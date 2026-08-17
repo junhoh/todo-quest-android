@@ -1076,6 +1076,20 @@
         "notification-settings"
       ],
       "summary": "Temurin 17.0.19·SDK/adb 37.0.0·SM-A325N API 33에서 Python 387개, debug·release JVM/Robolectric 각 708개, connected 169개와 lint·debug/test APK·phase manager·diff 검증을 통과했다.\n중상 좌표·Shop 고정 stat/action·선택 해제 cleanup·Room v15 중립 fallback/adventure 세트·source 보존·Settings 일반 알림 권한과 핵심 기능 독립성을 여섯 시나리오로 확인했다."
+    },
+    {
+      "id": 63,
+      "slug": "github-project-readme",
+      "dir": "060-069/63-github-project-readme",
+      "status": "completed",
+      "areas": [
+        "project"
+      ],
+      "kind": "documentation",
+      "tags": [
+        "github-project-readme"
+      ],
+      "completed_at": "2026-08-17T15:56:36+0900"
     }
   ]
 }
