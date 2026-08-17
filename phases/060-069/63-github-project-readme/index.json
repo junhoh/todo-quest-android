@@ -1,0 +1,16 @@
+{
+  "project": "Todo Quest",
+  "phase": "63-github-project-readme",
+  "steps": [
+    {
+      "step": 0,
+      "name": "write-project-readme",
+      "status": "completed",
+      "started_at": "2026-08-17T15:53:04+0900",
+      "summary": "GitHub 방문자용 한국어 루트 README를 생성해 프로젝트 목적·현재 기능·비주얼·기술 스택·아키텍처·로컬 실행·canonical 문서와 현재 제외 범위를 안내했다.",
+      "completed_at": "2026-08-17T15:55:09+0900"
+    }
+  ],
+  "created_at": "2026-08-17T15:53:04+0900",
+  "completed_at": "2026-08-17T15:56:36+0900"
+}
