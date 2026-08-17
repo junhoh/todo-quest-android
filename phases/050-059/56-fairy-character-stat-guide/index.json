@@ -1,0 +1,81 @@
+{
+  "project": "Todo Quest",
+  "phase": "56-fairy-character-stat-guide",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-fairy-guide-art-contract",
+      "status": "completed",
+      "started_at": "2026-08-11T19:31:50+0900",
+      "summary": "docs/art/npc/todo-quest-fairy-guide-front-idle-spec.json에 bounds [6,22,58,52]와 정확히 16색 필수 팔레트를 포함한 schema v1 요정 안내자 아트 계약을 정의함",
+      "completed_at": "2026-08-11T19:37:57+0900"
+    },
+    {
+      "step": 1,
+      "name": "generate-fairy-guide-sprite",
+      "status": "completed",
+      "started_at": "2026-08-11T19:37:57+0900",
+      "summary": "built-in imagegen 원안을 hard chroma 제거와 NEAREST 64×64 정규화로 canonical 요정 안내자 PNG로 생성하고 16색·binary alpha·bounds·외곽선 계약 및 Python 테스트 312개를 검증함",
+      "completed_at": "2026-08-11T19:54:18+0900"
+    },
+    {
+      "step": 2,
+      "name": "publish-fairy-guide-resource",
+      "status": "completed",
+      "started_at": "2026-08-11T20:33:10+0900",
+      "summary": "canonical PNG를 app/src/main/res/drawable-nodpi/todo_quest_fairy_guide_front_idle.png에 byte-identical 게시하고 SHA-256 8418CD89EE396BADB197A81117DE9E6CAF1960EA3BC4A05C5BD5E5AB417DE2E0 일치·Python 회귀 75개·assembleDebug 통과를 확인함",
+      "completed_at": "2026-08-11T20:35:28+0900"
+    },
+    {
+      "step": 3,
+      "name": "define-character-stat-guide-domain",
+      "status": "completed",
+      "started_at": "2026-08-11T20:36:06+0900",
+      "summary": "Android 비의존 CharacterStatGuideStatus와 별도 CharacterGuideRepository, 자동 표시 조건·확인 결과 전달 UseCase를 추가하고 네 상태 조합 및 중복 확인 테스트를 통과함",
+      "completed_at": "2026-08-11T20:39:12+0900"
+    },
+    {
+      "step": 4,
+      "name": "persist-character-stat-guide-state",
+      "status": "completed",
+      "started_at": "2026-08-11T20:39:55+0900",
+      "summary": "stat_allocation_auto_eligible_v1·stat_allocation_acknowledged_v1 키를 분리한 SharedPreferences Repository를 추가해 최초 eligibility 고정, 저장 실패 격리와 확인 멱등성을 검증함",
+      "completed_at": "2026-08-11T20:42:53+0900"
+    },
+    {
+      "step": 5,
+      "name": "integrate-character-stat-guide-viewmodel",
+      "status": "completed",
+      "started_at": "2026-08-11T20:44:08+0900",
+      "summary": "Character ViewModel에 자동·수동 능력치 가이드 origin과 최초 1회 prepare 상태를 추가하고 Loaded 조건 표시, 자동 확인 및 preference 오류 격리를 테스트함",
+      "completed_at": "2026-08-11T20:48:13+0900"
+    },
+    {
+      "step": 6,
+      "name": "wire-character-stat-guide-dependencies",
+      "status": "completed",
+      "started_at": "2026-08-11T20:49:04+0900",
+      "summary": "DB 파일 존재 여부를 Room 초기화 전에 판별해 신규 설치 후보를 고정하고 Character 가이드 Repository·UseCase를 application scope에서 ViewModel factory까지 주입함",
+      "completed_at": "2026-08-11T20:54:43+0900"
+    },
+    {
+      "step": 7,
+      "name": "render-character-stat-guide-dialog",
+      "status": "completed",
+      "started_at": "2026-08-11T20:55:30+0900",
+      "summary": "신규 설치 첫 Character 진입의 안내 요정 Dialog와 기본 능력치 도움말 재열람, 96dp 최근접 sprite·fallback, 본문 독립 스크롤·Base stats 이동 및 320dp·큰 글꼴·TalkBack 접근성을 구현·검증함",
+      "completed_at": "2026-08-11T23:04:05+0900"
+    },
+    {
+      "step": 8,
+      "name": "synchronize-fairy-stat-guide-docs",
+      "status": "completed",
+      "started_at": "2026-08-11T23:05:01+0900",
+      "summary": "Character Stat Allocation Guide v1의 신규 설치 자동 안내·수동 재열람·오류 격리와 요정 canonical/runtime 계약을 PRD·아키텍처·ADR-022·UI·NPC 아트·개발 문서에 동기화하고 validator·Python 314개·JVM 각 619개·lint·APK·connected 147개 회귀를 통과함",
+      "completed_at": "2026-08-11T23:30:14+0900"
+    }
+  ],
+  "created_at": "2026-08-11T19:31:50+0900",
+  "summary": "신규 설치 첫 Character 진입에만 자동 표시하고 모든 사용자가 기본 능력치 도움말로 재열람할 수 있는 안내 요정 능력치 배분 가이드를 Room v14와 stat transaction 변경 없이 구현·문서화·검증함",
+  "completed_at": "2026-08-11T23:30:14+0900"
+}

@@ -1,0 +1,55 @@
+{
+  "project": "Todo Quest",
+  "phase": "58-shop-screen-redesign",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-shop-preview-projection",
+      "status": "completed",
+      "started_at": "2026-08-12T01:59:42+0900",
+      "completed_at": "2026-08-12T02:32:32+0900",
+      "summary": "판매 장비의 동일 슬롯 modifier를 비영속 교체해 기존 공식으로 최종 능력치와 검증된 외형을 계산하고 잘못된 정의·레이어는 현재 상태로 격리하는 순수 projection 계약을 추가했다."
+    },
+    {
+      "step": 1,
+      "name": "load-shop-preview-projection",
+      "status": "completed",
+      "started_at": "2026-08-12T02:33:24+0900",
+      "completed_at": "2026-08-12T02:39:24+0900",
+      "summary": "같은 Repository snapshot의 캐릭터·실제 장착·활성 상태이상·검증된 외형 source로 모든 판매 장비의 구매 전 projection을 계산하면서 gold·소유·장착·HP 원천은 변경하지 않도록 했다."
+    },
+    {
+      "step": 2,
+      "name": "present-shop-selection-state",
+      "status": "completed",
+      "started_at": "2026-08-12T02:41:24+0900",
+      "completed_at": "2026-08-12T02:50:16+0900",
+      "summary": "상품 preview 선택과 상세 sheet 상태를 분리하고 최신 snapshot 기반 직접 구매 확인, 비영속 외형 preview와 실제 능력치 대비 차이 표시를 ViewModel state로 제공했다."
+    },
+    {
+      "step": 3,
+      "name": "redesign-shop-compose-ui",
+      "status": "completed",
+      "started_at": "2026-08-12T02:51:12+0900",
+      "completed_at": "2026-08-12T03:51:26+0900",
+      "summary": "고정 TopAppBar와 단일 LazyColumn 상점 화면을 배너·장착 미리보기·7개 슬롯·능력치 delta·필터·상태별 상품 action으로 재구성하고 320dp 큰 글꼴 및 기존 구매·장착 흐름을 연결 테스트로 검증했다."
+    },
+    {
+      "step": 4,
+      "name": "wire-shop-navigation-insets",
+      "status": "completed",
+      "started_at": "2026-08-12T03:52:21+0900",
+      "completed_at": "2026-08-12T04:38:35+0900",
+      "summary": "상점의 top-level back을 제거하고 Inventory back·하단 탭 상태를 유지했으며 고정 상단바·불투명 하단 navigation/system inset·마지막 판매 카드 경계를 실제 navigation 연결 테스트로 검증했다."
+    },
+    {
+      "step": 5,
+      "name": "synchronize-and-verify-shop-redesign",
+      "status": "completed",
+      "started_at": "2026-08-12T04:39:10+0900",
+      "completed_at": "2026-08-12T05:39:02+0900",
+      "summary": "상점 projection·화면·navigation 계약을 PRD·Architecture·ADR·UI Guide에 동기화하고 JVM 630개·기기 151개·harness 88개 테스트, lint·assemble·manager·diff 검증을 모두 통과했다."
+    }
+  ],
+  "created_at": "2026-08-12T01:59:42+0900"
+}

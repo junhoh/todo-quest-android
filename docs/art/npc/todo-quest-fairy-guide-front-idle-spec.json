@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "asset": {
+    "fileName": "todo-quest-fairy-guide-front-idle.png",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  "reference": {
+    "path": "../character/todo-quest-character-base-body.png",
+    "purpose": [
+      "style",
+      "logicalScale",
+      "outline",
+      "shadingSteps"
+    ],
+    "usage": "comparisonOnly",
+    "editable": false,
+    "opaqueBoundingBox": [20, 7, 44, 58],
+    "opaqueHeight": 52
+  },
+  "centerX": 32,
+  "soleY": 52,
+  "minimumMargin": 4,
+  "expectedOpaqueBoundingBox": [6, 22, 58, 52],
+  "boundingBoxInclusive": true,
+  "opaqueHeight": 31,
+  "scaleComparison": {
+    "referenceOpaqueHeight": 52,
+    "heightPercentOfReferenceApprox": 59.6,
+    "widthIncludes": [
+      "leftWing",
+      "rightWing"
+    ],
+    "centeredOnCenterAxis": true
+  },
+  "anchors": {
+    "headCenter": [32, 30],
+    "shoulderY": 36,
+    "waistY": 43,
+    "soleY": 52
+  },
+  "pose": {
+    "facing": "front",
+    "proportions": "twoAndHalfToThreeHeadTallHumanoidFairy",
+    "stance": "slightlyHoveringGuideIdle",
+    "bothToeTipsReachY": 52,
+    "viewerRightHand": "raisedAtChestHeightWithIndexFingerPointingSidewaysToGuide",
+    "viewerLeftHand": "holdsWaistPouch",
+    "forbidden": [
+      "attackAction",
+      "magicCasting",
+      "walkingPose",
+      "rotation"
+    ]
+  },
+  "appearance": {
+    "identity": "friendlyHumanoidFairyGuide",
+    "hair": "calmChinLengthBlondeHair",
+    "bangs": "mustNotCoverEyesNoseOrMouth",
+    "face": [
+      "largeBrightEyes",
+      "softSmile"
+    ],
+    "headAdornment": "oneSmallGoldStar",
+    "clothing": [
+      "simpleShortPaleGreenAndCreamTunic",
+      "smallBrownWaistPouch",
+      "softLeatherBoots"
+    ],
+    "forbidden": [
+      "crown",
+      "gemstones",
+      "frills",
+      "armor"
+    ]
+  },
+  "wings": {
+    "count": 2,
+    "shape": "elongatedRoundedInsectLikeWithoutSpecificInsectImitation",
+    "placement": "slightlySpreadLeftAndRightBehindBody",
+    "separation": "visuallySeparatedFromHeadFaceAndBothArms",
+    "internalPatternPixelClustersPerWing": {
+      "min": 1,
+      "max": 2
+    },
+    "paletteNames": [
+      "wingShadow",
+      "wingLight"
+    ],
+    "alpha": 255
+  },
+  "semanticRegions": {
+    "starAccent": {
+      "region": [29, 22, 35, 27],
+      "regionInclusive": true,
+      "paletteName": "goldAccent",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 2,
+        "max": 7
+      },
+      "allowedUse": "singleSmallHairStar"
+    },
+    "eyesAndSmile": {
+      "region": [27, 28, 37, 34],
+      "regionInclusive": true,
+      "paletteName": "inkDeep",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 3,
+        "max": 8
+      },
+      "allowedUses": [
+        "eyes",
+        "smile"
+      ]
+    },
+    "wingColors": {
+      "region": [6, 27, 58, 44],
+      "regionInclusive": true,
+      "paletteNames": [
+        "wingShadow",
+        "wingLight"
+      ],
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 30,
+        "max": 180
+      }
+    }
+  },
+  "groundContacts": {
+    "leftFoot": {
+      "xRange": [27, 30],
+      "xRangeInclusive": true,
+      "y": 52,
+      "minimumOpaquePixels": 2
+    },
+    "rightFoot": {
+      "xRange": [34, 37],
+      "xRangeInclusive": true,
+      "y": 52,
+      "minimumOpaquePixels": 2
+    }
+  },
+  "transparentRegions": {
+    "legGap": {
+      "region": [31, 47, 33, 51],
+      "regionInclusive": true,
+      "pixelCount": {
+        "min": 6
+      }
+    },
+    "leftWingBodyGap": {
+      "region": [19, 29, 23, 42],
+      "regionInclusive": true,
+      "pixelCount": {
+        "min": 12
+      }
+    },
+    "rightWingBodyGap": {
+      "region": [41, 29, 45, 42],
+      "regionInclusive": true,
+      "pixelCount": {
+        "min": 12
+      }
+    }
+  },
+  "palette": {
+    "outlineDarkNavy": "#263B5A",
+    "inkDeep": "#11151C",
+    "skinShadow": "#D99872",
+    "skinLight": "#FFD3AE",
+    "hairShadow": "#A9824B",
+    "hairBase": "#D7B86D",
+    "creamShadow": "#B7B0A3",
+    "creamLight": "#F4EFE3",
+    "tunicShadow": "#4F6B55",
+    "tunicBase": "#789B6E",
+    "tunicLight": "#AFC79A",
+    "leatherShadow": "#4A3225",
+    "leatherBase": "#765238",
+    "wingShadow": "#A9D9D4",
+    "wingLight": "#D9F1E8",
+    "goldAccent": "#F2C14E"
+  },
+  "requiredPaletteNames": [
+    "outlineDarkNavy",
+    "inkDeep",
+    "skinShadow",
+    "skinLight",
+    "hairShadow",
+    "hairBase",
+    "creamShadow",
+    "creamLight",
+    "tunicShadow",
+    "tunicBase",
+    "tunicLight",
+    "leatherShadow",
+    "leatherBase",
+    "wingShadow",
+    "wingLight",
+    "goldAccent"
+  ],
+  "optionalPaletteNames": [],
+  "transparentPixelsCountTowardPalette": false,
+  "outline": {
+    "color": "#263B5A",
+    "externalSilhouetteThickness": 1,
+    "externalBoundaryNeighborMode": 4,
+    "allExternalBoundaryPixelsUseOutlineColor": true,
+    "forbidExternalOutline2x2Blocks": true
+  },
+  "connectivity": {
+    "opaqueNeighborMode": 8,
+    "opaqueComponentCount": 1,
+    "allowIsolatedOpaquePixels": false
+  },
+  "allowedAlphaValues": [0, 255],
+  "chromaKey": "#FF00FF",
+  "chromaKeyAllowedInFinalPng": false,
+  "design": {
+    "subjectCount": 1,
+    "setting": "classicGentleFantasy",
+    "role": "friendlyCharacterStatGuide",
+    "forbidden": [
+      "weapons",
+      "firearms",
+      "machinery",
+      "modernElements",
+      "background",
+      "groundShadow",
+      "forest",
+      "flowers",
+      "grass",
+      "speechBubble",
+      "text",
+      "exclamationMark",
+      "questionMark",
+      "aura",
+      "magicCircle",
+      "sparkles",
+      "starDust",
+      "particles",
+      "specificInsectImitation",
+      "specificExistingGameCharacterImitation"
+    ]
+  }
+}

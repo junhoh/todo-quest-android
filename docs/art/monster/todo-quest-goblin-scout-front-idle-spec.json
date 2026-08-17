@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "asset": {
+    "fileName": "todo-quest-goblin-scout-front-idle.png",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  "reference": {
+    "path": "../character/todo-quest-character-base-body.png",
+    "purpose": [
+      "style",
+      "logicalScale"
+    ],
+    "editable": false,
+    "opaqueBoundingBox": [20, 7, 44, 58],
+    "opaqueHeight": 52
+  },
+  "centerX": 32,
+  "soleY": 58,
+  "minimumMargin": 3,
+  "expectedOpaqueBoundingBox": [16, 13, 48, 58],
+  "boundingBoxInclusive": true,
+  "opaqueHeight": 46,
+  "scaleComparison": {
+    "referenceOpaqueHeight": 52,
+    "heightReductionPercentApprox": 11.5,
+    "widthIncludes": [
+      "leftPointedEar",
+      "rightPointedEar",
+      "sideDagger"
+    ],
+    "bodyCore": "slimmerThanReferencePlayer"
+  },
+  "anchors": {
+    "headCenter": [32, 21],
+    "shoulderY": 31,
+    "waistY": 43,
+    "soleY": 58
+  },
+  "pose": {
+    "facing": "front",
+    "proportions": "threeHeadTallChibi",
+    "centerAxisFixed": true,
+    "stance": "neutralCombatIdle",
+    "bothSolesTouchY": 58,
+    "expression": "aggressiveEyebrows",
+    "arms": "alertGuarded",
+    "forbidden": [
+      "attackAction",
+      "rotation"
+    ]
+  },
+  "equipment": {
+    "dagger": {
+      "side": "viewerRightBesideBody",
+      "type": "shortSimplePoisonDagger",
+      "mustNotCoverCenterBody": true,
+      "connectedParts": [
+        "hand",
+        "handle",
+        "blade"
+      ],
+      "connection": "single8ConnectedOpaqueComponent"
+    },
+    "pouch": {
+      "side": "viewerLeftWaist",
+      "type": "smallClothPouch"
+    },
+    "armor": "wornLeatherArmor"
+  },
+  "semanticRegions": {
+    "redEyes": {
+      "region": [26, 19, 38, 25],
+      "regionInclusive": true,
+      "paletteName": "dangerRed",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 1,
+        "max": 4
+      }
+    },
+    "daggerMetal": {
+      "region": [41, 35, 48, 50],
+      "regionInclusive": true,
+      "paletteNames": [
+        "metalDark",
+        "metalMid",
+        "metalLight",
+        "poisonAccent"
+      ],
+      "onlyWithinRegion": true,
+      "opaqueBoundingBoxHeight": {
+        "min": 8,
+        "max": 12
+      },
+      "mustNotOverlapXRange": [24, 40],
+      "xRangeInclusive": true
+    },
+    "poison": {
+      "region": [41, 35, 48, 50],
+      "regionInclusive": true,
+      "paletteName": "poisonAccent",
+      "onlyOn": "dagger",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 1,
+        "max": 6
+      }
+    }
+  },
+  "palette": {
+    "outlineDarkNavy": "#263B5A",
+    "inkDeep": "#11151C",
+    "clothDark": "#3A3F45",
+    "clothMid": "#737982",
+    "metalDark": "#35445C",
+    "metalMid": "#B7B0A3",
+    "metalLight": "#F4EFE3",
+    "skinShadow": "#42543A",
+    "skinBase": "#657A4B",
+    "skinHighlight": "#8EA565",
+    "leatherShadow": "#4A3225",
+    "leatherBase": "#765238",
+    "leatherHighlight": "#A3744C",
+    "poisonAccent": "#5CC8A7",
+    "dangerRed": "#E05252"
+  },
+  "requiredPaletteNames": [
+    "outlineDarkNavy",
+    "skinShadow",
+    "skinBase",
+    "skinHighlight",
+    "leatherShadow",
+    "leatherBase",
+    "leatherHighlight",
+    "metalDark",
+    "metalMid",
+    "metalLight",
+    "poisonAccent",
+    "dangerRed"
+  ],
+  "optionalPaletteNames": [
+    "inkDeep",
+    "clothDark",
+    "clothMid"
+  ],
+  "transparentPixelsCountTowardPalette": false,
+  "outline": {
+    "color": "#263B5A",
+    "externalSilhouetteThickness": 1,
+    "externalBoundaryNeighborMode": 4,
+    "allExternalBoundaryPixelsUseOutlineColor": true,
+    "forbidExternalOutline2x2Blocks": true
+  },
+  "connectivity": {
+    "opaqueNeighborMode": 8,
+    "opaqueComponentCount": 1,
+    "allowIsolatedOpaquePixels": false
+  },
+  "allowedAlphaValues": [0, 255],
+  "chromaKey": "#FF00FF",
+  "chromaKeyAllowedInFinalPng": false,
+  "design": {
+    "attributes": [
+      "forest",
+      "poison"
+    ],
+    "role": "cunningAgileEarlyGameCommonEnemy",
+    "expression": "cuteButHostile",
+    "silhouette": "angularPointedEars",
+    "equipmentTheme": "classicMedievalFantasyNaturalMaterials",
+    "forbidden": [
+      "machinery",
+      "firearms",
+      "electronics",
+      "modernClothing",
+      "graphicViolence"
+    ]
+  }
+}

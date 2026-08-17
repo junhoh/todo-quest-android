@@ -1,0 +1,20 @@
+{
+  "project": "Todo Quest",
+  "phase": "5-emulator-launch-diagnostics",
+  "steps": [
+    {
+      "step": 0,
+      "name": "launch-smoke-test",
+      "status": "completed",
+      "completed_at": "2026-07-16T18:01:47+09:00",
+      "summary": "app/src/androidTest/java/com/todoquest/app/MainActivityLaunchSmokeTest.kt를 추가해 실제 MainActivity 실행 semantics와 screenshot 기반 검은 화면 판정을 검증하도록 했다."
+    },
+    {
+      "step": 1,
+      "name": "diagnostic-artifacts-and-validation",
+      "status": "completed",
+      "completed_at": "2026-07-16T19:32:43+09:00",
+      "summary": "emulator 재부팅 후 MainActivity screenshot이 더 이상 검정이 아니고 SurfaceFlinger에서 MainActivity layer가 visible 상태임을 확인했다."
+    }
+  ]
+}

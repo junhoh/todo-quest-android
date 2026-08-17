@@ -1,0 +1,926 @@
+{
+  "schemaVersion": 1,
+  "contractKind": "character-equipment-layer-variants",
+  "baseCharacterContract": {
+    "specPath": "../character/character-modular-sheet-spec.json",
+    "schemaVersion": 5,
+    "canonicalSourceCount": 15,
+    "relationship": "independent gameplay equipment variants; replaces only the selected hands_front or shoes render source without extending schema v5"
+  },
+  "pathContract": {
+    "sourcePathsRelativeTo": "spec-directory",
+    "previewPathsRelativeTo": "spec-directory",
+    "runtimePathRootRelativeToSpec": "../../../app/src/main/assets",
+    "safeRelativePathsRequired": true
+  },
+  "canvas": {
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA",
+    "boundsInclusive": [
+      0,
+      0,
+      63,
+      63
+    ],
+    "centerX": 32,
+    "characterSoleY": 58,
+    "anchorProfile": "canvas-64-center-x-32-sole-y-58-schema-v5"
+  },
+  "productionPalette": {
+    "colorCount": 16,
+    "colors": {
+      "hairBlack": "#11151C",
+      "eyeDarkNavy": "#1D3557",
+      "outlineDarkNavy": "#263B5A",
+      "hairHighlight": "#35445C",
+      "underDark": "#3A3F45",
+      "blueShadow": "#2853A6",
+      "underMid": "#737982",
+      "underLight": "#B7B0A3",
+      "skinShadow": "#D99872",
+      "skinLight": "#FFD3AE",
+      "lightCream": "#F4EFE3",
+      "bluePrimary": "#4F86E8",
+      "blueHighlight": "#7FB3FF",
+      "tealAccent": "#5CC8A7",
+      "goldAccent": "#F2C14E",
+      "redAccent": "#E05252"
+    },
+    "opaquePixelsOnly": true
+  },
+  "loadoutArtContract": {
+    "contractVersion": 1,
+    "status": "available",
+    "canvas": {
+      "width": 64,
+      "height": 64,
+      "mode": "RGBA",
+      "origin": [
+        0,
+        0
+      ],
+      "centerX": 32,
+      "soleY": 58,
+      "interpolation": "nearest-neighbor"
+    },
+    "alwaysPresentSourceIds": [
+      "body_base",
+      "hair_back_default",
+      "hair_front_default",
+      "hands_front"
+    ],
+    "emptyGameplaySlots": {
+      "HELMET": {
+        "representation": "transparent-overlay",
+        "sourceIds": []
+      },
+      "CHEST": {
+        "representation": "neutral-training-fallback",
+        "sourceIds": [
+          "top_default"
+        ]
+      },
+      "LEGS": {
+        "representation": "neutral-training-fallback",
+        "sourceIds": [
+          "bottom_default"
+        ]
+      },
+      "GLOVES": {
+        "representation": "transparent-overlay",
+        "sourceIds": []
+      },
+      "SHOES": {
+        "representation": "neutral-training-fallback",
+        "sourceIds": [
+          "shoes_default"
+        ]
+      },
+      "ACCESSORY": {
+        "representation": "transparent-overlay",
+        "sourceIds": []
+      },
+      "WEAPON": {
+        "representation": "transparent-overlay",
+        "sourceIds": []
+      }
+    },
+    "neutralTrainingFallback": {
+      "sourceIds": [
+        "top_default",
+        "bottom_default",
+        "shoes_default"
+      ],
+      "paletteNames": [
+        "underDark",
+        "underMid",
+        "underLight"
+      ],
+      "descriptionKorean": "회갈색 계열의 중립 훈련복"
+    },
+    "adventureShopSet": {
+      "setKey": "adventure_set",
+      "slots": {
+        "HELMET": {
+          "layerKey": "headgear_adventure",
+          "sourceIds": [
+            "headgear_adventure"
+          ]
+        },
+        "CHEST": {
+          "layerKey": "top_adventure",
+          "sourceIds": [
+            "top_adventure"
+          ]
+        },
+        "LEGS": {
+          "layerKey": "bottom_adventure",
+          "sourceIds": [
+            "bottom_adventure"
+          ]
+        },
+        "GLOVES": {
+          "layerKey": "gloves_adventure",
+          "sourceIds": [
+            "gloves_adventure"
+          ]
+        },
+        "SHOES": {
+          "layerKey": "shoes_adventure",
+          "sourceIds": [
+            "shoes_adventure"
+          ]
+        },
+        "ACCESSORY": {
+          "layerKey": "accessory_adventure",
+          "sourceIds": [
+            "accessory_adventure"
+          ]
+        },
+        "WEAPON": {
+          "layerKey": "weapon_default_sword",
+          "sourceIds": [
+            "weapon_back_default_sword",
+            "weapon_held_default_sword",
+            "weapon_front_default_sword"
+          ],
+          "mergedRuntimePngAllowed": false
+        }
+      }
+    },
+    "plannedCanonicalLayer": {
+      "id": "gloves_adventure",
+      "slot": "hands_front",
+      "sourcePath": "docs/art/character/layers/gloves_adventure.png",
+      "runtimePath": "app/src/main/assets/character/layers/gloves_adventure.png",
+      "replacesSourceIdWhenEquipped": "hands_front",
+      "referenceAlphaMaskSourceId": "hands_front",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 219,
+        "hashes": {
+          "fileSha256": "717bb2756d6a47bef0d226cdc3619a3734055e680d807c2f22a033b25b817b18",
+          "rawRgbaSha256": "0d62a679528982f39292d04766e589f1e22a0f0c99c04825c17c24f75231a270",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 219,
+        "hashes": {
+          "fileSha256": "717bb2756d6a47bef0d226cdc3619a3734055e680d807c2f22a033b25b817b18",
+          "rawRgbaSha256": "0d62a679528982f39292d04766e589f1e22a0f0c99c04825c17c24f75231a270",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      }
+    },
+    "compositionOrder": [
+      "accessory_back",
+      "hair_back",
+      "headgear_back",
+      "body_base",
+      "shoes",
+      "bottom",
+      "top",
+      "hands_front",
+      "face_overlay",
+      "hair_front",
+      "headgear_front",
+      "accessory_front",
+      "weapon_back",
+      "weapon_held",
+      "weapon_front"
+    ],
+    "schemaPromotion": {
+      "currentCharacterSchemaVersion": 5,
+      "targetCharacterSchemaVersion": 6,
+      "existingLayerIdsKeepMeaning": true,
+      "existingLayerIdsMayBeRenamedOrRemoved": false,
+      "storedAppearanceIdsRemainCompatible": true,
+      "newLayerIds": [
+        "gloves_adventure"
+      ]
+    },
+    "regenerationManifest": {
+      "changedCanonicalSourceIds": [
+        "top_default",
+        "bottom_default",
+        "shoes_default",
+        "gloves_adventure"
+      ],
+      "runtimeMirrors": [
+        {
+          "sourcePath": "docs/art/character/layers/top_default.png",
+          "runtimePath": "app/src/main/assets/character/layers/top_default.png"
+        },
+        {
+          "sourcePath": "docs/art/character/layers/bottom_default.png",
+          "runtimePath": "app/src/main/assets/character/layers/bottom_default.png"
+        },
+        {
+          "sourcePath": "docs/art/character/layers/shoes_default.png",
+          "runtimePath": "app/src/main/assets/character/layers/shoes_default.png"
+        },
+        {
+          "sourcePath": "docs/art/character/layers/gloves_adventure.png",
+          "runtimePath": "app/src/main/assets/character/layers/gloves_adventure.png"
+        }
+      ],
+      "generatedPreviewTileNames": [
+        "body-only",
+        "body-default-hair",
+        "default-equipped",
+        "adventure-equipped",
+        "mixed-default-top",
+        "mixed-adventure-top",
+        "headgear-off",
+        "headgear-on",
+        "accessory-off",
+        "accessory-on",
+        "weapon-off",
+        "weapon-on",
+        "anchors-preview",
+        "palette",
+        "layer-bounds-preview",
+        "runtime-equipped-reference"
+      ],
+      "generatedSheetDocsPath": "docs/art/character/todo-quest-character-modular-sheet.png",
+      "generatedSheetRuntimePath": "app/src/main/res/drawable-nodpi/todo_quest_character_modular_sheet.png",
+      "runtimeReadsGeneratedSheet": false
+    }
+  },
+  "layerContracts": {
+    "hands_front": {
+      "renderSlot": "hands_front",
+      "equipmentSlot": "GLOVES",
+      "allowedAlphaValues": [
+        0,
+        255
+      ],
+      "transparentPixelRgba": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "chromaKey": "#FF00FF",
+      "chromaKeyAllowed": false,
+      "alphaCompositing": "source-over",
+      "interpolation": "nearest-neighbor",
+      "referenceAlphaMask": {
+        "baseCharacterSourceId": "hands_front",
+        "path": "../character/layers/hands_front.png",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+      },
+      "connectivity": {
+        "opaqueNeighborMode": 8,
+        "opaqueComponentCount": 2,
+        "allowIsolatedOpaquePixels": false,
+        "components": [
+          {
+            "name": "leftHand",
+            "opaqueBounds": [
+              21,
+              39,
+              24,
+              45
+            ],
+            "opaquePixelCount": 19
+          },
+          {
+            "name": "rightHand",
+            "opaqueBounds": [
+              40,
+              39,
+              43,
+              45
+            ],
+            "opaquePixelCount": 19
+          }
+        ]
+      },
+      "requiredOpaquePoints": {
+        "primaryGripAnchor": [
+          42,
+          42
+        ]
+      },
+      "coordinatePreservation": {
+        "singleCanvasOrigin": [
+          0,
+          0
+        ],
+        "translationAllowed": false,
+        "croppingAllowed": false,
+        "scalingAllowed": false,
+        "thumbnailOpaqueBoundsReadOnlyScalingAllowed": true
+      }
+    },
+    "shoes": {
+      "renderSlot": "shoes",
+      "equipmentSlot": "SHOES",
+      "allowedAlphaValues": [
+        0,
+        255
+      ],
+      "transparentPixelRgba": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "chromaKey": "#FF00FF",
+      "chromaKeyAllowed": false,
+      "alphaCompositing": "source-over",
+      "interpolation": "nearest-neighbor",
+      "referenceAlphaMask": {
+        "baseCharacterSourceId": "shoes_adventure",
+        "path": "../character/layers/shoes_adventure.png",
+        "opaqueBounds": [
+          23,
+          53,
+          41,
+          58
+        ],
+        "opaquePixelCount": 104,
+        "alphaMaskSha256": "9d42064b05d8ede2c5ca9ce1cb0dc7c0551ed11f2e9f855e6e25fe0e69f0f104"
+      },
+      "connectivity": {
+        "opaqueNeighborMode": 8,
+        "opaqueComponentCount": 2,
+        "allowIsolatedOpaquePixels": false,
+        "components": [
+          {
+            "name": "leftFoot",
+            "opaqueBounds": [
+              23,
+              53,
+              31,
+              58
+            ],
+            "opaquePixelCount": 52
+          },
+          {
+            "name": "rightFoot",
+            "opaqueBounds": [
+              33,
+              53,
+              41,
+              58
+            ],
+            "opaquePixelCount": 52
+          }
+        ]
+      },
+      "requiredOpaqueRegions": {
+        "leftAnkleOverlap": [
+          24,
+          53,
+          31,
+          54
+        ],
+        "rightAnkleOverlap": [
+          33,
+          53,
+          40,
+          54
+        ]
+      },
+      "soleContract": {
+        "soleY": 58,
+        "centerX": 32,
+        "centerPixelTransparent": true,
+        "leftOpaqueRange": [
+          23,
+          31
+        ],
+        "rightOpaqueRange": [
+          33,
+          41
+        ]
+      },
+      "coordinatePreservation": {
+        "singleCanvasOrigin": [
+          0,
+          0
+        ],
+        "translationAllowed": false,
+        "croppingAllowed": false,
+        "scalingAllowed": false,
+        "thumbnailOpaqueBoundsReadOnlyScalingAllowed": true
+      }
+    }
+  },
+  "compositionContract": {
+    "gloveVariantReplaces": "hands_front",
+    "shoeVariantReplaces": "shoes_adventure",
+    "gloveGripOrder": [
+      "weapon_held",
+      "hands_front",
+      "weapon_front"
+    ],
+    "allSourcesShareCanvasOrigin": true,
+    "thumbnailUsesOpaqueBoundsReadOnly": true
+  },
+  "items": [
+    {
+      "displayNameKorean": "가죽 장갑",
+      "equipmentId": 1011,
+      "equipmentKey": "leather_gloves",
+      "imageKey": "gloves_leather",
+      "layerKey": "gloves_leather",
+      "renderSlot": "hands_front",
+      "equipmentSlot": "GLOVES",
+      "sourcePath": "layers/gloves_leather.png",
+      "runtimePath": "character/layers/gloves_leather.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 208,
+        "hashes": {
+          "fileSha256": "592df0366d81445015b13d3e6aa504e83499e9515743a79081e921f583b9a03a",
+          "rawRgbaSha256": "771e25594e1862794581dd63894e286ff7edc85070669203a15a9f35e4a8a15d",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 208,
+        "hashes": {
+          "fileSha256": "592df0366d81445015b13d3e6aa504e83499e9515743a79081e921f583b9a03a",
+          "rawRgbaSha256": "771e25594e1862794581dd63894e286ff7edc85070669203a15a9f35e4a8a15d",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      },
+      "previewKeys": {
+        "equipped1x": "leather-gloves-equipped@1x",
+        "equipped8x": "leather-gloves-equipped@8x"
+      }
+    },
+    {
+      "displayNameKorean": "강철 건틀릿",
+      "equipmentId": 1015,
+      "equipmentKey": "steel_gauntlets",
+      "imageKey": "gloves_steel_gauntlets",
+      "layerKey": "gloves_steel_gauntlets",
+      "renderSlot": "hands_front",
+      "equipmentSlot": "GLOVES",
+      "sourcePath": "layers/gloves_steel_gauntlets.png",
+      "runtimePath": "character/layers/gloves_steel_gauntlets.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 225,
+        "hashes": {
+          "fileSha256": "f1cd19b0209cb6226c5e80d826ba395d57d08c0d7ef7b401da3271c48b47948e",
+          "rawRgbaSha256": "8ac37438f5591147a6e491c6b92ea205df4cdf1b7f20dd9a982f6c5835c523ee",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 225,
+        "hashes": {
+          "fileSha256": "f1cd19b0209cb6226c5e80d826ba395d57d08c0d7ef7b401da3271c48b47948e",
+          "rawRgbaSha256": "8ac37438f5591147a6e491c6b92ea205df4cdf1b7f20dd9a982f6c5835c523ee",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      },
+      "previewKeys": {
+        "equipped1x": "steel-gauntlets-equipped@1x",
+        "equipped8x": "steel-gauntlets-equipped@8x"
+      }
+    },
+    {
+      "displayNameKorean": "여행자의 장화",
+      "equipmentId": 1012,
+      "equipmentKey": "travelers_boots",
+      "imageKey": "shoes_travelers_boots",
+      "layerKey": "shoes_travelers_boots",
+      "renderSlot": "shoes",
+      "equipmentSlot": "SHOES",
+      "sourcePath": "layers/shoes_travelers_boots.png",
+      "runtimePath": "character/layers/shoes_travelers_boots.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          23,
+          53,
+          41,
+          58
+        ],
+        "opaquePixelCount": 104,
+        "fileByteCount": 263,
+        "hashes": {
+          "fileSha256": "3b378876ea5ef7b3acdb214b9034831fd35b8386e8070b494b326622f9b02c32",
+          "rawRgbaSha256": "818d09f6a3dcd235592d7f3151a3dc3bd4fb0cd6248b1398a60f19bd2d31b670",
+          "alphaMaskSha256": "9d42064b05d8ede2c5ca9ce1cb0dc7c0551ed11f2e9f855e6e25fe0e69f0f104"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          23,
+          53,
+          41,
+          58
+        ],
+        "opaquePixelCount": 104,
+        "fileByteCount": 263,
+        "hashes": {
+          "fileSha256": "3b378876ea5ef7b3acdb214b9034831fd35b8386e8070b494b326622f9b02c32",
+          "rawRgbaSha256": "818d09f6a3dcd235592d7f3151a3dc3bd4fb0cd6248b1398a60f19bd2d31b670",
+          "alphaMaskSha256": "9d42064b05d8ede2c5ca9ce1cb0dc7c0551ed11f2e9f855e6e25fe0e69f0f104"
+        }
+      },
+      "previewKeys": {
+        "equipped1x": "travelers-boots-equipped@1x",
+        "equipped8x": "travelers-boots-equipped@8x"
+      }
+    },
+    {
+      "displayNameKorean": "바람걸음 장화",
+      "equipmentId": 1016,
+      "equipmentKey": "windwalker_boots",
+      "imageKey": "shoes_windwalker_boots",
+      "layerKey": "shoes_windwalker_boots",
+      "renderSlot": "shoes",
+      "equipmentSlot": "SHOES",
+      "sourcePath": "layers/shoes_windwalker_boots.png",
+      "runtimePath": "character/layers/shoes_windwalker_boots.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          23,
+          53,
+          41,
+          58
+        ],
+        "opaquePixelCount": 104,
+        "fileByteCount": 276,
+        "hashes": {
+          "fileSha256": "3f936920a071ff8999a136e9c42917e3b0d929e98f3347eb5668229f6e4037e7",
+          "rawRgbaSha256": "4c17463597dbead6a9ca02f96fa30e058aac3f5b981a2051eac21915c1a9d5e0",
+          "alphaMaskSha256": "9d42064b05d8ede2c5ca9ce1cb0dc7c0551ed11f2e9f855e6e25fe0e69f0f104"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          23,
+          53,
+          41,
+          58
+        ],
+        "opaquePixelCount": 104,
+        "fileByteCount": 276,
+        "hashes": {
+          "fileSha256": "3f936920a071ff8999a136e9c42917e3b0d929e98f3347eb5668229f6e4037e7",
+          "rawRgbaSha256": "4c17463597dbead6a9ca02f96fa30e058aac3f5b981a2051eac21915c1a9d5e0",
+          "alphaMaskSha256": "9d42064b05d8ede2c5ca9ce1cb0dc7c0551ed11f2e9f855e6e25fe0e69f0f104"
+        }
+      },
+      "previewKeys": {
+        "equipped1x": "windwalker-boots-equipped@1x",
+        "equipped8x": "windwalker-boots-equipped@8x"
+      }
+    }
+  ],
+  "previews": {
+    "purpose": "deterministic equipped visual verification; never a runtime layer source",
+    "combinationMatrix": {
+      "gloveEquipmentIds": [
+        1011,
+        1015
+      ],
+      "shoeEquipmentIds": [
+        1012,
+        1016
+      ],
+      "columns": 2,
+      "rows": 2,
+      "cellWidth": 64,
+      "cellHeight": 64,
+      "previewKeys": {
+        "matrix1x": "gloves-shoes-combination-matrix@1x",
+        "matrix4x": "gloves-shoes-combination-matrix@4x"
+      }
+    },
+    "artifacts": {
+      "leather-gloves-equipped@1x": {
+        "equipmentId": 1011,
+        "scale": 1,
+        "path": "previews/leather-gloves-equipped.png",
+        "width": 64,
+        "height": 64,
+        "mode": "RGBA",
+        "artifact": {
+          "status": "available",
+          "opaqueBounds": [
+            20,
+            4,
+            44,
+            58
+          ],
+          "opaquePixelCount": 1197,
+          "fileByteCount": 1422,
+          "hashes": {
+            "fileSha256": "5e469118e6d13badccbcd996cb36bfc1d841756c2b483952f749ad5ea04c9b71",
+            "rawRgbaSha256": "4680d7a9413a17a0b4d5495561adb49ac4f9dbd11a799b591e47edd6ff972c30",
+            "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"
+          }
+        }
+      },
+      "leather-gloves-equipped@8x": {
+        "equipmentId": 1011,
+        "scale": 8,
+        "path": "previews/leather-gloves-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {
+          "status": "available",
+          "opaqueBounds": [
+            160,
+            32,
+            359,
+            471
+          ],
+          "opaquePixelCount": 76608,
+          "fileByteCount": 4252,
+          "hashes": {
+            "fileSha256": "56bcd39579df5e42213bf58aa325d31019dfe02b5fb2610ead57e21324d9715c",
+            "rawRgbaSha256": "c44448627d0172f7d7bd93f7e0dbecee735aa9637d1e9f2923d6fc480bba1819",
+            "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"
+          }
+        }
+      },
+      "steel-gauntlets-equipped@1x": {
+        "equipmentId": 1015,
+        "scale": 1,
+        "path": "previews/steel-gauntlets-equipped.png",
+        "width": 64,
+        "height": 64,
+        "mode": "RGBA",
+        "artifact": {
+          "status": "available",
+          "opaqueBounds": [
+            20,
+            4,
+            44,
+            58
+          ],
+          "opaquePixelCount": 1197,
+          "fileByteCount": 1421,
+          "hashes": {
+            "fileSha256": "5bf009923dbd03cbfacc61881b870fe62451ba74e987bc1dd35742930223f00b",
+            "rawRgbaSha256": "d9a4f7fe46597c67a88bb8aed76feef269618531bedb3eae6469bd43ac89711b",
+            "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"
+          }
+        }
+      },
+      "steel-gauntlets-equipped@8x": {
+        "equipmentId": 1015,
+        "scale": 8,
+        "path": "previews/steel-gauntlets-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {
+          "status": "available",
+          "opaqueBounds": [
+            160,
+            32,
+            359,
+            471
+          ],
+          "opaquePixelCount": 76608,
+          "fileByteCount": 4252,
+          "hashes": {
+            "fileSha256": "2b164ffb08ffe6026dd3052d6a7668ce80376c2faa8d06b454ceb07cc6957fa8",
+            "rawRgbaSha256": "d62b39f362bbc434a5880cf97085608f1ad96abe5ee0bbf52c1a4c0942b6069f",
+            "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"
+          }
+        }
+      },
+      "travelers-boots-equipped@1x": {
+        "equipmentId": 1012,
+        "scale": 1,
+        "path": "previews/travelers-boots-equipped.png",
+        "width": 64,
+        "height": 64,
+        "mode": "RGBA",
+        "artifact": {
+          "status": "available",
+          "opaqueBounds": [
+            20,
+            4,
+            44,
+            58
+          ],
+          "opaquePixelCount": 1197,
+          "fileByteCount": 1441,
+          "hashes": {
+            "fileSha256": "9c0d2a2c1c16ca84424a284a3009ae1748abc52686f1eee589c2e7cdd75b9f4b",
+            "rawRgbaSha256": "34a989a80b7afbb9259f47108abeae2208390d52bbd37a2b64c0ac7d557fae7f",
+            "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"
+          }
+        }
+      },
+      "travelers-boots-equipped@8x": {
+        "equipmentId": 1012,
+        "scale": 8,
+        "path": "previews/travelers-boots-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {
+          "status": "available",
+          "opaqueBounds": [
+            160,
+            32,
+            359,
+            471
+          ],
+          "opaquePixelCount": 76608,
+          "fileByteCount": 4230,
+          "hashes": {
+            "fileSha256": "d644dbf6305f1a918246dcaa54004207b6939b6bb663a8765da2c8cdf09d6e37",
+            "rawRgbaSha256": "f4a495671243cebf9638e4a5c9303437c24a3adb6e662cd7eed30c034dcd7546",
+            "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"
+          }
+        }
+      },
+      "windwalker-boots-equipped@1x": {
+        "equipmentId": 1016,
+        "scale": 1,
+        "path": "previews/windwalker-boots-equipped.png",
+        "width": 64,
+        "height": 64,
+        "mode": "RGBA",
+        "artifact": {
+          "status": "available",
+          "opaqueBounds": [
+            20,
+            4,
+            44,
+            58
+          ],
+          "opaquePixelCount": 1197,
+          "fileByteCount": 1431,
+          "hashes": {
+            "fileSha256": "7608443825d2132389310deba916883140753161a3d35fac77c94ce39b66c144",
+            "rawRgbaSha256": "aedab7bb6f5c0c741c1dd24e745081d66a8bc5473ecdd16185f7b20cdebc937c",
+            "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"
+          }
+        }
+      },
+      "windwalker-boots-equipped@8x": {
+        "equipmentId": 1016,
+        "scale": 8,
+        "path": "previews/windwalker-boots-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {
+          "status": "available",
+          "opaqueBounds": [
+            160,
+            32,
+            359,
+            471
+          ],
+          "opaquePixelCount": 76608,
+          "fileByteCount": 4229,
+          "hashes": {
+            "fileSha256": "149b14bdaec54de87583c178f379f2d6ff9954dd7092782af94b5fbfd2d72999",
+            "rawRgbaSha256": "0fbf91736fbe9fdc885b47fdbb35d22c8d3580067976710061cf26cb8a006d2c",
+            "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"
+          }
+        }
+      },
+      "gloves-shoes-combination-matrix@1x": {
+        "kind": "combinationMatrix",
+        "scale": 1,
+        "path": "previews/gloves-shoes-combination-matrix.png",
+        "width": 128,
+        "height": 128,
+        "mode": "RGBA",
+        "artifact": {
+          "status": "available",
+          "opaqueBounds": [
+            20,
+            4,
+            108,
+            122
+          ],
+          "opaquePixelCount": 4788,
+          "fileByteCount": 3071,
+          "hashes": {
+            "fileSha256": "8b2eaba8965e9a1b0c8a4237e5c3395611bd6d8b2d75931bdc82591ab269c4ed",
+            "rawRgbaSha256": "90378809b055657eb06d5c995b5fbb6b45a30b3dd63094986515e7a1cd2e8f62",
+            "alphaMaskSha256": "c26565bfd5a8fd35689ad1faff43d9aea4ffcc9980530c692f73bdfff65a8fae"
+          }
+        }
+      },
+      "gloves-shoes-combination-matrix@4x": {
+        "kind": "combinationMatrix",
+        "scale": 4,
+        "path": "previews/gloves-shoes-combination-matrix@4x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {
+          "status": "available",
+          "opaqueBounds": [
+            80,
+            16,
+            435,
+            491
+          ],
+          "opaquePixelCount": 76608,
+          "fileByteCount": 6524,
+          "hashes": {
+            "fileSha256": "fd408d84bcab17300bf48000d5a1b93fda5cc0688d7b6337e7336602493e871b",
+            "rawRgbaSha256": "df813b8d3b0140aae460ab7514e7bfb56eb7bef9e9fd175cbd4278df5a47d89d",
+            "alphaMaskSha256": "fb0d1269a58a8500e79d71a84ddc45997f3ad352cabbaf7dbb29c5f8295f72b5"
+          }
+        }
+      }
+    }
+  },
+  "hashSerialization": {
+    "algorithm": "SHA-256",
+    "fileBytes": "exact stored PNG bytes without decoding",
+    "rawRgba": "top-to-bottom, left-to-right row-major RGBA bytes",
+    "alphaMask": "top-to-bottom, left-to-right row-major alpha bytes"
+  }
+}

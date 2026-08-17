@@ -1,0 +1,66 @@
+{
+  "project": "Todo Quest",
+  "phase": "46-shop-helmet-item-art",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-helmet-art-contract",
+      "status": "completed",
+      "started_at": "2026-08-04T22:31:57+0900",
+      "summary": "가죽 모자 [19,4,45,22]와 철 투구 [18,4,46,29]의 독립 headgear 계약, pending metadata, 3단계 선언형 validator와 테스트를 추가했다.",
+      "completed_at": "2026-08-04T22:44:53+0900"
+    },
+    {
+      "step": 1,
+      "name": "generate-helmet-layer-assets",
+      "status": "completed",
+      "started_at": "2026-08-04T22:44:54+0900",
+      "summary": "가죽 모자와 철 투구 canonical PNG를 독립 생성·정규화하고 착용 1×/8× preview와 실제 metadata 검증을 완료했다.",
+      "completed_at": "2026-08-04T22:58:49+0900"
+    },
+    {
+      "step": 2,
+      "name": "extend-headgear-loadout-domain",
+      "status": "completed",
+      "started_at": "2026-08-04T23:00:14+0900",
+      "summary": "캐릭터 loadout catalog에 가죽 모자와 철 투구 head ID를 추가하고 기존 모험가 모자 기본값과 다른 slot catalog를 보존했다.",
+      "completed_at": "2026-08-04T23:04:25+0900"
+    },
+    {
+      "step": 3,
+      "name": "register-helmet-runtime-layers",
+      "status": "completed",
+      "started_at": "2026-08-04T23:04:25+0900",
+      "summary": "가죽 모자·철 투구 canonical PNG를 byte-identical runtime layer로 등록하고 128개 loadout 합성 및 preview raw RGBA 일치를 검증했다.",
+      "completed_at": "2026-08-04T23:12:48+0900"
+    },
+    {
+      "step": 4,
+      "name": "bind-helmet-catalog-visuals",
+      "status": "completed",
+      "started_at": "2026-08-04T23:13:28+0900",
+      "summary": "가죽 모자·철 투구 visual key를 catalog와 멱등 backfill transaction에 연결하고 Room v10 schema·migration 변경 없이 구매·장착 projection을 보존했다.",
+      "completed_at": "2026-08-04T23:20:32+0900"
+    },
+    {
+      "step": 5,
+      "name": "render-helmet-equipment-images",
+      "status": "completed",
+      "started_at": "2026-08-04T23:21:22+0900",
+      "summary": "공용 equipment artwork catalog·loader와 bounds-fit renderer를 추가해 상점 목록·상세·장착 슬롯·인벤토리 네 위치에 투구 이미지를 표시하고 path cache 및 placeholder fallback을 검증했다.",
+      "completed_at": "2026-08-04T23:32:27+0900"
+    },
+    {
+      "step": 6,
+      "name": "verify-helmet-ui-and-docs",
+      "status": "completed",
+      "started_at": "2026-08-04T23:41:21+0900",
+      "summary": "투구 실제 artwork·구매·바로 장착·교체·fallback·compact 접근성을 실기기에서 검증하고 canonical 문서와 phase acceptance를 동기화했다.",
+      "completed_at": "2026-08-05T00:18:40+09:00"
+    }
+  ],
+  "created_at": "2026-08-04T22:31:57+0900",
+  "status": "completed",
+  "summary": "가죽 모자·철 투구의 canonical/runtime layer와 catalog visual mapping, Shop·Inventory artwork 및 shared 캐릭터 착용 합성을 구현하고 전체 acceptance를 완료했다.",
+  "completed_at": "2026-08-05T00:31:31+0900"
+}

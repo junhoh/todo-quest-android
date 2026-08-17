@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "asset": {
+    "fileName": "todo-quest-blacksmith-shopkeeper-front-idle.png",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  "reference": {
+    "path": "../character/todo-quest-character-base-body.png",
+    "purpose": [
+      "style",
+      "logicalScale"
+    ],
+    "editable": false,
+    "opaqueBoundingBox": [20, 7, 44, 58],
+    "opaqueHeight": 52
+  },
+  "centerX": 32,
+  "soleY": 58,
+  "minimumMargin": 3,
+  "expectedOpaqueBoundingBox": [14, 13, 50, 58],
+  "boundingBoxInclusive": true,
+  "opaqueHeight": 46,
+  "scaleComparison": {
+    "referenceOpaqueHeight": 52,
+    "heightReductionPercentApprox": 11.5,
+    "overallWidth": "widerThanReferencePlayer",
+    "widthIncludes": [
+      "viewerRightHammer",
+      "viewerLeftElbow"
+    ]
+  },
+  "anchors": {
+    "headCenter": [32, 21],
+    "shoulderY": 31,
+    "waistY": 43,
+    "soleY": 58
+  },
+  "pose": {
+    "facing": "front",
+    "proportions": "threeHeadTallChibi",
+    "torso": "short",
+    "shoulders": "broad",
+    "arms": "thick",
+    "stance": "calmShopIdle",
+    "bothSolesTouchY": 58,
+    "viewerRightHand": "holdsShortWorkHammerDownBesideBody",
+    "viewerLeftHand": "restsOnWaist",
+    "forbidden": [
+      "attackAction",
+      "rotation",
+      "walkingPose"
+    ]
+  },
+  "appearance": {
+    "identity": "middleAgedDwarf",
+    "hair": "neatDarkAuburn",
+    "beard": "darkAuburnReachingUpperChest",
+    "beardAdornment": "oneMetalRing",
+    "face": [
+      "thickEyebrows",
+      "roundNose",
+      "gentleEyes",
+      "subtleSmile"
+    ],
+    "soot": "limitedToSmallMarksOnFaceAndArms",
+    "clothing": [
+      "darkRolledSleeveWorkClothes",
+      "thickWornBrownLeatherApron",
+      "beltWithMinimalTools",
+      "leatherGloves",
+      "metalToeWorkBoots"
+    ]
+  },
+  "equipment": {
+    "hammer": {
+      "side": "viewerRightBesideBody",
+      "type": "shortHeavyFunctionalCraftingTool",
+      "orientation": "heldDown",
+      "mustNotCover": [
+        "face",
+        "beard",
+        "torso"
+      ],
+      "connectedParts": [
+        "hand",
+        "handle",
+        "hammerHead"
+      ],
+      "connection": "single8ConnectedOpaqueComponent"
+    },
+    "forbiddenWeapons": [
+      "sword",
+      "combatWeapon"
+    ]
+  },
+  "semanticRegions": {
+    "beardRing": {
+      "region": [29, 34, 35, 40],
+      "regionInclusive": true,
+      "paletteName": "brassAccent",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 1,
+        "max": 5
+      },
+      "allowedUse": "singleBeardRing"
+    },
+    "hammerHighlight": {
+      "region": [43, 44, 50, 54],
+      "regionInclusive": true,
+      "paletteName": "metalLight",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 2,
+        "max": 8
+      },
+      "opaqueBoundingBoxHeight": {
+        "min": 2,
+        "max": 7
+      },
+      "mustNotOverlapXRange": [20, 42],
+      "xRangeInclusive": true
+    },
+    "eyesAndSoot": {
+      "region": [18, 18, 44, 43],
+      "regionInclusive": true,
+      "paletteName": "inkDeep",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 4,
+        "max": 12
+      },
+      "allowedUses": [
+        "eyes",
+        "eyebrows",
+        "limitedSoot"
+      ]
+    }
+  },
+  "groundContacts": {
+    "leftFoot": {
+      "xRange": [22, 30],
+      "xRangeInclusive": true,
+      "y": 58,
+      "minimumOpaquePixels": 2
+    },
+    "rightFoot": {
+      "xRange": [34, 42],
+      "xRangeInclusive": true,
+      "y": 58,
+      "minimumOpaquePixels": 2
+    }
+  },
+  "transparentRegions": {
+    "legGap": {
+      "region": [31, 54, 33, 57],
+      "regionInclusive": true,
+      "pixelCount": {
+        "min": 6
+      }
+    }
+  },
+  "palette": {
+    "outlineDarkNavy": "#263B5A",
+    "inkDeep": "#11151C",
+    "clothDark": "#3A3F45",
+    "clothMid": "#737982",
+    "metalDark": "#35445C",
+    "metalMid": "#B7B0A3",
+    "metalLight": "#F4EFE3",
+    "skinShadow": "#D99872",
+    "skinLight": "#FFD3AE",
+    "hairShadow": "#4A2A26",
+    "hairBase": "#7C3F32",
+    "hairHighlight": "#B25F43",
+    "leatherShadow": "#4A3225",
+    "leatherBase": "#765238",
+    "leatherHighlight": "#A3744C",
+    "brassAccent": "#F2C14E"
+  },
+  "requiredPaletteNames": [
+    "outlineDarkNavy",
+    "inkDeep",
+    "clothDark",
+    "clothMid",
+    "metalDark",
+    "metalMid",
+    "metalLight",
+    "skinShadow",
+    "skinLight",
+    "hairShadow",
+    "hairBase",
+    "hairHighlight",
+    "leatherShadow",
+    "leatherBase",
+    "leatherHighlight",
+    "brassAccent"
+  ],
+  "optionalPaletteNames": [],
+  "transparentPixelsCountTowardPalette": false,
+  "outline": {
+    "color": "#263B5A",
+    "externalSilhouetteThickness": 1,
+    "externalBoundaryNeighborMode": 4,
+    "allExternalBoundaryPixelsUseOutlineColor": true,
+    "forbidExternalOutline2x2Blocks": true
+  },
+  "connectivity": {
+    "opaqueNeighborMode": 8,
+    "opaqueComponentCount": 1,
+    "allowIsolatedOpaquePixels": false
+  },
+  "allowedAlphaValues": [0, 255],
+  "chromaKey": "#FF00FF",
+  "chromaKeyAllowedInFinalPng": false,
+  "design": {
+    "setting": "classicMedievalFantasyVillage",
+    "role": "responsibleFriendlySkilledBlacksmithShopkeeper",
+    "forbidden": [
+      "royalOrnamentation",
+      "combatPose",
+      "firearms",
+      "electronics",
+      "modernWorkwear",
+      "machinery",
+      "flames",
+      "smoke",
+      "forgeLighting",
+      "particles",
+      "background",
+      "groundShadow",
+      "existingGameCharacterImitation"
+    ]
+  }
+}

@@ -1,0 +1,805 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 4,
+    "identityHash": "64b0b1ee521bb5cf47cd0310f803cbde",
+    "entities": [
+      {
+        "tableName": "todo_tasks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `recurrenceSeriesId` INTEGER NOT NULL DEFAULT 0, `title` TEXT NOT NULL, `memo` TEXT NOT NULL, `startDateEpochDay` INTEGER NOT NULL, `endDateEpochDay` INTEGER, `timeMinuteOfDay` INTEGER, `difficulty` TEXT NOT NULL, `category` TEXT NOT NULL, `recurrenceRule` TEXT NOT NULL, `createdAtEpochMillis` INTEGER NOT NULL, `updatedAtEpochMillis` INTEGER NOT NULL, `deletedAtEpochMillis` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurrenceSeriesId",
+            "columnName": "recurrenceSeriesId",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "memo",
+            "columnName": "memo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startDateEpochDay",
+            "columnName": "startDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endDateEpochDay",
+            "columnName": "endDateEpochDay",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "timeMinuteOfDay",
+            "columnName": "timeMinuteOfDay",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "difficulty",
+            "columnName": "difficulty",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurrenceRule",
+            "columnName": "recurrenceRule",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAtEpochMillis",
+            "columnName": "createdAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAtEpochMillis",
+            "columnName": "updatedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deletedAtEpochMillis",
+            "columnName": "deletedAtEpochMillis",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_todo_tasks_startDateEpochDay",
+            "unique": false,
+            "columnNames": [
+              "startDateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_todo_tasks_startDateEpochDay` ON `${TABLE_NAME}` (`startDateEpochDay`)"
+          },
+          {
+            "name": "index_todo_tasks_deletedAtEpochMillis",
+            "unique": false,
+            "columnNames": [
+              "deletedAtEpochMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_todo_tasks_deletedAtEpochMillis` ON `${TABLE_NAME}` (`deletedAtEpochMillis`)"
+          }
+        ]
+      },
+      {
+        "tableName": "completion_logs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `taskId` INTEGER NOT NULL, `occurrenceDateEpochDay` INTEGER NOT NULL, `completedAtEpochMillis` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "taskId",
+            "columnName": "taskId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occurrenceDateEpochDay",
+            "columnName": "occurrenceDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completedAtEpochMillis",
+            "columnName": "completedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_completion_logs_taskId_occurrenceDateEpochDay",
+            "unique": true,
+            "columnNames": [
+              "taskId",
+              "occurrenceDateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_completion_logs_taskId_occurrenceDateEpochDay` ON `${TABLE_NAME}` (`taskId`, `occurrenceDateEpochDay`)"
+          }
+        ]
+      },
+      {
+        "tableName": "reward_ledger",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `taskId` INTEGER NOT NULL, `occurrenceDateEpochDay` INTEGER NOT NULL, `recurrenceSeriesId` INTEGER NOT NULL, `xpAward` INTEGER NOT NULL, `goldAward` INTEGER NOT NULL, `rewardLocalDateEpochDay` INTEGER NOT NULL, `onTime` INTEGER NOT NULL, `onTimeMultiplierBp` INTEGER NOT NULL, `rewardEfficiencyBp` INTEGER NOT NULL, `repeatOrdinal` INTEGER NOT NULL, `dailyOrdinal` INTEGER NOT NULL, `goldGainBonusBp` INTEGER NOT NULL, `combatEligible` INTEGER NOT NULL, `balanceVersion` INTEGER NOT NULL, `awardedAtEpochMillis` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "taskId",
+            "columnName": "taskId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occurrenceDateEpochDay",
+            "columnName": "occurrenceDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurrenceSeriesId",
+            "columnName": "recurrenceSeriesId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "xpAward",
+            "columnName": "xpAward",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "goldAward",
+            "columnName": "goldAward",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rewardLocalDateEpochDay",
+            "columnName": "rewardLocalDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "onTime",
+            "columnName": "onTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "onTimeMultiplierBp",
+            "columnName": "onTimeMultiplierBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rewardEfficiencyBp",
+            "columnName": "rewardEfficiencyBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "repeatOrdinal",
+            "columnName": "repeatOrdinal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dailyOrdinal",
+            "columnName": "dailyOrdinal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "goldGainBonusBp",
+            "columnName": "goldGainBonusBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "combatEligible",
+            "columnName": "combatEligible",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "balanceVersion",
+            "columnName": "balanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awardedAtEpochMillis",
+            "columnName": "awardedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_reward_ledger_taskId_occurrenceDateEpochDay",
+            "unique": true,
+            "columnNames": [
+              "taskId",
+              "occurrenceDateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_reward_ledger_taskId_occurrenceDateEpochDay` ON `${TABLE_NAME}` (`taskId`, `occurrenceDateEpochDay`)"
+          },
+          {
+            "name": "index_reward_ledger_recurrenceSeriesId",
+            "unique": false,
+            "columnNames": [
+              "recurrenceSeriesId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_reward_ledger_recurrenceSeriesId` ON `${TABLE_NAME}` (`recurrenceSeriesId`)"
+          },
+          {
+            "name": "index_reward_ledger_rewardLocalDateEpochDay",
+            "unique": false,
+            "columnNames": [
+              "rewardLocalDateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_reward_ledger_rewardLocalDateEpochDay` ON `${TABLE_NAME}` (`rewardLocalDateEpochDay`)"
+          },
+          {
+            "name": "index_reward_ledger_onTime_occurrenceDateEpochDay",
+            "unique": false,
+            "columnNames": [
+              "onTime",
+              "occurrenceDateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_reward_ledger_onTime_occurrenceDateEpochDay` ON `${TABLE_NAME}` (`onTime`, `occurrenceDateEpochDay`)"
+          }
+        ]
+      },
+      {
+        "tableName": "character_profile",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `totalXp` INTEGER NOT NULL, `currentGold` INTEGER NOT NULL, `strength` INTEGER NOT NULL, `vitality` INTEGER NOT NULL, `focus` INTEGER NOT NULL, `willpower` INTEGER NOT NULL, `unspentStatPoints` INTEGER NOT NULL, `hasUsedFreeStatReset` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalXp",
+            "columnName": "totalXp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentGold",
+            "columnName": "currentGold",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "strength",
+            "columnName": "strength",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vitality",
+            "columnName": "vitality",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "focus",
+            "columnName": "focus",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "willpower",
+            "columnName": "willpower",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unspentStatPoints",
+            "columnName": "unspentStatPoints",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hasUsedFreeStatReset",
+            "columnName": "hasUsedFreeStatReset",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "character_current_state",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`characterId` INTEGER NOT NULL, `currentHp` INTEGER NOT NULL, `balanceVersion` INTEGER NOT NULL, `updatedAtEpochMillis` INTEGER NOT NULL, PRIMARY KEY(`characterId`))",
+        "fields": [
+          {
+            "fieldPath": "characterId",
+            "columnName": "characterId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentHp",
+            "columnName": "currentHp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "balanceVersion",
+            "columnName": "balanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAtEpochMillis",
+            "columnName": "updatedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "characterId"
+          ]
+        }
+      },
+      {
+        "tableName": "monster_instances",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `definitionId` TEXT NOT NULL, `grade` TEXT NOT NULL, `stageNumber` INTEGER NOT NULL, `encounterNumber` INTEGER NOT NULL, `level` INTEGER NOT NULL, `currentHp` INTEGER NOT NULL, `balanceVersion` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "definitionId",
+            "columnName": "definitionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "grade",
+            "columnName": "grade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stageNumber",
+            "columnName": "stageNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "encounterNumber",
+            "columnName": "encounterNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentHp",
+            "columnName": "currentHp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "balanceVersion",
+            "columnName": "balanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_monster_instances_stageNumber_encounterNumber",
+            "unique": true,
+            "columnNames": [
+              "stageNumber",
+              "encounterNumber"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_monster_instances_stageNumber_encounterNumber` ON `${TABLE_NAME}` (`stageNumber`, `encounterNumber`)"
+          }
+        ]
+      },
+      {
+        "tableName": "combat_progress",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `stageNumber` INTEGER NOT NULL, `stageLevel` INTEGER NOT NULL, `activeMonsterInstanceId` INTEGER NOT NULL, `lastReconciledAtEpochMillis` INTEGER NOT NULL, `balanceVersion` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stageNumber",
+            "columnName": "stageNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stageLevel",
+            "columnName": "stageLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activeMonsterInstanceId",
+            "columnName": "activeMonsterInstanceId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastReconciledAtEpochMillis",
+            "columnName": "lastReconciledAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "balanceVersion",
+            "columnName": "balanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "player_attack_events",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`taskId` INTEGER NOT NULL, `occurrenceDateEpochDay` INTEGER NOT NULL, `recurrenceSeriesId` INTEGER NOT NULL, `status` TEXT NOT NULL, `sourcePlayerLevel` INTEGER NOT NULL, `sourceAttack` INTEGER NOT NULL, `sourceCriticalChanceBp` INTEGER NOT NULL, `sourceCriticalDamageBp` INTEGER NOT NULL, `sourceMomentumBp` INTEGER NOT NULL, `characterBalanceVersion` INTEGER NOT NULL, `monsterBalanceVersion` INTEGER NOT NULL, `createdAtEpochMillis` INTEGER NOT NULL, `targetMonsterInstanceId` INTEGER, `seed` INTEGER, `roll` INTEGER, `wasCritical` INTEGER, `rawDamage` INTEGER, `targetDefense` INTEGER, `finalDamage` INTEGER, `targetHpBefore` INTEGER, `targetHpAfter` INTEGER, `processedAtEpochMillis` INTEGER, PRIMARY KEY(`taskId`, `occurrenceDateEpochDay`))",
+        "fields": [
+          {
+            "fieldPath": "taskId",
+            "columnName": "taskId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occurrenceDateEpochDay",
+            "columnName": "occurrenceDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurrenceSeriesId",
+            "columnName": "recurrenceSeriesId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourcePlayerLevel",
+            "columnName": "sourcePlayerLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceAttack",
+            "columnName": "sourceAttack",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceCriticalChanceBp",
+            "columnName": "sourceCriticalChanceBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceCriticalDamageBp",
+            "columnName": "sourceCriticalDamageBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceMomentumBp",
+            "columnName": "sourceMomentumBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "characterBalanceVersion",
+            "columnName": "characterBalanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monsterBalanceVersion",
+            "columnName": "monsterBalanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAtEpochMillis",
+            "columnName": "createdAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetMonsterInstanceId",
+            "columnName": "targetMonsterInstanceId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "seed",
+            "columnName": "seed",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "roll",
+            "columnName": "roll",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "wasCritical",
+            "columnName": "wasCritical",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "rawDamage",
+            "columnName": "rawDamage",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "targetDefense",
+            "columnName": "targetDefense",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "finalDamage",
+            "columnName": "finalDamage",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "targetHpBefore",
+            "columnName": "targetHpBefore",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "targetHpAfter",
+            "columnName": "targetHpAfter",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "processedAtEpochMillis",
+            "columnName": "processedAtEpochMillis",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "taskId",
+            "occurrenceDateEpochDay"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_player_attack_events_status_createdAtEpochMillis",
+            "unique": false,
+            "columnNames": [
+              "status",
+              "createdAtEpochMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_player_attack_events_status_createdAtEpochMillis` ON `${TABLE_NAME}` (`status`, `createdAtEpochMillis`)"
+          }
+        ]
+      },
+      {
+        "tableName": "monster_attack_events",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`taskId` INTEGER NOT NULL, `occurrenceDateEpochDay` INTEGER NOT NULL, `recurrenceSeriesId` INTEGER NOT NULL, `status` TEXT NOT NULL, `skipReason` TEXT, `sourceMonsterInstanceId` INTEGER NOT NULL, `sourceMonsterLevel` INTEGER NOT NULL, `sourceRawDamage` INTEGER NOT NULL, `playerDefense` INTEGER NOT NULL, `playerMaxHp` INTEGER NOT NULL, `finalDamage` INTEGER NOT NULL, `playerHpBefore` INTEGER NOT NULL, `playerHpAfter` INTEGER NOT NULL, `wasLethal` INTEGER NOT NULL, `revivedHp` INTEGER, `characterBalanceVersion` INTEGER NOT NULL, `monsterBalanceVersion` INTEGER NOT NULL, `processedAtEpochMillis` INTEGER NOT NULL, PRIMARY KEY(`taskId`, `occurrenceDateEpochDay`))",
+        "fields": [
+          {
+            "fieldPath": "taskId",
+            "columnName": "taskId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occurrenceDateEpochDay",
+            "columnName": "occurrenceDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurrenceSeriesId",
+            "columnName": "recurrenceSeriesId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "skipReason",
+            "columnName": "skipReason",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceMonsterInstanceId",
+            "columnName": "sourceMonsterInstanceId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceMonsterLevel",
+            "columnName": "sourceMonsterLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceRawDamage",
+            "columnName": "sourceRawDamage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playerDefense",
+            "columnName": "playerDefense",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playerMaxHp",
+            "columnName": "playerMaxHp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "finalDamage",
+            "columnName": "finalDamage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playerHpBefore",
+            "columnName": "playerHpBefore",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playerHpAfter",
+            "columnName": "playerHpAfter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wasLethal",
+            "columnName": "wasLethal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "revivedHp",
+            "columnName": "revivedHp",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "characterBalanceVersion",
+            "columnName": "characterBalanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monsterBalanceVersion",
+            "columnName": "monsterBalanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "processedAtEpochMillis",
+            "columnName": "processedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "taskId",
+            "occurrenceDateEpochDay"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '64b0b1ee521bb5cf47cd0310f803cbde')"
+    ]
+  }
+}

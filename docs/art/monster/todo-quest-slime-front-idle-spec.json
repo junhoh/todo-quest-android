@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "asset": {
+    "fileName": "todo-quest-slime-front-idle.png",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  "reference": {
+    "path": "../character/todo-quest-character-base-body.png",
+    "purpose": [
+      "style",
+      "logicalScale",
+      "outline",
+      "shadingSteps"
+    ],
+    "editable": false,
+    "opaqueBoundingBox": [20, 7, 44, 58],
+    "opaqueHeight": 52
+  },
+  "centerX": 32,
+  "soleY": 58,
+  "minimumMargin": 3,
+  "expectedOpaqueBoundingBox": [17, 35, 47, 58],
+  "boundingBoxInclusive": true,
+  "opaqueHeight": 24,
+  "scaleComparison": {
+    "referenceOpaqueHeight": 52,
+    "opaqueHeightPercentOfReferenceApprox": 46.2,
+    "widthIncludes": [
+      "entireTeardropBody"
+    ],
+    "centeredOnCenterAxis": true
+  },
+  "anchors": {
+    "apex": [32, 35],
+    "eyeLineY": 45,
+    "coreCenter": [32, 52],
+    "soleY": 58
+  },
+  "pose": {
+    "facing": "front",
+    "proportions": "lowRoundedTeardropJellyWiderAtBottomAndSlightlyPointedAtTop",
+    "centerAxisFixed": true,
+    "stance": "lowForwardCrouchedNeutralCombatIdle",
+    "weightDistribution": "stableLeftRight",
+    "wideBodyBaseTouchesY": 58,
+    "forbidden": [
+      "rotation",
+      "attackAction",
+      "jumpingPose",
+      "splittingPose"
+    ]
+  },
+  "groundContacts": {
+    "leftBodyBase": {
+      "xRange": [20, 30],
+      "xRangeInclusive": true,
+      "y": 58,
+      "minimumOpaquePixels": 4
+    },
+    "rightBodyBase": {
+      "xRange": [34, 44],
+      "xRangeInclusive": true,
+      "y": 58,
+      "minimumOpaquePixels": 4
+    }
+  },
+  "semanticRegions": {
+    "redEyes": {
+      "region": [24, 43, 40, 48],
+      "regionInclusive": true,
+      "paletteName": "dangerRed",
+      "onlyOn": "twoShortSharpEyesAngledInward",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 2,
+        "max": 4
+      }
+    },
+    "internalCore": {
+      "region": [28, 49, 36, 55],
+      "regionInclusive": true,
+      "paletteNames": [
+        "coreDeep",
+        "coreMid",
+        "coreOrange"
+      ],
+      "onlyOn": "smallDarkInternalCore",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 5,
+        "max": 16
+      }
+    },
+    "surfaceHighlights": {
+      "region": [20, 38, 44, 45],
+      "regionInclusive": true,
+      "paletteName": "surfaceHighlight",
+      "onlyOn": "oneOrTwoConnectedOpaqueHighlightClusters",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 3,
+        "max": 8
+      }
+    }
+  },
+  "palette": {
+    "outlineDarkNavy": "#263B5A",
+    "inkDeep": "#11151C",
+    "waterDeep": "#124A5A",
+    "waterShadow": "#176778",
+    "waterBase": "#238FA0",
+    "waterMid": "#3DAEBC",
+    "waterLight": "#72CDD2",
+    "surfaceHighlight": "#C3F0E9",
+    "coreDeep": "#173041",
+    "coreMid": "#2B4B5D",
+    "dangerRed": "#E05252",
+    "coreOrange": "#E58A3C"
+  },
+  "requiredPaletteNames": [
+    "outlineDarkNavy",
+    "inkDeep",
+    "waterDeep",
+    "waterShadow",
+    "waterBase",
+    "waterMid",
+    "waterLight",
+    "surfaceHighlight",
+    "coreDeep",
+    "coreMid",
+    "dangerRed",
+    "coreOrange"
+  ],
+  "transparentPixelsCountTowardPalette": false,
+  "outline": {
+    "color": "#263B5A",
+    "externalSilhouetteThickness": 1,
+    "externalBoundaryNeighborMode": 4,
+    "allExternalBoundaryPixelsUseOutlineColor": true,
+    "forbidExternalOutline2x2Blocks": true
+  },
+  "connectivity": {
+    "opaqueNeighborMode": 8,
+    "opaqueComponentCount": 1,
+    "allowIsolatedOpaquePixels": false
+  },
+  "allowedAlphaValues": [0, 255],
+  "chromaKey": "#FF00FF",
+  "chromaKeyAllowedInFinalPng": false,
+  "design": {
+    "attributes": [
+      "water",
+      "slime"
+    ],
+    "role": "lowestTierCommonEnemyInStartingArea",
+    "demeanor": "simpleInstinctiveButHostile",
+    "attack": "veryLowThreatMeleeBodyBounceImpact",
+    "silhouette": "cuteButClearlyCombatReadyClassicFantasyGelatinousCreature",
+    "forbidden": [
+      "arms",
+      "legs",
+      "equipment",
+      "weapons",
+      "teeth",
+      "blood",
+      "graphicViolence",
+      "translucentBody",
+      "specificExistingSlimeImitation"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+node_modules/
+.venv/
+__pycache__/
+.pytest_cache/
+.next/
+out/
+.tmp/
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# Gradle / Android build outputs
+.gradle/
+.kotlin/
+build/
+local.properties
+.idea/
+
+# Local device data, credentials, and signing material
+*.ab
+*.backup
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+.env
+.env.*
+google-services.json
+keystore.properties
+*.jks
+*.keystore
+*.key
+*.p12
+*.pem
+*.pfx
+
+# phase execution outputs
+phases/**/phase*-output.json
+phases/**/step*-output.json

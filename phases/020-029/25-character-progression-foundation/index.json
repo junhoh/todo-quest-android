@@ -1,0 +1,80 @@
+{
+  "project": "Todo Quest",
+  "phase": "25-character-progression-foundation",
+  "steps": [
+    {
+      "step": 0,
+      "name": "approve-character-growth-scope",
+      "status": "completed",
+      "started_at": "2026-07-21T04:20:47+0900",
+      "summary": "Post-MVP Character Growth v1의 성장·비전투 보상 범위와 저장 원칙을 승인하고 전투·장비 후속 경계를 명시했다.",
+      "completed_at": "2026-07-21T04:21:56+0900"
+    },
+    {
+      "step": 1,
+      "name": "implement-character-stat-engine",
+      "status": "completed",
+      "started_at": "2026-07-21T04:21:56+0900",
+      "summary": "version 1 밸런스 설정 기반의 캐릭터 모델, 파생 스탯·전투 계산기와 장비 modifier 검증 계약을 순수 Kotlin으로 구현했다.",
+      "completed_at": "2026-07-21T04:33:52+0900"
+    },
+    {
+      "step": 2,
+      "name": "implement-progression-reward-policies",
+      "status": "completed",
+      "started_at": "2026-07-21T04:34:26+0900",
+      "summary": "레벨·스탯 초기화와 정시·효율·연속일 기반 비전투 보상 정책을 순수 Kotlin과 단위 테스트로 구현했다.",
+      "completed_at": "2026-07-21T04:40:36+0900"
+    },
+    {
+      "step": 3,
+      "name": "migrate-character-storage",
+      "status": "completed",
+      "started_at": "2026-07-21T04:41:27+0900",
+      "summary": "Room schema v3에 캐릭터 원천 상태·current HP·확정 보상 ledger와 recurrence series를 추가하고 v1/v2 데이터 보존 마이그레이션 및 순번·정시 조회 DAO를 구현했다.",
+      "completed_at": "2026-07-21T04:49:33+0900"
+    },
+    {
+      "step": 4,
+      "name": "integrate-character-transactions",
+      "status": "completed",
+      "started_at": "2026-07-21T04:50:26+0900",
+      "summary": "CharacterRepository를 분리하고 완료 ledger·성장·HP 및 스탯 배분·초기화를 멱등 Room transaction으로 통합했다.",
+      "completed_at": "2026-07-21T04:58:38+0900"
+    },
+    {
+      "step": 5,
+      "name": "build-character-screen",
+      "status": "completed",
+      "started_at": "2026-07-21T04:59:47+0900",
+      "summary": "CharacterUiState·ViewModel과 스크롤 가능한 캐릭터 화면을 구현하고, exact-copy 원본 시트의 equipped 셀을 정수 배율·nearest-neighbor로 렌더링했다.",
+      "completed_at": "2026-07-21T05:11:49+0900"
+    },
+    {
+      "step": 6,
+      "name": "update-calendar-rewards",
+      "status": "completed",
+      "started_at": "2026-07-21T05:12:32+0900",
+      "summary": "캘린더가 character summary를 관찰하고 조건부 기본 보상과 실제 지급량 일회성 snackbar를 중복 없이 표시하도록 갱신했다.",
+      "completed_at": "2026-07-21T05:22:50+0900"
+    },
+    {
+      "step": 7,
+      "name": "wire-app-navigation",
+      "status": "completed",
+      "started_at": "2026-07-21T05:22:50+0900",
+      "summary": "Navigation Compose NavHost와 하단 탭으로 Calendar·Character를 연결하고 단일 DB·clock composition root 및 destination별 ViewModel factory를 구성했다.",
+      "completed_at": "2026-07-21T05:38:19+0900"
+    },
+    {
+      "step": 8,
+      "name": "synchronize-docs-and-validate",
+      "status": "completed",
+      "started_at": "2026-07-21T05:39:05+0900",
+      "summary": "실제 구현 상태를 핵심·게임 설계 문서에 동기화하고 Gradle 전체 gate, harness 69개, 두 캐릭터 시트와 Pixel_9 AVD connected test 17개를 통과했으며 자동 전투·몬스터 피해·WorkManager reconciliation·장비 영속/획득은 후속 범위로 남겼다.",
+      "completed_at": "2026-07-21T05:50:04+0900"
+    }
+  ],
+  "created_at": "2026-07-21T04:20:47+0900",
+  "completed_at": "2026-07-21T05:51:02+0900"
+}

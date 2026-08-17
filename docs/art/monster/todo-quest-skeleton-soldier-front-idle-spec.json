@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "asset": {
+    "fileName": "todo-quest-skeleton-soldier-front-idle.png",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  "reference": {
+    "path": "../character/todo-quest-character-base-body.png",
+    "purpose": [
+      "style",
+      "logicalScale",
+      "shadingSteps"
+    ],
+    "editable": false,
+    "opaqueBoundingBox": [20, 7, 44, 58],
+    "opaqueHeight": 52
+  },
+  "centerX": 32,
+  "soleY": 58,
+  "minimumMargin": 3,
+  "expectedOpaqueBoundingBox": [16, 13, 48, 58],
+  "boundingBoxInclusive": true,
+  "opaqueHeight": 46,
+  "scaleComparison": {
+    "referenceOpaqueHeight": 52,
+    "heightReductionPercentApprox": 11.5,
+    "widthIncludes": [
+      "viewerLeftDamagedCloth",
+      "viewerRightSword"
+    ],
+    "centeredOnCenterAxis": true
+  },
+  "anchors": {
+    "headCenter": [32, 21],
+    "shoulderY": 31,
+    "waistY": 43,
+    "soleY": 58
+  },
+  "pose": {
+    "facing": "front",
+    "proportions": "threeHeadTallChibiWithLargeSkull",
+    "centerAxisFixed": true,
+    "stance": "neutralCombatIdle",
+    "bothSolesTouchY": 58,
+    "readiness": "tenseSwordReady",
+    "forbidden": [
+      "rotation",
+      "attackAction",
+      "asymmetricWalkingPose"
+    ]
+  },
+  "groundContacts": {
+    "leftFoot": {
+      "xRange": [24, 31],
+      "xRangeInclusive": true,
+      "y": 58,
+      "minimumOpaquePixels": 2
+    },
+    "rightFoot": {
+      "xRange": [33, 40],
+      "xRangeInclusive": true,
+      "y": 58,
+      "minimumOpaquePixels": 2
+    }
+  },
+  "equipment": {
+    "helmet": "rustedDentedIronHelmet",
+    "greaves": "wornLeatherOrClothGreaves",
+    "damagedCloth": "partiallyDamagedShortCapeOrWaistCloth",
+    "sword": {
+      "side": "viewerRightBesideBody",
+      "type": "shortSimpleRustedOneHandedSword",
+      "mustNotCoverCenterBody": true,
+      "connectedParts": [
+        "hand",
+        "handle",
+        "blade"
+      ],
+      "connection": "single8ConnectedOpaqueComponent"
+    }
+  },
+  "semanticRegions": {
+    "eyeGlow": {
+      "region": [26, 19, 38, 26],
+      "regionInclusive": true,
+      "paletteName": "dangerRed",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 2,
+        "max": 4
+      }
+    },
+    "swordMetal": {
+      "region": [41, 34, 48, 53],
+      "regionInclusive": true,
+      "paletteNames": [
+        "bladeDark",
+        "bladeLight"
+      ],
+      "onlyWithinRegion": true,
+      "opaqueBoundingBoxHeight": {
+        "min": 14,
+        "max": 20
+      },
+      "mustNotOverlapXRange": [24, 40],
+      "xRangeInclusive": true
+    }
+  },
+  "transparentRegions": {
+    "ribCageGaps": {
+      "region": [28, 35, 36, 43],
+      "regionInclusive": true,
+      "pixelCount": {
+        "min": 4
+      }
+    },
+    "legGap": {
+      "region": [30, 49, 34, 57],
+      "regionInclusive": true,
+      "pixelCount": {
+        "min": 4
+      }
+    },
+    "swordBodyGap": {
+      "region": [39, 38, 44, 50],
+      "regionInclusive": true,
+      "pixelCount": {
+        "min": 2
+      }
+    }
+  },
+  "palette": {
+    "outlineDarkNavy": "#263B5A",
+    "inkDeep": "#11151C",
+    "boneShadow": "#737982",
+    "boneBase": "#B7B0A3",
+    "boneHighlight": "#F4EFE3",
+    "ironShadow": "#35445C",
+    "ironBase": "#56677A",
+    "rustAccent": "#A3744C",
+    "leatherShadow": "#4A3225",
+    "leatherBase": "#765238",
+    "clothDark": "#3A3F45",
+    "clothMid": "#5B6068",
+    "bladeDark": "#4B5059",
+    "bladeLight": "#9A9A94",
+    "dangerRed": "#E05252"
+  },
+  "requiredPaletteNames": [
+    "outlineDarkNavy",
+    "inkDeep",
+    "boneShadow",
+    "boneBase",
+    "boneHighlight",
+    "ironShadow",
+    "ironBase",
+    "rustAccent",
+    "leatherShadow",
+    "leatherBase",
+    "clothDark",
+    "clothMid",
+    "bladeDark",
+    "bladeLight",
+    "dangerRed"
+  ],
+  "transparentPixelsCountTowardPalette": false,
+  "outline": {
+    "color": "#263B5A",
+    "externalSilhouetteThickness": 1,
+    "externalBoundaryNeighborMode": 4,
+    "allExternalBoundaryPixelsUseOutlineColor": true,
+    "forbidExternalOutline2x2Blocks": true
+  },
+  "connectivity": {
+    "opaqueNeighborMode": 8,
+    "opaqueComponentCount": 1,
+    "allowIsolatedOpaquePixels": false
+  },
+  "allowedAlphaValues": [0, 255],
+  "chromaKey": "#FF00FF",
+  "chromaKeyAllowedInFinalPng": false,
+  "design": {
+    "attributes": [
+      "undead",
+      "dark"
+    ],
+    "role": "relentlessEarlyGameCommonEnemy",
+    "demeanor": "emotionlessCommandFollower",
+    "silhouette": "cuteButClearlyHostile",
+    "equipmentTheme": "classicMedievalFantasyNaturalMaterials",
+    "forbidden": [
+      "machinery",
+      "firearms",
+      "electronics",
+      "modernClothing",
+      "graphicViolence",
+      "specificExistingCharacterImitation"
+    ]
+  }
+}

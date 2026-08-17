@@ -1,0 +1,37 @@
+{
+  "project": "Todo Quest",
+  "phase": "4-schedule-entry-completion",
+  "steps": [
+    {
+      "step": 0,
+      "name": "schedule-entry-viewmodel-state",
+      "status": "completed",
+      "started_at": "2026-07-15T16:54:16+0900",
+      "completed_at": "2026-07-15T17:55:14+09:00",
+      "summary": "NewTaskFormUiState, CalendarViewModel 폼 업데이트 이벤트, HH:mm 검증, trim 처리된 CreateTaskInput 매핑, ViewModel 단위 테스트를 추가했다."
+    },
+    {
+      "step": 1,
+      "name": "schedule-entry-compose-form",
+      "status": "completed",
+      "completed_at": "2026-07-15T17:55:14+09:00",
+      "summary": "NewTaskDialog에 메모/시간/난이도/반복/카테고리 입력을 추가하고, task row에 메모와 메타데이터를 표시하도록 확장했으며 instrumentation 테스트로 검증했다."
+    },
+    {
+      "step": 2,
+      "name": "calendar-day-multi-task-indicators",
+      "status": "completed",
+      "completed_at": "2026-07-15T17:55:14+09:00",
+      "summary": "일자 marker 점 표시를 일정/완료 개수 텍스트와 날짜 셀 content description으로 교체하고 CalendarDayIndicatorTest로 검증했다."
+    },
+    {
+      "step": 3,
+      "name": "schedule-entry-verification",
+      "status": "completed",
+      "completed_at": "2026-07-15T17:55:14+09:00",
+      "summary": "gradlew test, lint, assembleDebug, connectedDebugAndroidTest, git diff --check, harness pytest를 통과했고 calendar UI에 DAO/scheduler 직접 import가 없음을 확인했다."
+    }
+  ],
+  "created_at": "2026-07-15T16:54:16+0900",
+  "completed_at": "2026-07-15T17:55:14+09:00"
+}

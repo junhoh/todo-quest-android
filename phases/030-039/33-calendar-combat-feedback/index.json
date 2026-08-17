@@ -1,0 +1,79 @@
+{
+  "project": "Todo Quest",
+  "phase": "33-calendar-combat-feedback",
+  "steps": [
+    {
+      "step": 0,
+      "name": "document-calendar-combat-contract",
+      "status": "completed",
+      "started_at": "2026-07-22T05:39:39+0900",
+      "summary": "Calendar Combat Feedback v1의 고정 Battle Map·독립 Calendar scroll, occurrence 3상태·수동 실패/취소 멱등 event와 replay 없는 전투 transition 계약을 문서에 승인했다.",
+      "completed_at": "2026-07-22T05:48:09+09:00"
+    },
+    {
+      "step": 1,
+      "name": "model-occurrence-outcomes",
+      "status": "completed",
+      "started_at": "2026-07-22T05:49:01+0900",
+      "summary": "TaskOccurrence 3상태·conflict와 실패/취소 UseCase 및 replay 없는 전투 transition Repository 경계를 순수 Kotlin으로 추가했다.",
+      "completed_at": "2026-07-22T05:58:04+09:00"
+    },
+    {
+      "step": 2,
+      "name": "persist-failure-state-room-v6",
+      "status": "completed",
+      "started_at": "2026-07-22T05:59:02+0900",
+      "summary": "Room v6 failure_logs와 monster attack trigger migration을 추가하고 TaskRepository가 완료·실패 상태를 상호 배타적 transaction으로 영속·복원하도록 구현했다.",
+      "completed_at": "2026-07-22T06:10:19+09:00"
+    },
+    {
+      "step": 3,
+      "name": "emit-idempotent-combat-transitions",
+      "status": "completed",
+      "started_at": "2026-07-22T06:10:52+0900",
+      "summary": "전투 변경 command를 Mutex로 직렬화하고 수동·복구·deadline monster attack과 player attack을 멱등 transaction 후 replay 없는 CombatTransition으로 발행했다.",
+      "completed_at": "2026-07-22T06:21:35+09:00"
+    },
+    {
+      "step": 4,
+      "name": "serialize-battle-presentation",
+      "status": "completed",
+      "started_at": "2026-07-22T06:22:56+0900",
+      "summary": "buffered actor queue가 전투 transition을 event key별 한 번만 직렬 소비하고 phase별 scene override와 입력 잠금 presentation state를 StateFlow로 제공하도록 구현했다.",
+      "completed_at": "2026-07-22T06:31:42+09:00"
+    },
+    {
+      "step": 5,
+      "name": "render-battle-hud-and-effects",
+      "status": "completed",
+      "started_at": "2026-07-22T06:32:30+0900",
+      "summary": "단일 행 축약 HUD와 경계 보정·220ms HP bar, phase별 공격·피격·사망·등장 effect 및 한국어 live region을 구현하고 connected 검증을 완료했다.",
+      "completed_at": "2026-07-22T06:53:43+09:00"
+    },
+    {
+      "step": 6,
+      "name": "integrate-calendar-failure-layout",
+      "status": "completed",
+      "started_at": "2026-07-22T06:54:29+0900",
+      "summary": "Calendar에 고정 Battle Map·독립 scroll layout을 적용하고 occurrence 실패·취소 action, 전투 입력 잠금과 완료·실패 분리 요약을 연동했다.",
+      "completed_at": "2026-07-22T07:49:20+09:00"
+    },
+    {
+      "step": 7,
+      "name": "wire-application-boundaries",
+      "status": "completed",
+      "started_at": "2026-07-22T07:49:49+0900",
+      "summary": "application container에 실패·취소 UseCase와 Room v6 migration·Worker 복구 경계를 연결하고 safeDrawing·고정 map·Calendar scroll·snackbar·bottom navigation 비중첩 회귀 검증을 완료했다.",
+      "completed_at": "2026-07-22T08:01:33+09:00"
+    },
+    {
+      "step": 8,
+      "name": "synchronize-and-validate",
+      "status": "completed",
+      "started_at": "2026-07-22T08:02:05+0900",
+      "summary": "Room v6·occurrence 실패/취소·replay 없는 전투 문서를 동기화하고 sprite·치명 부활 transition 회귀 수정 후 JVM 각 241개·connected 45개·harness 69개를 모두 통과했다.",
+      "completed_at": "2026-07-22T08:51:11+09:00"
+    }
+  ],
+  "created_at": "2026-07-22T05:39:39+0900"
+}

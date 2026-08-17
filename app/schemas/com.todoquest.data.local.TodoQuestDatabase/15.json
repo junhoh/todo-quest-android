@@ -1,0 +1,1565 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 15,
+    "identityHash": "2e12f86ca2d7dbb7af6bbc684b4820d7",
+    "entities": [
+      {
+        "tableName": "todo_tasks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `recurrenceSeriesId` INTEGER NOT NULL DEFAULT 0, `title` TEXT NOT NULL, `memo` TEXT NOT NULL, `startDateEpochDay` INTEGER NOT NULL, `endDateEpochDay` INTEGER, `timeMinuteOfDay` INTEGER, `difficulty` TEXT NOT NULL, `category` TEXT NOT NULL, `recurrenceRule` TEXT NOT NULL, `createdAtEpochMillis` INTEGER NOT NULL, `updatedAtEpochMillis` INTEGER NOT NULL, `deletedAtEpochMillis` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurrenceSeriesId",
+            "columnName": "recurrenceSeriesId",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "memo",
+            "columnName": "memo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startDateEpochDay",
+            "columnName": "startDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endDateEpochDay",
+            "columnName": "endDateEpochDay",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "timeMinuteOfDay",
+            "columnName": "timeMinuteOfDay",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "difficulty",
+            "columnName": "difficulty",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurrenceRule",
+            "columnName": "recurrenceRule",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAtEpochMillis",
+            "columnName": "createdAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAtEpochMillis",
+            "columnName": "updatedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deletedAtEpochMillis",
+            "columnName": "deletedAtEpochMillis",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_todo_tasks_startDateEpochDay",
+            "unique": false,
+            "columnNames": [
+              "startDateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_todo_tasks_startDateEpochDay` ON `${TABLE_NAME}` (`startDateEpochDay`)"
+          },
+          {
+            "name": "index_todo_tasks_deletedAtEpochMillis",
+            "unique": false,
+            "columnNames": [
+              "deletedAtEpochMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_todo_tasks_deletedAtEpochMillis` ON `${TABLE_NAME}` (`deletedAtEpochMillis`)"
+          }
+        ]
+      },
+      {
+        "tableName": "completion_logs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `taskId` INTEGER NOT NULL, `occurrenceDateEpochDay` INTEGER NOT NULL, `completedAtEpochMillis` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "taskId",
+            "columnName": "taskId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occurrenceDateEpochDay",
+            "columnName": "occurrenceDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completedAtEpochMillis",
+            "columnName": "completedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_completion_logs_taskId_occurrenceDateEpochDay",
+            "unique": true,
+            "columnNames": [
+              "taskId",
+              "occurrenceDateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_completion_logs_taskId_occurrenceDateEpochDay` ON `${TABLE_NAME}` (`taskId`, `occurrenceDateEpochDay`)"
+          }
+        ]
+      },
+      {
+        "tableName": "failure_logs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `taskId` INTEGER NOT NULL, `occurrenceDateEpochDay` INTEGER NOT NULL, `recurrenceSeriesId` INTEGER NOT NULL, `failedAtEpochMillis` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "taskId",
+            "columnName": "taskId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occurrenceDateEpochDay",
+            "columnName": "occurrenceDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurrenceSeriesId",
+            "columnName": "recurrenceSeriesId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "failedAtEpochMillis",
+            "columnName": "failedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_failure_logs_taskId_occurrenceDateEpochDay",
+            "unique": true,
+            "columnNames": [
+              "taskId",
+              "occurrenceDateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_failure_logs_taskId_occurrenceDateEpochDay` ON `${TABLE_NAME}` (`taskId`, `occurrenceDateEpochDay`)"
+          }
+        ]
+      },
+      {
+        "tableName": "reward_ledger",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `taskId` INTEGER NOT NULL, `occurrenceDateEpochDay` INTEGER NOT NULL, `recurrenceSeriesId` INTEGER NOT NULL, `xpAward` INTEGER NOT NULL, `goldAward` INTEGER NOT NULL, `rewardLocalDateEpochDay` INTEGER NOT NULL, `onTime` INTEGER NOT NULL, `onTimeMultiplierBp` INTEGER NOT NULL, `rewardEfficiencyBp` INTEGER NOT NULL, `repeatOrdinal` INTEGER NOT NULL, `dailyOrdinal` INTEGER NOT NULL, `goldGainBonusBp` INTEGER NOT NULL, `combatEligible` INTEGER NOT NULL, `balanceVersion` INTEGER NOT NULL, `awardedAtEpochMillis` INTEGER NOT NULL, `rewardMode` TEXT NOT NULL DEFAULT 'TODO_COMPLETION')",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "taskId",
+            "columnName": "taskId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occurrenceDateEpochDay",
+            "columnName": "occurrenceDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurrenceSeriesId",
+            "columnName": "recurrenceSeriesId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "xpAward",
+            "columnName": "xpAward",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "goldAward",
+            "columnName": "goldAward",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rewardLocalDateEpochDay",
+            "columnName": "rewardLocalDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "onTime",
+            "columnName": "onTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "onTimeMultiplierBp",
+            "columnName": "onTimeMultiplierBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rewardEfficiencyBp",
+            "columnName": "rewardEfficiencyBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "repeatOrdinal",
+            "columnName": "repeatOrdinal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dailyOrdinal",
+            "columnName": "dailyOrdinal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "goldGainBonusBp",
+            "columnName": "goldGainBonusBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "combatEligible",
+            "columnName": "combatEligible",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "balanceVersion",
+            "columnName": "balanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "awardedAtEpochMillis",
+            "columnName": "awardedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rewardMode",
+            "columnName": "rewardMode",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "'TODO_COMPLETION'"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_reward_ledger_taskId_occurrenceDateEpochDay",
+            "unique": true,
+            "columnNames": [
+              "taskId",
+              "occurrenceDateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_reward_ledger_taskId_occurrenceDateEpochDay` ON `${TABLE_NAME}` (`taskId`, `occurrenceDateEpochDay`)"
+          },
+          {
+            "name": "index_reward_ledger_recurrenceSeriesId",
+            "unique": false,
+            "columnNames": [
+              "recurrenceSeriesId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_reward_ledger_recurrenceSeriesId` ON `${TABLE_NAME}` (`recurrenceSeriesId`)"
+          },
+          {
+            "name": "index_reward_ledger_rewardLocalDateEpochDay",
+            "unique": false,
+            "columnNames": [
+              "rewardLocalDateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_reward_ledger_rewardLocalDateEpochDay` ON `${TABLE_NAME}` (`rewardLocalDateEpochDay`)"
+          },
+          {
+            "name": "index_reward_ledger_onTime_occurrenceDateEpochDay",
+            "unique": false,
+            "columnNames": [
+              "onTime",
+              "occurrenceDateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_reward_ledger_onTime_occurrenceDateEpochDay` ON `${TABLE_NAME}` (`onTime`, `occurrenceDateEpochDay`)"
+          }
+        ]
+      },
+      {
+        "tableName": "character_profile",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `totalXp` INTEGER NOT NULL, `currentGold` INTEGER NOT NULL, `strength` INTEGER NOT NULL, `vitality` INTEGER NOT NULL, `focus` INTEGER NOT NULL, `willpower` INTEGER NOT NULL, `unspentStatPoints` INTEGER NOT NULL, `hasUsedFreeStatReset` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalXp",
+            "columnName": "totalXp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentGold",
+            "columnName": "currentGold",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "strength",
+            "columnName": "strength",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vitality",
+            "columnName": "vitality",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "focus",
+            "columnName": "focus",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "willpower",
+            "columnName": "willpower",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unspentStatPoints",
+            "columnName": "unspentStatPoints",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hasUsedFreeStatReset",
+            "columnName": "hasUsedFreeStatReset",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "character_current_state",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`characterId` INTEGER NOT NULL, `currentHp` INTEGER NOT NULL, `balanceVersion` INTEGER NOT NULL, `updatedAtEpochMillis` INTEGER NOT NULL, PRIMARY KEY(`characterId`))",
+        "fields": [
+          {
+            "fieldPath": "characterId",
+            "columnName": "characterId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentHp",
+            "columnName": "currentHp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "balanceVersion",
+            "columnName": "balanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAtEpochMillis",
+            "columnName": "updatedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "characterId"
+          ]
+        }
+      },
+      {
+        "tableName": "character_appearance",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`characterId` INTEGER NOT NULL, `hairId` TEXT NOT NULL, PRIMARY KEY(`characterId`))",
+        "fields": [
+          {
+            "fieldPath": "characterId",
+            "columnName": "characterId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hairId",
+            "columnName": "hairId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "characterId"
+          ]
+        }
+      },
+      {
+        "tableName": "character_equipped_items",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`characterId` INTEGER NOT NULL, `headId` TEXT, `topId` TEXT NOT NULL, `bottomId` TEXT NOT NULL, `shoesId` TEXT NOT NULL, `accessoryId` TEXT, `weaponId` TEXT, `glovesId` TEXT, PRIMARY KEY(`characterId`))",
+        "fields": [
+          {
+            "fieldPath": "characterId",
+            "columnName": "characterId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "headId",
+            "columnName": "headId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "topId",
+            "columnName": "topId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bottomId",
+            "columnName": "bottomId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "shoesId",
+            "columnName": "shoesId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accessoryId",
+            "columnName": "accessoryId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "weaponId",
+            "columnName": "weaponId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "glovesId",
+            "columnName": "glovesId",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "characterId"
+          ]
+        }
+      },
+      {
+        "tableName": "monster_instances",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `definitionId` TEXT NOT NULL, `grade` TEXT NOT NULL, `stageNumber` INTEGER NOT NULL, `encounterNumber` INTEGER NOT NULL, `level` INTEGER NOT NULL, `currentHp` INTEGER NOT NULL, `balanceVersion` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "definitionId",
+            "columnName": "definitionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "grade",
+            "columnName": "grade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stageNumber",
+            "columnName": "stageNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "encounterNumber",
+            "columnName": "encounterNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentHp",
+            "columnName": "currentHp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "balanceVersion",
+            "columnName": "balanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_monster_instances_stageNumber_encounterNumber",
+            "unique": true,
+            "columnNames": [
+              "stageNumber",
+              "encounterNumber"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_monster_instances_stageNumber_encounterNumber` ON `${TABLE_NAME}` (`stageNumber`, `encounterNumber`)"
+          }
+        ]
+      },
+      {
+        "tableName": "combat_progress",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `stageNumber` INTEGER NOT NULL, `stageLevel` INTEGER NOT NULL, `activeMonsterInstanceId` INTEGER NOT NULL, `lastReconciledAtEpochMillis` INTEGER NOT NULL, `balanceVersion` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stageNumber",
+            "columnName": "stageNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stageLevel",
+            "columnName": "stageLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activeMonsterInstanceId",
+            "columnName": "activeMonsterInstanceId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastReconciledAtEpochMillis",
+            "columnName": "lastReconciledAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "balanceVersion",
+            "columnName": "balanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "player_attack_events",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`taskId` INTEGER NOT NULL, `occurrenceDateEpochDay` INTEGER NOT NULL, `recurrenceSeriesId` INTEGER NOT NULL, `status` TEXT NOT NULL, `sourcePlayerLevel` INTEGER NOT NULL, `sourceAttack` INTEGER NOT NULL, `sourceCriticalChanceBp` INTEGER NOT NULL, `sourceCriticalDamageBp` INTEGER NOT NULL, `sourceMomentumBp` INTEGER NOT NULL, `characterBalanceVersion` INTEGER NOT NULL, `monsterBalanceVersion` INTEGER NOT NULL, `createdAtEpochMillis` INTEGER NOT NULL, `targetMonsterInstanceId` INTEGER, `seed` INTEGER, `roll` INTEGER, `wasCritical` INTEGER, `rawDamage` INTEGER, `targetDefense` INTEGER, `finalDamage` INTEGER, `targetHpBefore` INTEGER, `targetHpAfter` INTEGER, `processedAtEpochMillis` INTEGER, `combatRewardVersion` INTEGER NOT NULL DEFAULT 0, `hitXpAward` INTEGER NOT NULL DEFAULT 0, `killBonusXpAward` INTEGER NOT NULL DEFAULT 0, `killGoldAward` INTEGER NOT NULL DEFAULT 0, `rewardGradeMultiplierBp` INTEGER NOT NULL DEFAULT 0, `rewardGoldGainBonusBp` INTEGER NOT NULL DEFAULT 0, `sourceTaskDifficulty` TEXT, `taskDifficultyBalanceVersion` INTEGER NOT NULL DEFAULT 0, PRIMARY KEY(`taskId`, `occurrenceDateEpochDay`))",
+        "fields": [
+          {
+            "fieldPath": "taskId",
+            "columnName": "taskId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occurrenceDateEpochDay",
+            "columnName": "occurrenceDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurrenceSeriesId",
+            "columnName": "recurrenceSeriesId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourcePlayerLevel",
+            "columnName": "sourcePlayerLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceAttack",
+            "columnName": "sourceAttack",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceCriticalChanceBp",
+            "columnName": "sourceCriticalChanceBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceCriticalDamageBp",
+            "columnName": "sourceCriticalDamageBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceMomentumBp",
+            "columnName": "sourceMomentumBp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "characterBalanceVersion",
+            "columnName": "characterBalanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monsterBalanceVersion",
+            "columnName": "monsterBalanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAtEpochMillis",
+            "columnName": "createdAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetMonsterInstanceId",
+            "columnName": "targetMonsterInstanceId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "seed",
+            "columnName": "seed",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "roll",
+            "columnName": "roll",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "wasCritical",
+            "columnName": "wasCritical",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "rawDamage",
+            "columnName": "rawDamage",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "targetDefense",
+            "columnName": "targetDefense",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "finalDamage",
+            "columnName": "finalDamage",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "targetHpBefore",
+            "columnName": "targetHpBefore",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "targetHpAfter",
+            "columnName": "targetHpAfter",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "processedAtEpochMillis",
+            "columnName": "processedAtEpochMillis",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "combatRewardVersion",
+            "columnName": "combatRewardVersion",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "hitXpAward",
+            "columnName": "hitXpAward",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "killBonusXpAward",
+            "columnName": "killBonusXpAward",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "killGoldAward",
+            "columnName": "killGoldAward",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "rewardGradeMultiplierBp",
+            "columnName": "rewardGradeMultiplierBp",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "rewardGoldGainBonusBp",
+            "columnName": "rewardGoldGainBonusBp",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "sourceTaskDifficulty",
+            "columnName": "sourceTaskDifficulty",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "taskDifficultyBalanceVersion",
+            "columnName": "taskDifficultyBalanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "taskId",
+            "occurrenceDateEpochDay"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_player_attack_events_status_createdAtEpochMillis",
+            "unique": false,
+            "columnNames": [
+              "status",
+              "createdAtEpochMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_player_attack_events_status_createdAtEpochMillis` ON `${TABLE_NAME}` (`status`, `createdAtEpochMillis`)"
+          }
+        ]
+      },
+      {
+        "tableName": "monster_attack_events",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`taskId` INTEGER NOT NULL, `occurrenceDateEpochDay` INTEGER NOT NULL, `recurrenceSeriesId` INTEGER NOT NULL, `trigger` TEXT NOT NULL DEFAULT 'MISSED_DEADLINE', `status` TEXT NOT NULL, `skipReason` TEXT, `sourceMonsterInstanceId` INTEGER NOT NULL, `sourceMonsterLevel` INTEGER NOT NULL, `sourceRawDamage` INTEGER NOT NULL, `playerDefense` INTEGER NOT NULL, `playerMaxHp` INTEGER NOT NULL, `finalDamage` INTEGER NOT NULL, `playerHpBefore` INTEGER NOT NULL, `playerHpAfter` INTEGER NOT NULL, `wasLethal` INTEGER NOT NULL, `revivedHp` INTEGER, `characterBalanceVersion` INTEGER NOT NULL, `monsterBalanceVersion` INTEGER NOT NULL, `processedAtEpochMillis` INTEGER NOT NULL, PRIMARY KEY(`taskId`, `occurrenceDateEpochDay`))",
+        "fields": [
+          {
+            "fieldPath": "taskId",
+            "columnName": "taskId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occurrenceDateEpochDay",
+            "columnName": "occurrenceDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurrenceSeriesId",
+            "columnName": "recurrenceSeriesId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "trigger",
+            "columnName": "trigger",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "'MISSED_DEADLINE'"
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "skipReason",
+            "columnName": "skipReason",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceMonsterInstanceId",
+            "columnName": "sourceMonsterInstanceId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceMonsterLevel",
+            "columnName": "sourceMonsterLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceRawDamage",
+            "columnName": "sourceRawDamage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playerDefense",
+            "columnName": "playerDefense",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playerMaxHp",
+            "columnName": "playerMaxHp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "finalDamage",
+            "columnName": "finalDamage",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playerHpBefore",
+            "columnName": "playerHpBefore",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playerHpAfter",
+            "columnName": "playerHpAfter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wasLethal",
+            "columnName": "wasLethal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "revivedHp",
+            "columnName": "revivedHp",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "characterBalanceVersion",
+            "columnName": "characterBalanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monsterBalanceVersion",
+            "columnName": "monsterBalanceVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "processedAtEpochMillis",
+            "columnName": "processedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "taskId",
+            "occurrenceDateEpochDay"
+          ]
+        }
+      },
+      {
+        "tableName": "equipment",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `nameKey` TEXT NOT NULL, `descriptionKey` TEXT NOT NULL, `type` TEXT NOT NULL, `slot` TEXT NOT NULL, `rarity` TEXT NOT NULL, `price` INTEGER NOT NULL, `requiredLevel` INTEGER NOT NULL, `imageKey` TEXT, `layerKey` TEXT, `isForSale` INTEGER NOT NULL, `weaponType` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameKey",
+            "columnName": "nameKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descriptionKey",
+            "columnName": "descriptionKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "slot",
+            "columnName": "slot",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rarity",
+            "columnName": "rarity",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "price",
+            "columnName": "price",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requiredLevel",
+            "columnName": "requiredLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageKey",
+            "columnName": "imageKey",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "layerKey",
+            "columnName": "layerKey",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "isForSale",
+            "columnName": "isForSale",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weaponType",
+            "columnName": "weaponType",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_equipment_isForSale",
+            "unique": false,
+            "columnNames": [
+              "isForSale"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_equipment_isForSale` ON `${TABLE_NAME}` (`isForSale`)"
+          },
+          {
+            "name": "index_equipment_slot",
+            "unique": false,
+            "columnNames": [
+              "slot"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_equipment_slot` ON `${TABLE_NAME}` (`slot`)"
+          }
+        ]
+      },
+      {
+        "tableName": "equipment_modifiers",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`equipmentId` INTEGER NOT NULL, `sortOrder` INTEGER NOT NULL, `targetKind` TEXT NOT NULL, `targetStat` TEXT NOT NULL, `modifierType` TEXT NOT NULL, `amount` INTEGER NOT NULL, PRIMARY KEY(`equipmentId`, `sortOrder`), FOREIGN KEY(`equipmentId`) REFERENCES `equipment`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "equipmentId",
+            "columnName": "equipmentId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sortOrder",
+            "columnName": "sortOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetKind",
+            "columnName": "targetKind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetStat",
+            "columnName": "targetStat",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "modifierType",
+            "columnName": "modifierType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "equipmentId",
+            "sortOrder"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_equipment_modifiers_equipmentId",
+            "unique": false,
+            "columnNames": [
+              "equipmentId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_equipment_modifiers_equipmentId` ON `${TABLE_NAME}` (`equipmentId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "equipment",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "equipmentId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "owned_equipment",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `characterId` INTEGER NOT NULL, `equipmentId` INTEGER NOT NULL, `acquiredAtEpochMillis` INTEGER NOT NULL, FOREIGN KEY(`characterId`) REFERENCES `character_profile`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`equipmentId`) REFERENCES `equipment`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "characterId",
+            "columnName": "characterId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equipmentId",
+            "columnName": "equipmentId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "acquiredAtEpochMillis",
+            "columnName": "acquiredAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_owned_equipment_characterId_equipmentId",
+            "unique": true,
+            "columnNames": [
+              "characterId",
+              "equipmentId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_owned_equipment_characterId_equipmentId` ON `${TABLE_NAME}` (`characterId`, `equipmentId`)"
+          },
+          {
+            "name": "index_owned_equipment_equipmentId",
+            "unique": false,
+            "columnNames": [
+              "equipmentId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_owned_equipment_equipmentId` ON `${TABLE_NAME}` (`equipmentId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "character_profile",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "characterId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "equipment",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "equipmentId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "character_equipment",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`characterId` INTEGER NOT NULL, `slot` TEXT NOT NULL, `ownedEquipmentId` INTEGER NOT NULL, PRIMARY KEY(`characterId`, `slot`), FOREIGN KEY(`characterId`) REFERENCES `character_profile`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`ownedEquipmentId`) REFERENCES `owned_equipment`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "characterId",
+            "columnName": "characterId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "slot",
+            "columnName": "slot",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ownedEquipmentId",
+            "columnName": "ownedEquipmentId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "characterId",
+            "slot"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_character_equipment_ownedEquipmentId",
+            "unique": true,
+            "columnNames": [
+              "ownedEquipmentId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_character_equipment_ownedEquipmentId` ON `${TABLE_NAME}` (`ownedEquipmentId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "character_profile",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "characterId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "owned_equipment",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "ownedEquipmentId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "task_reminders",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`taskId` INTEGER NOT NULL, `mode` TEXT NOT NULL, `customTimeMinuteOfDay` INTEGER, `scheduleStatus` TEXT NOT NULL, `scheduledOccurrenceEpochDay` INTEGER, `scheduledTriggerAtEpochMillis` INTEGER, `updatedAtEpochMillis` INTEGER NOT NULL, PRIMARY KEY(`taskId`), FOREIGN KEY(`taskId`) REFERENCES `todo_tasks`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "taskId",
+            "columnName": "taskId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mode",
+            "columnName": "mode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customTimeMinuteOfDay",
+            "columnName": "customTimeMinuteOfDay",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "scheduleStatus",
+            "columnName": "scheduleStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scheduledOccurrenceEpochDay",
+            "columnName": "scheduledOccurrenceEpochDay",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "scheduledTriggerAtEpochMillis",
+            "columnName": "scheduledTriggerAtEpochMillis",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "updatedAtEpochMillis",
+            "columnName": "updatedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "taskId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_task_reminders_mode",
+            "unique": false,
+            "columnNames": [
+              "mode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_task_reminders_mode` ON `${TABLE_NAME}` (`mode`)"
+          },
+          {
+            "name": "index_task_reminders_scheduleStatus",
+            "unique": false,
+            "columnNames": [
+              "scheduleStatus"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_task_reminders_scheduleStatus` ON `${TABLE_NAME}` (`scheduleStatus`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "todo_tasks",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "taskId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "character_status_effects",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`characterId` INTEGER NOT NULL, `effectType` TEXT NOT NULL, `definitionVersion` INTEGER NOT NULL, `appliedAtEpochMillis` INTEGER NOT NULL, `expiresAtEpochMillis` INTEGER NOT NULL, `remainingRecoveryCompletions` INTEGER NOT NULL, `active` INTEGER NOT NULL, `revision` INTEGER NOT NULL, `lastMutationId` TEXT NOT NULL, PRIMARY KEY(`characterId`, `effectType`), FOREIGN KEY(`characterId`) REFERENCES `character_profile`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "characterId",
+            "columnName": "characterId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "effectType",
+            "columnName": "effectType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "definitionVersion",
+            "columnName": "definitionVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "appliedAtEpochMillis",
+            "columnName": "appliedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "expiresAtEpochMillis",
+            "columnName": "expiresAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "remainingRecoveryCompletions",
+            "columnName": "remainingRecoveryCompletions",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "active",
+            "columnName": "active",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "revision",
+            "columnName": "revision",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastMutationId",
+            "columnName": "lastMutationId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "characterId",
+            "effectType"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_character_status_effects_characterId_active",
+            "unique": false,
+            "columnNames": [
+              "characterId",
+              "active"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_character_status_effects_characterId_active` ON `${TABLE_NAME}` (`characterId`, `active`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "character_profile",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "characterId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "status_effect_recovery_occurrences",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`characterId` INTEGER NOT NULL, `effectType` TEXT NOT NULL, `revision` INTEGER NOT NULL, `taskId` INTEGER NOT NULL, `occurrenceDateEpochDay` INTEGER NOT NULL, PRIMARY KEY(`characterId`, `effectType`, `revision`, `taskId`, `occurrenceDateEpochDay`), FOREIGN KEY(`characterId`, `effectType`) REFERENCES `character_status_effects`(`characterId`, `effectType`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "characterId",
+            "columnName": "characterId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "effectType",
+            "columnName": "effectType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "revision",
+            "columnName": "revision",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "taskId",
+            "columnName": "taskId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occurrenceDateEpochDay",
+            "columnName": "occurrenceDateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "characterId",
+            "effectType",
+            "revision",
+            "taskId",
+            "occurrenceDateEpochDay"
+          ]
+        },
+        "foreignKeys": [
+          {
+            "table": "character_status_effects",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "characterId",
+              "effectType"
+            ],
+            "referencedColumns": [
+              "characterId",
+              "effectType"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2e12f86ca2d7dbb7af6bbc684b4820d7')"
+    ]
+  }
+}

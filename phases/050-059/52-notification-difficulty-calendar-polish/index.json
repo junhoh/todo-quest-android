@@ -1,0 +1,80 @@
+{
+  "project": "Todo Quest",
+  "phase": "52-notification-difficulty-calendar-polish",
+  "steps": [
+    {
+      "step": 0,
+      "name": "approve-notification-and-difficulty-contract",
+      "status": "completed",
+      "summary": "ADR-020과 제품·아키텍처·UI·전투 보상 문서에 난이도 snapshot 배율과 staged 알림 전달·Calendar 표시의 승인 및 예정 구현 계약을 확정했다.",
+      "started_at": "2026-08-10T12:55:58+0900",
+      "completed_at": "2026-08-10T13:04:10+0900"
+    },
+    {
+      "step": 1,
+      "name": "define-difficulty-and-reminder-domain-policy",
+      "status": "completed",
+      "summary": "난이도별 versioned 전투 배율과 occurrence 알림 projection, local trigger 계산, 채널 차단 상태 및 callback-safe staged exact alarm 전이를 순수 Kotlin 계약으로 구현했다.",
+      "started_at": "2026-08-10T13:04:11+0900",
+      "completed_at": "2026-08-10T13:15:35+0900"
+    },
+    {
+      "step": 2,
+      "name": "persist-difficulty-snapshot-room-v14",
+      "status": "completed",
+      "summary": "Room v14에 공격 난이도 snapshot 컬럼과 MIGRATION_13_14를 추가하고 전체 reminder Flow 및 v1·v13 migration·DAO 검증을 완료했다.",
+      "started_at": "2026-08-10T13:16:18+0900",
+      "completed_at": "2026-08-10T13:25:20+0900"
+    },
+    {
+      "step": 3,
+      "name": "snapshot-difficulty-and-reminder-occurrences",
+      "status": "completed",
+      "summary": "신규 occurrence 공격의 난이도·version snapshot과 legacy repair 중립값, reminder occurrence Flow 및 PENDING/SCHEDULED delivery race 경계를 Repository에 구현했다.",
+      "started_at": "2026-08-10T13:26:11+0900",
+      "completed_at": "2026-08-10T13:34:15+0900"
+    },
+    {
+      "step": 4,
+      "name": "apply-difficulty-player-attacks",
+      "status": "completed",
+      "summary": "PENDING 공격에 versioned 난이도 피해·XP 배율과 strict rollback을 적용하고 APPLIED snapshot 멱등성 및 legacy 중립 호환을 검증했다.",
+      "started_at": "2026-08-10T13:36:00+0900",
+      "completed_at": "2026-08-10T13:42:56+0900"
+    },
+    {
+      "step": 5,
+      "name": "harden-android-reminder-delivery",
+      "status": "completed",
+      "summary": "알림 runtime permission·앱 전체 switch·채널 차단을 분리하고 채널 설정 복구, Pre-O 소리·진동, staged PENDING 전달과 Room v14 production wiring을 검증했다.",
+      "started_at": "2026-08-10T13:43:37+0900",
+      "completed_at": "2026-08-10T13:53:01+0900"
+    },
+    {
+      "step": 6,
+      "name": "show-reminder-time-and-compact-actions",
+      "status": "completed",
+      "summary": "occurrence 기준 알림 발화 시각과 task별 capability 복구 CTA, 48dp 터치 영역의 오른쪽 compact 완료·실패 action 및 난이도 보상 안내를 구현했다.",
+      "started_at": "2026-08-10T13:53:54+0900",
+      "completed_at": "2026-08-10T14:40:17+0900"
+    },
+    {
+      "step": 7,
+      "name": "align-exp-hud-labels",
+      "status": "completed",
+      "summary": "EXP label과 현재/필요 값을 progress bar 양 끝에 정렬하고 0·큰 수·font scale 2.0·compact map geometry를 검증했다.",
+      "started_at": "2026-08-10T14:43:36+0900",
+      "completed_at": "2026-08-10T14:54:50+0900"
+    },
+    {
+      "step": 8,
+      "name": "document-and-validate-notification-balance",
+      "status": "completed",
+      "summary": "Room v14 난이도·staged 알림·Calendar/HUD 계약을 문서화하고 emulator process-absent 알림 smoke와 전체 acceptance를 완료했다.",
+      "started_at": "2026-08-10T14:55:17+0900",
+      "completed_at": "2026-08-10T15:56:30+0900"
+    }
+  ],
+  "created_at": "2026-08-10T12:55:58+0900",
+  "completed_at": "2026-08-10T16:11:17+0900"
+}

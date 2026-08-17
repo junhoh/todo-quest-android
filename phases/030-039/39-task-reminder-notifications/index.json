@@ -1,0 +1,79 @@
+{
+  "project": "Todo Quest",
+  "phase": "39-task-reminder-notifications",
+  "steps": [
+    {
+      "step": 0,
+      "name": "approve-task-reminder-contract",
+      "status": "completed",
+      "started_at": "2026-07-28T16:36:22+0900",
+      "summary": "Task Reminder v1의 네 알림 모드, occurrence별 exact alarm, 권한·복구·표시 실패 격리 계약을 canonical 문서와 ADR-015로 승인했다.",
+      "completed_at": "2026-07-28T16:41:10+0900"
+    },
+    {
+      "step": 1,
+      "name": "define-reminder-domain-policy",
+      "status": "completed",
+      "started_at": "2026-07-28T16:41:11+0900",
+      "summary": "네 가지 reminder typed 모델·Repository/Scheduler 계약과 OccurrenceCalculator를 재사용하는 DST·엄격한 미래 trigger 계획 정책을 순수 Kotlin 테스트로 고정했다.",
+      "completed_at": "2026-07-28T16:50:34+09:00"
+    },
+    {
+      "step": 2,
+      "name": "persist-reminders-room-v10",
+      "status": "completed",
+      "started_at": "2026-07-28T17:03:05+0900",
+      "summary": "기존 row backfill 없이 task_reminders와 FK cascade·mode/status index·occurrence key 조건부 갱신 DAO를 추가하고 Room v10 migration과 schema를 고정했다.",
+      "completed_at": "2026-07-28T17:12:56+09:00"
+    },
+    {
+      "step": 3,
+      "name": "integrate-reminder-repositories",
+      "status": "completed",
+      "started_at": "2026-07-28T17:14:28+0900",
+      "summary": "일정과 reminder 설정을 하나의 Room transaction으로 저장하고 반복 분할은 기존 예약 key를 원 segment에 보존한 채 새 task row를 독립 생성하도록 Repository를 구현했다.",
+      "completed_at": "2026-07-28T17:25:04+09:00"
+    },
+    {
+      "step": 4,
+      "name": "coordinate-reminder-lifecycle",
+      "status": "completed",
+      "started_at": "2026-07-28T17:26:00+0900",
+      "summary": "일정·occurrence mutation 뒤 알림을 재조정하고 발화 직전 source 재검증·conditional claim으로 중복 게시를 막으며 scheduler·publisher 실패를 핵심 결과와 분리했다.",
+      "completed_at": "2026-07-28T17:35:51+09:00"
+    },
+    {
+      "step": 5,
+      "name": "implement-android-reminder-delivery",
+      "status": "completed",
+      "started_at": "2026-07-28T17:36:57+0900",
+      "summary": "occurrence URI 기반 immutable exact alarm과 권한 재검증 notification 게시, provider 기반 receiver 및 독립 unique restore work를 구현했다.",
+      "completed_at": "2026-07-28T17:48:30+09:00"
+    },
+    {
+      "step": 6,
+      "name": "add-calendar-reminder-controls",
+      "status": "completed",
+      "started_at": "2026-07-28T17:49:18+0900",
+      "summary": "Calendar 일정 editor에 네 알림 모드·직접 설정 picker·검증을 추가하고 저장 성공과 분리된 notification·exact-alarm 권한 one-shot 흐름을 구현했다.",
+      "completed_at": "2026-07-28T18:21:13+09:00"
+    },
+    {
+      "step": 7,
+      "name": "wire-reminder-application-flow",
+      "status": "completed",
+      "started_at": "2026-07-28T18:23:00+0900",
+      "summary": "application-scope 알림 graph와 Room v10·Calendar·notification tap을 연결하고 API 37 AVD의 stop-app 후 process-absent exact alarm 게시를 확인했다.",
+      "completed_at": "2026-07-28T22:25:17+09:00"
+    },
+    {
+      "step": 8,
+      "name": "document-and-validate-reminders",
+      "status": "completed",
+      "started_at": "2026-07-28T22:25:48+0900",
+      "summary": "Room v10 알림 계약을 실제 구현에 맞춰 canonical 문서에 동기화하고 API 37 process-absent exact notification 및 전체 AC를 통과했다.",
+      "completed_at": "2026-07-28T23:06:09+09:00"
+    }
+  ],
+  "created_at": "2026-07-28T16:36:22+0900"
+}

@@ -1,0 +1,36 @@
+{
+  "project": "Todo Quest",
+  "phase": "11-device-launch-compatibility",
+  "steps": [
+    {
+      "step": 0,
+      "name": "device-launch-smoke-test",
+      "status": "completed",
+      "started_at": "2026-07-19T15:34:09+0900",
+      "completed_at": "2026-07-19T15:34:09+0900",
+      "summary": "MainActivityLaunchSmokeTest 실패 출력에 디바이스 모델, SDK, 릴리스, 에뮬레이터 여부, 렌더러, fingerprint, 디바이스별 스크린샷 파일명을 포함하도록 보강했다."
+    },
+    {
+      "step": 1,
+      "name": "splashscreen-regression-audit",
+      "status": "completed",
+      "completed_at": "2026-07-19T16:05:41+09:00",
+      "summary": "커스텀 splash exit listener 없이 phase 10의 실행 경로를 유지했다. listener 실험은 API 37 AVD 문제를 해결하지 못했고, 알려진 splash 레이어 회귀를 피하기 위해 되돌렸다."
+    },
+    {
+      "step": 2,
+      "name": "launch-diagnostics-script",
+      "status": "completed",
+      "completed_at": "2026-07-19T16:05:41+09:00",
+      "summary": "에뮬레이터와 실제 디바이스 실행 진단을 위한 scripts/diagnose_android_launch.ps1를 추가했다. 현재 API 37 AVD 산출물에서는 amStartOk=true, pidOk=true이지만 screenshotOk=false로 확인된다."
+    },
+    {
+      "step": 3,
+      "name": "device-launch-validation-docs",
+      "status": "blocked",
+      "blocked_at": "2026-07-19T16:05:41+09:00",
+      "blocked_reason": "Final cross-device validation requires a stable API AVD or physical USB device. The only connected target is Android 17/API 37 16 KB preview emulator sdk_gphone16k_x86_64, where am start and process creation succeed but screenshot remains black, Activity teardown stays PAUSED, and SurfaceFlinger/window dumps show hidden app surfaces with stale splash/starting_reveal layers."
+    }
+  ],
+  "created_at": "2026-07-19T15:34:09+0900"
+}

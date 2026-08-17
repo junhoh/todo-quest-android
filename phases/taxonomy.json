@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "statuses": [
+    "pending",
+    "completed",
+    "error",
+    "blocked"
+  ],
+  "areas": [
+    "project",
+    "schedule",
+    "character",
+    "combat",
+    "art",
+    "android-platform",
+    "harness"
+  ],
+  "kinds": [
+    "feature",
+    "fix",
+    "design",
+    "asset",
+    "infrastructure",
+    "documentation"
+  ],
+  "tag_pattern": "[a-z0-9]+(?:-[a-z0-9]+)*\\Z",
+  "suggestion_rules": {
+    "areas": [
+      {
+        "value": "project",
+        "keywords": ["project", "architecture", "adr", "prd"],
+        "path_prefixes": ["docs/"]
+      },
+      {
+        "value": "schedule",
+        "keywords": ["schedule", "task", "calendar", "reminder", "notification", "occurrence"],
+        "path_prefixes": ["app/src/main/java/com/todoquest/feature/calendar/", "app/src/main/java/com/todoquest/feature/task/", "app/src/main/java/com/todoquest/notification/"]
+      },
+      {
+        "value": "character",
+        "keywords": ["character", "stat", "equipment", "shop", "inventory"],
+        "path_prefixes": ["app/src/main/java/com/todoquest/feature/character/", "app/src/main/java/com/todoquest/feature/shop/"]
+      },
+      {
+        "value": "combat",
+        "keywords": ["combat", "battle", "monster", "attack", "enemy"],
+        "path_prefixes": ["app/src/main/java/com/todoquest/feature/battle/"]
+      },
+      {
+        "value": "art",
+        "keywords": ["art", "sprite", "pixel", "drawable", "bitmap"],
+        "path_prefixes": ["docs/art/", "app/src/main/assets/", "app/src/main/res/drawable"]
+      },
+      {
+        "value": "android-platform",
+        "keywords": ["android", "gradle", "room", "emulator", "device", "workmanager", "alarmmanager", "manifest"],
+        "path_prefixes": ["app/", "gradle/"]
+      },
+      {
+        "value": "harness",
+        "keywords": ["harness", "phase", "registry", "catalog", "hook", "runner"],
+        "path_prefixes": ["scripts/", "phases/", ".codex/"]
+      }
+    ],
+    "kinds": [
+      {
+        "value": "fix",
+        "keywords": ["fix", "repair", "recovery", "regression", "bug"]
+      },
+      {
+        "value": "design",
+        "keywords": ["design", "architecture", "adr", "spec"]
+      },
+      {
+        "value": "asset",
+        "keywords": ["asset", "sprite", "bitmap", "png", "art"]
+      },
+      {
+        "value": "infrastructure",
+        "keywords": ["harness", "phase", "registry", "catalog", "cli", "script", "runner", "hook", "gradle", "tool"]
+      },
+      {
+        "value": "documentation",
+        "keywords": ["documentation", "docs", "readme", "guide"]
+      },
+      {
+        "value": "feature",
+        "keywords": ["feature", "screen", "ui", "flow", "create", "implement", "add"]
+      }
+    ]
+  },
+  "legacy_classification_overrides": {
+    "0-design-docs": {
+      "areas": ["project"],
+      "kind": "documentation",
+      "tags": ["design-docs", "ui-guide"]
+    },
+    "1-dev-tools": {
+      "areas": ["android-platform"],
+      "kind": "infrastructure",
+      "tags": ["dev-tools", "android-sdk"]
+    },
+    "2-android-skeleton": {
+      "areas": ["project", "android-platform"],
+      "kind": "infrastructure",
+      "tags": ["android-skeleton", "project-scaffold"]
+    },
+    "3-schedule-management": {
+      "areas": ["schedule"],
+      "kind": "feature",
+      "tags": ["schedule-management", "room"]
+    },
+    "4-schedule-entry-completion": {
+      "areas": ["schedule"],
+      "kind": "feature",
+      "tags": ["schedule-entry", "completion"]
+    },
+    "5-emulator-launch-diagnostics": {
+      "areas": ["android-platform"],
+      "kind": "infrastructure",
+      "tags": ["launch-diagnostics", "emulator"]
+    },
+    "6-emulator-launch-rendering-fix": {
+      "areas": ["android-platform"],
+      "kind": "fix",
+      "tags": ["launch-rendering", "system-insets"]
+    },
+    "7-task-entry-editing": {
+      "areas": ["schedule"],
+      "kind": "feature",
+      "tags": ["task-editing", "room"]
+    },
+    "8-harness-gradle-network-policy": {
+      "areas": ["harness"],
+      "kind": "infrastructure",
+      "tags": ["harness-network", "gradle"]
+    },
+    "9-harness-post-create-compact": {
+      "areas": ["harness"],
+      "kind": "documentation",
+      "tags": ["harness-workflow", "context"]
+    },
+    "10-emulator-connected-regression-fix": {
+      "areas": ["android-platform"],
+      "kind": "fix",
+      "tags": ["connected-tests", "launch-regression"]
+    },
+    "11-device-launch-compatibility": {
+      "areas": ["android-platform"],
+      "kind": "fix",
+      "tags": ["device-launch", "diagnostics"]
+    },
+    "12-launch-black-screen-recovery": {
+      "areas": ["android-platform"],
+      "kind": "fix",
+      "tags": ["black-screen", "graphics-recovery"]
+    },
+    "13-api37-emulator-compositor-recovery": {
+      "areas": ["android-platform"],
+      "kind": "fix",
+      "tags": ["api37", "compositor-recovery"]
+    },
+    "14-room-kapt-windows-temp-fix": {
+      "areas": ["android-platform"],
+      "kind": "fix",
+      "tags": ["room-kapt", "windows"]
+    },
+    "15-harness-auto-child-execution": {
+      "areas": ["harness"],
+      "kind": "infrastructure",
+      "tags": ["child-execution", "harness-runner"]
+    },
+    "16-character-base-design-sheet": {
+      "areas": ["character", "art"],
+      "kind": "asset",
+      "tags": ["character-art", "base-sheet"]
+    },
+    "17-modular-character-design-sheet": {
+      "areas": ["character", "art"],
+      "kind": "asset",
+      "tags": ["character-art", "modular-sheet"]
+    },
+    "18-targeted-stop-hook": {
+      "areas": ["harness"],
+      "kind": "infrastructure",
+      "tags": ["stop-hook", "targeted-validation"]
+    },
+    "19-character-hair-outfit-refinement": {
+      "areas": ["character", "art"],
+      "kind": "fix",
+      "tags": ["character-art", "hair-outfit"]
+    },
+    "20-adventure-outfit-seam-refinement": {
+      "areas": ["character", "art"],
+      "kind": "fix",
+      "tags": ["character-art", "outfit-seams"]
+    },
+    "21-adventure-outfit-overlap-remap": {
+      "areas": ["character", "art"],
+      "kind": "fix",
+      "tags": ["character-art", "layer-overlap"]
+    },
+    "22-goblin-scout-sprite": {
+      "areas": ["combat", "art"],
+      "kind": "asset",
+      "tags": ["monster-art", "goblin-scout"]
+    },
+    "23-character-stats-design": {
+      "areas": ["character", "combat"],
+      "kind": "design",
+      "tags": ["character-stats", "combat-design"]
+    },
+    "24-doc-indexing-and-cross-references": {
+      "areas": ["project", "character", "combat", "art"],
+      "kind": "documentation",
+      "tags": ["doc-index", "cross-references"]
+    },
+    "25-character-progression-foundation": {
+      "areas": ["character", "schedule"],
+      "kind": "feature",
+      "tags": ["character-growth", "reward-policy"]
+    },
+    "26-korean-character-ui": {
+      "areas": ["character"],
+      "kind": "feature",
+      "tags": ["korean-ui", "character-screen"]
+    },
+    "27-calendar-navigation-korean-ui": {
+      "areas": ["schedule"],
+      "kind": "fix",
+      "tags": ["korean-ui", "calendar-navigation"]
+    },
+    "28-monster-stats-and-combat": {
+      "areas": ["combat", "schedule", "character"],
+      "kind": "feature",
+      "tags": ["monster-combat", "combat-reconciliation"]
+    },
+    "29-calendar-battle-map": {
+      "areas": ["combat", "schedule", "art"],
+      "kind": "feature",
+      "tags": ["battle-map", "calendar-ui"]
+    },
+    "30-calendar-battle-progress-hud": {
+      "areas": ["combat", "schedule", "character"],
+      "kind": "feature",
+      "tags": ["battle-hud", "sunday-calendar"]
+    },
+    "31-calendar-task-editor-composition-recovery": {
+      "areas": ["android-platform", "schedule"],
+      "kind": "fix",
+      "tags": ["task-editor", "composition-recovery"]
+    },
+    "32-character-layer-runtime-composition": {
+      "areas": ["character", "art", "combat"],
+      "kind": "feature",
+      "tags": ["character-layers", "runtime-composition"]
+    },
+    "33-calendar-combat-feedback": {
+      "areas": ["schedule", "combat"],
+      "kind": "feature",
+      "tags": ["combat-feedback", "occurrence-failure"]
+    },
+    "34-equipment-shop-and-inventory": {
+      "areas": ["character", "combat", "schedule"],
+      "kind": "feature",
+      "tags": ["equipment-shop", "inventory"]
+    },
+    "35-shop-character-equipment-preview": {
+      "areas": ["character"],
+      "kind": "feature",
+      "tags": ["shop-preview", "equipment-slots"]
+    },
+    "36-calendar-battle-feedback-polish": {
+      "areas": ["combat", "schedule"],
+      "kind": "fix",
+      "tags": ["combat-feedback", "ui-polish"]
+    },
+    "37-overdue-hud-stat-allocation-fixes": {
+      "areas": ["schedule", "combat", "character"],
+      "kind": "fix",
+      "tags": ["overdue-failures", "stat-allocation", "hud-layout"]
+    },
+    "38-hud-stat-descriptions-combat-rewards": {
+      "areas": ["combat", "character", "schedule"],
+      "kind": "feature",
+      "tags": ["combat-rewards", "stat-descriptions", "exp-hud"]
+    },
+    "39-task-reminder-notifications": {
+      "areas": ["schedule", "android-platform"],
+      "kind": "feature",
+      "tags": ["task-reminders", "exact-alarm", "notifications"]
+    },
+    "40-skeleton-soldier-enemy": {
+      "areas": ["combat", "art"],
+      "kind": "feature",
+      "tags": ["skeleton-soldier", "monster-species"]
+    },
+    "41-corrupted-tree-spirit-enemy": {
+      "areas": ["combat", "art"],
+      "kind": "feature",
+      "tags": ["corrupted-tree-spirit", "monster-species"]
+    },
+    "42-harpy-enemy": {
+      "areas": ["combat", "art"],
+      "kind": "feature",
+      "tags": ["harpy", "monster-species"]
+    },
+    "43-harness-phase-catalog": {
+      "areas": ["harness"],
+      "kind": "infrastructure",
+      "tags": ["phase-catalog", "registry"]
+    }
+  }
+}

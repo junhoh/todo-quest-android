@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -lc 'export PYTHONUTF8=1; repo_root=\"$(git rev-parse --show-toplevel)\" || exit $?; if [ -x \"$repo_root/.venv/bin/python\" ]; then exec \"$repo_root/.venv/bin/python\" \"$repo_root/scripts/stop_hook.py\"; fi; exec python3 \"$repo_root/scripts/stop_hook.py\"'",
+            "commandWindows": "powershell -NoProfile -NonInteractive -Command \"$env:PYTHONUTF8 = '1'; $repoRoot = git rev-parse --show-toplevel; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; $projectPython = Join-Path $repoRoot '.venv/Scripts/python.exe'; if (Test-Path -LiteralPath $projectPython -PathType Leaf) { & $projectPython (Join-Path $repoRoot 'scripts/stop_hook.py'); exit $LASTEXITCODE }; py -3 (Join-Path $repoRoot 'scripts/stop_hook.py'); exit $LASTEXITCODE\"",
+            "timeout": 900,
+            "statusMessage": "Checking relevant project changes"
+          }
+        ]
+      }
+    ]
+  }
+}

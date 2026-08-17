@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "asset": {
+    "fileName": "todo-quest-harpy-front-idle.png",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  "reference": {
+    "path": "../character/todo-quest-character-base-body.png",
+    "purpose": [
+      "style",
+      "logicalScale",
+      "outline",
+      "shadingSteps"
+    ],
+    "editable": false,
+    "opaqueBoundingBox": [20, 7, 44, 58],
+    "opaqueHeight": 52
+  },
+  "centerX": 32,
+  "soleY": 58,
+  "minimumMargin": 3,
+  "expectedOpaqueBoundingBox": [11, 11, 53, 58],
+  "boundingBoxInclusive": true,
+  "opaqueHeight": 48,
+  "scaleComparison": {
+    "referenceOpaqueHeight": 52,
+    "heightReductionPercentApprox": 7.7,
+    "widthIncludes": [
+      "leftWing",
+      "rightWing"
+    ],
+    "centeredOnCenterAxis": true
+  },
+  "anchors": {
+    "headCenter": [32, 20],
+    "shoulderY": 29,
+    "waistY": 42,
+    "soleY": 58
+  },
+  "pose": {
+    "facing": "front",
+    "proportions": "threeHeadTallChibiWithLargeHumanoidHeadAndShortTorso",
+    "centerAxisFixed": true,
+    "stance": "neutralCombatIdle",
+    "wingArms": "slightlySpreadBesideBody",
+    "bothSolesTouchY": 58,
+    "forbidden": [
+      "flightPose",
+      "rotation",
+      "attackAction",
+      "walkingPose"
+    ]
+  },
+  "groundContacts": {
+    "leftFoot": {
+      "xRange": [24, 30],
+      "xRangeInclusive": true,
+      "y": 58,
+      "minimumOpaquePixels": 2
+    },
+    "rightFoot": {
+      "xRange": [34, 40],
+      "xRangeInclusive": true,
+      "y": 58,
+      "minimumOpaquePixels": 2
+    }
+  },
+  "transparentRegions": {
+    "legGap": {
+      "region": [30, 49, 34, 57],
+      "regionInclusive": true,
+      "pixelCount": {
+        "min": 4
+      }
+    },
+    "leftWingBodyGap": {
+      "region": [23, 34, 25, 45],
+      "regionInclusive": true,
+      "pixelCount": {
+        "min": 6
+      }
+    },
+    "rightWingBodyGap": {
+      "region": [39, 34, 41, 45],
+      "regionInclusive": true,
+      "pixelCount": {
+        "min": 6
+      }
+    }
+  },
+  "mirroredRegions": {
+    "wings": {
+      "axisX": 32,
+      "leftRegion": [11, 26, 24, 47],
+      "rightRegion": [40, 26, 53, 47],
+      "regionInclusive": true,
+      "comparison": "rgba"
+    }
+  },
+  "semanticRegions": {
+    "redEyes": {
+      "region": [27, 18, 37, 24],
+      "regionInclusive": true,
+      "paletteName": "dangerRed",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 2,
+        "max": 4
+      }
+    },
+    "talons": {
+      "region": [22, 50, 42, 58],
+      "regionInclusive": true,
+      "paletteNames": [
+        "clawShadow",
+        "clawLight"
+      ],
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 8,
+        "max": 32
+      }
+    },
+    "wornCloth": {
+      "region": [24, 31, 40, 49],
+      "regionInclusive": true,
+      "paletteNames": [
+        "clothShadow",
+        "clothBase",
+        "clothHighlight"
+      ],
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 8,
+        "max": 48
+      }
+    }
+  },
+  "palette": {
+    "outlineDarkNavy": "#263B5A",
+    "inkDeep": "#11151C",
+    "featherDeep": "#203B46",
+    "featherShadow": "#2E5960",
+    "featherBase": "#3F7680",
+    "featherHighlight": "#6A9AA0",
+    "skinShadow": "#A66B52",
+    "skinBase": "#D69870",
+    "skinHighlight": "#F0C09C",
+    "clothShadow": "#4A3225",
+    "clothBase": "#765238",
+    "clothHighlight": "#A3744C",
+    "clawShadow": "#737982",
+    "clawLight": "#B7B0A3",
+    "dangerRed": "#E05252"
+  },
+  "requiredPaletteNames": [
+    "outlineDarkNavy",
+    "inkDeep",
+    "featherDeep",
+    "featherShadow",
+    "featherBase",
+    "featherHighlight",
+    "skinShadow",
+    "skinBase",
+    "skinHighlight",
+    "clothShadow",
+    "clothBase",
+    "clothHighlight",
+    "clawShadow",
+    "clawLight",
+    "dangerRed"
+  ],
+  "transparentPixelsCountTowardPalette": false,
+  "outline": {
+    "color": "#263B5A",
+    "externalSilhouetteThickness": 1,
+    "externalBoundaryNeighborMode": 4,
+    "allExternalBoundaryPixelsUseOutlineColor": true,
+    "forbidExternalOutline2x2Blocks": true
+  },
+  "connectivity": {
+    "opaqueNeighborMode": 8,
+    "opaqueComponentCount": 1,
+    "allowIsolatedOpaquePixels": false
+  },
+  "allowedAlphaValues": [0, 255],
+  "chromaKey": "#FF00FF",
+  "chromaKeyAllowedInFinalPng": false,
+  "design": {
+    "attributes": [
+      "wind",
+      "flight",
+      "mountain",
+      "grassland"
+    ],
+    "role": "lowThreatFastCommonMeleeEnemy",
+    "anatomy": "humanoidHeadAndTorsoWithBirdWingsShortLegsAndTalons",
+    "feathers": "tousledDarkTeal",
+    "clothing": "wornShortTopAndWaistCloth",
+    "silhouette": "cuteButClearlyHostile",
+    "forbidden": [
+      "weapons",
+      "machinery",
+      "firearms",
+      "modernElements",
+      "graphicViolence",
+      "specificExistingCharacterImitation"
+    ]
+  }
+}

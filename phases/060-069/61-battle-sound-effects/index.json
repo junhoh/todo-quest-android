@@ -1,0 +1,79 @@
+{
+  "project": "Todo Quest",
+  "phase": "61-battle-sound-effects",
+  "steps": [
+    {
+      "step": 0,
+      "name": "document-battle-sfx-contract",
+      "status": "completed",
+      "summary": "ADR-024와 제품·아키텍처·UI·개발·몬스터 설계 문서에 replay 없는 전투 효과음 순서, 기본 켜짐 설정, application-scope SoundPool 수명과 Room v14 무변경 계약을 동기화했다.",
+      "started_at": "2026-08-12T12:36:48+0900",
+      "completed_at": "2026-08-12T12:44:49+0900"
+    },
+    {
+      "step": 1,
+      "name": "model-battle-effect-events",
+      "status": "completed",
+      "started_at": "2026-08-12T12:46:02+0900",
+      "completed_at": "2026-08-12T12:54:18+0900",
+      "summary": "CombatTransition에 typed 전투 entity 참조와 공격·피격·전투 불능 ordered effect event를 추가하고 fresh/replay-0 계약을 테스트했다."
+    },
+    {
+      "step": 2,
+      "name": "persist-battle-sfx-setting",
+      "status": "completed",
+      "started_at": "2026-08-12T12:55:49+0900",
+      "completed_at": "2026-08-12T12:58:22+0900",
+      "summary": "BattleSfxSettingsRepository와 전용 todo_quest_audio_settings/battle_sfx_enabled_v1 SharedPreferences 경계를 추가해 기본 켜짐, 동기 갱신과 commit 실패 복원을 테스트했다."
+    },
+    {
+      "step": 3,
+      "name": "generate-original-battle-sfx-assets",
+      "status": "completed",
+      "started_at": "2026-08-12T12:59:14+0900",
+      "completed_at": "2026-08-12T13:03:30+0900",
+      "summary": "표준 라이브러리 기반 결정론적 합성기와 품질 검증 테스트로 44.1kHz 16-bit mono 전투 효과음 WAV 6개 및 seed·SHA-256 원본 manifest를 생성했다."
+    },
+    {
+      "step": 4,
+      "name": "implement-soundpool-battle-player",
+      "status": "completed",
+      "started_at": "2026-08-12T13:04:09+0900",
+      "completed_at": "2026-08-12T13:12:33+0900",
+      "summary": "Android 비의존 BattleSfxPlayer 계약과 설정·256개 멱등 cache decorator, 6종을 한 번 preload하고 foreground·load·release 상태를 격리하는 application-scope SoundPool adapter를 테스트 우선으로 구현했다."
+    },
+    {
+      "step": 5,
+      "name": "coordinate-sfx-with-battle-timeline",
+      "status": "completed",
+      "started_at": "2026-08-12T13:38:34+0900",
+      "completed_at": "2026-08-12T13:45:40+0900",
+      "summary": "BattleAnimationController의 ordered effect timeline에 6종 SFX를 phase별로 결합하고 예외 격리·분리된 256개 bounded 소비 cache와 CalendarViewModel 주입 경계를 테스트했다."
+    },
+    {
+      "step": 6,
+      "name": "build-battle-sfx-settings-screen",
+      "status": "completed",
+      "started_at": "2026-08-12T13:46:19+0900",
+      "completed_at": "2026-08-12T13:53:00+0900",
+      "summary": "효과음 설정의 Repository StateFlow 기반 UI state와 FIFO 저장 ViewModel, 한국어 고정 앱바·Switch·실패 snackbar·접근성 화면을 테스트 우선으로 구현했다."
+    },
+    {
+      "step": 7,
+      "name": "wire-audio-lifecycle-and-navigation",
+      "status": "completed",
+      "started_at": "2026-08-12T13:53:28+0900",
+      "completed_at": "2026-08-12T14:17:28+0900",
+      "summary": "TodoQuestAppContainer가 동일한 효과음 설정과 configured player를 application scope로 공유하고 멱등 release와 실패 격리를 제공하며, 다섯 번째 설정 탭과 fake 기반 음소거·재생·과거 event 비재생 검증을 연결했다."
+    },
+    {
+      "step": 8,
+      "name": "verify-battle-sfx-regressions",
+      "status": "completed",
+      "started_at": "2026-08-12T14:17:57+0900",
+      "completed_at": "2026-08-12T14:52:53+0900",
+      "summary": "Temurin JDK 17.0.19·SDK 35/Platform Tools 37.0.0·SM-A325N API 33에서 Python 95개, debug·release JVM/Robolectric 각 685개, connected 161개와 lint·APK·WAV 6종 validator를 통과하고 Room v14·보상·전투·중상 멱등 계약을 보존했다."
+    }
+  ],
+  "created_at": "2026-08-12T12:36:48+0900"
+}

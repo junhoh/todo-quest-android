@@ -1,0 +1,14 @@
+{
+  "project": "Todo Quest",
+  "phase": "8-harness-gradle-network-policy",
+  "steps": [
+    {
+      "step": 0,
+      "name": "harness-gradle-network-policy",
+      "status": "completed",
+      "completed_at": "2026-07-18T18:37:31+09:00",
+      "summary": "harness child Codex는 승인/샌드박스 우회와 TODO_QUEST_HARNESS_CHILD env로 실행되며, Stop hook은 child 세션에서 중복 Gradle 검증을 건너뛰도록 변경했다."
+    }
+  ],
+  "completed_at": "2026-07-18T18:37:31+09:00"
+}

@@ -1,0 +1,66 @@
+# Step 7: synchronize-skeleton-docs-and-validate
+
+## 읽어야 할 파일
+
+- `/AGENTS.md`
+- `/docs/README.md`
+- `/docs/PRD.md`
+- `/docs/ARCHITECTURE.md`
+- `/docs/ADR.md`
+- `/docs/UI_GUIDE.md`
+- `/docs/DEVELOPMENT.md`
+- `/docs/art/monster/README.md`
+- `/docs/art/monster/todo-quest-goblin-scout-front-idle-spec.json`
+- `/docs/art/monster/todo-quest-skeleton-soldier-front-idle-spec.json`
+- `/docs/game-design/monster-stats-and-growth.md`
+- `/app/src/main/java/com/todoquest/domain/model/Monster.kt`
+- `/app/src/main/java/com/todoquest/domain/model/Combat.kt`
+- `/app/src/main/java/com/todoquest/feature/battle/BattleMapUiModel.kt`
+- `/app/src/main/java/com/todoquest/feature/battle/BattleAnimationController.kt`
+- `/phases/040-049/40-skeleton-soldier-enemy/index.json`
+
+## 작업
+
+구현 결과를 canonical 문서와 동기화하고 phase 전체 acceptance를 실행한다.
+
+- `docs/art/monster/README.md`에 고블린과 해골 canonical PNG·spec·각 validator 명령과 runtime 사본 경계를 등록한다.
+- `UI_GUIDE.md`에 해골의 `[16,13,48,58]`, 46px 높이, 공통 외곽선·ground anchor·최근접 보간과 `ATTACK + NORMAL` 표시 규칙을 기록한다.
+- `ARCHITECTURE.md`에 `definitionId + grade → definition type → MonsterSpeciesPolicy → CombatSnapshot.activeMonsterSpecies → BattleMonsterVisualCatalog` data flow를 기록한다.
+- `ADR.md`의 Monster Combat/Battle Map 구현 상태에 종족이 파생 metadata이며 Room migration·balance change 없이 일반 공격형만 해골로 표시된다는 결정을 반영한다. 새 전투 상성 ADR은 만들지 않는다.
+- `monster-stats-and-growth.md`에 encounter 2·8 해골, 5 elite와 나머지 고블린, 능력치·보상 불변을 기록한다.
+- 필요한 경우 PRD, docs index와 DEVELOPMENT 검증 이력을 실제 구현과 일치하도록 최소 수정한다.
+- 언데드·어둠은 이번 phase에서 시각 콘셉트와 종족 식별이며 상성, 상태 효과, 스킬, 전리품은 후속 범위임을 명시한다.
+
+전체 검증이 성공하면 task index의 step 7과 phase를 `completed`로 갱신하고, `/phases/index.json`의 `40-skeleton-soldier-enemy`도 `completed`로 갱신한다. phase summary는 canonical/runtime PNG, 선언형 validator, 종족 정책, 전투 presentation과 검증 결과를 한국어 한 줄로 기록한다.
+
+## Acceptance Criteria
+
+```powershell
+.\.venv\Scripts\python.exe scripts\validate_monster_sprite.py --image docs\art\monster\todo-quest-goblin-scout-front-idle.png --spec docs\art\monster\todo-quest-goblin-scout-front-idle-spec.json
+.\.venv\Scripts\python.exe scripts\validate_monster_sprite.py --image docs\art\monster\todo-quest-skeleton-soldier-front-idle.png --spec docs\art\monster\todo-quest-skeleton-soldier-front-idle-spec.json
+$canonical = (Get-FileHash -Algorithm SHA256 docs\art\monster\todo-quest-skeleton-soldier-front-idle.png).Hash
+$runtime = (Get-FileHash -Algorithm SHA256 app\src\main\res\drawable-nodpi\todo_quest_skeleton_soldier_front_idle.png).Hash
+if ($canonical -ne $runtime) { throw 'Runtime skeleton sprite differs from canonical art' }
+$env:PYTHONUTF8='1'
+.\.venv\Scripts\python.exe -m pytest scripts\test_validate_monster_sprite.py scripts\test_validate_character_sheet.py scripts\test_validate_battle_map.py scripts\test_execute.py --basetemp build\pytest-40-skeleton-final
+.\gradlew.bat test
+.\gradlew.bat lint
+.\gradlew.bat assembleDebug
+.\gradlew.bat connectedDebugAndroidTest
+git diff --check
+```
+
+## 검증 절차
+
+1. 모든 AC 명령을 실행한다.
+2. 두 monster canonical PNG, 해골 runtime byte equality, 1배율·8배율 해골 시각과 portrait/landscape Battle Map을 확인한다.
+3. 테스트 결과와 실제 코드·경로·Room version·종족 mapping을 문서 내용과 대조한다.
+4. ARCHITECTURE, ADR, UI_GUIDE, AGENTS.md의 CRITICAL 규칙을 최종 확인한다.
+5. AC 성공 시 phase와 상위 index를 `completed`로 갱신한다. 필수 Android 도구·기기 부재 시 설치하지 않고 `blocked`, 3회 수정 후에도 코드·테스트 실패가 남으면 `error`로 기록한다.
+
+## 금지사항
+
+- 실제 구현과 다른 완료 수치나 검증 결과를 문서에 추정해 쓰지 마라. 이유: canonical 문서는 실행 증거와 일치해야 한다.
+- Room migration, 새 속성 상성, 상태 효과, 스킬 또는 전리품을 추가하지 마라. 이유: 승인된 종족 표시 범위를 넘어선다.
+- phase 완료 뒤 부모 Stop을 두 번째 전체 acceptance gate로 사용하지 마라. 이유: 각 child step의 AC와 status가 harness 완료 판정이다.
+- 기존 테스트를 깨뜨리지 마라.

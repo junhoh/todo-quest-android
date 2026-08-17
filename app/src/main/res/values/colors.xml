@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="quest_background">#15181B</color>
+    <color name="quest_surface">#20242A</color>
+    <color name="quest_gold">#F2C14E</color>
+</resources>

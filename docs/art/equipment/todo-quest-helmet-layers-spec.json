@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "contractKind": "character-equipment-layer-variants",
+  "baseCharacterContract": {
+    "specPath": "../character/character-modular-sheet-spec.json",
+    "schemaVersion": 5,
+    "canonicalSourceCount": 15,
+    "relationship": "independent gameplay equipment variants; does not extend or replace the schema v5 canonical source set"
+  },
+  "pathContract": {
+    "sourcePathsRelativeTo": "spec-directory",
+    "previewPathsRelativeTo": "spec-directory",
+    "runtimePathRootRelativeToSpec": "../../../app/src/main/assets",
+    "safeRelativePathsRequired": true
+  },
+  "canvas": {
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA",
+    "boundsInclusive": [0, 0, 63, 63],
+    "centerX": 32,
+    "characterSoleY": 58,
+    "anchorProfile": "canvas-64-center-x-32-sole-y-58-schema-v5"
+  },
+  "productionPalette": {
+    "colorCount": 16,
+    "colors": {
+      "hairBlack": "#11151C",
+      "eyeDarkNavy": "#1D3557",
+      "outlineDarkNavy": "#263B5A",
+      "hairHighlight": "#35445C",
+      "underDark": "#3A3F45",
+      "blueShadow": "#2853A6",
+      "underMid": "#737982",
+      "underLight": "#B7B0A3",
+      "skinShadow": "#D99872",
+      "skinLight": "#FFD3AE",
+      "lightCream": "#F4EFE3",
+      "bluePrimary": "#4F86E8",
+      "blueHighlight": "#7FB3FF",
+      "tealAccent": "#5CC8A7",
+      "goldAccent": "#F2C14E",
+      "redAccent": "#E05252"
+    },
+    "opaquePixelsOnly": true
+  },
+  "layerContract": {
+    "slot": "headgear_front",
+    "allowedAlphaValues": [0, 255],
+    "transparentPixelRgba": [0, 0, 0, 0],
+    "chromaKey": "#FF00FF",
+    "chromaKeyAllowed": false,
+    "alphaCompositing": "source-over",
+    "interpolation": "nearest-neighbor",
+    "faceProtectedRegion": [23, 20, 41, 28],
+    "faceProtectedRegionInclusive": true,
+    "outline": {
+      "paletteName": "outlineDarkNavy",
+      "color": "#263B5A",
+      "widthLogicalPixels": 1,
+      "externalBoundaryNeighborMode": 4,
+      "allExternalBoundaryPixelsUseOutlineColor": true,
+      "forbidExternalOutline2x2Blocks": true
+    },
+    "connectivity": {
+      "opaqueNeighborMode": 8,
+      "opaqueComponentCount": 1,
+      "allowIsolatedOpaquePixels": false
+    },
+    "coordinatePreservation": {
+      "singleCanvasOrigin": [0, 0],
+      "translationAllowed": false,
+      "croppingAllowed": false,
+      "scalingAllowed": false,
+      "thumbnailOpaqueBoundsReadOnlyScalingAllowed": true
+    }
+  },
+  "items": [
+    {
+      "displayNameKorean": "가죽 모자",
+      "equipmentId": 1003,
+      "imageKey": "headgear_leather_hat",
+      "layerKey": "headgear_leather_hat",
+      "slot": "headgear_front",
+      "sourcePath": "layers/headgear_leather_hat.png",
+      "runtimePath": "character/layers/headgear_leather_hat.png",
+      "design": {
+        "summaryKorean": "가벼운 갈색 가죽 캡, 낮은 둥근 crown, 짧은 brow band와 열린 얼굴",
+        "material": "brown-leather",
+        "silhouette": "low-rounded-crown",
+        "shortBrowBand": true,
+        "openFace": true,
+        "mirrorSymmetryRequired": false,
+        "forbiddenFeatures": ["horns", "feathers"]
+      },
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [19, 4, 45, 22],
+        "opaquePixelCount": 348,
+        "fileByteCount": 402,
+        "hashes": {
+          "fileSha256": "099bfc8868d9a2b4817a5d1443e80f95965a70d09486f8a0e659e7a955339e00",
+          "rawRgbaSha256": "e1c29ffad58302e1be0cc82949f40f1dfc0812b7149b5f7ae4ef49d4fd161e96",
+          "alphaMaskSha256": "8d612f73efff5caacaaaeea2a03ebe5458ce2f76015d4737473a9d110c286cad"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [19, 4, 45, 22],
+        "opaquePixelCount": 348,
+        "fileByteCount": 402,
+        "hashes": {
+          "fileSha256": "099bfc8868d9a2b4817a5d1443e80f95965a70d09486f8a0e659e7a955339e00",
+          "rawRgbaSha256": "e1c29ffad58302e1be0cc82949f40f1dfc0812b7149b5f7ae4ef49d4fd161e96",
+          "alphaMaskSha256": "8d612f73efff5caacaaaeea2a03ebe5458ce2f76015d4737473a9d110c286cad"
+        }
+      },
+      "previewKeys": {
+        "equipped1x": "leather-hat-equipped@1x",
+        "equipped8x": "leather-hat-equipped@8x"
+      }
+    },
+    {
+      "displayNameKorean": "철 투구",
+      "equipmentId": 1004,
+      "imageKey": "headgear_iron_helmet",
+      "layerKey": "headgear_iron_helmet",
+      "slot": "headgear_front",
+      "sourcePath": "layers/headgear_iron_helmet.png",
+      "runtimePath": "character/layers/headgear_iron_helmet.png",
+      "design": {
+        "summaryKorean": "좌우 대칭의 개방형 강철 dome, brow guard와 바깥쪽 cheek guard, 열린 눈과 표정",
+        "material": "steel",
+        "silhouette": "open-symmetric-dome",
+        "browGuard": true,
+        "cheekGuards": "outer-only",
+        "openEyesAndExpression": true,
+        "mirrorSymmetryRequired": true,
+        "visor": false,
+        "forbiddenFeatures": ["horns", "plume"]
+      },
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [18, 4, 46, 29],
+        "opaquePixelCount": 404,
+        "fileByteCount": 542,
+        "hashes": {
+          "fileSha256": "d09863e83ed4616f8666c37782c27769c02377114b2633f142578e03655d2329",
+          "rawRgbaSha256": "80a83a25185845e727f4b8125eff9ec1549a9343233c141f4a99cc505e7f690e",
+          "alphaMaskSha256": "04000c9883a7e7fca5b103c0562e44d001556b663acc058b03cd942680b45cec"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [18, 4, 46, 29],
+        "opaquePixelCount": 404,
+        "fileByteCount": 542,
+        "hashes": {
+          "fileSha256": "d09863e83ed4616f8666c37782c27769c02377114b2633f142578e03655d2329",
+          "rawRgbaSha256": "80a83a25185845e727f4b8125eff9ec1549a9343233c141f4a99cc505e7f690e",
+          "alphaMaskSha256": "04000c9883a7e7fca5b103c0562e44d001556b663acc058b03cd942680b45cec"
+        }
+      },
+      "previewKeys": {
+        "equipped1x": "iron-helmet-equipped@1x",
+        "equipped8x": "iron-helmet-equipped@8x"
+      }
+    }
+  ],
+  "previews": {
+    "purpose": "deterministic equipped visual verification; never a runtime layer source",
+    "artifacts": {
+      "leather-hat-equipped@1x": {
+        "equipmentId": 1003,
+        "scale": 1,
+        "path": "previews/leather-hat-equipped.png",
+        "width": 64,
+        "height": 64,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [19, 4, 45, 58], "opaquePixelCount": 1233, "fileByteCount": 1384, "hashes": {"fileSha256": "0673ff1947937608f214fcb714e2554ce0dd958774ad4b84648306c209413e3a", "rawRgbaSha256": "9d625c199c55975e2ff5423ed812f0712f93a621a6d45191887f1f03dcf9408b", "alphaMaskSha256": "0ac392b199bde71e4fb22f11ea22eb1fa832df2d9c4b92c4a2f1356a6d016f07"}}
+      },
+      "leather-hat-equipped@8x": {
+        "equipmentId": 1003,
+        "scale": 8,
+        "path": "previews/leather-hat-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [152, 32, 367, 471], "opaquePixelCount": 78912, "fileByteCount": 4157, "hashes": {"fileSha256": "3eeb836f29bd74c18e7547e89fc13747bd424d7ddcdc5a703cc7422a55eaca8e", "rawRgbaSha256": "6668dcc0dbd6d6c773ba2419375d54a3af46ac9a4658e9e61b649fbd4d5c63e1", "alphaMaskSha256": "99f0419a04e7590987b0ff2375258c5e9ba9b69d34650344d60889c851b851e7"}}
+      },
+      "iron-helmet-equipped@1x": {
+        "equipmentId": 1004,
+        "scale": 1,
+        "path": "previews/iron-helmet-equipped.png",
+        "width": 64,
+        "height": 64,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [18, 4, 46, 58], "opaquePixelCount": 1254, "fileByteCount": 1490, "hashes": {"fileSha256": "cc8d3ac78d18fe767795d6058684646baa3f14bc6fa14d2823d50778b6cc51f9", "rawRgbaSha256": "c699256950c7410818f4f4c26a95ca0fd085cb0d995f38c28dda1d5ab63ecb88", "alphaMaskSha256": "5e6a9c6f02836b79438d2c98b94524bdf1af5dd8ad00ccb264377a18a5ed6e67"}}
+      },
+      "iron-helmet-equipped@8x": {
+        "equipmentId": 1004,
+        "scale": 8,
+        "path": "previews/iron-helmet-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [144, 32, 375, 471], "opaquePixelCount": 80256, "fileByteCount": 4382, "hashes": {"fileSha256": "d7459f55fa34cf073e85d6626739e9d538d2a5c3dde41ea906671e40b3f29d62", "rawRgbaSha256": "aad05647f36cd70914beaa80587aa86078ce4d386c1f8240d0de1bb26fef4739", "alphaMaskSha256": "e16e911d591f5346efcc8e4344afb0a8de54031ed6169559ac8c5a3063ddf6e1"}}
+      }
+    }
+  },
+  "hashSerialization": {
+    "algorithm": "SHA-256",
+    "fileBytes": "exact stored PNG bytes without decoding",
+    "rawRgba": "top-to-bottom, left-to-right row-major RGBA bytes",
+    "alphaMask": "top-to-bottom, left-to-right row-major alpha bytes"
+  }
+}

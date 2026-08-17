@@ -1,0 +1,969 @@
+{
+  "schemaVersion": 3,
+  "schemaCompatibility": {
+    "schemaV1SemanticsUnchanged": true,
+    "schemaV2SemanticsUnchanged": true,
+    "description": "schema v3는 v1과 v2의 좌표, 팔레트, 안내선, 합성 및 픽셀 무결성 의미를 유지하면서 기본 머리와 기본/모험가 의상 레이어 및 외부 base-body 계약을 추가한다."
+  },
+  "reference": {
+    "sourceSheet": "docs/art/character/todo-quest-character-base-sheet.png",
+    "sourceSpec": "docs/art/character/character-base-spec.json",
+    "tile": {
+      "name": "equipped",
+      "row": 0,
+      "column": 0
+    },
+    "description": "첫 번째 파란색 장비 캐릭터",
+    "exclusiveCanonicalReference": true
+  },
+  "sheet": {
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  "logicalTile": {
+    "width": 64,
+    "height": 64,
+    "columns": 8,
+    "rows": 2
+  },
+  "tileMap": [
+    { "name": "equipped", "row": 0, "column": 0 },
+    { "name": "default-outfit", "row": 0, "column": 1 },
+    { "name": "default-hair-preview", "row": 0, "column": 2 },
+    { "name": "anchors", "row": 0, "column": 3 },
+    { "name": "palette", "row": 0, "column": 4 },
+    { "name": "default-top-layer", "row": 0, "column": 5 },
+    { "name": "default-bottom-layer", "row": 0, "column": 6 },
+    { "name": "default-shoes-layer", "row": 0, "column": 7 },
+    { "name": "default-hair-back-layer", "row": 1, "column": 0 },
+    { "name": "adventure-shoes-layer", "row": 1, "column": 1 },
+    { "name": "adventure-bottom-layer", "row": 1, "column": 2 },
+    { "name": "adventure-top-layer", "row": 1, "column": 3 },
+    { "name": "default-hair-front-layer", "row": 1, "column": 4 },
+    { "name": "head-gear-layer", "row": 1, "column": 5 },
+    { "name": "accessory-layer", "row": 1, "column": 6 },
+    { "name": "composite", "row": 1, "column": 7 }
+  ],
+  "centerX": 32,
+  "soleY": 58,
+  "minimumMargin": 3,
+  "commonAllowedBox": [20, 4, 44, 58],
+  "commonAllowedBoxInclusive": true,
+  "anchors": {
+    "headTopY": 7,
+    "shoulderY": 25,
+    "waistY": 39,
+    "ankleY": 53,
+    "soleY": 58,
+    "centerX": 32,
+    "upperExtensionRule": {
+      "allowedY": [4, 6],
+      "allowedLayers": [
+        "default-hair-back-layer",
+        "default-hair-front-layer",
+        "head-gear-layer"
+      ],
+      "description": "머리카락과 머리 장비만 공통 허용 영역 안에서 y=4..6을 사용할 수 있다."
+    }
+  },
+  "guide": {
+    "tile": "anchors",
+    "baseTile": "default-hair-preview",
+    "overlayColor": "#5CC8A7",
+    "overlayPaletteName": "tealAccent",
+    "lineWidth": 1,
+    "pattern": {
+      "onPixels": 1,
+      "offPixels": 1
+    },
+    "verticalLines": [
+      {
+        "x": 32,
+        "yRange": [4, 58],
+        "pixelCoordinates": [
+          [32, 4],
+          [32, 6],
+          [32, 8],
+          [32, 10],
+          [32, 12],
+          [32, 14],
+          [32, 16],
+          [32, 18],
+          [32, 20],
+          [32, 22],
+          [32, 24],
+          [32, 26],
+          [32, 28],
+          [32, 30],
+          [32, 32],
+          [32, 34],
+          [32, 36],
+          [32, 38],
+          [32, 40],
+          [32, 42],
+          [32, 44],
+          [32, 46],
+          [32, 48],
+          [32, 50],
+          [32, 52],
+          [32, 54],
+          [32, 56],
+          [32, 58]
+        ]
+      }
+    ],
+    "horizontalLines": [
+      {
+        "y": 7,
+        "xRange": [20, 44],
+        "pixelCoordinates": [
+          [20, 7],
+          [22, 7],
+          [24, 7],
+          [26, 7],
+          [28, 7],
+          [30, 7],
+          [32, 7],
+          [34, 7],
+          [36, 7],
+          [38, 7],
+          [40, 7],
+          [42, 7],
+          [44, 7]
+        ]
+      },
+      {
+        "y": 25,
+        "xRange": [20, 44],
+        "pixelCoordinates": [
+          [20, 25],
+          [22, 25],
+          [24, 25],
+          [26, 25],
+          [28, 25],
+          [30, 25],
+          [32, 25],
+          [34, 25],
+          [36, 25],
+          [38, 25],
+          [40, 25],
+          [42, 25],
+          [44, 25]
+        ]
+      },
+      {
+        "y": 39,
+        "xRange": [20, 44],
+        "pixelCoordinates": [
+          [20, 39],
+          [22, 39],
+          [24, 39],
+          [26, 39],
+          [28, 39],
+          [30, 39],
+          [32, 39],
+          [34, 39],
+          [36, 39],
+          [38, 39],
+          [40, 39],
+          [42, 39],
+          [44, 39]
+        ]
+      },
+      {
+        "y": 53,
+        "xRange": [20, 44],
+        "pixelCoordinates": [
+          [20, 53],
+          [22, 53],
+          [24, 53],
+          [26, 53],
+          [28, 53],
+          [30, 53],
+          [32, 53],
+          [34, 53],
+          [36, 53],
+          [38, 53],
+          [40, 53],
+          [42, 53],
+          [44, 53]
+        ]
+      },
+      {
+        "y": 58,
+        "xRange": [20, 44],
+        "pixelCoordinates": [
+          [20, 58],
+          [22, 58],
+          [24, 58],
+          [26, 58],
+          [28, 58],
+          [30, 58],
+          [32, 58],
+          [34, 58],
+          [36, 58],
+          [38, 58],
+          [40, 58],
+          [42, 58],
+          [44, 58]
+        ]
+      }
+    ],
+    "excludedFromCharacterTiles": true
+  },
+  "externalLayers": {
+    "base-body": {
+      "path": "todo-quest-character-base-body.png",
+      "pathRelativeToSpec": true,
+      "width": 64,
+      "height": 64,
+      "mode": "RGBA",
+      "localCoordinateSpace": [0, 0, 63, 63],
+      "centerX": 32,
+      "soleY": 58,
+      "commonAllowedBox": [20, 4, 44, 58],
+      "minimumMargin": 3,
+      "sameAlphaSilhouetteAsOriginalBodyBase": true,
+      "sameFaceAsOriginalBodyBase": true,
+      "sameBodyProportionsAsOriginalBodyBase": true,
+      "sameFrontFacingPoseAsOriginalBodyBase": true,
+      "includes": [
+        "bald-face",
+        "ears",
+        "neck",
+        "arms",
+        "hands",
+        "legs",
+        "neutral-underwear"
+      ],
+      "excludes": [
+        "hair",
+        "default-outfit",
+        "adventure-outfit",
+        "head-gear",
+        "accessory"
+      ],
+      "neutralUnderwearPaletteNames": [
+        "underDark",
+        "underMid",
+        "underLight"
+      ],
+      "neutralUnderwearRegion": {
+        "minY": 30,
+        "maxY": 58,
+        "inclusive": true,
+        "description": "중립 내의 팔레트 제한은 보존된 머리·얼굴 아래의 의상 정규화 영역에만 적용한다."
+      },
+      "nonProtectedAnatomyPaletteNames": [
+        "outlineDarkNavy",
+        "skinShadow",
+        "skinLight"
+      ],
+      "originalBodyBaseReference": {
+        "validationMode": "embedded-contract",
+        "capturedFromSheetRequiredAtValidation": false,
+        "capturedFromSheet": "todo-quest-character-modular-sheet.png",
+        "capturedFromSheetSha256": "404ec074dfc40fa62c1c25c71b1a3bd6217a91553d83029996b8d567619933d0",
+        "tile": {
+          "name": "body-base",
+          "row": 0,
+          "column": 1
+        },
+        "sha256": {
+          "algorithm": "SHA-256",
+          "serialization": "4096 pixels in row-major order, each encoded as four RGBA bytes",
+          "value": "ad4e6a19b07832fa7256a7f47282894fced2c2e58b4ead4dd0c7ebcc5ac659e4"
+        },
+        "alphaMaskSha256": {
+          "algorithm": "SHA-256",
+          "serialization": "4096 alpha bytes in row-major order",
+          "value": "50a09892663855568f303c8f1b840ed289900d44b523aa423b8d76dc3f8922e8"
+        },
+        "alphaMaskBitset": {
+          "encoding": "4096 row-major bits packed most-significant-bit first and hex encoded",
+          "value": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001ffc0000000000007fff000000000000ffff800000000000ffff800000000003ffffc00000000003ffffc00000000007fffff00000000007fffff00000000007fffff00000000007fffff00000000007fffff00000000007fffff00000000007fffff0000000000ffffff8000000000ffffff8000000000ffffff8000000000ffffff80000000007fffff00000000003ffffe00000000000ffff8000000000007fff0000000000001ffc0000000000003ffc0000000000007fff0000000000007fff000000000000ffff800000000000ffff800000000001ffffc00000000003ffffe00000000003ffffe00000000003ffffe00000000007fffff00000000007fffff00000000007fffff0000000000ffffff8000000000ffffff8000000000ffffff8000000000ffffff8000000000ffffff80000000007fffff00000000000ffff800000000000ffff800000000000ff7f800000000000ff7f800000000000ff7f800000000000ff7f800000000000ff7f800000000000ff7f800000000001ff7fc00000000001ff7fc00000000001ff7fc00000000001ff7fc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "opaqueBoundingBox": [20, 7, 44, 58],
+        "boundingBoxInclusive": true
+      }
+    }
+  },
+  "faceProtectionContract": {
+    "source": "externalLayers.base-body.originalBodyBaseReference",
+    "protectedRegion": [20, 20, 44, 28],
+    "protectedRegionInclusive": true,
+    "pixelCoordinatesAreLocal": true,
+    "comparison": "pixel-exact-rgba",
+    "features": {
+      "left-eye": [
+        { "coordinate": [25, 20], "rgba": [17, 21, 28, 255] },
+        { "coordinate": [26, 20], "rgba": [29, 53, 87, 255] },
+        { "coordinate": [27, 20], "rgba": [29, 53, 87, 255] },
+        { "coordinate": [28, 20], "rgba": [29, 53, 87, 255] },
+        { "coordinate": [29, 20], "rgba": [17, 21, 28, 255] },
+        { "coordinate": [25, 21], "rgba": [244, 239, 227, 255] },
+        { "coordinate": [26, 21], "rgba": [58, 63, 69, 255] },
+        { "coordinate": [27, 21], "rgba": [29, 53, 87, 255] },
+        { "coordinate": [28, 21], "rgba": [244, 239, 227, 255] },
+        { "coordinate": [25, 22], "rgba": [244, 239, 227, 255] },
+        { "coordinate": [26, 22], "rgba": [53, 68, 92, 255] },
+        { "coordinate": [27, 22], "rgba": [29, 53, 87, 255] },
+        { "coordinate": [28, 22], "rgba": [29, 53, 87, 255] }
+      ],
+      "right-eye": [
+        { "coordinate": [35, 20], "rgba": [29, 53, 87, 255] },
+        { "coordinate": [36, 20], "rgba": [29, 53, 87, 255] },
+        { "coordinate": [37, 20], "rgba": [29, 53, 87, 255] },
+        { "coordinate": [38, 20], "rgba": [17, 21, 28, 255] },
+        { "coordinate": [39, 20], "rgba": [17, 21, 28, 255] },
+        { "coordinate": [36, 21], "rgba": [244, 239, 227, 255] },
+        { "coordinate": [37, 21], "rgba": [29, 53, 87, 255] },
+        { "coordinate": [38, 21], "rgba": [244, 239, 227, 255] },
+        { "coordinate": [39, 21], "rgba": [244, 239, 227, 255] },
+        { "coordinate": [35, 22], "rgba": [244, 239, 227, 255] },
+        { "coordinate": [36, 22], "rgba": [29, 53, 87, 255] },
+        { "coordinate": [37, 22], "rgba": [17, 21, 28, 255] },
+        { "coordinate": [38, 22], "rgba": [244, 239, 227, 255] }
+      ],
+      "nose": [
+        { "coordinate": [31, 26], "rgba": [217, 152, 114, 255] },
+        { "coordinate": [33, 26], "rgba": [217, 152, 114, 255] }
+      ],
+      "mouth": [
+        { "coordinate": [32, 27], "rgba": [217, 152, 114, 255] }
+      ],
+      "face-outline": [
+        { "coordinate": [20, 20], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [21, 20], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [43, 20], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [44, 20], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [20, 21], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [44, 21], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [20, 22], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [44, 22], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [20, 23], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [21, 23], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [43, 23], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [44, 23], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [21, 24], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [22, 24], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [42, 24], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [43, 24], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [22, 25], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [23, 25], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [24, 25], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [40, 25], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [41, 25], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [42, 25], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [24, 26], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [25, 26], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [39, 26], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [40, 26], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [25, 27], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [26, 27], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [27, 27], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [37, 27], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [38, 27], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [39, 27], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [27, 28], "rgba": [38, 59, 90, 255] },
+        { "coordinate": [37, 28], "rgba": [38, 59, 90, 255] }
+      ]
+    },
+    "hairExclusion": {
+      "layer": "default-hair-front-layer",
+      "centralBang": {
+        "xRange": [29, 35],
+        "browY": 20,
+        "maxY": 19,
+        "description": "중앙 앞머리는 눈썹 위에서 끝나며 눈 사이로 내려오지 않는다."
+      },
+      "centralFaceOpenRegion": [25, 20, 39, 28],
+      "centralFaceOpenRegionInclusive": true,
+      "eyeNeighborhood": {
+        "sourceFeatures": ["left-eye", "right-eye"],
+        "radius": 1,
+        "connectivity": 8,
+        "opaqueHairForbidden": true
+      },
+      "directOverlapForbiddenFeatures": ["nose", "mouth"],
+      "sideHairBelowBrow": {
+        "yRange": [20, 30],
+        "allowedXRanges": [[20, 24], [40, 44]],
+        "description": "눈썹 아래에서는 옆머리만 얼굴 바깥을 따라 목선까지 내려올 수 있다."
+      }
+    }
+  },
+  "handProtectionContract": {
+    "source": "externalLayers.base-body",
+    "sourcePath": "todo-quest-character-base-body.png",
+    "sourcePathRelativeToSpec": true,
+    "regions": {
+      "left": {
+        "xRange": [20, 24],
+        "yRange": [39, 45]
+      },
+      "right": {
+        "xRange": [40, 44],
+        "yRange": [39, 45]
+      }
+    },
+    "regionBoundsInclusive": true,
+    "paletteNames": ["skinLight", "skinShadow"],
+    "extractionOrder": "left region then right region, each in row-major y/x order",
+    "pixelCoordinatesAreLocal": true,
+    "comparison": "pixel-exact-rgba",
+    "pixelCoordinates": [
+      [22, 39], [23, 39], [24, 39],
+      [22, 40], [23, 40], [24, 40],
+      [22, 41], [23, 41],
+      [21, 42], [22, 42], [23, 42],
+      [21, 43], [22, 43], [23, 43],
+      [21, 44], [22, 44], [23, 44],
+      [22, 45], [23, 45],
+      [40, 39], [41, 39], [42, 39],
+      [40, 40], [41, 40], [42, 40],
+      [41, 41], [42, 41],
+      [41, 42], [42, 42], [43, 42],
+      [41, 43], [42, 43], [43, 43],
+      [41, 44], [42, 44], [43, 44],
+      [41, 45], [42, 45]
+    ],
+    "pixels": [
+      { "coordinate": [22, 39], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [23, 39], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [24, 39], "paletteName": "skinShadow", "rgba": [217, 152, 114, 255] },
+      { "coordinate": [22, 40], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [23, 40], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [24, 40], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [22, 41], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [23, 41], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [21, 42], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [22, 42], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [23, 42], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [21, 43], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [22, 43], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [23, 43], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [21, 44], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [22, 44], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [23, 44], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [22, 45], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [23, 45], "paletteName": "skinShadow", "rgba": [217, 152, 114, 255] },
+      { "coordinate": [40, 39], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [41, 39], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [42, 39], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [40, 40], "paletteName": "skinShadow", "rgba": [217, 152, 114, 255] },
+      { "coordinate": [41, 40], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [42, 40], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [41, 41], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [42, 41], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [41, 42], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [42, 42], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [43, 42], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [41, 43], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [42, 43], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [43, 43], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [41, 44], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [42, 44], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [43, 44], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] },
+      { "coordinate": [41, 45], "paletteName": "skinShadow", "rgba": [217, 152, 114, 255] },
+      { "coordinate": [42, 45], "paletteName": "skinLight", "rgba": [255, 211, 174, 255] }
+    ],
+    "adventureTopTransparency": {
+      "layer": "adventure-top-layer",
+      "coordinates": "pixelCoordinates",
+      "requiredAlpha": 0
+    },
+    "compositeVisibility": {
+      "tiles": ["equipped", "composite"],
+      "expectedSource": "base-body",
+      "coordinates": "pixelCoordinates",
+      "comparison": "pixel-exact-rgba"
+    }
+  },
+  "layerOrder": [
+    "default-hair-back-layer",
+    "base-body",
+    "adventure-shoes-layer",
+    "adventure-bottom-layer",
+    "adventure-top-layer",
+    "default-hair-front-layer",
+    "head-gear-layer",
+    "accessory-layer"
+  ],
+  "layerBounds": {
+    "default-hair-back-layer": { "minY": 4, "maxY": 30, "inclusive": true },
+    "default-hair-front-layer": { "minY": 4, "maxY": 30, "inclusive": true },
+    "default-top-layer": { "minY": 24, "maxY": 39, "inclusive": true },
+    "default-bottom-layer": { "minY": 39, "maxY": 46, "inclusive": true },
+    "default-shoes-layer": { "minY": 53, "maxY": 58, "inclusive": true },
+    "adventure-shoes-layer": { "minY": 53, "maxY": 58, "inclusive": true },
+    "adventure-bottom-layer": { "minY": 41, "maxY": 54, "inclusive": true },
+    "adventure-top-layer": { "minY": 24, "maxY": 43, "inclusive": true },
+    "head-gear-layer": { "minY": 4, "maxY": 25, "inclusive": true },
+    "accessory-layer": { "minY": 4, "maxY": 58, "inclusive": true }
+  },
+  "layerBoundaryContracts": {
+    "sharedSeamRule": "기본 복장은 명시된 공통 seam만 공유하며, 모험가 복장은 adventureWaistOverlap과 adventureAnkleOverlap의 필수 source-over 중첩만 공유한다.",
+    "defaultOutfitSeam": {
+      "layers": ["default-top-layer", "default-bottom-layer"],
+      "type": "shared-seam",
+      "seamY": 39,
+      "anchor": "anchors.waistY"
+    },
+    "adventureWaistOverlap": {
+      "layersBackToFront": ["adventure-bottom-layer", "adventure-top-layer"],
+      "type": "required-source-over-overlap",
+      "xRange": [24, 40],
+      "yRange": [41, 43],
+      "boundsInclusive": true,
+      "requiredSharedOpaqueRegion": true,
+      "sharedOpaqueCoordinatesOutsideRegionForbidden": true,
+      "laterCompositedLayer": "adventure-top-layer",
+      "hiddenOverlapLayer": "adventure-bottom-layer",
+      "hiddenOverlapForbiddenPaletteNames": ["outlineDarkNavy"],
+      "finalVisibleHem": {
+        "layer": "adventure-top-layer",
+        "y": 43,
+        "rowCount": 1
+      }
+    },
+    "adventureAnkleOverlap": {
+      "layersBackToFront": ["adventure-shoes-layer", "adventure-bottom-layer"],
+      "type": "required-source-over-overlap",
+      "xRanges": [[24, 31], [33, 40]],
+      "yRange": [53, 54],
+      "boundsInclusive": true,
+      "requiredSharedOpaqueRegion": true,
+      "sharedOpaqueCoordinatesOutsideRegionForbidden": true,
+      "laterCompositedLayer": "adventure-bottom-layer",
+      "hiddenOverlapLayer": "adventure-shoes-layer",
+      "hiddenOverlapForbiddenPaletteNames": ["outlineDarkNavy"],
+      "finalVisibleHem": {
+        "layer": "adventure-bottom-layer",
+        "y": 54,
+        "rowCount": 1
+      }
+    },
+    "default-hair-back-layer": {
+      "neckEndY": 30,
+      "pixelsBelowNeckForbidden": true
+    },
+    "default-top-layer": {
+      "hemY": 39,
+      "hemRequired": true,
+      "pixelsAtOrBelowY": 40,
+      "pixelsAtOrBelowForbidden": true,
+      "longFrontTailForbidden": true
+    },
+    "default-bottom-layer": {
+      "waistSeamY": 39,
+      "waistSeamRequired": true,
+      "leftRightHemSameY": true,
+      "hemY": 46
+    },
+    "default-shoes-layer": {
+      "ankleSeamY": 53,
+      "soleY": 58,
+      "leftRightSameSize": true,
+      "leftRightSameSoleY": true
+    },
+    "adventure-shoes-layer": {
+      "ankleSeamY": 53,
+      "soleY": 58,
+      "overlapContract": "layerBoundaryContracts.adventureAnkleOverlap"
+    },
+    "adventure-bottom-layer": {
+      "waistY": 41,
+      "waistOverlapYRange": [41, 43],
+      "hemY": 54,
+      "hemRowCount": 1,
+      "overlapContracts": [
+        "layerBoundaryContracts.adventureWaistOverlap",
+        "layerBoundaryContracts.adventureAnkleOverlap"
+      ]
+    },
+    "adventure-top-layer": {
+      "torsoRegion": {
+        "xRange": [24, 40],
+        "yRange": [29, 43],
+        "inclusive": true
+      },
+      "hemY": 43,
+      "hemXRange": [24, 40],
+      "hemContinuousOpaque": true,
+      "hemShape": "near-horizontal-single-row",
+      "longFrontTailForbidden": true,
+      "centerFrontTailForbidden": true,
+      "leftRightCoatTailsForbidden": true,
+      "overlapContract": "layerBoundaryContracts.adventureWaistOverlap",
+      "hemTermination": {
+        "y": 43,
+        "elements": ["lightCream-shirt", "button", "zipper", "vertical-decoration"],
+        "pixelsBelowHemForbidden": true
+      }
+    },
+    "head-gear-layer": {
+      "preserveSchemaV2Pixels": true,
+      "rgbaSha256": "4cd87e2791d5d59877ccd674b63f385382d21d5502bd487dd281f85a5dbf99ae"
+    },
+    "accessory-layer": {
+      "preserveSchemaV2Pixels": true,
+      "rgbaSha256": "bf3361d94522aac7bb4d105df0c2de912a11b4016c564aa5f6aacc243277d806"
+    },
+    "preservedLayerHashSerialization": "4096 pixels in row-major order, each encoded as four RGBA bytes"
+  },
+  "equipmentMappingContracts": {
+    "adventure-top-layer": {
+      "reference": "base-body",
+      "primaryMappingYRange": [29, 43],
+      "boundsInclusive": true,
+      "maximumChebyshevExpansionPixels": 1,
+      "collarShoulderPreservation": {
+        "yRange": [24, 28],
+        "boundsInclusive": true,
+        "directBaseAlphaOverlapOnly": true
+      },
+      "neutralUnderwearCoverage": {
+        "yRange": [29, 43],
+        "boundsInclusive": true,
+        "sourcePaletteNames": "externalLayers.base-body.neutralUnderwearPaletteNames",
+        "required": true
+      },
+      "transparentCoordinates": "handProtectionContract.pixelCoordinates",
+      "centerAxisX": 32,
+      "leftRightOuterExtentDifferenceTolerancePixels": 1
+    },
+    "adventure-bottom-layer": {
+      "reference": "base-body",
+      "boundsInclusive": true,
+      "requiredOpaqueRegions": [
+        {
+          "xRange": [24, 40],
+          "yRange": [41, 48]
+        },
+        {
+          "xRanges": [[24, 31], [33, 40]],
+          "yRange": [49, 54]
+        }
+      ],
+      "requiredTransparentRegion": {
+        "x": 32,
+        "yRange": [49, 54]
+      },
+      "opaqueCoordinatesOutsideRequiredRegionsForbidden": true,
+      "maximumChebyshevExpansionPixels": 1
+    },
+    "adventure-shoes-layer": {
+      "reference": "base-body",
+      "mappingYRange": [53, 58],
+      "boundsInclusive": true,
+      "coverAllBaseBodyFootAlpha": true,
+      "maximumChebyshevExpansionPixels": 1,
+      "soleY": 58
+    }
+  },
+  "compositionContracts": {
+    "alphaCompositing": "source-over",
+    "localCoordinateSpace": [0, 0, 63, 63],
+    "externalLayersUseSameLocalCoordinates": true,
+    "default-outfit": {
+      "sources": [
+        "default-hair-back-layer",
+        "base-body",
+        "default-shoes-layer",
+        "default-bottom-layer",
+        "default-top-layer",
+        "default-hair-front-layer"
+      ],
+      "pixelExact": true
+    },
+    "default-hair-preview": {
+      "sources": [
+        "default-hair-back-layer",
+        "base-body",
+        "default-hair-front-layer"
+      ],
+      "pixelExact": true
+    },
+    "anchors": {
+      "base": "default-hair-preview",
+      "overlay": "guide",
+      "onlyGuidePixelCoordinatesMayDiffer": true,
+      "pixelExact": true
+    },
+    "equipped": {
+      "sources": [
+        "default-hair-back-layer",
+        "base-body",
+        "adventure-shoes-layer",
+        "adventure-bottom-layer",
+        "adventure-top-layer",
+        "default-hair-front-layer",
+        "head-gear-layer",
+        "accessory-layer"
+      ],
+      "pixelExact": true
+    },
+    "composite": {
+      "sources": [
+        "default-hair-back-layer",
+        "base-body",
+        "adventure-shoes-layer",
+        "adventure-bottom-layer",
+        "adventure-top-layer",
+        "default-hair-front-layer",
+        "head-gear-layer",
+        "accessory-layer"
+      ],
+      "pixelExact": true
+    },
+    "equippedCompositeEquality": {
+      "tiles": ["equipped", "composite"],
+      "pixelExact": true
+    },
+    "geometry": {
+      "tiles": [
+        "equipped",
+        "default-outfit",
+        "default-hair-preview",
+        "composite"
+      ],
+      "externalLayers": ["base-body"],
+      "commonAllowedBox": [20, 4, 44, 58],
+      "sameBoundingBox": true,
+      "sameCenterX": 32,
+      "sameSoleY": 58,
+      "excludedTiles": [
+        "anchors",
+        "palette"
+      ]
+    }
+  },
+  "targetedEditContract": {
+    "baselineSheet": "todo-quest-character-modular-sheet.png",
+    "baselineSheetRgbaSha256": "42b40ddb93efc1294a15d9913347809cbfeb5486d890ec0184e4b7d52db056ac",
+    "hashAlgorithm": "SHA-256",
+    "hashSerialization": "RGBA pixels in row-major order, each encoded as four bytes; baseline sheet hashes all 32768 pixels and preserved tile hashes each tile's 4096 pixels",
+    "tiles": ["equipped", "adventure-shoes-layer", "adventure-bottom-layer", "adventure-top-layer", "composite"],
+    "preservedTiles": [
+      "default-outfit",
+      "default-hair-preview",
+      "anchors",
+      "palette",
+      "default-top-layer",
+      "default-bottom-layer",
+      "default-shoes-layer",
+      "default-hair-back-layer",
+      "default-hair-front-layer",
+      "head-gear-layer",
+      "accessory-layer"
+    ],
+    "preservedTilesPixelExact": true,
+    "preservedTileRgbaSha256": {
+      "default-outfit": "ae0245a77970080d211e91bf9d50a727345e02bbdd67aed4f74b9f8596f9d67c",
+      "default-hair-preview": "74b42c9245cc1d2d6625963f5b161df6431a5b0c168014c7c895f1584a12d082",
+      "anchors": "d6e7c60fb94dd413a936a599fd0c6fe041a21b1660688df6e51eeb2e857c38ee",
+      "palette": "dd8118b21a94bdb0f7d0dd904496844fc17ab4e3472a8fa07d3c1badaaf11531",
+      "default-top-layer": "f69170bcf6ca5ef1691512d497a71ada64adb353a5dddae94c1e4597393ddb98",
+      "default-bottom-layer": "8f7501c83021f202e83e6d8541abc6082ac3da2b3cb73e916011a4bc6723c22f",
+      "default-shoes-layer": "c8421158b67d96e8ac14148744edbe4195d51a505cc263f0d14ac8dc19242dfd",
+      "default-hair-back-layer": "868cb31b177d67b204ac929d9c5dc327e9beac269eaebe84eb0de5d4ec8b06c5",
+      "default-hair-front-layer": "fbee9f420877dbd00cd2d3c7d5ee626dbc4050189c15ea7e86c9a3e2cddc0f70",
+      "head-gear-layer": "4cd87e2791d5d59877ccd674b63f385382d21d5502bd487dd281f85a5dbf99ae",
+      "accessory-layer": "bf3361d94522aac7bb4d105df0c2de912a11b4016c564aa5f6aacc243277d806"
+    }
+  },
+  "designContracts": {
+    "default-hair": {
+      "layers": ["default-hair-back-layer", "default-hair-front-layer"],
+      "primaryPaletteName": "hairBlack",
+      "highlightPaletteName": "hairHighlight",
+      "outlinePaletteName": "outlineDarkNavy",
+      "requiredPaletteNames": ["hairBlack", "hairHighlight", "outlineDarkNavy"],
+      "alphaSilhouetteMirrorAxisX": 32,
+      "alphaSilhouetteMirrorExact": true,
+      "backHairEndsAtNeck": true
+    },
+    "default-top": {
+      "layer": "default-top-layer",
+      "description": "무장식 반팔 티셔츠",
+      "primaryPaletteName": "lightCream",
+      "shadePaletteName": "underLight",
+      "outlinePaletteName": "outlineDarkNavy",
+      "requiredPaletteNames": ["lightCream", "underLight", "outlineDarkNavy"],
+      "decorationForbidden": true
+    },
+    "default-bottom": {
+      "layer": "default-bottom-layer",
+      "description": "무장식 반바지",
+      "primaryPaletteName": "underDark",
+      "shadePaletteName": "underMid",
+      "outlinePaletteName": "outlineDarkNavy",
+      "requiredPaletteNames": ["underDark", "underMid", "outlineDarkNavy"],
+      "decorationForbidden": true
+    },
+    "default-shoes": {
+      "layer": "default-shoes-layer",
+      "description": "동일 크기 운동화",
+      "primaryPaletteName": "lightCream",
+      "shadePaletteName": "underLight",
+      "outlinePaletteName": "outlineDarkNavy",
+      "requiredPaletteNames": ["lightCream", "underLight", "outlineDarkNavy"]
+    },
+    "adventure-top": {
+      "layer": "adventure-top-layer",
+      "description": "y=24..28 목깃·어깨를 보존하고 y=29..43에 매핑되며 y=43 한 행 밑단으로 끝나는 파란 재킷",
+      "overlapContract": "layerBoundaryContracts.adventureWaistOverlap",
+      "usesDefaultWaistSeam": false,
+      "torsoRegion": [24, 29, 40, 43],
+      "torsoRegionInclusive": true,
+      "hemY": 43,
+      "primaryPaletteName": "bluePrimary",
+      "shadePaletteName": "blueShadow",
+      "highlightPaletteName": "blueHighlight",
+      "accentPaletteName": "tealAccent",
+      "innerPaletteName": "lightCream",
+      "outlinePaletteName": "outlineDarkNavy",
+      "allowedPaletteNames": ["bluePrimary", "blueShadow", "blueHighlight", "tealAccent", "lightCream", "outlineDarkNavy"],
+      "requiredPaletteNames": ["bluePrimary", "blueShadow", "blueHighlight", "lightCream", "outlineDarkNavy"]
+    },
+    "adventure-bottom": {
+      "layer": "adventure-bottom-layer",
+      "description": "y=41..48의 연속 허리·골반과 y=49..54의 분리된 다리로 매핑되는 상의보다 어두운 바지",
+      "overlapContracts": [
+        "layerBoundaryContracts.adventureWaistOverlap",
+        "layerBoundaryContracts.adventureAnkleOverlap"
+      ],
+      "usesDefaultWaistSeam": false,
+      "waistY": 41,
+      "waistOverlapYRange": [41, 43],
+      "hemY": 54,
+      "shoeRegionStartY": 53,
+      "primaryPaletteName": "eyeDarkNavy",
+      "shadePaletteName": "underDark",
+      "outlinePaletteName": "outlineDarkNavy",
+      "allowedPaletteNames": ["eyeDarkNavy", "underDark", "outlineDarkNavy"],
+      "requiredPaletteNames": ["eyeDarkNavy", "underDark", "outlineDarkNavy"],
+      "allOtherPaletteNamesForbidden": true,
+      "forbiddenPaletteNames": ["hairBlack", "blueShadow", "hairHighlight", "underMid", "underLight", "skinShadow", "skinLight", "lightCream", "bluePrimary", "blueHighlight", "tealAccent", "goldAccent", "guideRed"],
+      "nearSymmetryAxisX": 32,
+      "leftRightLegBoundingBoxesNearSymmetric": true,
+      "leftRightLegEndYSame": true,
+      "mustBeDarkerThan": "adventure-top"
+    },
+    "adventure-shoes": {
+      "layer": "adventure-shoes-layer",
+      "description": "y=53..58의 base-body 발을 덮고 y=58에서 끝나는 파란색·아이보리·금색 모험가 신발",
+      "overlapContract": "layerBoundaryContracts.adventureAnkleOverlap",
+      "soleY": 58,
+      "primaryPaletteName": "blueShadow",
+      "accentPaletteName": "goldAccent",
+      "innerPaletteName": "lightCream",
+      "outlinePaletteName": "outlineDarkNavy",
+      "allowedPaletteNames": ["outlineDarkNavy", "blueShadow", "goldAccent", "lightCream", "underLight", "hairHighlight", "underDark", "underMid"],
+      "requiredPaletteNames": ["outlineDarkNavy", "blueShadow", "goldAccent", "lightCream", "underLight", "hairHighlight", "underDark", "underMid"],
+      "allOtherPaletteNamesForbidden": true,
+      "forbiddenPaletteNames": ["hairBlack", "eyeDarkNavy", "skinShadow", "skinLight", "bluePrimary", "blueHighlight", "tealAccent", "guideRed"]
+    }
+  },
+  "symmetryContracts": {
+    "mirrorAxisX": 32,
+    "colorShadingMirrorRequired": false,
+    "defaultHairAlpha": {
+      "layers": ["default-hair-back-layer", "default-hair-front-layer"],
+      "comparison": "mirrored-alpha-silhouette"
+    },
+    "sleeves": [
+      {
+        "layer": "default-top-layer",
+        "leftXRange": [20, 31],
+        "rightXRange": [33, 44],
+        "compare": ["bounding-box", "end-y"]
+      },
+      {
+        "layer": "adventure-top-layer",
+        "leftXRange": [20, 31],
+        "rightXRange": [33, 44],
+        "compare": ["bounding-box", "end-y"]
+      }
+    ],
+    "shortsHem": {
+      "layer": "default-bottom-layer",
+      "leftXRange": [20, 31],
+      "rightXRange": [33, 44],
+      "compare": ["end-y"]
+    },
+    "shoes": [
+      {
+        "layer": "default-shoes-layer",
+        "compare": ["bounding-box-size", "sole-y"]
+      },
+      {
+        "layer": "adventure-shoes-layer",
+        "compare": ["bounding-box-size", "sole-y"]
+      }
+    ]
+  },
+  "opaqueConnectivityContract": {
+    "connectivity": 8,
+    "isolatedOpaquePixelsForbidden": true,
+    "minimumConnectedComponentPixelCount": 2,
+    "allowedSmallComponents": [],
+    "excludedTiles": ["anchors", "palette"],
+    "description": "안내선과 팔레트를 제외한 캐릭터 및 레이어에는 고립 픽셀이나 허용 목록에 없는 2픽셀 미만 연결 요소가 없어야 한다."
+  },
+  "paletteGrid": {
+    "columns": 4,
+    "rows": 4,
+    "cellWidth": 10,
+    "cellHeight": 10,
+    "gap": 2,
+    "origin": [9, 9],
+    "colorOrder": [
+      "hairBlack",
+      "eyeDarkNavy",
+      "outlineDarkNavy",
+      "hairHighlight",
+      "underDark",
+      "blueShadow",
+      "underMid",
+      "underLight",
+      "skinShadow",
+      "skinLight",
+      "lightCream",
+      "bluePrimary",
+      "blueHighlight",
+      "tealAccent",
+      "goldAccent",
+      "guideRed"
+    ]
+  },
+  "palette": {
+    "hairBlack": "#11151C",
+    "eyeDarkNavy": "#1D3557",
+    "outlineDarkNavy": "#263B5A",
+    "hairHighlight": "#35445C",
+    "underDark": "#3A3F45",
+    "blueShadow": "#2853A6",
+    "underMid": "#737982",
+    "underLight": "#B7B0A3",
+    "skinShadow": "#D99872",
+    "skinLight": "#FFD3AE",
+    "lightCream": "#F4EFE3",
+    "bluePrimary": "#4F86E8",
+    "blueHighlight": "#7FB3FF",
+    "tealAccent": "#5CC8A7",
+    "goldAccent": "#F2C14E",
+    "guideRed": "#E05252"
+  },
+  "outlineColor": "#263B5A",
+  "outlinePaletteName": "outlineDarkNavy",
+  "outlineWidth": 1,
+  "outlineAppliesTo": "external-silhouette",
+  "outlineContinuous": true,
+  "transparentPixelsCountTowardPalette": false,
+  "allowedAlphaValues": [0, 255],
+  "chromaKey": "#FF00FF",
+  "chromaKeyAllowedInFinalPng": false
+}

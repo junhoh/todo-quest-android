@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "contractKind": "character-equipment-layer-variants",
+  "baseCharacterContract": {
+    "specPath": "../character/character-modular-sheet-spec.json",
+    "schemaVersion": 5,
+    "canonicalSourceCount": 15,
+    "relationship": "independent gameplay weapon variants for the schema-v5 topmost weapon group"
+  },
+  "pathContract": {
+    "sourcePathsRelativeTo": "spec-directory",
+    "previewPathsRelativeTo": "spec-directory",
+    "runtimePathRootRelativeToSpec": "../../../app/src/main/assets",
+    "safeRelativePathsRequired": true
+  },
+  "canvas": {
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA",
+    "boundsInclusive": [0, 0, 63, 63],
+    "centerX": 32,
+    "characterSoleY": 58,
+    "anchorProfile": "canvas-64-center-x-32-sole-y-58-schema-v5"
+  },
+  "productionPalette": {
+    "colorCount": 16,
+    "colors": {
+      "hairBlack": "#11151C",
+      "eyeDarkNavy": "#1D3557",
+      "outlineDarkNavy": "#263B5A",
+      "hairHighlight": "#35445C",
+      "underDark": "#3A3F45",
+      "blueShadow": "#2853A6",
+      "underMid": "#737982",
+      "underLight": "#B7B0A3",
+      "skinShadow": "#D99872",
+      "skinLight": "#FFD3AE",
+      "lightCream": "#F4EFE3",
+      "bluePrimary": "#4F86E8",
+      "blueHighlight": "#7FB3FF",
+      "tealAccent": "#5CC8A7",
+      "goldAccent": "#F2C14E",
+      "redAccent": "#E05252"
+    },
+    "opaquePixelsOnly": true
+  },
+  "layerContracts": {
+    "weapon_front": {
+      "renderSlot": "weapon_front",
+      "equipmentSlot": "WEAPON",
+      "allowedWeaponTypes": ["LONGSWORD", "SPEAR", "BLUNT"],
+      "allowedAlphaValues": [0, 255],
+      "transparentPixelRgba": [0, 0, 0, 0],
+      "chromaKey": "#FF00FF",
+      "chromaKeyAllowed": false,
+      "alphaCompositing": "source-over",
+      "interpolation": "nearest-neighbor",
+      "opaqueEnvelope": [40, 4, 58, 58],
+      "faceProtectedRegion": [20, 7, 44, 28],
+      "faceProtectedRegionInclusive": true,
+      "handOverlapContract": {
+        "region": [40, 39, 44, 45],
+        "allowedOpaqueEnvelope": [41, 39, 44, 45],
+        "allowedPart": "handle",
+        "forbiddenParts": ["blade", "spearhead", "maceHead"]
+      },
+      "connectivity": {
+        "opaqueNeighborMode": 8,
+        "opaqueComponentCount": 1,
+        "allowIsolatedOpaquePixels": false
+      },
+      "requiredOpaquePoints": {
+        "primaryGripAnchor": [42, 42]
+      },
+      "coordinatePreservation": {
+        "singleCanvasOrigin": [0, 0],
+        "translationAllowed": false,
+        "croppingAllowed": false,
+        "scalingAllowed": false,
+        "thumbnailOpaqueBoundsReadOnlyScalingAllowed": true
+      }
+    }
+  },
+  "compositionContract": {
+    "gameplayWeaponSourceCountPerItem": 1,
+    "gameplayWeaponRenderSlot": "weapon_front",
+    "allSourcesShareCanvasOrigin": true,
+    "thumbnailUsesOpaqueBoundsReadOnly": true,
+    "characterSchemaVersion": 5,
+    "weaponGroup": {
+      "groupId": "weapon",
+      "zOrder": "topmost",
+      "drawnAfterAllCharacterGroups": true,
+      "containsAllGameplayWeaponSources": true
+    }
+  },
+  "items": [
+    {
+      "displayNameKorean": "낡은 검",
+      "equipmentId": 1001,
+      "equipmentKey": "worn_sword",
+      "weaponType": "LONGSWORD",
+      "imageKey": "weapon_worn_sword",
+      "layerKey": "weapon_worn_sword",
+      "renderSlot": "weapon_front",
+      "equipmentSlot": "WEAPON",
+      "sourcePath": "layers/weapon_worn_sword.png",
+      "runtimePath": "character/layers/weapon_worn_sword.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [40, 4, 58, 58],
+        "opaquePixelCount": 274,
+        "fileByteCount": 704,
+        "hashes": {
+          "fileSha256": "7d0c103687af8b97dc2d7368754985189bae639485714b4851cee9ccb9f60eaf",
+          "rawRgbaSha256": "0dd9e72578d8189570f1dd68d41c8ba1c2c056bcb7be5d6b5af68a7359a65b99",
+          "alphaMaskSha256": "993cc92e89c82bfb304cc5dbba673c1313f282fa24b670539fb180a7b8d534e6"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [40, 4, 58, 58],
+        "opaquePixelCount": 274,
+        "fileByteCount": 704,
+        "hashes": {
+          "fileSha256": "7d0c103687af8b97dc2d7368754985189bae639485714b4851cee9ccb9f60eaf",
+          "rawRgbaSha256": "0dd9e72578d8189570f1dd68d41c8ba1c2c056bcb7be5d6b5af68a7359a65b99",
+          "alphaMaskSha256": "993cc92e89c82bfb304cc5dbba673c1313f282fa24b670539fb180a7b8d534e6"
+        }
+      },
+      "previewKeys": {
+        "equipped1x": "worn-sword-equipped@1x",
+        "equipped8x": "worn-sword-equipped@8x"
+      }
+    },
+    {
+      "displayNameKorean": "철 장검",
+      "equipmentId": 1002,
+      "equipmentKey": "iron_longsword",
+      "weaponType": "LONGSWORD",
+      "imageKey": "weapon_iron_longsword",
+      "layerKey": "weapon_iron_longsword",
+      "renderSlot": "weapon_front",
+      "equipmentSlot": "WEAPON",
+      "sourcePath": "layers/weapon_iron_longsword.png",
+      "runtimePath": "character/layers/weapon_iron_longsword.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [40, 4, 58, 58],
+        "opaquePixelCount": 229,
+        "fileByteCount": 591,
+        "hashes": {
+          "fileSha256": "0801a9ad41cb8ccddb6800898ed32e431d9585fe6f033f845ab25cf8c74c62b1",
+          "rawRgbaSha256": "37c2d4886a4d4b271b4486a2c0c07cb8623ad75a9b04562f265b5c6c781365ec",
+          "alphaMaskSha256": "6773314572c660a690a16c3835d6a1e7ef53b164fea874dd7e2e3c176fcf650d"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [40, 4, 58, 58],
+        "opaquePixelCount": 229,
+        "fileByteCount": 591,
+        "hashes": {
+          "fileSha256": "0801a9ad41cb8ccddb6800898ed32e431d9585fe6f033f845ab25cf8c74c62b1",
+          "rawRgbaSha256": "37c2d4886a4d4b271b4486a2c0c07cb8623ad75a9b04562f265b5c6c781365ec",
+          "alphaMaskSha256": "6773314572c660a690a16c3835d6a1e7ef53b164fea874dd7e2e3c176fcf650d"
+        }
+      },
+      "previewKeys": {
+        "equipped1x": "iron-longsword-equipped@1x",
+        "equipped8x": "iron-longsword-equipped@8x"
+      }
+    },
+    {
+      "displayNameKorean": "물푸레나무 창",
+      "equipmentId": 1017,
+      "equipmentKey": "ash_spear",
+      "weaponType": "SPEAR",
+      "imageKey": "weapon_ash_spear",
+      "layerKey": "weapon_ash_spear",
+      "renderSlot": "weapon_front",
+      "equipmentSlot": "WEAPON",
+      "sourcePath": "layers/weapon_ash_spear.png",
+      "runtimePath": "character/layers/weapon_ash_spear.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [40, 4, 58, 58],
+        "opaquePixelCount": 225,
+        "fileByteCount": 638,
+        "hashes": {
+          "fileSha256": "c37c62b25c5349a790d21f5ba5c11909af338ce214a730a706fb59abae68696d",
+          "rawRgbaSha256": "53ecc34175911d662acb9f39a94ff022af69f81da3ca06e30c0fe1cc4880f250",
+          "alphaMaskSha256": "04a5dae319f73bd31788c55f4aafe1c6abd4a03273c0bfef47bb8900db3b99b8"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [40, 4, 58, 58],
+        "opaquePixelCount": 225,
+        "fileByteCount": 638,
+        "hashes": {
+          "fileSha256": "c37c62b25c5349a790d21f5ba5c11909af338ce214a730a706fb59abae68696d",
+          "rawRgbaSha256": "53ecc34175911d662acb9f39a94ff022af69f81da3ca06e30c0fe1cc4880f250",
+          "alphaMaskSha256": "04a5dae319f73bd31788c55f4aafe1c6abd4a03273c0bfef47bb8900db3b99b8"
+        }
+      },
+      "previewKeys": {
+        "equipped1x": "ash-spear-equipped@1x",
+        "equipped8x": "ash-spear-equipped@8x"
+      }
+    },
+    {
+      "displayNameKorean": "강철 철퇴",
+      "equipmentId": 1018,
+      "equipmentKey": "steel_mace",
+      "weaponType": "BLUNT",
+      "imageKey": "weapon_steel_mace",
+      "layerKey": "weapon_steel_mace",
+      "renderSlot": "weapon_front",
+      "equipmentSlot": "WEAPON",
+      "sourcePath": "layers/weapon_steel_mace.png",
+      "runtimePath": "character/layers/weapon_steel_mace.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [40, 4, 58, 58],
+        "opaquePixelCount": 403,
+        "fileByteCount": 836,
+        "hashes": {
+          "fileSha256": "64c25331107a4cffb0eb8143807daf6ef0e95af3a855af3d34647496941dba2a",
+          "rawRgbaSha256": "52d6e16c08d65609dfb2c00a51b8fbf6cae5e3a9f1e448547ae085c1e3fda8e7",
+          "alphaMaskSha256": "e627d3490285e31e7b86c994a8ff7c38424d936c995c1d8bec27db51e5761c3b"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [40, 4, 58, 58],
+        "opaquePixelCount": 403,
+        "fileByteCount": 836,
+        "hashes": {
+          "fileSha256": "64c25331107a4cffb0eb8143807daf6ef0e95af3a855af3d34647496941dba2a",
+          "rawRgbaSha256": "52d6e16c08d65609dfb2c00a51b8fbf6cae5e3a9f1e448547ae085c1e3fda8e7",
+          "alphaMaskSha256": "e627d3490285e31e7b86c994a8ff7c38424d936c995c1d8bec27db51e5761c3b"
+        }
+      },
+      "previewKeys": {
+        "equipped1x": "steel-mace-equipped@1x",
+        "equipped8x": "steel-mace-equipped@8x"
+      }
+    }
+  ],
+  "previews": {
+    "purpose": "deterministic equipped visual verification; never a runtime layer source",
+    "combinationMatrix": {
+      "weaponEquipmentIds": [1001, 1002, 1017, 1018],
+      "columns": 2,
+      "rows": 2,
+      "cellWidth": 64,
+      "cellHeight": 64,
+      "previewKeys": {
+        "matrix1x": "weapon-combination-matrix@1x",
+        "matrix4x": "weapon-combination-matrix@4x"
+      }
+    },
+    "artifacts": {
+      "worn-sword-equipped@1x": {
+        "equipmentId": 1001,
+        "scale": 1,
+        "path": "previews/worn-sword-equipped.png",
+        "width": 64,
+        "height": 64,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [20, 4, 58, 58], "opaquePixelCount": 1390, "fileByteCount": 1713, "hashes": {"fileSha256": "da26a4a8ea66d3d3d8ab4d60dce9b8bfad06e66d9575274976ca64efe300c2e2", "rawRgbaSha256": "13e8b50539cf0e00c527ac6c68f4c21d7c6b3d82c376255d2d034fb49da9fbe4", "alphaMaskSha256": "3998908b7e15e423a14d9e592ffdce4ce3379d7ffe865d4b13f42e3e52c081f9"}}
+      },
+      "worn-sword-equipped@8x": {
+        "equipmentId": 1001,
+        "scale": 8,
+        "path": "previews/worn-sword-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [160, 32, 471, 471], "opaquePixelCount": 88960, "fileByteCount": 4793, "hashes": {"fileSha256": "a34455cb3c76ee734ec976239ffb25837e83f9c07cabad9526a0df4b07a1092f", "rawRgbaSha256": "156b2694d3ae2e5bb5ac2b9f2108e774e118da0d774760ff28a75d87005cca84", "alphaMaskSha256": "c9b9ee2c906bab662daee76719afb9eaa012a865ddefa54097c7574a33948a73"}}
+      },
+      "iron-longsword-equipped@1x": {
+        "equipmentId": 1002,
+        "scale": 1,
+        "path": "previews/iron-longsword-equipped.png",
+        "width": 64,
+        "height": 64,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [20, 4, 58, 58], "opaquePixelCount": 1348, "fileByteCount": 1642, "hashes": {"fileSha256": "05c4577867a18f73ec0efd4524e021cc3d7220e761c7ba2121e718bb93067e20", "rawRgbaSha256": "ac9aa19c34a31817e047bdf5e0dce4f72a9a534f63a5296a40d7597ddfe8d78a", "alphaMaskSha256": "78b58898154c21f21c5024dbd6463ce7cff67f8db0c36db977be211236d2b9de"}}
+      },
+      "iron-longsword-equipped@8x": {
+        "equipmentId": 1002,
+        "scale": 8,
+        "path": "previews/iron-longsword-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [160, 32, 471, 471], "opaquePixelCount": 86272, "fileByteCount": 4769, "hashes": {"fileSha256": "13553cfed06714e210d9a3d3a67a5663972244f0f077b13393ff6107c4949871", "rawRgbaSha256": "baa3c83ec01b1c08464f87dd1a399a44fda4f01aac5d66d1b7d186adaec1f4e2", "alphaMaskSha256": "adec08adf5dc46e46012efcb1ffb7cb1785ee28f348f932678cc05117f00ce60"}}
+      },
+      "ash-spear-equipped@1x": {
+        "equipmentId": 1017,
+        "scale": 1,
+        "path": "previews/ash-spear-equipped.png",
+        "width": 64,
+        "height": 64,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [20, 4, 58, 58], "opaquePixelCount": 1361, "fileByteCount": 1680, "hashes": {"fileSha256": "434b23acaf9f236c55e5603f42e9d08c0cc57ded326627cb0df2d0d3c43d8c7c", "rawRgbaSha256": "55c80e286da3ec3c836164327918eb9c9b478ccc750e98db73f7a740c3a4d4a6", "alphaMaskSha256": "868e664310dca49a6045bae8b39324b0007a91549594ade01160d2bc854a1403"}}
+      },
+      "ash-spear-equipped@8x": {
+        "equipmentId": 1017,
+        "scale": 8,
+        "path": "previews/ash-spear-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [160, 32, 471, 471], "opaquePixelCount": 87104, "fileByteCount": 4710, "hashes": {"fileSha256": "d9d487e32b4f78c8a4fa32ba5089303b1586610d5d0bfeb0d1908afeb5c7ac03", "rawRgbaSha256": "b7eacf38ee12547ef8ddf5e65f7cd47877a2b46c010b4d7767328b631d01c8e7", "alphaMaskSha256": "b94073ff472af532ba713b98ef9422face7cfb963a00c4636f0a027d5f8bb3d9"}}
+      },
+      "steel-mace-equipped@1x": {
+        "equipmentId": 1018,
+        "scale": 1,
+        "path": "previews/steel-mace-equipped.png",
+        "width": 64,
+        "height": 64,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [20, 4, 58, 58], "opaquePixelCount": 1536, "fileByteCount": 1892, "hashes": {"fileSha256": "4289391c846b0509d2d5e343d665a4dc5fc51284317efac1526044542ce6977c", "rawRgbaSha256": "d18dfc8b2436ba953fbbbdbefd28a0e29546f7f765f98bb0d036207fff1ee6db", "alphaMaskSha256": "969556ddf7d608bb84d22351a8157dcce89dd180c9a46789bd52de05ee5f503a"}}
+      },
+      "steel-mace-equipped@8x": {
+        "equipmentId": 1018,
+        "scale": 8,
+        "path": "previews/steel-mace-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [160, 32, 471, 471], "opaquePixelCount": 98304, "fileByteCount": 5125, "hashes": {"fileSha256": "b0cef95a74e5ad193ba0e4b908afe668108d2da2923cafaa2baec5a67cce8349", "rawRgbaSha256": "2cd24df31601fd4014abafec64a4044525222bddacc05ac1bd2de69a510b9d0e", "alphaMaskSha256": "cb68e0d0655ace19d7bb8159dc6dae06114413dbdd60e796a60ef20df607c54d"}}
+      },
+      "weapon-combination-matrix@1x": {
+        "kind": "combinationMatrix",
+        "scale": 1,
+        "path": "previews/weapon-combination-matrix.png",
+        "width": 128,
+        "height": 128,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [20, 4, 122, 122], "opaquePixelCount": 5635, "fileByteCount": 4268, "hashes": {"fileSha256": "bbc62398f895c4b164b46286955e94634662979b8307116816fa129804833475", "rawRgbaSha256": "694e7942635a742cbbf6f72612dd53d7fc566da5b36d68d89be7ca75ea68d360", "alphaMaskSha256": "910c46b4c8a0a063e5bb2427a1a8ed9b387851923922a5fb026ac4c73a6b3769"}}
+      },
+      "weapon-combination-matrix@4x": {
+        "kind": "combinationMatrix",
+        "scale": 4,
+        "path": "previews/weapon-combination-matrix@4x.png",
+        "width": 512,
+        "height": 512,
+        "mode": "RGBA",
+        "artifact": {"status": "available", "opaqueBounds": [80, 16, 491, 491], "opaquePixelCount": 90160, "fileByteCount": 8497, "hashes": {"fileSha256": "534f8d0769e7a77b70cc667e60265b5388a137e3a3b09805ac782e3b6c955f6d", "rawRgbaSha256": "3556040a94158147c100e98ac5d48f351bfe5f27df5f22566d4906292a424d4e", "alphaMaskSha256": "d86ba93f05be693ea037ffd6d6bbe1019375b6edcbc5e0e698e542475cf3e1ac"}}
+      }
+    }
+  },
+  "hashSerialization": {
+    "algorithm": "SHA-256",
+    "fileBytes": "exact stored PNG bytes without decoding",
+    "rawRgba": "top-to-bottom, left-to-right row-major RGBA bytes",
+    "alphaMask": "top-to-bottom, left-to-right row-major alpha bytes"
+  }
+}

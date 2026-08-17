@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "asset": {
+    "fileName": "todo-quest-battle-map-grassland.png",
+    "format": "PNG",
+    "width": 1200,
+    "height": 500,
+    "aspectRatio": {
+      "width": 12,
+      "height": 5,
+      "decimal": 2.4
+    },
+    "allowedModes": [
+      "RGB",
+      "RGBA"
+    ],
+    "rgbaAlpha": "fullyOpaque",
+    "sha256": "3c96ab77dfc850c58cb557a98255ce6b8245f8046189e1ac4305f583afe18cc4"
+  },
+  "runtime": {
+    "path": "app/src/main/res/drawable-nodpi/battle_map_grassland.png",
+    "mustBeByteIdentical": true
+  },
+  "normalization": {
+    "source": "builtInImageGen",
+    "operations": [
+      "centerCropToAspectRatio",
+      "resize"
+    ],
+    "resizeFilter": "Image.Resampling.LANCZOS",
+    "forbiddenLocalEdits": [
+      "addColor",
+      "removeColor",
+      "addObject",
+      "removeObject"
+    ]
+  },
+  "manualVisualReview": {
+    "requiredAbsences": [
+      "people",
+      "characters",
+      "monsters",
+      "animals",
+      "livingCreatureSilhouettes",
+      "healthBars",
+      "damageNumbers",
+      "hud",
+      "icons",
+      "text",
+      "logos",
+      "watermarks",
+      "castShadowsFromAbsentUnits"
+    ],
+    "requiredSceneElements": [
+      "paleBlueSky",
+      "distantMountains",
+      "distantForestSilhouettes",
+      "smallVillageRoofsOrFence",
+      "mutedGreenMeadow",
+      "gentlyCurvedDirtPath",
+      "broadFlatForegroundCombatGround",
+      "sparseGrassTufts",
+      "tinyStones"
+    ],
+    "composition": {
+      "levelHorizon": true,
+      "foregroundGroundPlaneNearlyHorizontal": true,
+      "lowSaturation": true,
+      "restrainedContrast": true
+    },
+    "safeZones": [
+      {
+        "name": "player",
+        "normalizedX": {
+          "center": 0.2,
+          "clearRange": [
+            0.12,
+            0.28
+          ]
+        },
+        "normalizedY": [
+          0.72,
+          0.88
+        ]
+      },
+      {
+        "name": "monsters",
+        "normalizedX": {
+          "clearRange": [
+            0.55,
+            0.95
+          ]
+        },
+        "normalizedY": [
+          0.72,
+          0.88
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "project": "Todo Quest",
+  "phase": "10-emulator-connected-regression-fix",
+  "steps": [
+    {
+      "step": 0,
+      "name": "connected-ui-test-determinism",
+      "status": "completed",
+      "started_at": "2026-07-18T20:29:30+0900",
+      "completed_at": "2026-07-18T20:36:56+0900",
+      "summary": "중복 metadata 텍스트가 있어도 표시된 목록 노드가 하나 이상이면 통과하도록 CalendarScreenTest helper를 수정함"
+    },
+    {
+      "step": 1,
+      "name": "splashscreen-launch-stability",
+      "status": "completed",
+      "started_at": "2026-07-18T20:37:56+0900",
+      "completed_at": "2026-07-18T20:43:04+0900",
+      "summary": "core-splashscreen을 1.2.0으로 올리고 MainActivity의 커스텀 splash exit listener를 제거함"
+    },
+    {
+      "step": 2,
+      "name": "instrumentation-runner-isolation",
+      "status": "completed",
+      "started_at": "2026-07-18T20:44:34+0900",
+      "completed_at": "2026-07-19T01:28:00+0900",
+      "summary": "Android Test Orchestrator와 clearPackageData를 활성화하고 screenshot smoke test를 shell screencap 기반으로 안정화함"
+    },
+    {
+      "step": 3,
+      "name": "emulator-regression-verification",
+      "status": "completed",
+      "completed_at": "2026-07-19T01:37:20+0900",
+      "summary": "Gradle unit/lint/assemble/connected 검증, 수동 screencap, SurfaceFlinger layer 확인, harness pytest를 통과해 splash/black screen 회귀가 해소됨을 검증함"
+    }
+  ],
+  "created_at": "2026-07-18T20:29:30+0900"
+}

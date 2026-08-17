@@ -1,0 +1,56 @@
+{
+  "project": "Todo Quest",
+  "phase": "21-adventure-outfit-overlap-remap",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-layer-overlap-contract",
+      "status": "completed",
+      "started_at": "2026-07-20T22:15:14+0900",
+      "summary": "모험가 상·하의·신발의 허리 3행·발목 2행 source-over 중첩과 base-body 매핑 계약을 정의하고 5개 변경 허용·11개 현재 RGBA 해시 보존 타일을 확정함",
+      "completed_at": "2026-07-20T22:21:23+0900"
+    },
+    {
+      "step": 1,
+      "name": "replace-layer-overlap-validation",
+      "status": "completed",
+      "started_at": "2026-07-20T22:22:29+0900",
+      "summary": "schema v3 모험가 허리·발목 overlap과 base-body 장비 매핑·외곽선·합집합 노출 검증으로 교체하고 v1/v2 및 11개 보존 타일 회귀를 유지함",
+      "completed_at": "2026-07-20T22:39:26+0900"
+    },
+    {
+      "step": 2,
+      "name": "remap-adventure-top",
+      "status": "completed",
+      "started_at": "2026-07-21T00:11:58+0900",
+      "summary": ".tmp/imagegen/21-adventure-outfit-overlap-remap/adventure-top-layer.png에 기존 built-in precise-object-edit 6색 재킷의 base-body 몸통·팔 매핑과 손 노출을 유지한 채 x=19 좌측 4픽셀을 제거해 중심축 x=32로 맞추고 최종 외부 경계와 y=43 단일 hem을 outlineDarkNavy로 정규화함",
+      "completed_at": "2026-07-21T00:17:20+0900"
+    },
+    {
+      "step": 3,
+      "name": "remap-adventure-bottom",
+      "status": "completed",
+      "started_at": "2026-07-20T23:27:37+0900",
+      "summary": ".tmp/imagegen/21-adventure-outfit-overlap-remap/adventure-bottom-layer.png에 built-in precise-object-edit의 기존 3색 바지를 232픽셀 정확 mask로 정규화해 허리 3행 outline-free·x=32 다리 간격·y=54 단일 hem을 확정함",
+      "completed_at": "2026-07-20T23:37:36+0900"
+    },
+    {
+      "step": 4,
+      "name": "remap-adventure-shoes",
+      "status": "completed",
+      "started_at": "2026-07-20T23:38:49+0900",
+      "summary": ".tmp/imagegen/21-adventure-outfit-overlap-remap/adventure-shoes-layer.png에 built-in precise-object-edit의 기존 8색 신발을 base-body 발 104픽셀에 매핑하고 y=53..54의 32픽셀 outline-free 하의 중첩과 y=58 sole을 확정함",
+      "completed_at": "2026-07-20T23:48:02+0900"
+    },
+    {
+      "step": 5,
+      "name": "assemble-overlapped-outfit",
+      "status": "completed",
+      "started_at": "2026-07-21T00:22:50+0900",
+      "summary": "docs/art/character/todo-quest-character-modular-sheet.png의 대상 5개 타일에 승인 레이어 3개를 8단계 source-over로 조립해 비대상 11개 타일과 base-body 해시를 보존하고 두 validator·pytest 220개·git diff --check 및 1×/8× 검사를 통과함",
+      "completed_at": "2026-07-21T00:34:34+0900"
+    }
+  ],
+  "created_at": "2026-07-20T22:15:14+0900",
+  "completed_at": "2026-07-21T00:34:34+0900"
+}

@@ -1,0 +1,64 @@
+{
+  "project": "Todo Quest",
+  "phase": "51-severe-injury-status-effect",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-status-effect-domain",
+      "status": "completed",
+      "started_at": "2026-08-05T15:47:47+0900",
+      "summary": "일반화된 상태이상 모델과 중상 v1 정책, 20% 유효 스탯 감소·50% 응급 회복 및 치명 피해 0 HP 계약을 순수 Kotlin 테스트로 구현했다.",
+      "completed_at": "2026-08-05T16:01:23+0900"
+    },
+    {
+      "step": 1,
+      "name": "persist-status-effects-room-v13",
+      "status": "completed",
+      "started_at": "2026-08-05T16:01:23+0900",
+      "summary": "Room v13에 상태이상과 revision별 occurrence 회복 credit 영속 테이블·DAO·멱등 migration을 추가하고 기존 데이터를 보존했다.",
+      "completed_at": "2026-08-05T16:11:00+0900"
+    },
+    {
+      "step": 2,
+      "name": "integrate-status-effect-repositories",
+      "status": "completed",
+      "started_at": "2026-08-05T16:12:11+0900",
+      "summary": "활성 상태이상 관찰·만료·제거 경계와 공통 유효 스탯 계산을 Repository에 연결하고 신규 occurrence 완료 3회의 멱등 회복 credit 및 세 번째 완료의 복원 공격 snapshot을 원자적으로 구현했다.",
+      "completed_at": "2026-08-05T16:27:53+09:00"
+    },
+    {
+      "step": 3,
+      "name": "apply-severe-injury-in-combat",
+      "status": "completed",
+      "started_at": "2026-08-05T16:29:04+0900",
+      "summary": "치명 공격 transaction에 패배·중상 적용/갱신·50% 응급 회복의 ordered lifecycle과 revision 기반 멱등 처리를 연결했다.",
+      "completed_at": "2026-08-05T17:06:17+09:00"
+    },
+    {
+      "step": 4,
+      "name": "sequence-status-effect-presentation",
+      "status": "completed",
+      "started_at": "2026-08-05T17:08:33+0900",
+      "summary": "패배·중상 적용/갱신·응급 회복 lifecycle을 event ID별로 순차 소비하고 상태 제거 및 만료 표시를 회전·재진입에 안전한 presentation state로 연결했다.",
+      "completed_at": "2026-08-05T17:31:39+09:00"
+    },
+    {
+      "step": 5,
+      "name": "render-severe-injury-ui",
+      "status": "completed",
+      "started_at": "2026-08-05T17:32:13+0900",
+      "summary": "캐릭터 정보와 Battle Map에 접근 가능한 중상 배지·상세 dialog·전투 불능 및 중상 회복 연출을 구현하고 대상 unit test와 APK 빌드를 통과했으며, 연결 장치가 없어 계측 테스트는 미실행했다.",
+      "completed_at": "2026-08-10T09:59:21+09:00"
+    },
+    {
+      "step": 6,
+      "name": "document-and-validate-severe-injury",
+      "status": "completed",
+      "started_at": "2026-08-10T10:11:05+0900",
+      "summary": "Room v13 상태이상·occurrence 회복 멱등 key와 전투 불능→중상 적용/갱신→응급 회복 lifecycle, 한국어 접근성 계약을 문서화하고 JVM 각 525개·connected 121개·harness 88개 및 lint·build·migration·링크 검증을 완료했다.",
+      "completed_at": "2026-08-10T12:02:18+09:00"
+    }
+  ],
+  "created_at": "2026-08-05T15:47:47+0900",
+  "completed_at": "2026-08-10T12:02:18+09:00"
+}

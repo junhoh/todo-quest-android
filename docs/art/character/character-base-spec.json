@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "sheet": {
+    "width": 384,
+    "height": 128,
+    "mode": "RGBA"
+  },
+  "logicalTile": {
+    "width": 64,
+    "height": 64,
+    "columns": 6,
+    "rows": 2
+  },
+  "centerX": 32,
+  "commonBoundingBox": [20, 4, 44, 58],
+  "boundingBoxInclusive": true,
+  "minimumMargin": 3,
+  "soleY": 58,
+  "anchors": {
+    "headCenter": [32, 13],
+    "neck": [32, 24],
+    "shoulderLeft": [22, 27],
+    "shoulderRight": [42, 27],
+    "waistY": 39,
+    "wristLeft": [20, 40],
+    "wristRight": [44, 40],
+    "ankleLeft": [27, 53],
+    "ankleRight": [37, 53],
+    "soleY": 58
+  },
+  "anchorGuidePixels": [
+    [32, 13],
+    [32, 24],
+    [22, 27],
+    [42, 27],
+    [32, 39],
+    [20, 40],
+    [44, 40],
+    [27, 53],
+    [37, 53],
+    [32, 58]
+  ],
+  "layerOrder": [
+    "rear-hair",
+    "body-base",
+    "lower",
+    "shoes",
+    "upper",
+    "front-hair",
+    "head",
+    "face",
+    "accessory",
+    "weapon"
+  ],
+  "tileMap": [
+    { "name": "equipped", "row": 0, "column": 0 },
+    { "name": "base", "row": 0, "column": 1 },
+    { "name": "slot-map", "row": 0, "column": 2 },
+    { "name": "anchors", "row": 0, "column": 3 },
+    { "name": "hair-split", "row": 0, "column": 4 },
+    { "name": "palette", "row": 0, "column": 5 },
+    { "name": "head-layer", "row": 1, "column": 0 },
+    { "name": "face-layer", "row": 1, "column": 1 },
+    { "name": "upper-layer", "row": 1, "column": 2 },
+    { "name": "lower-layer", "row": 1, "column": 3 },
+    { "name": "shoes-layer", "row": 1, "column": 4 },
+    { "name": "accessory-weapon-layer", "row": 1, "column": 5 }
+  ],
+  "equippedBaseContract": {
+    "sameBoundingBox": true,
+    "sameFace": true,
+    "sameBodyProportions": true,
+    "sameFrontFacingIdlePose": true,
+    "accessoryAndWeaponInsideCommonBoundingBox": true
+  },
+  "palette": {
+    "hairBlack": "#11151C",
+    "eyeDarkNavy": "#1D3557",
+    "outlineDarkNavy": "#263B5A",
+    "hairHighlight": "#35445C",
+    "underDark": "#3A3F45",
+    "blueShadow": "#2853A6",
+    "underMid": "#737982",
+    "underLight": "#B7B0A3",
+    "skinShadow": "#D99872",
+    "skinLight": "#FFD3AE",
+    "lightCream": "#F4EFE3",
+    "bluePrimary": "#4F86E8",
+    "blueHighlight": "#7FB3FF",
+    "tealAccent": "#5CC8A7",
+    "goldAccent": "#F2C14E",
+    "guideRed": "#E05252"
+  },
+  "transparentPixelsCountTowardPalette": false,
+  "chromaKey": "#FF00FF",
+  "chromaKeyAllowedInFinalPng": false
+}

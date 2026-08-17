@@ -1,0 +1,64 @@
+{
+  "project": "Todo Quest",
+  "phase": "53-equipment-shop-ux-polish",
+  "steps": [
+    {
+      "step": 0,
+      "name": "model-equipment-unequip",
+      "status": "completed",
+      "started_at": "2026-08-10T17:02:09+0900",
+      "summary": "장비 해제 결과 타입과 일곱 gameplay slot의 외형 fallback 초기화 정책 및 순수 도메인 테스트를 추가했다.",
+      "completed_at": "2026-08-10T17:06:05+0900"
+    },
+    {
+      "step": 1,
+      "name": "persist-equipment-unequip",
+      "status": "completed",
+      "started_at": "2026-08-10T17:06:05+0900",
+      "summary": "대상 장착 row 삭제·외형 fallback 초기화·상태 효과 포함 능력치 및 HP 비율 갱신을 단일 transaction으로 구현하고 빈 slot 멱등성과 rollback을 검증했다.",
+      "completed_at": "2026-08-10T17:14:10+0900"
+    },
+    {
+      "step": 2,
+      "name": "present-equipment-unequip",
+      "status": "completed",
+      "started_at": "2026-08-10T17:15:20+0900",
+      "summary": "상점 슬롯 관리와 인벤토리 장착·해제의 ViewModel 상태·이벤트를 추가하고 중복 차단, 빈 슬롯 멱등 성공, 재시도·결과 소비 및 요구 레벨 독립 표시 계약을 테스트했다.",
+      "completed_at": "2026-08-10T17:22:35+0900"
+    },
+    {
+      "step": 3,
+      "name": "render-equipment-unequip-ui",
+      "status": "completed",
+      "started_at": "2026-08-10T17:23:29+0900",
+      "summary": "상점 슬롯 관리 dialog와 인벤토리 해제 action, 48dp 접근성·처리 잠금·한국어 결과 feedback을 구현하고 Pixel 9 AVD의 Shop·Inventory connected 테스트 42개와 assembleDebug·diff 검증을 통과했다.",
+      "completed_at": "2026-08-10T18:10:31+0900"
+    },
+    {
+      "step": 4,
+      "name": "polish-shop-card-preview",
+      "status": "completed",
+      "started_at": "2026-08-10T18:29:56+0900",
+      "summary": "상점 카드에 요구 레벨·레벨 부족 잠금, 보유 전용 색상·체크 배지와 판매 중지 예외를 적용하고 일반 96dp·compact/큰 글꼴 120dp 슬롯 geometry를 Pixel 9 ShopScreenTest 33개로 검증했다.",
+      "completed_at": "2026-08-10T19:12:01+0900"
+    },
+    {
+      "step": 5,
+      "name": "wire-and-verify-shared-unequip",
+      "status": "completed",
+      "started_at": "2026-08-10T19:12:30+0900",
+      "summary": "application-scope 해제 UseCase를 Shop·Inventory factory에 명시 주입하고 실제 Room 해제 후 소유권·HP·중상·신규 계산·과거 snapshot·기본 복장 shared renderer·재생성 비재생을 연결 테스트로 검증했다.",
+      "completed_at": "2026-08-10T19:59:13+0900"
+    },
+    {
+      "step": 6,
+      "name": "synchronize-and-validate",
+      "status": "completed",
+      "started_at": "2026-08-10T20:05:35+0900",
+      "summary": "장비 해제 transaction과 AlreadyEmpty 멱등성·기본 복장 shared renderer, 상점 카드·96/120dp preview UX를 canonical 문서와 동기화하고 debug·release 각 580개, Pixel 9 connected 134개, harness 88개 및 전체 AC를 통과했다.",
+      "completed_at": "2026-08-10T21:00:59+0900"
+    }
+  ],
+  "created_at": "2026-08-10T17:02:09+0900",
+  "completed_at": "2026-08-10T21:00:59+0900"
+}

@@ -1,0 +1,103 @@
+{
+  "project": "Todo Quest",
+  "phase": "62-gameplay-ui-equipment-permission-polish",
+  "steps": [
+    {
+      "step": 0,
+      "name": "preserve-injured-player-position",
+      "status": "completed",
+      "summary": "중상 status layout이 전달받은 player sprite 좌표와 크기를 그대로 반환하고 HP·배지만 HUD/map 경계 안에서 clamp하도록 수정했다.\n순수 Kotlin 및 Compose 회귀 테스트로 일반·compact 배치와 중상 적용 전후 player top/left 불변을 검증했다.",
+      "started_at": "2026-08-16T19:41:57+0900",
+      "completed_at": "2026-08-16T20:02:36+0900"
+    },
+    {
+      "step": 1,
+      "name": "define-loadout-art-contract",
+      "status": "completed",
+      "summary": "빈 gameplay slot은 top_default·bottom_default·shoes_default의 회갈색 훈련복과 nullable overlay로, body·hair·hands는 항상 유지하도록 계약했다.\n기존 adventure key를 7부위 상점 세트로 보존하고 gloves_adventure·3분할 검·runtime mirror·preview/sheet 재생성 manifest를 고정했다.",
+      "started_at": "2026-08-16T20:14:44+0900",
+      "completed_at": "2026-08-16T20:27:34+0900"
+    },
+    {
+      "step": 2,
+      "name": "generate-empty-and-adventure-assets",
+      "status": "completed",
+      "summary": "회갈색 중립 훈련복 fallback 3종과 맨손 38픽셀 mask를 따르는 파란·청록 모험가 장갑을 schema v6 canonical/runtime 자산으로 생성했다.\n기존 모험가 6부위·3분할 검을 보존하고 16개 preview와 modular sheet를 결정론적으로 재생성해 validator와 회귀 테스트를 통과했다.",
+      "started_at": "2026-08-16T20:28:08+0900",
+      "completed_at": "2026-08-16T20:49:28+0900"
+    },
+    {
+      "step": 3,
+      "name": "extend-equipment-domain-contracts",
+      "status": "completed",
+      "summary": "빈 gameplay slot의 기본 loadout을 중립 fallback으로 전환하고 gloves_adventure를 도메인·런타임 catalog에 등록했다.\nEquipmentStoreSnapshot에 equipment id 기반 owned lookup과 character·catalog 일관성 검증을 추가해 owned row id와 분리했다.",
+      "started_at": "2026-08-16T20:50:39+0900",
+      "completed_at": "2026-08-16T21:00:16+0900"
+    },
+    {
+      "step": 4,
+      "name": "migrate-empty-fallback-and-seed-set",
+      "status": "completed",
+      "summary": "Room v15 data-only migration으로 appearance fallback만 중립 빈 슬롯 외형으로 전환하고 gameplay 소유·장착과 HP·상태·일정·보상·전투 source를 보존했다.\n1019~1025 모험가 세트 7종을 UNCOMMON·레벨 5·두 modifier와 기존 adventure visual key·한국어 리소스로 멱등 seed했다.",
+      "started_at": "2026-08-16T21:01:12+0900",
+      "completed_at": "2026-08-16T21:13:54+0900"
+    },
+    {
+      "step": 5,
+      "name": "project-owned-shop-actions",
+      "status": "completed",
+      "summary": "EquipmentStoreSnapshot에 equipment id 기반 owned row lookup을 투영하고 ownedEquipmentIds·equippedBySlot이 동일한 typed source를 참조하도록 일관성을 보장했다.\n미소유·소유 미장착·소유 장착과 신규 모험가 7부위의 preview·중립 fallback·실제 장착 render 우선순위를 repository 테스트로 검증했다.",
+      "started_at": "2026-08-16T21:15:19+0900",
+      "completed_at": "2026-08-16T21:19:54+0900"
+    },
+    {
+      "step": 6,
+      "name": "present-shop-action-state",
+      "status": "completed",
+      "summary": "미소유 구매 가능·불가와 소유 미장착·장착 중 장비를 Purchase·PurchaseUnavailable·Equip·Unequip 단일 typed action으로 투영하고 owned row id를 장착 command에 전달했다.\n해제 대상 equipment id를 처리·결과·재시도에 보존해 선택 장비 성공 해제 시 상세·확인·temporary preview를 지우고, 다른 장비와 실패 시 선택을 유지했다.",
+      "started_at": "2026-08-16T21:20:33+0900",
+      "completed_at": "2026-08-16T21:31:58+0900"
+    },
+    {
+      "step": 7,
+      "name": "present-notification-permission-state",
+      "status": "completed",
+      "summary": "SettingsViewModel이 ReminderScheduler의 POST_NOTIFICATIONS capability만 조회해 Loading·Available·Required·ChannelDisabled·CheckFailed typed 상태와 초기·재시도 refresh를 제공한다.\n진행 중 refresh는 최신 요청으로 교체하고 취소를 실패로 바꾸지 않으며, 권한 조회 실패와 효과음 저장을 독립적으로 검증했다.",
+      "started_at": "2026-08-16T21:34:20+0900",
+      "completed_at": "2026-08-16T21:38:05+0900"
+    },
+    {
+      "step": 8,
+      "name": "stabilize-shop-layout-actions",
+      "status": "completed",
+      "summary": "공격력·최대 체력·방어력 summary cell의 값·증감 영역을 고정하고 선택·차이·큰 글꼴에서도 동일한 bounds와 접근성 의미를 유지했다.\n카드·상세의 typed action을 104dp × 48dp 우측 하단 버튼과 네 한국어 label로 통일하고 선택 장비 해제 후 상세·선택·preview 정리를 UI 테스트로 검증했다.",
+      "started_at": "2026-08-16T21:38:46+0900",
+      "completed_at": "2026-08-16T23:05:29+0900"
+    },
+    {
+      "step": 9,
+      "name": "wire-notification-permission-settings",
+      "status": "completed",
+      "summary": "설정 화면에 일반 알림 권한의 확인 중·허용됨·권한 필요·채널 꺼짐·확인 실패 상태와 runtime·앱·채널 설정 진입점을 연결했다.\npermission/settings 복귀와 ON_RESUME에서 최신 상태를 재조회하고 권한 거부 중에도 효과음·navigation·핵심 기능이 독립적으로 유지됨을 검증했다.",
+      "started_at": "2026-08-16T23:10:33+0900",
+      "completed_at": "2026-08-16T23:43:02+0900"
+    },
+    {
+      "step": 10,
+      "name": "synchronize-canonical-docs",
+      "status": "completed",
+      "summary": "ADR-025와 Room v15 비파괴 migration·중립 fallback·고정 ID 1019~1025 adventure catalog 호환 계약을 canonical 문서에 동기화했다.\nShop typed action·고정 layout·중상 actor 좌표 불변과 exact alarm을 제외한 Settings 일반 알림 권한 경계 및 검증 명령을 최신화했다.",
+      "started_at": "2026-08-16T23:45:16+0900",
+      "completed_at": "2026-08-17T00:04:07+0900"
+    },
+    {
+      "step": 11,
+      "name": "verify-gameplay-ui-polish",
+      "status": "completed",
+      "summary": "Temurin 17.0.19·SDK/adb 37.0.0·SM-A325N API 33에서 Python 387개, debug·release JVM/Robolectric 각 708개, connected 169개와 lint·debug/test APK·phase manager·diff 검증을 통과했다.\n중상 좌표·Shop 고정 stat/action·선택 해제 cleanup·Room v15 중립 fallback/adventure 세트·source 보존·Settings 일반 알림 권한과 핵심 기능 독립성을 여섯 시나리오로 확인했다.",
+      "started_at": "2026-08-17T00:05:00+0900",
+      "completed_at": "2026-08-17T01:16:05+0900"
+    }
+  ],
+  "created_at": "2026-08-16T19:34:34+0900"
+}

@@ -1,0 +1,55 @@
+{
+  "project": "Todo Quest",
+  "phase": "3-schedule-management",
+  "steps": [
+    {
+      "step": 0,
+      "name": "schedule-domain-models",
+      "status": "completed",
+      "completed_at": "2026-07-14T12:56:30+09:00",
+      "summary": "순수 Kotlin 일정 도메인 모델, 발생분 계산기, 보상 정책과 반복/보상 JVM 테스트를 추가했다."
+    },
+    {
+      "step": 1,
+      "name": "schedule-room-storage",
+      "status": "completed",
+      "completed_at": "2026-07-14T12:56:30+09:00",
+      "summary": "Room 및 desugaring Gradle 설정, 일정/완료/보상/프로필 entity, DAO, database, mapper와 Room schema export를 추가했다."
+    },
+    {
+      "step": 2,
+      "name": "schedule-repository-usecases",
+      "status": "completed",
+      "completed_at": "2026-07-14T12:56:30+09:00",
+      "summary": "TaskRepository, RoomTaskRepository, 완료/완료취소 use case, AppClock과 멱등 보상 repository transaction 테스트를 추가했다."
+    },
+    {
+      "step": 3,
+      "name": "calendar-viewmodel",
+      "status": "completed",
+      "completed_at": "2026-07-14T12:56:30+09:00",
+      "summary": "CalendarUiState와 CalendarViewModel을 추가하고 fake repository 기반 날짜 선택, 일정 생성, 완료, 프로필 갱신 unit test를 작성했다."
+    },
+    {
+      "step": 4,
+      "name": "calendar-compose-ui",
+      "status": "completed",
+      "completed_at": "2026-07-14T12:56:30+09:00",
+      "summary": "placeholder 화면을 CalendarScreen으로 교체하고 TodoQuestApp composition root를 RoomTaskRepository와 CalendarViewModel에 연결했다."
+    },
+    {
+      "step": 5,
+      "name": "calendar-compose-ui-test",
+      "status": "completed",
+      "completed_at": "2026-07-14T13:21:12+09:00",
+      "summary": "CalendarScreen Compose UI instrumentation test를 emulator-5554에서 실행했고 Espresso 3.7.0 명시로 Android test runtime 호환성을 맞췄다."
+    },
+    {
+      "step": 6,
+      "name": "schedule-verification",
+      "status": "completed",
+      "completed_at": "2026-07-14T12:56:30+09:00",
+      "summary": "unit test, lint, assembleDebug, connected instrumentation, harness pytest, diff-check, Room schema export와 아키텍처 가드레일을 검증했다."
+    }
+  ]
+}

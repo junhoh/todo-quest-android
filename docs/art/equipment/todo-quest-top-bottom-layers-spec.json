@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "contractKind": "character-equipment-layer-variants",
+  "baseCharacterContract": {
+    "specPath": "../character/character-modular-sheet-spec.json",
+    "schemaVersion": 5,
+    "canonicalSourceCount": 15,
+    "relationship": "independent gameplay equipment variants; does not extend or replace the schema v5 canonical source set"
+  },
+  "pathContract": {
+    "sourcePathsRelativeTo": "spec-directory",
+    "previewPathsRelativeTo": "spec-directory",
+    "runtimePathRootRelativeToSpec": "../../../app/src/main/assets",
+    "safeRelativePathsRequired": true
+  },
+  "canvas": {
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA",
+    "boundsInclusive": [0, 0, 63, 63],
+    "centerX": 32,
+    "characterSoleY": 58,
+    "anchorProfile": "canvas-64-center-x-32-sole-y-58-schema-v5"
+  },
+  "productionPalette": {
+    "colorCount": 16,
+    "colors": {
+      "hairBlack": "#11151C",
+      "eyeDarkNavy": "#1D3557",
+      "outlineDarkNavy": "#263B5A",
+      "hairHighlight": "#35445C",
+      "underDark": "#3A3F45",
+      "blueShadow": "#2853A6",
+      "underMid": "#737982",
+      "underLight": "#B7B0A3",
+      "skinShadow": "#D99872",
+      "skinLight": "#FFD3AE",
+      "lightCream": "#F4EFE3",
+      "bluePrimary": "#4F86E8",
+      "blueHighlight": "#7FB3FF",
+      "tealAccent": "#5CC8A7",
+      "goldAccent": "#F2C14E",
+      "redAccent": "#E05252"
+    },
+    "opaquePixelsOnly": true
+  },
+  "layerContracts": {
+    "top": {
+      "slot": "top",
+      "allowedAlphaValues": [0, 255],
+      "transparentPixelRgba": [0, 0, 0, 0],
+      "chromaKey": "#FF00FF",
+      "chromaKeyAllowed": false,
+      "alphaCompositing": "source-over",
+      "interpolation": "nearest-neighbor",
+      "requiredOpaqueRegions": {
+        "waistOverlap": [24, 41, 40, 43]
+      },
+      "hiddenOverlapOutlineForbiddenRegions": {},
+      "twoPixelHorizontalOutlineForbidden": [],
+      "outline": {
+        "paletteName": "outlineDarkNavy",
+        "color": "#263B5A",
+        "widthLogicalPixels": 1,
+        "externalBoundaryNeighborMode": 4,
+        "allExternalBoundaryPixelsUseOutlineColor": true,
+        "forbidExternalOutline2x2Blocks": true
+      },
+      "connectivity": {
+        "opaqueNeighborMode": 8,
+        "opaqueComponentCount": 1,
+        "allowIsolatedOpaquePixels": false
+      },
+      "coordinatePreservation": {
+        "singleCanvasOrigin": [0, 0],
+        "translationAllowed": false,
+        "croppingAllowed": false,
+        "scalingAllowed": false,
+        "thumbnailOpaqueBoundsReadOnlyScalingAllowed": true
+      }
+    },
+    "bottom": {
+      "slot": "bottom",
+      "allowedAlphaValues": [0, 255],
+      "transparentPixelRgba": [0, 0, 0, 0],
+      "chromaKey": "#FF00FF",
+      "chromaKeyAllowed": false,
+      "alphaCompositing": "source-over",
+      "interpolation": "nearest-neighbor",
+      "requiredOpaqueRegions": {
+        "waistOverlap": [24, 41, 40, 43],
+        "leftAnkleOverlap": [24, 53, 31, 54],
+        "rightAnkleOverlap": [33, 53, 40, 54]
+      },
+      "hiddenOverlapOutlineForbiddenRegions": {
+        "waistOverlap": [24, 41, 40, 43]
+      },
+      "twoPixelHorizontalOutlineForbidden": [
+        {
+          "name": "ankleOverlap",
+          "xRanges": [[24, 31], [33, 40]],
+          "rows": [53, 54]
+        }
+      ],
+      "outline": {
+        "paletteName": "outlineDarkNavy",
+        "color": "#263B5A",
+        "widthLogicalPixels": 1,
+        "externalBoundaryNeighborMode": 4,
+        "allExternalBoundaryPixelsUseOutlineColor": true,
+        "forbidExternalOutline2x2Blocks": true
+      },
+      "connectivity": {
+        "opaqueNeighborMode": 8,
+        "opaqueComponentCount": 1,
+        "allowIsolatedOpaquePixels": false
+      },
+      "coordinatePreservation": {
+        "singleCanvasOrigin": [0, 0],
+        "translationAllowed": false,
+        "croppingAllowed": false,
+        "scalingAllowed": false,
+        "thumbnailOpaqueBoundsReadOnlyScalingAllowed": true
+      }
+    }
+  },
+  "compositionContract": {
+    "slotsBackToFront": ["shoes", "bottom", "top"],
+    "waistOverlap": [24, 41, 40, 43],
+    "ankleOverlapBands": {
+      "left": [24, 53, 31, 54],
+      "right": [33, 53, 40, 54]
+    },
+    "sharedOpaqueCoverageRequired": true,
+    "transparentGapsAllowed": false,
+    "hiddenHorizontalJunctionDoubleOutlineAllowed": false
+  },
+  "items": [
+    {
+      "displayNameKorean": "천 상의",
+      "equipmentId": 1005,
+      "imageKey": "top_cloth",
+      "layerKey": "top_cloth",
+      "slot": "top",
+      "sourcePath": "layers/top_cloth.png",
+      "runtimePath": "character/layers/top_cloth.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [20, 29, 44, 45],
+        "opaquePixelCount": 300,
+        "fileByteCount": 479,
+        "hashes": {"fileSha256": "3d4e8422b7fb206f0c1cf49eb1b7f96560c9a1f506d6491425c6ca5e4c180061", "rawRgbaSha256": "d7efbd1cb43a2888bf4cfbb99820c05c02385cb7d5a17509b135f8c933cc88a2", "alphaMaskSha256": "cc4a169a5dcd77cd2a40789ef659d67a150b719ad866250e2bb9c5781a7f6a0b"}
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [20, 29, 44, 45],
+        "opaquePixelCount": 300,
+        "fileByteCount": 479,
+        "hashes": {"fileSha256": "3d4e8422b7fb206f0c1cf49eb1b7f96560c9a1f506d6491425c6ca5e4c180061", "rawRgbaSha256": "d7efbd1cb43a2888bf4cfbb99820c05c02385cb7d5a17509b135f8c933cc88a2", "alphaMaskSha256": "cc4a169a5dcd77cd2a40789ef659d67a150b719ad866250e2bb9c5781a7f6a0b"}
+      },
+      "previewKeys": {"equipped1x": "top-cloth-equipped@1x", "equipped8x": "top-cloth-equipped@8x"}
+    },
+    {
+      "displayNameKorean": "가죽 갑옷",
+      "equipmentId": 1006,
+      "imageKey": "top_leather_armor",
+      "layerKey": "top_leather_armor",
+      "slot": "top",
+      "sourcePath": "layers/top_leather_armor.png",
+      "runtimePath": "character/layers/top_leather_armor.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [20, 29, 44, 45],
+        "opaquePixelCount": 301,
+        "fileByteCount": 431,
+        "hashes": {"fileSha256": "2e4f827f0a41681d1e96274970f1f3e212d5d830744ed8b31e1b420f5317f610", "rawRgbaSha256": "6431a78815f374946b429d4a80b76487a5c3f1bb8aadd4dfb78803798129893a", "alphaMaskSha256": "6b07836638061afeefff926e8ab97fc64e5c34bdceefcd1579a7061b861c36f6"}
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [20, 29, 44, 45],
+        "opaquePixelCount": 301,
+        "fileByteCount": 431,
+        "hashes": {"fileSha256": "2e4f827f0a41681d1e96274970f1f3e212d5d830744ed8b31e1b420f5317f610", "rawRgbaSha256": "6431a78815f374946b429d4a80b76487a5c3f1bb8aadd4dfb78803798129893a", "alphaMaskSha256": "6b07836638061afeefff926e8ab97fc64e5c34bdceefcd1579a7061b861c36f6"}
+      },
+      "previewKeys": {"equipped1x": "top-leather-armor-equipped@1x", "equipped8x": "top-leather-armor-equipped@8x"}
+    },
+    {
+      "displayNameKorean": "철 흉갑",
+      "equipmentId": 1007,
+      "imageKey": "top_iron_breastplate",
+      "layerKey": "top_iron_breastplate",
+      "slot": "top",
+      "sourcePath": "layers/top_iron_breastplate.png",
+      "runtimePath": "character/layers/top_iron_breastplate.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [20, 29, 44, 45],
+        "opaquePixelCount": 299,
+        "fileByteCount": 605,
+        "hashes": {"fileSha256": "85150725cd0ea182e262918ea402c5eb558f9ab782665eb2fd07d83c9f5f2eea", "rawRgbaSha256": "7e0fdc25b5ae2c0dcd132bbcba317c9919ebc5f5a3c6912670b12cbcda2a8398", "alphaMaskSha256": "a8b597bbc3b679b075aa3908c350dea6ed5bfd9e9115e299b1d8c0404b01395e"}
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [20, 29, 44, 45],
+        "opaquePixelCount": 299,
+        "fileByteCount": 605,
+        "hashes": {"fileSha256": "85150725cd0ea182e262918ea402c5eb558f9ab782665eb2fd07d83c9f5f2eea", "rawRgbaSha256": "7e0fdc25b5ae2c0dcd132bbcba317c9919ebc5f5a3c6912670b12cbcda2a8398", "alphaMaskSha256": "a8b597bbc3b679b075aa3908c350dea6ed5bfd9e9115e299b1d8c0404b01395e"}
+      },
+      "previewKeys": {"equipped1x": "top-iron-breastplate-equipped@1x", "equipped8x": "top-iron-breastplate-equipped@8x"}
+    },
+    {
+      "displayNameKorean": "천 바지",
+      "equipmentId": 1008,
+      "imageKey": "bottom_cloth_pants",
+      "layerKey": "bottom_cloth_pants",
+      "slot": "bottom",
+      "sourcePath": "layers/bottom_cloth_pants.png",
+      "runtimePath": "character/layers/bottom_cloth_pants.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [24, 41, 40, 54],
+        "opaquePixelCount": 217,
+        "fileByteCount": 333,
+        "hashes": {"fileSha256": "d5560f6e75d4a5b8a17ab27a5be17825956c5b0b61b90466486b9a55dd8ce8ee", "rawRgbaSha256": "14ac9502b397155c7196714caa2cbc262f72634cd6e4a1fd33c69082f6303a99", "alphaMaskSha256": "25f4fef3c774d35740068d7e42ff8769d7a5918f6deac252d9f8bcdf04074553"}
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [24, 41, 40, 54],
+        "opaquePixelCount": 217,
+        "fileByteCount": 333,
+        "hashes": {"fileSha256": "d5560f6e75d4a5b8a17ab27a5be17825956c5b0b61b90466486b9a55dd8ce8ee", "rawRgbaSha256": "14ac9502b397155c7196714caa2cbc262f72634cd6e4a1fd33c69082f6303a99", "alphaMaskSha256": "25f4fef3c774d35740068d7e42ff8769d7a5918f6deac252d9f8bcdf04074553"}
+      },
+      "previewKeys": {"equipped1x": "bottom-cloth-pants-equipped@1x", "equipped8x": "bottom-cloth-pants-equipped@8x"}
+    },
+    {
+      "displayNameKorean": "가죽 바지",
+      "equipmentId": 1009,
+      "imageKey": "bottom_leather_pants",
+      "layerKey": "bottom_leather_pants",
+      "slot": "bottom",
+      "sourcePath": "layers/bottom_leather_pants.png",
+      "runtimePath": "character/layers/bottom_leather_pants.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [24, 41, 40, 54],
+        "opaquePixelCount": 213,
+        "fileByteCount": 288,
+        "hashes": {"fileSha256": "1e18b15b36ad71e87ea4b7287a7bca91cb457b67e7e0bf7ceb76f284b2e7e7d4", "rawRgbaSha256": "f3bb5904d7daedff5da181977fc2010223a20fed120d70339e6697cbd448fdb0", "alphaMaskSha256": "391d32eb0bec5193ac66edcba3e70edd65e16afa319ef264c7b80f2d64bfd0a7"}
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [24, 41, 40, 54],
+        "opaquePixelCount": 213,
+        "fileByteCount": 288,
+        "hashes": {"fileSha256": "1e18b15b36ad71e87ea4b7287a7bca91cb457b67e7e0bf7ceb76f284b2e7e7d4", "rawRgbaSha256": "f3bb5904d7daedff5da181977fc2010223a20fed120d70339e6697cbd448fdb0", "alphaMaskSha256": "391d32eb0bec5193ac66edcba3e70edd65e16afa319ef264c7b80f2d64bfd0a7"}
+      },
+      "previewKeys": {"equipped1x": "bottom-leather-pants-equipped@1x", "equipped8x": "bottom-leather-pants-equipped@8x"}
+    },
+    {
+      "displayNameKorean": "강철 각반",
+      "equipmentId": 1010,
+      "imageKey": "bottom_steel_greaves",
+      "layerKey": "bottom_steel_greaves",
+      "slot": "bottom",
+      "sourcePath": "layers/bottom_steel_greaves.png",
+      "runtimePath": "character/layers/bottom_steel_greaves.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [24, 41, 40, 54],
+        "opaquePixelCount": 217,
+        "fileByteCount": 512,
+        "hashes": {"fileSha256": "8b0d1e506979e18ba93f0b7d4b11800109df674aa155321eea55d2367d4e0b6d", "rawRgbaSha256": "cbacd2ecb7054c91f0467bd9123f6807000b3f7633e059e862d7ab8d22808ec0", "alphaMaskSha256": "c9225735abaff884cfde1e4b1ca5b21baaede0a0cfaf1343bb84b6a0850bfca3"}
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [24, 41, 40, 54],
+        "opaquePixelCount": 217,
+        "fileByteCount": 512,
+        "hashes": {"fileSha256": "8b0d1e506979e18ba93f0b7d4b11800109df674aa155321eea55d2367d4e0b6d", "rawRgbaSha256": "cbacd2ecb7054c91f0467bd9123f6807000b3f7633e059e862d7ab8d22808ec0", "alphaMaskSha256": "c9225735abaff884cfde1e4b1ca5b21baaede0a0cfaf1343bb84b6a0850bfca3"}
+      },
+      "previewKeys": {"equipped1x": "bottom-steel-greaves-equipped@1x", "equipped8x": "bottom-steel-greaves-equipped@8x"}
+    }
+  ],
+  "previews": {
+    "purpose": "deterministic equipped visual verification; never a runtime layer source",
+    "combinationMatrix": {
+      "topEquipmentIds": [1005, 1006, 1007],
+      "bottomEquipmentIds": [1008, 1009, 1010],
+      "columns": 3,
+      "rows": 3,
+      "cellWidth": 64,
+      "cellHeight": 64,
+      "previewKeys": {
+        "matrix1x": "top-bottom-combination-matrix@1x",
+        "matrix4x": "top-bottom-combination-matrix@4x"
+      }
+    },
+    "artifacts": {
+      "top-cloth-equipped@1x": {"equipmentId": 1005, "scale": 1, "path": "previews/top-cloth-equipped.png", "width": 64, "height": 64, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [20, 4, 44, 58], "opaquePixelCount": 1194, "fileByteCount": 1518, "hashes": {"fileSha256": "ffbac281e42b828207b9f03926da7d706e98a3d6b22f984f01fcb0f5604d3735", "rawRgbaSha256": "c45054c34363368a69ec421f25f2501b1a84f14347c135b096d2d2851a025a8e", "alphaMaskSha256": "5bd0d06cf177f6ef5e7874f1020e70d49e726aca0ddb454d81e7995ec220d8dc"}}},
+      "top-cloth-equipped@8x": {"equipmentId": 1005, "scale": 8, "path": "previews/top-cloth-equipped@8x.png", "width": 512, "height": 512, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [160, 32, 359, 471], "opaquePixelCount": 76416, "fileByteCount": 4367, "hashes": {"fileSha256": "98fb5ac2de8c54ddcebe50141f42b7a949bb65d9fad712a8ad25ffad58bb70a6", "rawRgbaSha256": "ff0ac1d23c51172e1455fc308f54b844543232b128685fb3c837f8659e034cf0", "alphaMaskSha256": "c41e36982a9dc75d99f8d7cccf14bf0fd6a18f2e75d88c3dadf7da3913c88003"}}},
+      "top-leather-armor-equipped@1x": {"equipmentId": 1006, "scale": 1, "path": "previews/top-leather-armor-equipped.png", "width": 64, "height": 64, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [20, 4, 44, 58], "opaquePixelCount": 1194, "fileByteCount": 1473, "hashes": {"fileSha256": "739b5f207e5f8b26d40e5599d8f90804611f81e6847902164028bd637b4633c3", "rawRgbaSha256": "68221cfdabef2f9127da9c2a1fd1c9fc47d09da4e4133ae6f1ea72b86e7f0d7b", "alphaMaskSha256": "1da32801e5519c00ff89efcf2af4857534731d1d44aa4bc6eacb7d669f05a31b"}}},
+      "top-leather-armor-equipped@8x": {"equipmentId": 1006, "scale": 8, "path": "previews/top-leather-armor-equipped@8x.png", "width": 512, "height": 512, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [160, 32, 359, 471], "opaquePixelCount": 76416, "fileByteCount": 4287, "hashes": {"fileSha256": "0a08b704a6795f70515d401af6aaca295aa0cbd1c0d2505843965ad671b41303", "rawRgbaSha256": "43b7524cf1bef5c153e91550ccb3be7677c8c761c9a7fd15e39d464302b9b913", "alphaMaskSha256": "3ee784c7802019ce7bec4b17758a47910fe89951eedfb3e26712b0fa180d3dea"}}},
+      "top-iron-breastplate-equipped@1x": {"equipmentId": 1007, "scale": 1, "path": "previews/top-iron-breastplate-equipped.png", "width": 64, "height": 64, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [20, 4, 44, 58], "opaquePixelCount": 1195, "fileByteCount": 1623, "hashes": {"fileSha256": "15e5d4258d2c9e569d69279253ecbc9b53ceefc743188beb07bc48a8f16aa155", "rawRgbaSha256": "99b9da202685f8e2735bc9931d04d307a3e8a5cfede038049741ea5688155c05", "alphaMaskSha256": "749fd05723281a23cc5521d20d1e87929fb3d06c3ccf5c591d67ce9ca785c479"}}},
+      "top-iron-breastplate-equipped@8x": {"equipmentId": 1007, "scale": 8, "path": "previews/top-iron-breastplate-equipped@8x.png", "width": 512, "height": 512, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [160, 32, 359, 471], "opaquePixelCount": 76480, "fileByteCount": 4610, "hashes": {"fileSha256": "052e31e8270993e8822f3d4d2019aabae1611f533473232f27f236687bf3c796", "rawRgbaSha256": "9ae6cba4dcaf482179366928c56c21b2ee9fd732b8e30043f9cf103d1e934d70", "alphaMaskSha256": "639fc53db9ecc181f37a1556cd795b2dfe24c27416eaf676ad58b2c603ff292c"}}},
+      "bottom-cloth-pants-equipped@1x": {"equipmentId": 1008, "scale": 1, "path": "previews/bottom-cloth-pants-equipped.png", "width": 64, "height": 64, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [20, 4, 44, 58], "opaquePixelCount": 1197, "fileByteCount": 1468, "hashes": {"fileSha256": "b420428f0c14e16d710a92621e5cdda48a51eefabc31a5ae4840469dfcbd3998", "rawRgbaSha256": "8a9ec1f9fff05683d57c78ee6717b958dac3a187edca4f1313be2fa5bcfcbafd", "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"}}},
+      "bottom-cloth-pants-equipped@8x": {"equipmentId": 1008, "scale": 8, "path": "previews/bottom-cloth-pants-equipped@8x.png", "width": 512, "height": 512, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [160, 32, 359, 471], "opaquePixelCount": 76608, "fileByteCount": 4347, "hashes": {"fileSha256": "7c6207749848d527e85ccc9a423111155a5ddb2e6cbcab5698af65c4ac8045f1", "rawRgbaSha256": "7e0315217bfa9d2b23f633f96f65e635f496e225702f5d55f08b0975a4b1411d", "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"}}},
+      "bottom-leather-pants-equipped@1x": {"equipmentId": 1009, "scale": 1, "path": "previews/bottom-leather-pants-equipped.png", "width": 64, "height": 64, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [20, 4, 44, 58], "opaquePixelCount": 1197, "fileByteCount": 1485, "hashes": {"fileSha256": "b625fb63b8d92754ed1d422e58a277395dc18300b10add214ca2ad750b2f4092", "rawRgbaSha256": "ccd62feb01f7489c36ec5cc0f015a37e115b4e4e83b68f0c6579b36030cbd75c", "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"}}},
+      "bottom-leather-pants-equipped@8x": {"equipmentId": 1009, "scale": 8, "path": "previews/bottom-leather-pants-equipped@8x.png", "width": 512, "height": 512, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [160, 32, 359, 471], "opaquePixelCount": 76608, "fileByteCount": 4337, "hashes": {"fileSha256": "3ba65b909c14d4b98c8b4badfdccc3656163cbc404b2b90b20026587bef6e93e", "rawRgbaSha256": "f788236d6197f20a8d3408af68457bbed307eb89dc99b7171907c85628faa199", "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"}}},
+      "bottom-steel-greaves-equipped@1x": {"equipmentId": 1010, "scale": 1, "path": "previews/bottom-steel-greaves-equipped.png", "width": 64, "height": 64, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [20, 4, 44, 58], "opaquePixelCount": 1197, "fileByteCount": 1612, "hashes": {"fileSha256": "96cabc5b6e15fc26af679ece15d8f5f2e070707e734e9e1ff3a202271e4e9765", "rawRgbaSha256": "59cad9ba189384ad2565944839af452a01b56d2819172535feebbae96221acb3", "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"}}},
+      "bottom-steel-greaves-equipped@8x": {"equipmentId": 1010, "scale": 8, "path": "previews/bottom-steel-greaves-equipped@8x.png", "width": 512, "height": 512, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [160, 32, 359, 471], "opaquePixelCount": 76608, "fileByteCount": 4601, "hashes": {"fileSha256": "8ab6b666bbd4981803c740721c2f0d780c3a1ac1c2d84696d633be3f88af9eb8", "rawRgbaSha256": "0f1736f315acc0d321b90615288b21d68a185d610634d04c57914b2696c837a7", "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"}}},
+      "top-bottom-combination-matrix@1x": {"kind": "combinationMatrix", "scale": 1, "path": "previews/top-bottom-combination-matrix.png", "width": 192, "height": 192, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [20, 4, 172, 186], "opaquePixelCount": 10749, "fileByteCount": 6148, "hashes": {"fileSha256": "3f18fbc075d897c24f886db99a3b6507a040991fa233a6b7ad61bd5211ffdaf5", "rawRgbaSha256": "1e859652212c3537a1da8fc94e6ab1e086066c8228522635e07c0bda567ba739", "alphaMaskSha256": "8696ec334df8086c27284bc28a0239a40008963f23ab69ed2d76b3fbe88bae2b"}}},
+      "top-bottom-combination-matrix@4x": {"kind": "combinationMatrix", "scale": 4, "path": "previews/top-bottom-combination-matrix@4x.png", "width": 768, "height": 768, "mode": "RGBA", "artifact": {"status": "available", "opaqueBounds": [80, 16, 691, 747], "opaquePixelCount": 171984, "fileByteCount": 12801, "hashes": {"fileSha256": "44b1dc2086f22752e7aa55b4ffa973d31d355bcebaff3fe81d0a640499943e45", "rawRgbaSha256": "c0f14edcbe36035792a19008e8e6945ed048c0c7bdc03aa52ae2882ed82de815", "alphaMaskSha256": "fcf5a5645277a89b5f243ebb96187efa0433e19b791cc0ce7c6f82f81065b77b"}}}
+    }
+  },
+  "hashSerialization": {
+    "algorithm": "SHA-256",
+    "fileBytes": "exact stored PNG bytes without decoding",
+    "rawRgba": "top-to-bottom, left-to-right row-major RGBA bytes",
+    "alphaMask": "top-to-bottom, left-to-right row-major alpha bytes"
+  }
+}

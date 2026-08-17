@@ -1,0 +1,35 @@
+{
+  "project": "Todo Quest",
+  "phase": "0-design-docs",
+  "steps": [
+    {
+      "step": 0,
+      "name": "project-guardrails",
+      "status": "completed",
+      "completed_at": "2026-07-14T00:42:09+0900",
+      "summary": "AGENTS.md와 docs/DEVELOPMENT.md에 Todo Quest Android 기술 스택, 아키텍처 가드레일, 검증 명령을 정리했다."
+    },
+    {
+      "step": 1,
+      "name": "product-spec",
+      "status": "completed",
+      "completed_at": "2026-07-14T00:42:09+0900",
+      "summary": "docs/PRD.md에 일정, 반복 occurrence, 알림, RPG 보상, MVP 제외 범위와 성공 기준을 정리했다."
+    },
+    {
+      "step": 2,
+      "name": "architecture-records",
+      "status": "completed",
+      "completed_at": "2026-07-14T00:42:09+0900",
+      "summary": "docs/ARCHITECTURE.md와 docs/ADR.md에 레이어 분리, 반복 일정, 보상 ledger, 알림 scheduler 결정을 정리했다."
+    },
+    {
+      "step": 3,
+      "name": "ui-guide",
+      "status": "completed",
+      "completed_at": "2026-07-14T00:42:09+0900",
+      "summary": "docs/UI_GUIDE.md에 생산성 중심 캘린더와 픽셀 RPG 보상 영역의 UI 원칙, 접근성, 금지사항을 정리했다."
+    }
+  ],
+  "completed_at": "2026-07-14T00:42:09+0900"
+}

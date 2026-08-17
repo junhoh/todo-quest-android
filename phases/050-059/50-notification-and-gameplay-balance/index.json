@@ -1,0 +1,96 @@
+{
+  "project": "Todo Quest",
+  "phase": "50-notification-and-gameplay-balance",
+  "steps": [
+    {
+      "step": 0,
+      "name": "approve-permission-and-economy-contract",
+      "status": "completed",
+      "started_at": "2026-08-05T11:35:14+0900",
+      "summary": "첫 Calendar 알림 권한 진입, Combat Reward v2·18종 가격 완화와 104dp EXP 표시의 제품·호환성 계약을 문서로 승인했다.",
+      "completed_at": "2026-08-05T11:44:24+0900"
+    },
+    {
+      "step": 1,
+      "name": "define-first-launch-permission-policy",
+      "status": "completed",
+      "started_at": "2026-08-05T11:44:24+0900",
+      "summary": "첫 Calendar 진입 확인을 한 번만 소비하고 POST_NOTIFICATIONS 필요 여부만 안전하게 판정하는 순수 Kotlin 저장소 계약과 UseCase를 테스트 우선으로 구현했다.",
+      "completed_at": "2026-08-05T11:46:55+0900"
+    },
+    {
+      "step": 2,
+      "name": "implement-android-notification-entrypoints",
+      "status": "completed",
+      "started_at": "2026-08-05T11:47:44+0900",
+      "summary": "SharedPreferences 기반 최초 알림 권한 one-shot 저장소와 API별 runtime permission·package settings typed Android action을 Robolectric 테스트 우선으로 구현했다.",
+      "completed_at": "2026-08-05T11:55:24+0900"
+    },
+    {
+      "step": 3,
+      "name": "add-calendar-permission-rationales",
+      "status": "completed",
+      "started_at": "2026-08-05T11:56:16+0900",
+      "summary": "최초 Calendar와 reminder 알림 권한 안내를 origin별 UI state로 분리하고 runtime·설정 진입 및 exact 후속 흐름을 replay 없는 event로 구현했다.",
+      "completed_at": "2026-08-05T12:20:25+0900"
+    },
+    {
+      "step": 4,
+      "name": "wire-startup-permission-lifecycle",
+      "status": "completed",
+      "started_at": "2026-08-05T12:21:13+0900",
+      "summary": "application-scope 최초 알림 권한 저장소와 준비 UseCase를 Calendar ViewModel까지 연결하고 재생성·탭 복원·실패 격리를 검증했다.",
+      "completed_at": "2026-08-05T12:41:10+0900"
+    },
+    {
+      "step": 5,
+      "name": "version-combat-reward-policy",
+      "status": "completed",
+      "started_at": "2026-08-05T12:42:05+0900",
+      "summary": "Combat Reward v1·v2 설정 catalog와 명시적 version 계산 경계를 추가하고 기존·신규 골든, exact arithmetic 및 몬스터 계약 불변성을 테스트로 고정했다.",
+      "completed_at": "2026-08-05T12:47:21+0900"
+    },
+    {
+      "step": 6,
+      "name": "integrate-combat-reward-v2",
+      "status": "completed",
+      "started_at": "2026-08-05T12:48:15+0900",
+      "summary": "신규 completion은 Combat Reward v2를 snapshot하고, v0·v1·v2 event별 보상 적용과 APPLIED 멱등성·미지원 version rollback을 동시 reconciliation·재시작 테스트로 고정했다.",
+      "completed_at": "2026-08-05T12:53:39+0900"
+    },
+    {
+      "step": 7,
+      "name": "rebalance-equipment-catalog",
+      "status": "completed",
+      "started_at": "2026-08-05T12:54:17+0900",
+      "summary": "18종 장비의 fresh 가격을 승인값으로 완화하고 canonical identity와 기존 가격이 일치하는 row만 원자적으로 갱신해 custom 가격·소유·장착 상태를 보존했다.",
+      "completed_at": "2026-08-05T13:00:16+0900"
+    },
+    {
+      "step": 8,
+      "name": "sync-shop-price-presentation",
+      "status": "completed",
+      "started_at": "2026-08-05T13:01:48+0900",
+      "summary": "18종 승인 가격에 맞춰 Shop preview와 catalog 전용 목록·상세·구매 확인·부족 안내·성공 잔액 fixture를 동기화하고 Repository 단일 가격 원천과 Inventory 소유·장착 상태를 유지했다.",
+      "completed_at": "2026-08-05T13:26:08+0900"
+    },
+    {
+      "step": 9,
+      "name": "expand-battle-exp-hud",
+      "status": "completed",
+      "started_at": "2026-08-05T13:26:46+0900",
+      "summary": "EXP 그룹을 최소 104dp와 최대 intrinsic 폭으로 확장하고 0/100 전체 표시·큰 글꼴·맵 경계를 connected 테스트와 portrait 렌더로 검증했다.",
+      "completed_at": "2026-08-05T13:44:27+0900"
+    },
+    {
+      "step": 10,
+      "name": "document-and-validate-balance",
+      "status": "completed",
+      "started_at": "2026-08-05T13:53:43+0900",
+      "summary": "첫 Calendar 알림 권한 UX, Combat Reward v2, 18종 조건부 가격 완화와 104dp EXP HUD를 canonical 문서에 동기화하고 JVM 485개씩·connected 118개·harness 88개를 검증했다.",
+      "completed_at": "2026-08-05T15:07:42+0900"
+    }
+  ],
+  "created_at": "2026-08-05T11:35:14+0900",
+  "completed_at": "2026-08-05T15:07:42+0900"
+}

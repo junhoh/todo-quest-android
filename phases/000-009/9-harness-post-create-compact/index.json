@@ -1,0 +1,14 @@
+{
+  "project": "Todo Quest",
+  "phase": "9-harness-post-create-compact",
+  "steps": [
+    {
+      "step": 0,
+      "name": "harness-post-create-compact-docs",
+      "status": "completed",
+      "completed_at": "2026-07-18T18:50:23+09:00",
+      "summary": "harness phase 생성 직후 같은 세션에서 바로 작업할 때 첫 step 전에 /compact 후 필수 문서를 다시 읽도록 스킬 문서와 개발 문서를 갱신했다."
+    }
+  ],
+  "completed_at": "2026-07-18T18:50:23+09:00"
+}

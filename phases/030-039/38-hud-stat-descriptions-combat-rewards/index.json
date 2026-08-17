@@ -1,0 +1,78 @@
+{
+  "project": "Todo Quest",
+  "phase": "38-hud-stat-descriptions-combat-rewards",
+  "steps": [
+    {
+      "step": 0,
+      "name": "approve-combat-reward-replacement",
+      "status": "completed",
+      "summary": "ADR-014와 제품·UI·아키텍처 문서에 TODO 직접 보상을 전투 hit·kill 보상으로 교체하고 legacy 비소급·600ms 배지 계약을 승인했다.",
+      "completed_at": "2026-07-28T05:36:19+0900"
+    },
+    {
+      "step": 1,
+      "name": "define-level-scaled-combat-reward-policy",
+      "status": "completed",
+      "summary": "레벨·등급·GOLD_GAIN_BONUS를 사용하는 exact arithmetic CombatRewardPolicy와 경계·처치·비처치 단위 테스트를 구현했다.",
+      "completed_at": "2026-07-28T05:36:19+0900"
+    },
+    {
+      "step": 2,
+      "name": "migrate-combat-reward-ledgers-room-v9",
+      "status": "completed",
+      "summary": "reward mode와 전투 보상 피연산자 snapshot을 Room v9에 추가하고 legacy version 0 보존·멱등 컬럼 migration을 검증했다.",
+      "completed_at": "2026-07-28T05:36:19+0900"
+    },
+    {
+      "step": 3,
+      "name": "queue-all-completions-for-combat",
+      "status": "completed",
+      "summary": "신규 occurrence 완료를 직접 XP·골드 없이 COMBAT_ATTACK ledger와 PENDING 공격 event로 저장하고 일일 20회 제한을 제거했다.",
+      "completed_at": "2026-07-28T05:36:19+0900"
+    },
+    {
+      "step": 4,
+      "name": "award-combat-rewards-transactionally",
+      "status": "completed",
+      "summary": "피해·Stage·캐릭터 XP·골드·HP와 공격 event 보상 snapshot을 한 Room transaction에서 멱등 적용하고 legacy event 비소급을 보장했다.",
+      "completed_at": "2026-07-28T05:36:19+0900"
+    },
+    {
+      "step": 5,
+      "name": "refine-exp-hud-and-reward-badge",
+      "status": "completed",
+      "summary": "EXP 글자 폭에 맞는 outline track과 0/100 가시성을 구현하고 실제 전투 보상을 600ms 비재생 Battle Map 배지로 표시했다.",
+      "completed_at": "2026-07-28T05:36:19+0900"
+    },
+    {
+      "step": 6,
+      "name": "align-calendar-with-combat-rewards",
+      "status": "completed",
+      "summary": "Calendar 행 문구를 공격·처치 보상 흐름으로 교체하고 신규 COMBAT_ATTACK 완료에서 기존 보상 Snackbar를 억제했다.",
+      "completed_at": "2026-07-28T05:36:19+0900"
+    },
+    {
+      "step": 7,
+      "name": "stabilize-and-explain-character-stats",
+      "status": "completed",
+      "summary": "기본 능력치 control 폭을 고정해 pending 문구의 좌우 이동을 막고 기본·파생 능력치 한국어 설명 dialog를 ViewModel 상태로 연결했다.",
+      "completed_at": "2026-07-28T05:36:19+0900"
+    },
+    {
+      "step": 8,
+      "name": "wire-room-v9-integration",
+      "status": "completed",
+      "summary": "production과 file-backed Room builder에 v9 migration을 연결하고 completion→combat→character application 흐름과 격리 재개방을 검증했다.",
+      "completed_at": "2026-07-28T05:36:19+0900"
+    },
+    {
+      "step": 9,
+      "name": "document-and-validate-reward-polish",
+      "status": "completed",
+      "summary": "canonical 문서와 Room schema를 동기화하고 JVM 각 318개·lint·APK·연결 72개·harness·문서 링크 검증을 완료했다.",
+      "completed_at": "2026-07-28T05:40:10+0900"
+    }
+  ],
+  "created_at": "2026-07-28T04:33:05+0900",
+  "completed_at": "2026-07-28T05:40:10+0900"
+}

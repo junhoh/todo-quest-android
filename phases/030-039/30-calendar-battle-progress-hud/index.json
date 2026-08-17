@@ -1,0 +1,42 @@
+{
+  "project": "Todo Quest",
+  "phase": "30-calendar-battle-progress-hud",
+  "steps": [
+    {
+      "step": 0,
+      "name": "extend-calendar-progress-state",
+      "status": "completed",
+      "summary": "Calendar 플레이어 요약에 로딩·레벨 구간 XP·골드 상태를 추가하고 CharacterSnapshot 매핑 및 경계 테스트를 완료함",
+      "started_at": "2026-07-21T16:43:27+0900",
+      "completed_at": "2026-07-21T16:47:04+0900"
+    },
+    {
+      "step": 1,
+      "name": "build-battle-progress-hud",
+      "status": "completed",
+      "summary": "BattleOverlayLayer에 독립 합성 가능한 플레이어 레벨·경험치·골드 HUD와 반응형 Preview 및 경계·접근성 테스트를 구현함",
+      "started_at": "2026-07-21T16:47:04+0900",
+      "completed_at": "2026-07-21T16:57:30+0900"
+    },
+    {
+      "step": 2,
+      "name": "integrate-hud-and-sunday-grid",
+      "status": "completed",
+      "summary": "기존 Calendar Header를 제거하고 Battle Map HUD에 플레이어 진행 상태를 연결했으며 월간 캘린더를 Sunday-first로 정렬함",
+      "started_at": "2026-07-21T17:02:32+0900",
+      "completed_at": "2026-07-21T17:35:11+0900"
+    },
+    {
+      "step": 3,
+      "name": "synchronize-docs-and-validate",
+      "status": "completed",
+      "started_at": "2026-07-21T17:38:48+0900",
+      "summary": "플레이어 진행 HUD·Sunday-first Calendar 계약과 검증 매트릭스를 문서에 동기화하고 전체 Android 4종·연결 UI 36개·harness 69개 및 세로·가로 QA를 완료함",
+      "completed_at": "2026-07-21T17:57:25+09:00"
+    }
+  ],
+  "created_at": "2026-07-21T16:43:27+0900",
+  "status": "completed",
+  "summary": "Calendar의 기존 상단 정보 Header를 Battle Map 플레이어 진행 HUD로 통합하고 월간 캘린더를 Sunday-first로 정렬했으며 경계·접근성·전체 Android·harness·실기 검증을 완료함",
+  "completed_at": "2026-07-21T17:57:25+09:00"
+}

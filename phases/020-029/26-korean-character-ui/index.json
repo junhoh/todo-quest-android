@@ -1,0 +1,32 @@
+{
+  "project": "Todo Quest",
+  "phase": "26-korean-character-ui",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-korean-ui-default",
+      "status": "completed",
+      "summary": "한국어 기본 문자열 리소스 정책과 하단 navigation·Character 화면의 고정 표시 용어를 문서화했다.",
+      "started_at": "2026-07-21T06:12:05+0900",
+      "completed_at": "2026-07-21T06:13:55+0900"
+    },
+    {
+      "step": 1,
+      "name": "localize-character-presentation",
+      "status": "completed",
+      "summary": "Character UI 상태를 semantic message 계약으로 분리하고 화면·오류·TalkBack을 한국어 기본 문자열 리소스로 전환했다.",
+      "started_at": "2026-07-21T06:13:56+0900",
+      "completed_at": "2026-07-21T06:27:48+0900"
+    },
+    {
+      "step": 2,
+      "name": "localize-navigation-shell",
+      "status": "completed",
+      "summary": "공통 하단 navigation을 한국어 문자열 리소스로 전환하고 unit·lint·APK 조립·전체 19개 instrumentation 테스트를 통과했다.",
+      "started_at": "2026-07-21T06:46:16+0900",
+      "completed_at": "2026-07-21T06:53:07+09:00"
+    }
+  ],
+  "created_at": "2026-07-21T06:12:05+0900",
+  "completed_at": "2026-07-21T06:53:34+0900"
+}

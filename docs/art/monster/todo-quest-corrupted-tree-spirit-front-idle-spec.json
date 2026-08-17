@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "asset": {
+    "fileName": "todo-quest-corrupted-tree-spirit-front-idle.png",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA"
+  },
+  "reference": {
+    "path": "../character/todo-quest-character-base-body.png",
+    "purpose": [
+      "style",
+      "logicalScale",
+      "outline",
+      "shadingSteps"
+    ],
+    "editable": false,
+    "opaqueBoundingBox": [20, 7, 44, 58],
+    "opaqueHeight": 52
+  },
+  "centerX": 32,
+  "soleY": 58,
+  "minimumMargin": 3,
+  "expectedOpaqueBoundingBox": [14, 11, 50, 58],
+  "boundingBoxInclusive": true,
+  "opaqueHeight": 48,
+  "scaleComparison": {
+    "referenceOpaqueHeight": 52,
+    "heightReductionPercentApprox": 7.7,
+    "widthIncludes": [
+      "leftCrownBranches",
+      "rightCrownBranches",
+      "slightlySpreadArms"
+    ],
+    "centeredOnCenterAxis": true
+  },
+  "anchors": {
+    "headCenter": [32, 21],
+    "shoulderY": 30,
+    "waistY": 42,
+    "soleY": 58
+  },
+  "pose": {
+    "facing": "front",
+    "proportions": "threeHeadTallChibiWithLargeHeadAndShortThickTrunk",
+    "centerAxisFixed": true,
+    "stance": "neutralCombatIdle",
+    "arms": "slightlySpreadBesideBody",
+    "bothSolesTouchY": 58,
+    "forbidden": [
+      "rotation",
+      "attackAction",
+      "walkingPose"
+    ]
+  },
+  "groundContacts": {
+    "leftRootFoot": {
+      "xRange": [23, 30],
+      "xRangeInclusive": true,
+      "y": 58,
+      "minimumOpaquePixels": 2
+    },
+    "rightRootFoot": {
+      "xRange": [34, 41],
+      "xRangeInclusive": true,
+      "y": 58,
+      "minimumOpaquePixels": 2
+    }
+  },
+  "transparentRegions": {
+    "rootFootGap": {
+      "region": [30, 48, 34, 57],
+      "regionInclusive": true,
+      "pixelCount": {
+        "min": 4
+      }
+    }
+  },
+  "semanticRegions": {
+    "eyeGlow": {
+      "region": [26, 19, 38, 25],
+      "regionInclusive": true,
+      "paletteName": "dangerRed",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 2,
+        "max": 4
+      }
+    },
+    "corruptionCracks": {
+      "region": [25, 29, 39, 47],
+      "regionInclusive": true,
+      "paletteNames": [
+        "corruptionShadow",
+        "corruptionGlow"
+      ],
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 3,
+        "max": 12
+      }
+    },
+    "corruptedSap": {
+      "region": [26, 22, 38, 40],
+      "regionInclusive": true,
+      "paletteName": "sapBlack",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 1,
+        "max": 5
+      }
+    },
+    "witheredLeaves": {
+      "region": [14, 11, 50, 23],
+      "regionInclusive": true,
+      "paletteName": "witheredLeaf",
+      "onlyOn": "branchConnectedLeaves",
+      "onlyWithinRegion": true,
+      "pixelCount": {
+        "min": 2,
+        "max": 12
+      }
+    }
+  },
+  "palette": {
+    "outlineDarkNavy": "#263B5A",
+    "inkDeep": "#11151C",
+    "barkDeep": "#2E211C",
+    "barkShadow": "#4A3225",
+    "barkBase": "#765238",
+    "barkHighlight": "#A3744C",
+    "barkLight": "#C08A5A",
+    "mossShadow": "#42543A",
+    "mossBase": "#657A4B",
+    "mossHighlight": "#8EA565",
+    "witheredLeaf": "#3A3F45",
+    "sapBlack": "#1C1318",
+    "corruptionShadow": "#45294F",
+    "corruptionGlow": "#9A4E8A",
+    "dangerRed": "#E05252"
+  },
+  "requiredPaletteNames": [
+    "outlineDarkNavy",
+    "inkDeep",
+    "barkDeep",
+    "barkShadow",
+    "barkBase",
+    "barkHighlight",
+    "barkLight",
+    "mossShadow",
+    "mossBase",
+    "mossHighlight",
+    "witheredLeaf",
+    "sapBlack",
+    "corruptionShadow",
+    "corruptionGlow",
+    "dangerRed"
+  ],
+  "transparentPixelsCountTowardPalette": false,
+  "outline": {
+    "color": "#263B5A",
+    "externalSilhouetteThickness": 1,
+    "externalBoundaryNeighborMode": 4,
+    "allExternalBoundaryPixelsUseOutlineColor": true,
+    "forbidExternalOutline2x2Blocks": true
+  },
+  "connectivity": {
+    "opaqueNeighborMode": 8,
+    "opaqueComponentCount": 1,
+    "allowIsolatedOpaquePixels": false
+  },
+  "allowedAlphaValues": [0, 255],
+  "chromaKey": "#FF00FF",
+  "chromaKeyAllowedInFinalPng": false,
+  "design": {
+    "attributes": [
+      "forest",
+      "dark",
+      "corruption"
+    ],
+    "role": "lowThreatCommonEnemySlowPersistentMeleeDisruptor",
+    "demeanor": "cuteButClearlyHostile",
+    "silhouette": "classicFantasyTreeSpiritWithCrownBranchesAndRootFeet",
+    "forbidden": [
+      "armor",
+      "clothing",
+      "artificialWeapons",
+      "machinery",
+      "metalDevices",
+      "firearms",
+      "electronics",
+      "modernElements",
+      "graphicViolence",
+      "specificExistingCharacterImitation"
+    ]
+  }
+}

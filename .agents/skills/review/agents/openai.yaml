@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Review"
+  short_description: "프로젝트 규칙에 따라 현재 변경사항을 체계적으로 검토합니다"
+  default_prompt: "Use $review to review the current changes against this project rules."

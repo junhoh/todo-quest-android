@@ -1,0 +1,20 @@
+{
+  "project": "Todo Quest",
+  "phase": "14-room-kapt-windows-temp-fix",
+  "steps": [
+    {
+      "step": 0,
+      "name": "kapt-gradle-jvm-alignment",
+      "status": "completed",
+      "completed_at": "2026-07-20T02:14:43+09:00",
+      "summary": "KAPT task의 Java toolchain을 현재 Gradle JVM에 맞춰 Android Studio JBR 21에서 별도 JDK 17 process worker를 만들지 않도록 수정했다. JBR 21과 Temurin JDK 17에서 kaptDebugKotlin 강제 재실행이 모두 통과했으며 Java 17 타깃과 의존성 버전은 유지했다."
+    },
+    {
+      "step": 1,
+      "name": "kapt-build-regression-validation",
+      "status": "completed",
+      "completed_at": "2026-07-20T02:31:42+09:00",
+      "summary": "Windows Room KAPT 문제의 원인, Gradle JVM 정렬 해결 방식, 진단 명령과 정상 판정 기준을 개발 문서에 추가했다. Temurin JDK 17에서 test, lint, assembleDebug가 통과했고 Pixel_9 AVD의 connectedDebugAndroidTest 11개와 harness pytest 63개도 모두 통과했으며 앱 소스와 Room schema 변경은 없었다."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "project": "Todo Quest",
+  "phase": "35-shop-character-equipment-preview",
+  "steps": [
+    {
+      "step": 0,
+      "name": "extend-equipment-store-preview-snapshot",
+      "status": "completed",
+      "started_at": "2026-07-22T14:15:28+0900",
+      "summary": "Equipment.kt, CharacterProfileDao.kt, RoomEquipmentRepository.kt와 관련 Repository·Shop ViewModel 테스트를 수정해 상점 snapshot이 구매·장착 commit 뒤 외형, 검증된 렌더 loadout, 기존 공식 파생 능력치를 단일 aggregate로 제공하고 7개 slot 독립 교체와 fallback을 검증함",
+      "completed_at": "2026-07-22T14:24:44+0900"
+    },
+    {
+      "step": 1,
+      "name": "model-shop-character-preview-state",
+      "status": "completed",
+      "started_at": "2026-07-22T14:24:45+0900",
+      "summary": "ShopUiState, ShopViewModel과 테스트를 확장해 기본 캐릭터 preview, 7개 slot·스탯 요약, slot 기반 category 선택과 Repository snapshot 기반 구매·장착 후 gold·소유·비교·렌더 갱신 및 CHEST/LEGS 독립 보존을 검증함",
+      "completed_at": "2026-07-22T14:29:46+0900"
+    },
+    {
+      "step": 2,
+      "name": "render-shop-character-equipment-preview",
+      "status": "completed",
+      "started_at": "2026-07-22T14:30:18+0900",
+      "summary": "ShopScreen을 캐릭터·장비 프리뷰, 최종 능력치, category, 판매 목록 순서의 단일 스크롤로 확장하고 shared sprite, 7개 slot의 일반·compact 배치, selected·48dp·한국어 TalkBack 접근성을 UI 테스트로 검증함",
+      "completed_at": "2026-07-22T14:43:04+0900"
+    },
+    {
+      "step": 3,
+      "name": "verify-shop-preview-integration",
+      "status": "completed",
+      "started_at": "2026-07-22T14:43:49+0900",
+      "summary": "실제 application-scope EquipmentRepository와 Room Flow를 사용하는 Shop 연결 테스트를 확장해 구매 직후 gold·보유·구매 불가 갱신, 바로 장착의 CHEST/LEGS 독립 교체·능력치·동일 slot 비교·외형 fallback, Activity 재생성 복원과 navigation 회귀를 검증함",
+      "completed_at": "2026-07-22T15:00:45+0900"
+    },
+    {
+      "step": 4,
+      "name": "synchronize-and-validate",
+      "status": "completed",
+      "started_at": "2026-07-22T15:18:01+0900",
+      "summary": "PRD·Architecture·UI Guide·Development를 실제 Shop 프리뷰와 동기화해 EquipmentStoreSnapshot의 외형 fallback·gameplay 7 slot·검증된 render loadout·기존 DerivedStats aggregate와 ShopViewModel 단일 StateFlow, 일반 좌우 4/3 및 360dp 미만·font scale 1.5 이상 compact UI를 기록하고 Repository·ViewModel·ShopScreen·AppNavigation 테스트를 확장했으며, debug/release JVM 각 289개·lint·assembleDebug·SM-A325N connected 63개·harness 69개·문서 18개/링크 89개·diff check를 실패·오류·skip 없이 통과함(새 장비 bitmap 없음·대부분 layerKey 미제공)",
+      "completed_at": "2026-07-22T15:34:54+0900"
+    }
+  ],
+  "created_at": "2026-07-22T14:15:28+0900",
+  "completed_at": "2026-07-22T15:35:51+0900"
+}

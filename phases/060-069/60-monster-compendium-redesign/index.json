@@ -1,0 +1,40 @@
+{
+  "project": "Todo Quest",
+  "phase": "60-monster-compendium-redesign",
+  "steps": [
+    {
+      "step": 0,
+      "name": "present-monster-compendium-state",
+      "status": "completed",
+      "summary": "기존 발견 Flow를 검색·필터·선택·상세 상태로 투영하고 미발견 이름 리소스를 제거한 replay 없는 안내 effect 경계를 구현했다.",
+      "started_at": "2026-08-12T09:33:22+0900",
+      "completed_at": "2026-08-12T09:42:20+0900"
+    },
+    {
+      "step": 1,
+      "name": "redesign-monster-compendium-ui",
+      "status": "completed",
+      "summary": "고정 앱바 아래 단일 LazyVerticalGrid에 수집 현황·검색/필터·프리뷰와 3~5열 카드를 구성하고 미발견 비노출·replay 없는 안내·공용 상세 sheet를 연결했다.",
+      "started_at": "2026-08-12T09:42:21+0900",
+      "completed_at": "2026-08-12T10:16:31+0900"
+    },
+    {
+      "step": 2,
+      "name": "preserve-compendium-navigation",
+      "status": "completed",
+      "summary": "도감 목록을 back-stack ViewModel의 선택·검색·필터 상태와 replay 없는 effect에 연결하고 sheet 우선 back, 탭·재생성 복원 및 호환 상세 route의 미발견 privacy를 보존했다.",
+      "started_at": "2026-08-12T10:18:24+0900",
+      "completed_at": "2026-08-12T10:35:35+0900"
+    },
+    {
+      "step": 3,
+      "name": "synchronize-and-verify-compendium-redesign",
+      "status": "completed",
+      "summary": "도감 presentation v2 계약을 PRD·Architecture·ADR-023·UI Guide·Development에 동기화하고 JVM 1276개·connected 156개·harness 88개, lint·assemble·manager·diff 검증을 통과했다.",
+      "started_at": "2026-08-12T10:51:26+0900",
+      "completed_at": "2026-08-12T11:56:53+0900"
+    }
+  ],
+  "created_at": "2026-08-12T09:33:22+0900",
+  "completed_at": "2026-08-12T11:56:53+0900"
+}

@@ -1,0 +1,32 @@
+{
+  "project": "Todo Quest",
+  "phase": "16-character-base-design-sheet",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-character-art-contract",
+      "status": "completed",
+      "started_at": "2026-07-20T03:46:07+0900",
+      "summary": "docs/art/character/character-base-spec.json에 384×128 RGBA 6×2 시트, 공통 바운딩 박스 [20,4,44,58], 중심축 x=32·발바닥 y=58, 10개 기준점과 16색 팔레트 계약을 정의함",
+      "completed_at": "2026-07-20T03:48:37+0900"
+    },
+    {
+      "step": 1,
+      "name": "add-pixel-sheet-validator",
+      "status": "completed",
+      "started_at": "2026-07-20T03:48:38+0900",
+      "summary": "Pillow 기반 scripts/validate_character_sheet.py와 임시 PNG fixture 테스트를 추가해 시트 규격, 이진 알파, 16색 팔레트·크로마키, 기준 타일 기하, 앵커 가이드를 검증함",
+      "completed_at": "2026-07-20T03:56:20+0900"
+    },
+    {
+      "step": 2,
+      "name": "generate-character-design-sheet",
+      "status": "completed",
+      "started_at": "2026-07-20T03:56:21+0900",
+      "summary": "built-in imagegen으로 도시형 퀘스트 러너·중립 바디슈트·레이어/앵커/16색 팔레트를 담은 docs/art/character/todo-quest-character-base-sheet.png를 생성하고 투명 픽셀아트 계약에 맞춰 정규화함",
+      "completed_at": "2026-07-20T04:03:52+09:00"
+    }
+  ],
+  "created_at": "2026-07-20T03:46:07+0900",
+  "completed_at": "2026-07-20T04:04:41+0900"
+}

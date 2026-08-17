@@ -1,0 +1,72 @@
+{
+  "project": "Todo Quest",
+  "phase": "49-weapon-types-and-item-art",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-weapon-asset-contract",
+      "status": "completed",
+      "started_at": "2026-08-05T07:07:55+0900",
+      "summary": "worn_sword·iron_longsword·ash_spear·steel_mace 네 key와 primary grip (42,42), schema-v5 최상단 weapon group 계약을 정의했다.",
+      "completed_at": "2026-08-05T07:23:44+0900"
+    },
+    {
+      "step": 1,
+      "name": "generate-weapon-layer-assets",
+      "status": "completed",
+      "started_at": "2026-08-05T07:23:45+0900",
+      "summary": "built-in image_gen 독립 호출로 네 무기 canonical PNG를 생성·정규화하고 장비별 1×/8× 및 2×2 조합 preview를 완성했다.",
+      "completed_at": "2026-08-05T07:47:47+0900"
+    },
+    {
+      "step": 2,
+      "name": "extend-weapon-type-domain",
+      "status": "completed",
+      "started_at": "2026-08-05T07:48:33+0900",
+      "summary": "LONGSWORD·DAGGER·SPEAR·BLUNT subtype 불변식과 단일 WEAPON slot을 유지한 네 visual loadout ID를 순수 Kotlin domain에 추가했다.",
+      "completed_at": "2026-08-05T07:53:17+0900"
+    },
+    {
+      "step": 3,
+      "name": "persist-weapon-type-room-v12",
+      "status": "completed",
+      "started_at": "2026-08-05T08:22:59+0900",
+      "summary": "Room v12에 nullable weaponType을 추가하고 기존 WEAPON을 LONGSWORD로 backfill하면서 장비·소유·장착·일정·보상·전투·알림 원천 상태를 보존했다.",
+      "completed_at": "2026-08-05T08:29:53+0900"
+    },
+    {
+      "step": 4,
+      "name": "seed-and-bind-weapon-catalog",
+      "status": "completed",
+      "started_at": "2026-08-05T08:31:38+0900",
+      "summary": "18종 catalog와 16개 visual metadata를 멱등 seed하고, 물푸레나무 창(+4 공격력)·강철 철퇴(+12 공격력·+4 힘·+400bp 치명타 피해)의 subtype·구매·장착 projection을 연결했다.",
+      "completed_at": "2026-08-05T08:38:58+0900"
+    },
+    {
+      "step": 5,
+      "name": "register-topmost-weapon-runtime-layers",
+      "status": "completed",
+      "started_at": "2026-08-05T08:39:48+0900",
+      "summary": "캐릭터 layer schema를 v5 최상단 weapon group으로 갱신하고 네 무기 runtime PNG·31개 경로·7,200개 합성 및 preview golden을 연결했다.",
+      "completed_at": "2026-08-05T09:04:06+0900"
+    },
+    {
+      "step": 6,
+      "name": "render-weapon-shop-and-inventory-ui",
+      "status": "completed",
+      "started_at": "2026-08-05T09:09:26+0900",
+      "summary": "worn_sword·iron_longsword·ash_spear·steel_mace 네 artwork mapping과 subtype을 Shop 판매 카드·상세·캐릭터 프리뷰 및 Inventory 카드에 한국어로 표시했다.",
+      "completed_at": "2026-08-05T09:19:30+0900"
+    },
+    {
+      "step": 7,
+      "name": "verify-weapon-integration-and-docs",
+      "status": "completed",
+      "started_at": "2026-08-05T09:21:11+0900",
+      "summary": "Room v12·18종 catalog·schema v5 최상단 무기를 문서와 동기화하고 Python 438개, JVM 457개씩, lint·APK와 연결 테스트 75개를 통과했다.",
+      "completed_at": "2026-08-05T10:44:06+0900"
+    }
+  ],
+  "created_at": "2026-08-05T07:07:55+0900",
+  "completed_at": "2026-08-05T10:44:06+0900"
+}

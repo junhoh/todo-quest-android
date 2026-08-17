@@ -1,0 +1,48 @@
+{
+  "project": "Todo Quest",
+  "phase": "55-blacksmith-shopkeeper-npc",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-blacksmith-shopkeeper-art-contract",
+      "status": "completed",
+      "started_at": "2026-08-11T16:20:57+0900",
+      "summary": "docs/art/npc/todo-quest-blacksmith-shopkeeper-front-idle-spec.json에 bounds [14,13,50,58]과 16색 필수 팔레트를 포함한 schema v1 대장장이 상점 NPC 아트 계약을 정의함",
+      "completed_at": "2026-08-11T16:25:53+0900"
+    },
+    {
+      "step": 1,
+      "name": "generate-blacksmith-shopkeeper-sprite",
+      "status": "completed",
+      "started_at": "2026-08-11T16:25:53+0900",
+      "summary": "built-in imagegen으로 대장장이 상점 NPC를 생성하고 64×64·bounds [14,13,50,58]·16색·binary alpha로 정규화해 canonical PNG 및 검증 테스트를 완료함",
+      "completed_at": "2026-08-11T16:36:21+0900"
+    },
+    {
+      "step": 2,
+      "name": "publish-blacksmith-shopkeeper-resource",
+      "status": "completed",
+      "started_at": "2026-08-11T16:37:49+0900",
+      "summary": "canonical 대장장이 상점 NPC PNG를 drawable-nodpi runtime 경로에 byte-identical로 게시하고 SHA-256 일치와 assembleDebug 성공을 확인함",
+      "completed_at": "2026-08-11T16:40:01+0900"
+    },
+    {
+      "step": 3,
+      "name": "render-blacksmith-shopkeeper-greeting",
+      "status": "completed",
+      "started_at": "2026-08-11T16:40:44+0900",
+      "summary": "Shop 첫 스크롤 항목에 비대화형 대장장이 인사 카드를 추가하고 한국어 접근성 설명·104dp 최근접 sprite/fallback·일반/compact 반응형 배치와 emulator-5554 Shop 연결 테스트 36개 통과를 확인함",
+      "completed_at": "2026-08-11T17:00:22+0900"
+    },
+    {
+      "step": 4,
+      "name": "synchronize-blacksmith-shopkeeper-docs",
+      "status": "completed",
+      "started_at": "2026-08-11T17:01:07+0900",
+      "summary": "canonical docs/art/npc PNG·JSON과 byte-identical drawable-nodpi 경로, Shop 첫 비대화형 인사 카드의 '대장장이'·'어서 오게. 필요한 장비를 골라 보게.'·정확한 TalkBack 계약을 문서화하고 아트 validator·Python 311개·JVM 각 595개·lint·APK·Compose 포함 connected 143개·문서 링크 190개 회귀를 통과함",
+      "completed_at": "2026-08-11T17:39:20+0900"
+    }
+  ],
+  "created_at": "2026-08-11T16:20:57+0900",
+  "completed_at": "2026-08-11T17:46:22+0900"
+}

@@ -1,0 +1,72 @@
+{
+  "project": "Todo Quest",
+  "phase": "48-shop-gloves-shoes-item-art",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-gloves-shoes-asset-contract",
+      "status": "completed",
+      "summary": "gloves_leather·gloves_steel_gauntlets·shoes_travelers_boots·shoes_windwalker_boots 네 key와 hands_front·shoes_adventure 알파 마스크 대체 계약을 정의했다.",
+      "started_at": "2026-08-05T04:01:41+0900",
+      "completed_at": "2026-08-05T04:18:31+0900"
+    },
+    {
+      "step": 1,
+      "name": "generate-gloves-shoes-layer-assets",
+      "status": "completed",
+      "summary": "built-in image_gen으로 gloves_leather·gloves_steel_gauntlets·shoes_travelers_boots·shoes_windwalker_boots 네 canonical PNG를 독립 생성하고 hands_front·shoes_adventure 계약 마스크에 정규화해 장비별 1×/8×와 2×2 조합 preview를 완성했다.",
+      "started_at": "2026-08-05T04:18:31+0900",
+      "completed_at": "2026-08-05T04:38:56+0900"
+    },
+    {
+      "step": 2,
+      "name": "extend-gloves-shoes-loadout-domain",
+      "status": "completed",
+      "summary": "EquippedItems 마지막 nullable 장갑 field와 장갑·신발 4개 visual ID를 catalog에 추가하고 기본 미장착 장갑·기존 모험가 신발 loadout을 보존했다.",
+      "started_at": "2026-08-05T04:39:57+0900",
+      "completed_at": "2026-08-05T05:02:00+0900"
+    },
+    {
+      "step": 3,
+      "name": "persist-gloves-loadout-field",
+      "status": "completed",
+      "summary": "Room v11에 nullable glovesId appearance fallback을 추가하고 v10 이하 row와 기존 table·index·data 보존 및 유효·invalid loadout 저장을 검증했다.",
+      "started_at": "2026-08-05T05:03:03+0900",
+      "completed_at": "2026-08-05T05:11:50+0900"
+    },
+    {
+      "step": 4,
+      "name": "register-gloves-shoes-runtime-layers",
+      "status": "completed",
+      "summary": "runtime 27개 path와 4800개 loadout 합성, 장갑 손 대체 및 검 grip z-order 보존을 검증했다.",
+      "started_at": "2026-08-05T05:13:27+0900",
+      "completed_at": "2026-08-05T05:26:17+0900"
+    },
+    {
+      "step": 5,
+      "name": "seed-and-bind-gloves-shoes-catalog",
+      "status": "completed",
+      "summary": "16종 catalog와 12개 visual mapping을 멱등 seed하고 강철 건틀릿·바람걸음 장화의 신규 희귀 3-affix 밸런스 및 장갑·신발 appearance 투영을 연결했다.",
+      "started_at": "2026-08-05T05:27:52+0900",
+      "completed_at": "2026-08-05T05:35:19+0900"
+    },
+    {
+      "step": 6,
+      "name": "render-gloves-shoes-shop-artwork",
+      "status": "completed",
+      "summary": "장갑·신발 4개 artwork mapping과 강철 건틀릿·바람걸음 장화 한국어 문자열을 추가하고 Shop 목록·상세·장착 슬롯·Inventory 표시 fixture를 확장했다.",
+      "started_at": "2026-08-05T05:35:55+0900",
+      "completed_at": "2026-08-05T05:42:50+0900"
+    },
+    {
+      "step": 7,
+      "name": "verify-gloves-shoes-ui-and-docs",
+      "status": "completed",
+      "summary": "Room 기반 장갑·신발 구매·장착·교체·복원과 shared renderer·혼합 합성·접근성·fallback을 연결 검증하고 Room v11·16종 catalog 문서를 실제 acceptance 결과와 동기화했다.",
+      "started_at": "2026-08-05T05:43:54+0900",
+      "completed_at": "2026-08-05T06:26:51+0900"
+    }
+  ],
+  "created_at": "2026-08-05T04:01:41+0900",
+  "completed_at": "2026-08-05T06:39:00+0900"
+}

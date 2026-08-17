@@ -1,0 +1,32 @@
+{
+  "project": "Todo Quest",
+  "phase": "17-modular-character-design-sheet",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-modular-sheet-contract",
+      "status": "completed",
+      "started_at": "2026-07-20T05:07:05+0900",
+      "summary": "docs/art/character/character-modular-sheet-spec.json에 첫 번째 파란 장비 캐릭터를 유일한 기준으로 한 512×128 RGBA 8×2 모듈 시트, 8단계 합성 순서, 레이어 범위, 정확한 앵커 점선 좌표와 기존 16색 팔레트 계약을 정의함",
+      "completed_at": "2026-07-20T05:09:54+09:00"
+    },
+    {
+      "step": 1,
+      "name": "extend-modular-sheet-validator",
+      "status": "completed",
+      "started_at": "2026-07-20T05:10:37+0900",
+      "summary": "schema v1 회귀를 유지하면서 schema v2의 픽셀, 예약 타일, geometry, 합성, 레이어 범위, 안내선, 팔레트 그리드 계약을 임시 PNG fixture와 총 43개 validator 테스트로 검증하도록 확장함",
+      "completed_at": "2026-07-20T05:18:20+0900"
+    },
+    {
+      "step": 2,
+      "name": "generate-modular-character-design-sheet",
+      "status": "completed",
+      "started_at": "2026-07-20T05:18:20+0900",
+      "summary": "built-in imagegen 결과인 승인 후보를 사용해 docs/art/character/todo-quest-character-modular-sheet.png에 512×128 RGBA 모듈 시트를 완성하고 #263B5A 외곽선 정규화와 8단계 source-over 합성 계약을 충족함",
+      "completed_at": "2026-07-20T14:31:52+09:00"
+    }
+  ],
+  "created_at": "2026-07-20T05:07:05+0900",
+  "completed_at": "2026-07-20T14:33:06+0900"
+}

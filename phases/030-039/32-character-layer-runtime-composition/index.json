@@ -1,0 +1,114 @@
+{
+  "project": "Todo Quest",
+  "phase": "32-character-layer-runtime-composition",
+  "steps": [
+    {
+      "step": 0,
+      "name": "audit-character-geometry",
+      "status": "completed",
+      "started_at": "2026-07-22T01:06:41+0900",
+      "summary": "docs/art/character/character-layer-migration-report.md에 세 PNG의 geometry·전체/타일 hash와 base-body RGBA·stale baseline·잘못된 body-base 참조 충돌을 기록했다.",
+      "completed_at": "2026-07-22T01:13:42+0900"
+    },
+    {
+      "step": 1,
+      "name": "define-layer-schema-v4",
+      "status": "completed",
+      "started_at": "2026-07-22T01:13:43+0900",
+      "summary": "외부 body_base와 hair·hands·default/adventure 의상·front 장식·3분할 sword의 15개 독립 source, semantic anchor, z-order와 pendingGeneration 계약으로 schema v4를 정의했다.",
+      "completed_at": "2026-07-22T01:20:07+0900"
+    },
+    {
+      "step": 2,
+      "name": "extend-character-layer-validation",
+      "status": "completed",
+      "started_at": "2026-07-22T01:21:02+0900",
+      "summary": "`--check-contract`·`--check-layer`·`--write`·`--check` builder CLI와 독립 레이어·64개 조합을 검증하는 schema v4 테스트 23개를 추가하고 v1~v3 회귀를 유지했다.",
+      "completed_at": "2026-07-22T01:39:03+0900"
+    },
+    {
+      "step": 3,
+      "name": "build-appearance-layers",
+      "status": "completed",
+      "started_at": "2026-07-22T01:39:37+0900",
+      "summary": "docs/art/character/layers/에 기본 hair back/front와 base-body 원본 좌표·RGBA를 보존한 38픽셀 hands_front appearance layer를 생성했다.",
+      "completed_at": "2026-07-22T01:42:55+0900"
+    },
+    {
+      "step": 4,
+      "name": "remap-default-outfit-layers",
+      "status": "completed",
+      "started_at": "2026-07-22T01:44:20+0900",
+      "summary": "built-in precise-object-edit에서 Image 1 base-body geometry 고정·Image 2 current default target·Image 3 legacy upper/lower/shoes 참조로 각 1회 생성하고 hard #FF00FF key·nearest 64×64·binary alpha·16색 매핑을 거쳐 docs/art/character/layers/top_default.png, bottom_default.png, shoes_default.png를 완성했다.",
+      "completed_at": "2026-07-22T01:54:33+0900"
+    },
+    {
+      "step": 5,
+      "name": "remap-adventure-outfit-layers",
+      "status": "completed",
+      "started_at": "2026-07-22T01:57:08+0900",
+      "summary": "built-in precise-object-edit 프롬프트를 Image 1 base-body geometry·Image 2 current adventure target·Image 3 legacy design 역할로 레이어별 1회 사용해 docs/art/character/layers/top_adventure.png, bottom_adventure.png, shoes_adventure.png를 생성하고 default top+adventure bottom+default shoes 및 adventure top+default bottom+adventure shoes를 포함한 8개 혼합 조합이 seam·neutral underwear·hands·centerX=32·soleY=58 검사를 통과했다.",
+      "completed_at": "2026-07-22T02:10:45+0900"
+    },
+    {
+      "step": 6,
+      "name": "split-headgear-accessory-layers",
+      "status": "completed",
+      "started_at": "2026-07-22T02:11:38+0900",
+      "summary": "current 전용 타일을 원점·RGBA 그대로 분리해 docs/art/character/layers/headgear_adventure.png와 accessory_adventure.png에 front-only 레이어로 등록하고 back·legacy combined runtime 경로는 생략했다.",
+      "completed_at": "2026-07-22T02:19:22+09:00"
+    },
+    {
+      "step": 7,
+      "name": "build-default-sword-layers",
+      "status": "completed",
+      "started_at": "2026-07-22T02:20:08+0900",
+      "summary": "legacy accessory-weapon-layer의 4/8-connected [41,17,44,58] 검 component를 source grip [42,46]에서 primary grip [42,42]로 [0,-4] 이동해 blade·handle/pommel·guard를 weapon_back_default_sword.png·weapon_held_default_sword.png·weapon_front_default_sword.png로 분할했다.",
+      "completed_at": "2026-07-22T02:27:29+09:00"
+    },
+    {
+      "step": 8,
+      "name": "generate-character-previews",
+      "status": "completed",
+      "started_at": "2026-07-22T02:28:31+0900",
+      "summary": "SHA-256 cbe55a6cd81bb6dbd580a17d4e0525259825e0db311068448ea39dff9fb12be7인 512×128 시트와 docs/art/character/previews/의 1×/8× preview 32개, app/src/main/assets/character/layers/의 byte-identical runtime layer 15개를 생성하고 64개 조합 검증을 통과했다.",
+      "completed_at": "2026-07-22T02:36:24+09:00"
+    },
+    {
+      "step": 9,
+      "name": "persist-character-loadout",
+      "status": "completed",
+      "started_at": "2026-07-22T02:37:07+0900",
+      "summary": "Room schema v5에 캐릭터 외형·장착 상태를 영속화하고 slot catalog 검증을 거치는 CharacterRepository loadout API와 4-row 원자 초기화를 추가했다.",
+      "completed_at": "2026-07-22T02:50:29+0900"
+    },
+    {
+      "step": 10,
+      "name": "implement-character-layer-composer",
+      "status": "completed",
+      "started_at": "2026-07-22T02:50:30+0900",
+      "summary": "app/src/main/java/com/todoquest/ui/character/CharacterLayerCatalog.kt와 CharacterBitmapComposer.kt에 schema v4 원점 합성·2단계 캐시를 구현하고 64개 loadout 및 runtime-equipped-reference raw RGBA golden 일치를 검증했다.",
+      "completed_at": "2026-07-22T03:00:29+09:00"
+    },
+    {
+      "step": 11,
+      "name": "integrate-character-and-battle-rendering",
+      "status": "completed",
+      "started_at": "2026-07-22T03:01:22+0900",
+      "summary": "Character 화면과 Calendar Battle Map 플레이어를 shared LayeredCharacterSprite 런타임 합성 경로로 교체하고 monster drawable renderer를 유지한 채 test·lint·assembleDebug·connectedDebugAndroidTest 36개를 통과했다.",
+      "completed_at": "2026-07-22T03:54:56+09:00"
+    },
+    {
+      "step": 12,
+      "name": "verify-character-layer-migration",
+      "status": "completed",
+      "started_at": "2026-07-22T04:02:01+0900",
+      "summary": "독립 캐릭터 레이어·Room v5 loadout·공유 cached composer를 문서화하고 자산·Python 252개·Android unit 410개·lint·assemble·API 37 emulator connected 36개 및 화면 캡처 검증을 완료했다.",
+      "completed_at": "2026-07-22T04:32:01+09:00"
+    }
+  ],
+  "created_at": "2026-07-22T01:06:41+0900",
+  "status": "completed",
+  "summary": "15개 독립 레이어와 64개 loadout 조합, Room v5 영속 상태, Character·Calendar 공유 cached composer를 구현하고 자산·Python·Android·에뮬레이터 검증과 최종 문서화를 완료했다.",
+  "completed_at": "2026-07-22T04:32:01+09:00"
+}

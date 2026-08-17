@@ -1,0 +1,12 @@
+# Harness 실행 진입점만 승인 프롬프트 대상으로 둔다.
+# git, python, powershell 전체를 허용하지 않는다.
+# match 예시는 command parser를 거치므로 Windows path backslash를 한 번 더 escape한다.
+prefix_rule(
+    pattern = [".\\scripts\\run_harness.ps1"],
+    decision = "prompt",
+    justification = "harness는 내부에서 git branch/commit/push와 Gradle 검증을 수행할 수 있으므로 승인 후 sandbox 밖에서 실행합니다.",
+    match = [
+        ".\\\\scripts\\\\run_harness.ps1 -Phase 5-emulator-launch-diagnostics",
+        ".\\\\scripts\\\\run_harness.ps1 -Phase 5-emulator-launch-diagnostics -Push",
+    ],
+)

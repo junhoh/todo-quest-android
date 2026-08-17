@@ -1,0 +1,90 @@
+{
+  "project": "Todo Quest",
+  "phase": "28-monster-stats-and-combat",
+  "steps": [
+    {
+      "step": 0,
+      "name": "approve-monster-combat-scope",
+      "status": "completed",
+      "started_at": "2026-07-21T08:33:35+0900",
+      "summary": "Post-MVP Monster Combat v1의 backend 전투 범위와 독립 멱등 event, pending outbox, Room v4 및 권한 비의존 reconciliation 결정을 승인했다.",
+      "completed_at": "2026-07-21T08:36:21+0900"
+    },
+    {
+      "step": 1,
+      "name": "specify-monster-balance",
+      "status": "completed",
+      "started_at": "2026-07-21T08:36:21+0900",
+      "summary": "몬스터 선형 능력치·유형/등급 bp·10칸 Stage·공통 정수 피해·Room 원천 상태 경계를 canonical 문서와 게임 설계 인덱스에 확정했다.",
+      "completed_at": "2026-07-21T08:42:33+0900"
+    },
+    {
+      "step": 2,
+      "name": "implement-monster-domain",
+      "status": "completed",
+      "started_at": "2026-07-21T08:43:18+0900",
+      "summary": "순수 Kotlin 몬스터 모델과 v1 밸런스 계산기, 10칸 Stage 정책, 피해·부활·회복 HP 정책을 구현하고 골든 테스트로 검증했다.",
+      "completed_at": "2026-07-21T08:57:24+0900"
+    },
+    {
+      "step": 3,
+      "name": "migrate-combat-storage",
+      "status": "completed",
+      "started_at": "2026-07-21T08:58:34+0900",
+      "summary": "Room v4에 몬스터·전투 진행·양방향 공격 event 테이블과 DAO를 추가하고 v1/v2/v3 migration의 기존 데이터 보존·비소급 경계를 검증했다.",
+      "completed_at": "2026-07-21T09:09:26+0900"
+    },
+    {
+      "step": 4,
+      "name": "implement-player-combat-transactions",
+      "status": "completed",
+      "started_at": "2026-07-21T09:10:14+0900",
+      "summary": "CombatRepository와 RoomCombatRepository에 플레이어 공격 event 멱등 transaction, HP 회복 및 10칸 encounter·Stage 전진을 구현하고 재시작·동시성 테스트로 검증했다.",
+      "completed_at": "2026-07-21T09:20:26+0900"
+    },
+    {
+      "step": 5,
+      "name": "enqueue-occurrence-attacks",
+      "status": "completed",
+      "started_at": "2026-07-21T09:21:34+0900",
+      "summary": "occurrence 최초 보상 transaction에 post-reward 전투 스냅샷 PENDING outbox를 연결하고, 누락 eligible ledger 보완과 반복 분할 양방향 event 재귀속을 검증했다.",
+      "completed_at": "2026-07-21T09:29:47+0900"
+    },
+    {
+      "step": 6,
+      "name": "implement-failure-reconciliation",
+      "status": "completed",
+      "started_at": "2026-07-21T09:30:44+0900",
+      "summary": "마감 실패 occurrence를 정렬·3회 피해 상한·영구 skip으로 reconciliation하고 치명 피해와 legacy 0 HP를 25% 즉시 부활시키는 단일 Room transaction을 구현했다.",
+      "completed_at": "2026-07-21T09:41:59+0900"
+    },
+    {
+      "step": 7,
+      "name": "orchestrate-combat-usecases",
+      "status": "completed",
+      "started_at": "2026-07-21T09:42:52+0900",
+      "summary": "완료·보상 성공 뒤 pending 플레이어 공격을 best-effort 처리하고 비취소 오류 진단·취소 전파·멱등 skip 및 시계 기반 전투 reconciliation UseCase를 검증했다.",
+      "completed_at": "2026-07-21T09:49:47+0900"
+    },
+    {
+      "step": 8,
+      "name": "schedule-combat-reconciliation",
+      "status": "completed",
+      "started_at": "2026-07-21T09:50:59+0900",
+      "summary": "Application 범위 단일 DB·Clock·Repository container를 Compose와 Worker가 공유하고, 15분 unique WorkManager reconciliation과 제한 재시도·멱등 검증을 연결했다.",
+      "completed_at": "2026-07-21T10:09:34+0900"
+    },
+    {
+      "step": 9,
+      "name": "synchronize-combat-docs-and-validate",
+      "status": "completed",
+      "started_at": "2026-07-21T10:12:31+0900",
+      "summary": "실제 Monster.kt와 background/CombatReconciliationWorker.kt 경로, Room v4 원천 상태·멱등 전투 정책·후속 범위를 문서에 동기화하고 Gradle test/lint/assembleDebug와 harness pytest 69개를 통과했다.",
+      "completed_at": "2026-07-21T10:22:05+09:00"
+    }
+  ],
+  "created_at": "2026-07-21T08:33:35+0900",
+  "status": "completed",
+  "summary": "몬스터 세 능력치와 10칸 Stage, Room v4 양방향 멱등 공격, 3회 복귀 상한·25% 즉시 부활·WorkManager reconciliation backend 구현과 전체 검증을 완료했다.",
+  "completed_at": "2026-07-21T10:22:05+09:00"
+}

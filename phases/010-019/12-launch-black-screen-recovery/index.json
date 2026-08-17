@@ -1,0 +1,21 @@
+{
+  "project": "Todo Quest",
+  "phase": "12-launch-black-screen-recovery",
+  "steps": [
+    {
+      "step": 0,
+      "name": "launch-diagnostics-hygiene",
+      "status": "completed",
+      "completed_at": "2026-07-19T17:13:16+09:00",
+      "summary": "scripts/diagnose_android_launch.ps1와 MainActivityLaunchSmokeTest가 앱 미설치, foreground 불일치, stale test package/window artifact를 black screen 판정과 분리해 기록하도록 보강했다."
+    },
+    {
+      "step": 1,
+      "name": "splashless-launch-fallback",
+      "status": "completed",
+      "completed_at": "2026-07-19T21:23:00+09:00",
+      "summary": "앱 splash/theme 변경 없이 API 37.1 AVD를 snapshot 비사용 software renderer로 실행해 system baseline과 app raw screenshot을 복구했다. connected app-render와 host compositor 판정을 분리해 앱 회귀와 preview AVD 환경 오류를 구분한다."
+    }
+  ],
+  "completed_at": "2026-07-19T21:23:00+09:00"
+}

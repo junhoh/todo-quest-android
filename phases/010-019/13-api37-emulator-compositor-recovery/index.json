@@ -1,0 +1,35 @@
+{
+  "project": "Todo Quest",
+  "phase": "13-api37-emulator-compositor-recovery",
+  "steps": [
+    {
+      "step": 0,
+      "name": "emulator-compositor-preflight",
+      "status": "completed",
+      "completed_at": "2026-07-19T20:52:00+09:00",
+      "summary": "시스템 기준 화면과 앱 스크린샷을 분리 판정하고 비영구 콜드 부팅 복구 실행기를 추가했다. Pixel_9 API 37.1은 software GPU 모드에서 기준 화면과 앱 화면의 blackPixelRatio=0.0000, HWC 레이어=5, MainActivity hidden=false로 통과했다."
+    },
+    {
+      "step": 1,
+      "name": "orchestrator-database-isolation",
+      "status": "completed",
+      "completed_at": "2026-07-19T21:07:00+09:00",
+      "summary": "Android Test Orchestrator는 유지하고 clearPackageData를 제거했으며, 각 테스트 실행 전에 todo-quest.db만 삭제하는 전용 runner를 추가했다. API 37.1 software AVD에서 데이터베이스 격리 테스트 2개가 모두 통과했다."
+    },
+    {
+      "step": 2,
+      "name": "launch-render-probe-separation",
+      "status": "completed",
+      "completed_at": "2026-07-19T21:11:00+09:00",
+      "summary": "연결 기기 launch smoke test를 Activity 1회 실행으로 통합하고 RESUMED, attached, shown 상태 확인과 Compose 앱 렌더 캡처를 적용했다. API 37.1에서 1080x2424 산출물과 blackPixelRatio=0.0000을 확인했으며, 원시 compositor 캡처는 host diagnostics의 별도 통과 조건으로 유지했다."
+    },
+    {
+      "step": 3,
+      "name": "api37-graphics-regression-validation",
+      "status": "completed",
+      "completed_at": "2026-07-19T21:23:00+09:00",
+      "summary": "API 37.1 software 콜드 부팅에서 전체 연결 테스트 11개를 두 번 연속 통과했다. 최종 host diagnostics는 시스템과 앱 화면의 blackPixelRatio=0.0000, HWC 레이어=5, transition root=0, MainActivity 레이어 found=true/hidden=false를 기록했다."
+    }
+  ],
+  "completed_at": "2026-07-19T21:23:00+09:00"
+}

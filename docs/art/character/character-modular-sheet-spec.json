@@ -1,0 +1,1771 @@
+{
+  "schemaVersion": 6,
+  "contractKind": "independent-character-layer-sources",
+  "pathContract": {
+    "sourcePathsRelativeTo": "character-modular-sheet-spec.json directory",
+    "runtimePathPattern": "character/layers/*.png",
+    "runtimePathRoot": "app/src/main/assets",
+    "singleCanvasOriginRequired": true,
+    "forbiddenPerItemFields": [
+      "offset",
+      "crop",
+      "scale"
+    ]
+  },
+  "canvasBounds": [
+    0,
+    0,
+    63,
+    63
+  ],
+  "bodyOpaqueBounds": [
+    20,
+    7,
+    44,
+    58
+  ],
+  "appearanceAllowedEnvelope": [
+    20,
+    4,
+    44,
+    58
+  ],
+  "boundsInclusive": true,
+  "centerX": 32,
+  "soleY": 58,
+  "geometryCanonicalReference": {
+    "path": "todo-quest-character-base-body.png",
+    "pathRelativeToSpec": true,
+    "mediaType": "image/png",
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA",
+    "canvasBounds": [
+      0,
+      0,
+      63,
+      63
+    ],
+    "opaqueBounds": [
+      20,
+      7,
+      44,
+      58
+    ],
+    "opaquePixelCount": 1025,
+    "centerX": 32,
+    "soleY": 58,
+    "hashAlgorithm": "SHA-256",
+    "fileByteCount": 948,
+    "fileSha256": "465ba078046e3bc48b8c6477b4913d5bea5359795313a0a2bc4fe7205b973478",
+    "rawRgbaSha256": "7a63a4100e9954edc2705462f3b441ee8fb639058fc83a9ecc596f7bd98293d9",
+    "alphaMaskSha256": "50a09892663855568f303c8f1b840ed289900d44b523aa423b8d76dc3f8922e8",
+    "geometryAuthority": "sole external body geometry source"
+  },
+  "legacyArtDirectionReference": {
+    "sheetPath": "todo-quest-character-base-sheet.png",
+    "specPath": "character-base-spec.json",
+    "pathsRelativeToSpec": true,
+    "productionPaletteColorCount": 16,
+    "roles": {
+      "palette": "production 색상 역할과 값의 역사적 기준",
+      "outline": {
+        "paletteName": "outlineDarkNavy",
+        "widthPixels": 1,
+        "appliesTo": "external silhouette"
+      },
+      "shading": "legacy highlight와 shadow 배치의 아트 방향만 제공",
+      "design": "정면 대기 자세, 파란 모험가 의상과 검의 역사적 디자인 방향만 제공"
+    },
+    "historicalAnchors": {
+      "headCenter": [
+        32,
+        13
+      ],
+      "neck": [
+        32,
+        24
+      ],
+      "shoulderLeft": [
+        22,
+        27
+      ],
+      "shoulderRight": [
+        42,
+        27
+      ],
+      "waistY": 39,
+      "wristLeft": [
+        20,
+        40
+      ],
+      "wristRight": [
+        44,
+        40
+      ],
+      "ankleLeft": [
+        27,
+        53
+      ],
+      "ankleRight": [
+        37,
+        53
+      ],
+      "soleY": 58
+    }
+  },
+  "semanticAnchors": {
+    "headTopY": 7,
+    "headBounds": [
+      20,
+      7,
+      44,
+      28
+    ],
+    "faceProtectedRegion": [
+      20,
+      7,
+      44,
+      28
+    ],
+    "neckTopY": 29,
+    "neckBaseY": 30,
+    "shoulderBandY": [
+      30,
+      35
+    ],
+    "shoulderAnchors": {
+      "left": [
+        22,
+        35
+      ],
+      "right": [
+        42,
+        35
+      ]
+    },
+    "torsoBounds": [
+      24,
+      30,
+      40,
+      43
+    ],
+    "waistOverlapBand": [
+      24,
+      41,
+      40,
+      43
+    ],
+    "ankleOverlapBands": {
+      "left": [
+        24,
+        53,
+        31,
+        54
+      ],
+      "right": [
+        33,
+        53,
+        40,
+        54
+      ]
+    },
+    "handProtectedRegions": {
+      "left": [
+        20,
+        39,
+        24,
+        45
+      ],
+      "right": [
+        40,
+        39,
+        44,
+        45
+      ]
+    },
+    "primaryGripAnchor": [
+      42,
+      42
+    ]
+  },
+  "productionPalette": {
+    "colorCount": 16,
+    "colors": {
+      "hairBlack": "#11151C",
+      "eyeDarkNavy": "#1D3557",
+      "outlineDarkNavy": "#263B5A",
+      "hairHighlight": "#35445C",
+      "underDark": "#3A3F45",
+      "blueShadow": "#2853A6",
+      "underMid": "#737982",
+      "underLight": "#B7B0A3",
+      "skinShadow": "#D99872",
+      "skinLight": "#FFD3AE",
+      "lightCream": "#F4EFE3",
+      "bluePrimary": "#4F86E8",
+      "blueHighlight": "#7FB3FF",
+      "tealAccent": "#5CC8A7",
+      "goldAccent": "#F2C14E",
+      "redAccent": "#E05252"
+    },
+    "runtimeLayerValidationScope": "canonical source PNG와 runtime layer PNG의 모든 opaque pixel",
+    "transparentPixelsCountTowardPalette": false
+  },
+  "debugGuideColor": {
+    "value": "#FF00FF",
+    "allowedScope": "generated preview overlay only",
+    "productionPaletteMember": false,
+    "canonicalSourceLayersAllowed": false,
+    "runtimeLayersAllowed": false
+  },
+  "loadoutArtContract": {
+    "contractVersion": 1,
+    "status": "available",
+    "canvas": {
+      "width": 64,
+      "height": 64,
+      "mode": "RGBA",
+      "origin": [
+        0,
+        0
+      ],
+      "centerX": 32,
+      "soleY": 58,
+      "interpolation": "nearest-neighbor"
+    },
+    "alwaysPresentSourceIds": [
+      "body_base",
+      "hair_back_default",
+      "hair_front_default",
+      "hands_front"
+    ],
+    "emptyGameplaySlots": {
+      "HELMET": {
+        "representation": "transparent-overlay",
+        "sourceIds": []
+      },
+      "CHEST": {
+        "representation": "neutral-training-fallback",
+        "sourceIds": [
+          "top_default"
+        ]
+      },
+      "LEGS": {
+        "representation": "neutral-training-fallback",
+        "sourceIds": [
+          "bottom_default"
+        ]
+      },
+      "GLOVES": {
+        "representation": "transparent-overlay",
+        "sourceIds": []
+      },
+      "SHOES": {
+        "representation": "neutral-training-fallback",
+        "sourceIds": [
+          "shoes_default"
+        ]
+      },
+      "ACCESSORY": {
+        "representation": "transparent-overlay",
+        "sourceIds": []
+      },
+      "WEAPON": {
+        "representation": "transparent-overlay",
+        "sourceIds": []
+      }
+    },
+    "neutralTrainingFallback": {
+      "sourceIds": [
+        "top_default",
+        "bottom_default",
+        "shoes_default"
+      ],
+      "paletteNames": [
+        "underDark",
+        "underMid",
+        "underLight"
+      ],
+      "descriptionKorean": "회갈색 계열의 중립 훈련복"
+    },
+    "adventureShopSet": {
+      "setKey": "adventure_set",
+      "slots": {
+        "HELMET": {
+          "layerKey": "headgear_adventure",
+          "sourceIds": [
+            "headgear_adventure"
+          ]
+        },
+        "CHEST": {
+          "layerKey": "top_adventure",
+          "sourceIds": [
+            "top_adventure"
+          ]
+        },
+        "LEGS": {
+          "layerKey": "bottom_adventure",
+          "sourceIds": [
+            "bottom_adventure"
+          ]
+        },
+        "GLOVES": {
+          "layerKey": "gloves_adventure",
+          "sourceIds": [
+            "gloves_adventure"
+          ]
+        },
+        "SHOES": {
+          "layerKey": "shoes_adventure",
+          "sourceIds": [
+            "shoes_adventure"
+          ]
+        },
+        "ACCESSORY": {
+          "layerKey": "accessory_adventure",
+          "sourceIds": [
+            "accessory_adventure"
+          ]
+        },
+        "WEAPON": {
+          "layerKey": "weapon_default_sword",
+          "sourceIds": [
+            "weapon_back_default_sword",
+            "weapon_held_default_sword",
+            "weapon_front_default_sword"
+          ],
+          "mergedRuntimePngAllowed": false
+        }
+      }
+    },
+    "plannedCanonicalLayer": {
+      "id": "gloves_adventure",
+      "slot": "hands_front",
+      "sourcePath": "docs/art/character/layers/gloves_adventure.png",
+      "runtimePath": "app/src/main/assets/character/layers/gloves_adventure.png",
+      "replacesSourceIdWhenEquipped": "hands_front",
+      "referenceAlphaMaskSourceId": "hands_front",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 219,
+        "hashes": {
+          "fileSha256": "717bb2756d6a47bef0d226cdc3619a3734055e680d807c2f22a033b25b817b18",
+          "rawRgbaSha256": "0d62a679528982f39292d04766e589f1e22a0f0c99c04825c17c24f75231a270",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 219,
+        "hashes": {
+          "fileSha256": "717bb2756d6a47bef0d226cdc3619a3734055e680d807c2f22a033b25b817b18",
+          "rawRgbaSha256": "0d62a679528982f39292d04766e589f1e22a0f0c99c04825c17c24f75231a270",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      }
+    },
+    "compositionOrder": [
+      "accessory_back",
+      "hair_back",
+      "headgear_back",
+      "body_base",
+      "shoes",
+      "bottom",
+      "top",
+      "hands_front",
+      "face_overlay",
+      "hair_front",
+      "headgear_front",
+      "accessory_front",
+      "weapon_back",
+      "weapon_held",
+      "weapon_front"
+    ],
+    "schemaPromotion": {
+      "currentCharacterSchemaVersion": 5,
+      "targetCharacterSchemaVersion": 6,
+      "existingLayerIdsKeepMeaning": true,
+      "existingLayerIdsMayBeRenamedOrRemoved": false,
+      "storedAppearanceIdsRemainCompatible": true,
+      "newLayerIds": [
+        "gloves_adventure"
+      ]
+    },
+    "regenerationManifest": {
+      "changedCanonicalSourceIds": [
+        "top_default",
+        "bottom_default",
+        "shoes_default",
+        "gloves_adventure"
+      ],
+      "runtimeMirrors": [
+        {
+          "sourcePath": "docs/art/character/layers/top_default.png",
+          "runtimePath": "app/src/main/assets/character/layers/top_default.png"
+        },
+        {
+          "sourcePath": "docs/art/character/layers/bottom_default.png",
+          "runtimePath": "app/src/main/assets/character/layers/bottom_default.png"
+        },
+        {
+          "sourcePath": "docs/art/character/layers/shoes_default.png",
+          "runtimePath": "app/src/main/assets/character/layers/shoes_default.png"
+        },
+        {
+          "sourcePath": "docs/art/character/layers/gloves_adventure.png",
+          "runtimePath": "app/src/main/assets/character/layers/gloves_adventure.png"
+        }
+      ],
+      "generatedPreviewTileNames": [
+        "body-only",
+        "body-default-hair",
+        "default-equipped",
+        "adventure-equipped",
+        "mixed-default-top",
+        "mixed-adventure-top",
+        "headgear-off",
+        "headgear-on",
+        "accessory-off",
+        "accessory-on",
+        "weapon-off",
+        "weapon-on",
+        "anchors-preview",
+        "palette",
+        "layer-bounds-preview",
+        "runtime-equipped-reference"
+      ],
+      "generatedSheetDocsPath": "docs/art/character/todo-quest-character-modular-sheet.png",
+      "generatedSheetRuntimePath": "app/src/main/res/drawable-nodpi/todo_quest_character_modular_sheet.png",
+      "runtimeReadsGeneratedSheet": false
+    }
+  },
+  "pixelContract": {
+    "width": 64,
+    "height": 64,
+    "mode": "RGBA",
+    "allowedAlphaValues": [
+      0,
+      255
+    ],
+    "transparentPixelRgba": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alphaCompositing": "source-over",
+    "interpolation": "nearest-neighbor",
+    "productionColors": "productionPalette.colors only"
+  },
+  "layerSlots": [
+    "accessory_back",
+    "hair_back",
+    "headgear_back",
+    "body_base",
+    "shoes",
+    "bottom",
+    "top",
+    "hands_front",
+    "face_overlay",
+    "hair_front",
+    "headgear_front",
+    "accessory_front",
+    "weapon_back",
+    "weapon_held",
+    "weapon_front"
+  ],
+  "zOrder": [
+    "accessory_back",
+    "hair_back",
+    "headgear_back",
+    "body_base",
+    "shoes",
+    "bottom",
+    "top",
+    "hands_front",
+    "face_overlay",
+    "hair_front",
+    "headgear_front",
+    "accessory_front",
+    "weapon_back",
+    "weapon_held",
+    "weapon_front"
+  ],
+  "currentlyUnusedLayerSlots": {
+    "accessory_back": {
+      "status": "unused",
+      "reason": "현재 accessory는 front-only source다."
+    },
+    "headgear_back": {
+      "status": "unused",
+      "reason": "현재 headgear는 front-only source다."
+    },
+    "face_overlay": {
+      "status": "unused",
+      "reason": "얼굴은 geometry canonical body_base에 보존한다."
+    }
+  },
+  "canonicalLayers": [
+    {
+      "id": "body_base",
+      "slot": "body_base",
+      "sourcePath": "todo-quest-character-base-body.png",
+      "runtimePath": "character/layers/body_base.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          7,
+          44,
+          58
+        ],
+        "opaquePixelCount": 1025,
+        "fileByteCount": 948,
+        "hashes": {
+          "fileSha256": "465ba078046e3bc48b8c6477b4913d5bea5359795313a0a2bc4fe7205b973478",
+          "rawRgbaSha256": "7a63a4100e9954edc2705462f3b441ee8fb639058fc83a9ecc596f7bd98293d9",
+          "alphaMaskSha256": "50a09892663855568f303c8f1b840ed289900d44b523aa423b8d76dc3f8922e8"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          7,
+          44,
+          58
+        ],
+        "opaquePixelCount": 1025,
+        "fileByteCount": 948,
+        "hashes": {
+          "fileSha256": "465ba078046e3bc48b8c6477b4913d5bea5359795313a0a2bc4fe7205b973478",
+          "rawRgbaSha256": "7a63a4100e9954edc2705462f3b441ee8fb639058fc83a9ecc596f7bd98293d9",
+          "alphaMaskSha256": "50a09892663855568f303c8f1b840ed289900d44b523aa423b8d76dc3f8922e8"
+        }
+      }
+    },
+    {
+      "id": "hair_back_default",
+      "slot": "hair_back",
+      "sourcePath": "layers/hair_back_default.png",
+      "runtimePath": "character/layers/hair_back_default.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          4,
+          44,
+          30
+        ],
+        "opaquePixelCount": 520,
+        "fileByteCount": 377,
+        "hashes": {
+          "fileSha256": "af797866b575f1ceecf31d324bc7bab19313bb8f295609dc8b44f6a55201a7c8",
+          "rawRgbaSha256": "868cb31b177d67b204ac929d9c5dc327e9beac269eaebe84eb0de5d4ec8b06c5",
+          "alphaMaskSha256": "58567952bc56b5bcd324bcf5794664f904f53adf45f4aa9acde161342a2b0fb8"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          4,
+          44,
+          30
+        ],
+        "opaquePixelCount": 520,
+        "fileByteCount": 377,
+        "hashes": {
+          "fileSha256": "af797866b575f1ceecf31d324bc7bab19313bb8f295609dc8b44f6a55201a7c8",
+          "rawRgbaSha256": "868cb31b177d67b204ac929d9c5dc327e9beac269eaebe84eb0de5d4ec8b06c5",
+          "alphaMaskSha256": "58567952bc56b5bcd324bcf5794664f904f53adf45f4aa9acde161342a2b0fb8"
+        }
+      }
+    },
+    {
+      "id": "hair_front_default",
+      "slot": "hair_front",
+      "sourcePath": "layers/hair_front_default.png",
+      "runtimePath": "character/layers/hair_front_default.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          4,
+          44,
+          30
+        ],
+        "opaquePixelCount": 383,
+        "fileByteCount": 375,
+        "hashes": {
+          "fileSha256": "8df4a8e6c31453e8091e3cbd19a4309706f1e905cb5d6babb850c186204ba675",
+          "rawRgbaSha256": "fbee9f420877dbd00cd2d3c7d5ee626dbc4050189c15ea7e86c9a3e2cddc0f70",
+          "alphaMaskSha256": "2f1e22336d850903d835e793a29a0ef6f0b78430ee241c086295a8986a608640"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          4,
+          44,
+          30
+        ],
+        "opaquePixelCount": 383,
+        "fileByteCount": 375,
+        "hashes": {
+          "fileSha256": "8df4a8e6c31453e8091e3cbd19a4309706f1e905cb5d6babb850c186204ba675",
+          "rawRgbaSha256": "fbee9f420877dbd00cd2d3c7d5ee626dbc4050189c15ea7e86c9a3e2cddc0f70",
+          "alphaMaskSha256": "2f1e22336d850903d835e793a29a0ef6f0b78430ee241c086295a8986a608640"
+        }
+      }
+    },
+    {
+      "id": "hands_front",
+      "slot": "hands_front",
+      "sourcePath": "layers/hands_front.png",
+      "runtimePath": "character/layers/hands_front.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 186,
+        "hashes": {
+          "fileSha256": "c6c8068b2dfa6aea53ecacd208e3a77b2dfa27346d8b75f7ca56c298d6c4b039",
+          "rawRgbaSha256": "7a115515268da155790e74cef2c99609a750512f7558582cfab7055d9d7209b0",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 186,
+        "hashes": {
+          "fileSha256": "c6c8068b2dfa6aea53ecacd208e3a77b2dfa27346d8b75f7ca56c298d6c4b039",
+          "rawRgbaSha256": "7a115515268da155790e74cef2c99609a750512f7558582cfab7055d9d7209b0",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      }
+    },
+    {
+      "id": "gloves_adventure",
+      "slot": "hands_front",
+      "sourcePath": "layers/gloves_adventure.png",
+      "runtimePath": "character/layers/gloves_adventure.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 219,
+        "hashes": {
+          "fileSha256": "717bb2756d6a47bef0d226cdc3619a3734055e680d807c2f22a033b25b817b18",
+          "rawRgbaSha256": "0d62a679528982f39292d04766e589f1e22a0f0c99c04825c17c24f75231a270",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          21,
+          39,
+          43,
+          45
+        ],
+        "opaquePixelCount": 38,
+        "fileByteCount": 219,
+        "hashes": {
+          "fileSha256": "717bb2756d6a47bef0d226cdc3619a3734055e680d807c2f22a033b25b817b18",
+          "rawRgbaSha256": "0d62a679528982f39292d04766e589f1e22a0f0c99c04825c17c24f75231a270",
+          "alphaMaskSha256": "115452260a8f6d94e7dd000bda02875d52ec02a0516be5b547b82da8fc3169e3"
+        }
+      }
+    },
+    {
+      "id": "top_default",
+      "slot": "top",
+      "sourcePath": "layers/top_default.png",
+      "runtimePath": "character/layers/top_default.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          29,
+          44,
+          45
+        ],
+        "opaquePixelCount": 271,
+        "fileByteCount": 333,
+        "hashes": {
+          "fileSha256": "4b92f80f46cf25215e95dae2525fa4549a94fc9e12b770efb594441537d6475a",
+          "rawRgbaSha256": "30d8926d70cea95a1857d1d99990b1448529220346c57df7ae84df81bfd1eed2",
+          "alphaMaskSha256": "d3c062d7bf83071f43757952fe086e767cfd1fc261a6ca976d5617d0d320ce8d"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          29,
+          44,
+          45
+        ],
+        "opaquePixelCount": 271,
+        "fileByteCount": 333,
+        "hashes": {
+          "fileSha256": "4b92f80f46cf25215e95dae2525fa4549a94fc9e12b770efb594441537d6475a",
+          "rawRgbaSha256": "30d8926d70cea95a1857d1d99990b1448529220346c57df7ae84df81bfd1eed2",
+          "alphaMaskSha256": "d3c062d7bf83071f43757952fe086e767cfd1fc261a6ca976d5617d0d320ce8d"
+        }
+      }
+    },
+    {
+      "id": "bottom_default",
+      "slot": "bottom",
+      "sourcePath": "layers/bottom_default.png",
+      "runtimePath": "character/layers/bottom_default.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          24,
+          41,
+          40,
+          54
+        ],
+        "opaquePixelCount": 232,
+        "fileByteCount": 235,
+        "hashes": {
+          "fileSha256": "c71240f3dd6f186f081a6819cc1adde86ad37d59fbf180e90a4c62142691317c",
+          "rawRgbaSha256": "1dcc4c76d7f8b67ef8717c289dee14134370b2e3a006fefbdb174f883f555d17",
+          "alphaMaskSha256": "63cde22b2797b42c67a6eba9da5459ef1e4332364b4769110f98842ccf75ad47"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          24,
+          41,
+          40,
+          54
+        ],
+        "opaquePixelCount": 232,
+        "fileByteCount": 235,
+        "hashes": {
+          "fileSha256": "c71240f3dd6f186f081a6819cc1adde86ad37d59fbf180e90a4c62142691317c",
+          "rawRgbaSha256": "1dcc4c76d7f8b67ef8717c289dee14134370b2e3a006fefbdb174f883f555d17",
+          "alphaMaskSha256": "63cde22b2797b42c67a6eba9da5459ef1e4332364b4769110f98842ccf75ad47"
+        }
+      }
+    },
+    {
+      "id": "shoes_default",
+      "slot": "shoes",
+      "sourcePath": "layers/shoes_default.png",
+      "runtimePath": "character/layers/shoes_default.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          23,
+          53,
+          41,
+          58
+        ],
+        "opaquePixelCount": 104,
+        "fileByteCount": 208,
+        "hashes": {
+          "fileSha256": "79c6f7a8c05867b3b8a4957975a9dab7eb27ad3b5b41ac6bb499f365e0015a7d",
+          "rawRgbaSha256": "68a60cf1eece4c245822d56d711b430baa75654d3466d2849a269a0a8625ccac",
+          "alphaMaskSha256": "9d42064b05d8ede2c5ca9ce1cb0dc7c0551ed11f2e9f855e6e25fe0e69f0f104"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          23,
+          53,
+          41,
+          58
+        ],
+        "opaquePixelCount": 104,
+        "fileByteCount": 208,
+        "hashes": {
+          "fileSha256": "79c6f7a8c05867b3b8a4957975a9dab7eb27ad3b5b41ac6bb499f365e0015a7d",
+          "rawRgbaSha256": "68a60cf1eece4c245822d56d711b430baa75654d3466d2849a269a0a8625ccac",
+          "alphaMaskSha256": "9d42064b05d8ede2c5ca9ce1cb0dc7c0551ed11f2e9f855e6e25fe0e69f0f104"
+        }
+      }
+    },
+    {
+      "id": "top_adventure",
+      "slot": "top",
+      "sourcePath": "layers/top_adventure.png",
+      "runtimePath": "character/layers/top_adventure.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          29,
+          44,
+          43
+        ],
+        "opaquePixelCount": 297,
+        "fileByteCount": 449,
+        "hashes": {
+          "fileSha256": "4278a1ddd6be0a7cac5ae5c69fefcc94cc2d67b4a7f4162cd8b483827edc792e",
+          "rawRgbaSha256": "615f0ae0a4b3379000ff273291929869ca3620f2714f0f9a13a96db7a98d0953",
+          "alphaMaskSha256": "b0c588b72bf93791a322f01ac73c5349cf122167565c4b4dd658946fdb739eb1"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          29,
+          44,
+          43
+        ],
+        "opaquePixelCount": 297,
+        "fileByteCount": 449,
+        "hashes": {
+          "fileSha256": "4278a1ddd6be0a7cac5ae5c69fefcc94cc2d67b4a7f4162cd8b483827edc792e",
+          "rawRgbaSha256": "615f0ae0a4b3379000ff273291929869ca3620f2714f0f9a13a96db7a98d0953",
+          "alphaMaskSha256": "b0c588b72bf93791a322f01ac73c5349cf122167565c4b4dd658946fdb739eb1"
+        }
+      }
+    },
+    {
+      "id": "bottom_adventure",
+      "slot": "bottom",
+      "sourcePath": "layers/bottom_adventure.png",
+      "runtimePath": "character/layers/bottom_adventure.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          24,
+          41,
+          40,
+          54
+        ],
+        "opaquePixelCount": 232,
+        "fileByteCount": 271,
+        "hashes": {
+          "fileSha256": "f689ae531232efb6c227db282ede4292c18b918f8bd7cfc4fdeb1e716974bf96",
+          "rawRgbaSha256": "0dc6a3e2ee20b7ab5ddecb0fd04ff6dd663b96b249c36d3a7fac222ae31b801d",
+          "alphaMaskSha256": "63cde22b2797b42c67a6eba9da5459ef1e4332364b4769110f98842ccf75ad47"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          24,
+          41,
+          40,
+          54
+        ],
+        "opaquePixelCount": 232,
+        "fileByteCount": 271,
+        "hashes": {
+          "fileSha256": "f689ae531232efb6c227db282ede4292c18b918f8bd7cfc4fdeb1e716974bf96",
+          "rawRgbaSha256": "0dc6a3e2ee20b7ab5ddecb0fd04ff6dd663b96b249c36d3a7fac222ae31b801d",
+          "alphaMaskSha256": "63cde22b2797b42c67a6eba9da5459ef1e4332364b4769110f98842ccf75ad47"
+        }
+      }
+    },
+    {
+      "id": "shoes_adventure",
+      "slot": "shoes",
+      "sourcePath": "layers/shoes_adventure.png",
+      "runtimePath": "character/layers/shoes_adventure.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          23,
+          53,
+          41,
+          58
+        ],
+        "opaquePixelCount": 104,
+        "fileByteCount": 367,
+        "hashes": {
+          "fileSha256": "e41bb37f56deff8c156e369427291a8b3eb1ed3b0fb423ff45be1cc6401335d6",
+          "rawRgbaSha256": "d6f76051ebd9c92e9519bb6084658ae651dd1e865b9d662e7b236bd5c1fd78bd",
+          "alphaMaskSha256": "9d42064b05d8ede2c5ca9ce1cb0dc7c0551ed11f2e9f855e6e25fe0e69f0f104"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          23,
+          53,
+          41,
+          58
+        ],
+        "opaquePixelCount": 104,
+        "fileByteCount": 367,
+        "hashes": {
+          "fileSha256": "e41bb37f56deff8c156e369427291a8b3eb1ed3b0fb423ff45be1cc6401335d6",
+          "rawRgbaSha256": "d6f76051ebd9c92e9519bb6084658ae651dd1e865b9d662e7b236bd5c1fd78bd",
+          "alphaMaskSha256": "9d42064b05d8ede2c5ca9ce1cb0dc7c0551ed11f2e9f855e6e25fe0e69f0f104"
+        }
+      }
+    },
+    {
+      "id": "headgear_adventure",
+      "slot": "headgear_front",
+      "sourcePath": "layers/headgear_adventure.png",
+      "runtimePath": "character/layers/headgear_adventure.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          7,
+          44,
+          25
+        ],
+        "opaquePixelCount": 363,
+        "fileByteCount": 574,
+        "hashes": {
+          "fileSha256": "7dd56f9690a475ec3441c71e4a5101369120ea60de8ac694e0bab9e19c25767f",
+          "rawRgbaSha256": "4cd87e2791d5d59877ccd674b63f385382d21d5502bd487dd281f85a5dbf99ae",
+          "alphaMaskSha256": "ff3d5a233dd97ad7f0fd3af80fa59bde083a20a639b0734d8d1d77477f956e50"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          7,
+          44,
+          25
+        ],
+        "opaquePixelCount": 363,
+        "fileByteCount": 574,
+        "hashes": {
+          "fileSha256": "7dd56f9690a475ec3441c71e4a5101369120ea60de8ac694e0bab9e19c25767f",
+          "rawRgbaSha256": "4cd87e2791d5d59877ccd674b63f385382d21d5502bd487dd281f85a5dbf99ae",
+          "alphaMaskSha256": "ff3d5a233dd97ad7f0fd3af80fa59bde083a20a639b0734d8d1d77477f956e50"
+        }
+      }
+    },
+    {
+      "id": "accessory_adventure",
+      "slot": "accessory_front",
+      "sourcePath": "layers/accessory_adventure.png",
+      "runtimePath": "character/layers/accessory_adventure.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          24,
+          44,
+          36
+        ],
+        "opaquePixelCount": 119,
+        "fileByteCount": 351,
+        "hashes": {
+          "fileSha256": "69a688be1a4a04e7b221bf4e193195071d9c5774edef99fc804599a908474b0e",
+          "rawRgbaSha256": "bf3361d94522aac7bb4d105df0c2de912a11b4016c564aa5f6aacc243277d806",
+          "alphaMaskSha256": "2cd0161e69e7ae932fbf50dab8a0743dd60ca7e06c15807a0ffce83dac3b6b42"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          20,
+          24,
+          44,
+          36
+        ],
+        "opaquePixelCount": 119,
+        "fileByteCount": 351,
+        "hashes": {
+          "fileSha256": "69a688be1a4a04e7b221bf4e193195071d9c5774edef99fc804599a908474b0e",
+          "rawRgbaSha256": "bf3361d94522aac7bb4d105df0c2de912a11b4016c564aa5f6aacc243277d806",
+          "alphaMaskSha256": "2cd0161e69e7ae932fbf50dab8a0743dd60ca7e06c15807a0ffce83dac3b6b42"
+        }
+      }
+    },
+    {
+      "id": "weapon_back_default_sword",
+      "slot": "weapon_back",
+      "sourcePath": "layers/weapon_back_default_sword.png",
+      "runtimePath": "character/layers/weapon_back_default_sword.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          42,
+          13,
+          43,
+          38
+        ],
+        "opaquePixelCount": 51,
+        "fileByteCount": 191,
+        "hashes": {
+          "fileSha256": "b5dc22837299d4f7dda13046c9f119c97de0c7d55f5787e5994c92624a8a75cc",
+          "rawRgbaSha256": "2963628116af2c1e907ed848d407ea6c446be9b5b5f3e7e04e271e4ff28cca32",
+          "alphaMaskSha256": "e8eea9f1a45d1787db73dd82cbd2e2a3d71757bb8c6995c6f5e3e81f9171d3af"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          42,
+          13,
+          43,
+          38
+        ],
+        "opaquePixelCount": 51,
+        "fileByteCount": 191,
+        "hashes": {
+          "fileSha256": "b5dc22837299d4f7dda13046c9f119c97de0c7d55f5787e5994c92624a8a75cc",
+          "rawRgbaSha256": "2963628116af2c1e907ed848d407ea6c446be9b5b5f3e7e04e271e4ff28cca32",
+          "alphaMaskSha256": "e8eea9f1a45d1787db73dd82cbd2e2a3d71757bb8c6995c6f5e3e81f9171d3af"
+        }
+      }
+    },
+    {
+      "id": "weapon_held_default_sword",
+      "slot": "weapon_held",
+      "sourcePath": "layers/weapon_held_default_sword.png",
+      "runtimePath": "character/layers/weapon_held_default_sword.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          41,
+          40,
+          44,
+          54
+        ],
+        "opaquePixelCount": 40,
+        "fileByteCount": 252,
+        "hashes": {
+          "fileSha256": "d1d68d6b508ff708b752baec0fe371556fa2feed73555830e17c91b6a8fb3244",
+          "rawRgbaSha256": "8845bbba0ba4cddef519128dc60c222989a7049c8ee1b024f09908fdd6ccdb65",
+          "alphaMaskSha256": "c3baa19897ad92da406c8f70dbc8c3fc081a7b96ec23fac366a51a9c96ca655f"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          41,
+          40,
+          44,
+          54
+        ],
+        "opaquePixelCount": 40,
+        "fileByteCount": 252,
+        "hashes": {
+          "fileSha256": "d1d68d6b508ff708b752baec0fe371556fa2feed73555830e17c91b6a8fb3244",
+          "rawRgbaSha256": "8845bbba0ba4cddef519128dc60c222989a7049c8ee1b024f09908fdd6ccdb65",
+          "alphaMaskSha256": "c3baa19897ad92da406c8f70dbc8c3fc081a7b96ec23fac366a51a9c96ca655f"
+        }
+      }
+    },
+    {
+      "id": "weapon_front_default_sword",
+      "slot": "weapon_front",
+      "sourcePath": "layers/weapon_front_default_sword.png",
+      "runtimePath": "character/layers/weapon_front_default_sword.png",
+      "sourceArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          41,
+          39,
+          44,
+          39
+        ],
+        "opaquePixelCount": 4,
+        "fileByteCount": 132,
+        "hashes": {
+          "fileSha256": "fff1d5f5dd29ef0ecfaf497eb634dca07b865e8612e152bdc2e3d4c1ea5d4fb7",
+          "rawRgbaSha256": "a3e08c1a54d8c5c8e550c735bdeea59359301ecf9712719203f830fd88ec648a",
+          "alphaMaskSha256": "072af167565156061db10603bea978e5567a6dd8486a52589d9093f03d73df11"
+        }
+      },
+      "runtimeArtifact": {
+        "status": "available",
+        "opaqueBounds": [
+          41,
+          39,
+          44,
+          39
+        ],
+        "opaquePixelCount": 4,
+        "fileByteCount": 132,
+        "hashes": {
+          "fileSha256": "fff1d5f5dd29ef0ecfaf497eb634dca07b865e8612e152bdc2e3d4c1ea5d4fb7",
+          "rawRgbaSha256": "a3e08c1a54d8c5c8e550c735bdeea59359301ecf9712719203f830fd88ec648a",
+          "alphaMaskSha256": "072af167565156061db10603bea978e5567a6dd8486a52589d9093f03d73df11"
+        }
+      }
+    }
+  ],
+  "layerInterfaceContracts": {
+    "handsFront": {
+      "source": "geometryCanonicalReference",
+      "regions": "semanticAnchors.handProtectedRegions",
+      "allowedPaletteNames": [
+        "skinLight",
+        "skinShadow"
+      ],
+      "expectedOpaquePixelCount": 38,
+      "coordinatePreservationRequired": true
+    },
+    "faceProtection": {
+      "region": "semanticAnchors.faceProtectedRegion",
+      "featureRegion": [
+        20,
+        20,
+        44,
+        28
+      ],
+      "appearanceLayersMayReplaceBodyFacePixels": false
+    },
+    "waistOverlap": {
+      "region": "semanticAnchors.waistOverlapBand",
+      "requiredOpaquePixelCount": 51,
+      "topAndBottomRequiredOpaque": true,
+      "hiddenBoundaryOutlineForbidden": true
+    },
+    "ankleOverlap": {
+      "regions": "semanticAnchors.ankleOverlapBands",
+      "requiredOpaquePixelCount": 32,
+      "bottomAndShoesRequiredOpaque": true,
+      "hiddenBoundaryOutlineForbidden": true
+    },
+    "weaponGrip": {
+      "anchor": "semanticAnchors.primaryGripAnchor",
+      "occlusionOrder": [
+        "weapon_held",
+        "hands_front",
+        "weapon_front"
+      ]
+    }
+  },
+  "compositionContract": {
+    "alphaCompositing": "source-over",
+    "localCoordinateSpace": [
+      0,
+      0,
+      63,
+      63
+    ],
+    "allSourcesShareLocalCoordinates": true,
+    "applyZOrderBySlot": true,
+    "runtimeReadsGeneratedSheet": false,
+    "itemTranslationAllowed": false,
+    "itemCroppingAllowed": false,
+    "itemScalingAllowed": false
+  },
+  "generatedOverlayMasks": {
+    "anchors-preview": {
+      "baseTile": "body-default-hair",
+      "pixelCoordinates": [
+        [
+          32,
+          7
+        ],
+        [
+          32,
+          29
+        ],
+        [
+          22,
+          35
+        ],
+        [
+          42,
+          35
+        ],
+        [
+          32,
+          42
+        ],
+        [
+          20,
+          42
+        ],
+        [
+          44,
+          42
+        ],
+        [
+          27,
+          53
+        ],
+        [
+          37,
+          53
+        ],
+        [
+          32,
+          58
+        ]
+      ]
+    },
+    "layer-bounds-preview": {
+      "baseTile": "runtime-equipped-reference",
+      "pixelCoordinates": [
+        [
+          20,
+          4
+        ],
+        [
+          44,
+          4
+        ],
+        [
+          20,
+          58
+        ],
+        [
+          44,
+          58
+        ]
+      ]
+    }
+  },
+  "generatedPreviews": {
+    "directory": "previews",
+    "scales": [
+      1,
+      8
+    ],
+    "status": "available",
+    "artifacts": {
+      "body-only@1x": {
+        "path": "previews/body-only.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 938,
+        "hashes": {
+          "fileSha256": "e1bc7be7b327d8a0b81f5d81dcf8a61c9c31210d9251e1a30784a4cfb24f7c2b",
+          "rawRgbaSha256": "7a63a4100e9954edc2705462f3b441ee8fb639058fc83a9ecc596f7bd98293d9",
+          "alphaMaskSha256": "50a09892663855568f303c8f1b840ed289900d44b523aa423b8d76dc3f8922e8"
+        }
+      },
+      "body-only@8x": {
+        "path": "previews/body-only@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 3409,
+        "hashes": {
+          "fileSha256": "1358e71490dc63b0f6e37179c37e31f2dcc3489e7632d3a58998be72ac79e045",
+          "rawRgbaSha256": "af8d1b4efa6932ee2ee337741f05d4258fa2be1524916c227cbc4929e615d922",
+          "alphaMaskSha256": "b07af2387b893615c759329aa9058ea332224aaab5cf7c26904c034ef4feb1c7"
+        }
+      },
+      "body-default-hair@1x": {
+        "path": "previews/body-default-hair.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 998,
+        "hashes": {
+          "fileSha256": "e86b64de3eaa4602e5f07a191e8ded907e271d8eda51f65e33330b7ea7d6b396",
+          "rawRgbaSha256": "74b42c9245cc1d2d6625963f5b161df6431a5b0c168014c7c895f1584a12d082",
+          "alphaMaskSha256": "cdc945b359b109535da6975aea3e245806a50147f9a295566134a358aa9aeadf"
+        }
+      },
+      "body-default-hair@8x": {
+        "path": "previews/body-default-hair@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 3542,
+        "hashes": {
+          "fileSha256": "2ffb0a19bc7c542528bec49784bf84e8d447a5a5ff2c88df652e9ea8dd849088",
+          "rawRgbaSha256": "fd21b7a3196fc755a2bba966f08688b9f95d80b2355d69e0126e4c00e8a98e4b",
+          "alphaMaskSha256": "354d3dee1c085153b0ac97ab42b6cdbf1bfd37e6d1e967732e6347ba11fb957e"
+        }
+      },
+      "default-equipped@1x": {
+        "path": "previews/default-equipped.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 905,
+        "hashes": {
+          "fileSha256": "ee243e82e854187bb849aefdd08f41c17a1012176a1a29915b556e9764753ef8",
+          "rawRgbaSha256": "676852b80d1aed866d1b837c5e912bdc203ce16de53671483ec261668c95b00e",
+          "alphaMaskSha256": "cdc945b359b109535da6975aea3e245806a50147f9a295566134a358aa9aeadf"
+        }
+      },
+      "default-equipped@8x": {
+        "path": "previews/default-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 3358,
+        "hashes": {
+          "fileSha256": "9c217e68ba31ddeba0bbfc9dcac86bf875aa3a80b8890814e8e8a52935a8ff30",
+          "rawRgbaSha256": "7623b61aa479652b2dfb209dcc6873c3f696f614c00be6eabe4c199b6ab83edc",
+          "alphaMaskSha256": "354d3dee1c085153b0ac97ab42b6cdbf1bfd37e6d1e967732e6347ba11fb957e"
+        }
+      },
+      "adventure-equipped@1x": {
+        "path": "previews/adventure-equipped.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1440,
+        "hashes": {
+          "fileSha256": "f89a34b68b1f6009d060d909f9ccfcf6a2659658ae0ae49cd5f1badd9d59a0af",
+          "rawRgbaSha256": "371fda1511d6a757142d7d00fcd552183da283c43dfca08c676965c6820e3795",
+          "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"
+        }
+      },
+      "adventure-equipped@8x": {
+        "path": "previews/adventure-equipped@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 4258,
+        "hashes": {
+          "fileSha256": "97d0a0212c302ead0990b1c507d08a682cb39439ba80cd3de58b70bb12e38e8a",
+          "rawRgbaSha256": "d1f3b5db6985a565ee3ba117818924fa1f30be2ca68b981fa2975ae81d2c78ef",
+          "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"
+        }
+      },
+      "mixed-default-top@1x": {
+        "path": "previews/mixed-default-top.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1407,
+        "hashes": {
+          "fileSha256": "1e23a1aafcbbb29f64167c6129d68889415c7e81eaab2e7aee09581093b8b7a2",
+          "rawRgbaSha256": "7d026b6cd6fd727bd6fb785467bd0b98e48fc159daf33d6ff6446ebee5bec73e",
+          "alphaMaskSha256": "b66cfddb54238d6112d6d75e4ed81f2fc79c436b28662ee3ba0dc752f6c80eea"
+        }
+      },
+      "mixed-default-top@8x": {
+        "path": "previews/mixed-default-top@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 4151,
+        "hashes": {
+          "fileSha256": "42b1f09577b66bea3fe4c6a11ebe9dfdf0bd9fe1aefff30a420415fe3d87b99c",
+          "rawRgbaSha256": "2adafe1c2d58795cbcb14a2dcb5e74c278b0ca807b46a71440a6067400a9e772",
+          "alphaMaskSha256": "1fa837ecc63959bd6e90eee1331bab53f62ea78d342ee1657b4eecceade6ce9f"
+        }
+      },
+      "mixed-adventure-top@1x": {
+        "path": "previews/mixed-adventure-top.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1370,
+        "hashes": {
+          "fileSha256": "6d6613fd7f04176d90e10869a55da0417abdcf69900ce38b3cf96cb72ef66412",
+          "rawRgbaSha256": "e4841b9c212d9b6312975bbee490b998ea197635c7bf4a5d8768ad19bb949bbb",
+          "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"
+        }
+      },
+      "mixed-adventure-top@8x": {
+        "path": "previews/mixed-adventure-top@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 4107,
+        "hashes": {
+          "fileSha256": "7e6c91ce0228cc84d9fc1c35e3da182c6e035f692ad96fac503c8de53c573d64",
+          "rawRgbaSha256": "9a324eacead5a18dbc077c84bc60c23a87892403b90f3af38e2fb3c0dcc86967",
+          "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"
+        }
+      },
+      "headgear-off@1x": {
+        "path": "previews/headgear-off.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1278,
+        "hashes": {
+          "fileSha256": "d8b574ac75de9441eb17676c206a2574cb48ae2aa4cad3c9977879c3e4046eef",
+          "rawRgbaSha256": "7d51e4a016a79a9356b1e47b460af2ba8432d34d8383734ea06138b7a6f13cfb",
+          "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"
+        }
+      },
+      "headgear-off@8x": {
+        "path": "previews/headgear-off@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 3988,
+        "hashes": {
+          "fileSha256": "cf74598fad5124545fd4d0c37c2ce3ac2d0e7dc91da24071dcc009350b66a0b6",
+          "rawRgbaSha256": "e534e51a609aff0b4c7890ba495e4d6b57a6661315cc9c93a249da3ccea61ddb",
+          "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"
+        }
+      },
+      "headgear-on@1x": {
+        "path": "previews/headgear-on.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1440,
+        "hashes": {
+          "fileSha256": "f89a34b68b1f6009d060d909f9ccfcf6a2659658ae0ae49cd5f1badd9d59a0af",
+          "rawRgbaSha256": "371fda1511d6a757142d7d00fcd552183da283c43dfca08c676965c6820e3795",
+          "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"
+        }
+      },
+      "headgear-on@8x": {
+        "path": "previews/headgear-on@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 4258,
+        "hashes": {
+          "fileSha256": "97d0a0212c302ead0990b1c507d08a682cb39439ba80cd3de58b70bb12e38e8a",
+          "rawRgbaSha256": "d1f3b5db6985a565ee3ba117818924fa1f30be2ca68b981fa2975ae81d2c78ef",
+          "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"
+        }
+      },
+      "accessory-off@1x": {
+        "path": "previews/accessory-off.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1388,
+        "hashes": {
+          "fileSha256": "a610f5bf58af0e214d0a91629786f9b0e55632b246b0fed4cb70130692b60571",
+          "rawRgbaSha256": "3b0b9ea3ae2602ab186d64cfe80acdabb00f1c49a80a81679b3741f035fbfbf3",
+          "alphaMaskSha256": "31f7968b1f7ff35d4a45c9d7bd9e755d613603f80180690c5b64382c53b3ed2a"
+        }
+      },
+      "accessory-off@8x": {
+        "path": "previews/accessory-off@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 4152,
+        "hashes": {
+          "fileSha256": "e3f379edd67eae9b6490f1e29027f1863dccb5b2f54e0b9de01d78ad8e7f682e",
+          "rawRgbaSha256": "d137fb2d6a7a3793ec1bd4ed790359932177e2e870307eb776959516c645c22d",
+          "alphaMaskSha256": "2a38e23fca9987dfd6bf3f92415efd52a97bc9f8f673234635a955821c3c9a10"
+        }
+      },
+      "accessory-on@1x": {
+        "path": "previews/accessory-on.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1440,
+        "hashes": {
+          "fileSha256": "f89a34b68b1f6009d060d909f9ccfcf6a2659658ae0ae49cd5f1badd9d59a0af",
+          "rawRgbaSha256": "371fda1511d6a757142d7d00fcd552183da283c43dfca08c676965c6820e3795",
+          "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"
+        }
+      },
+      "accessory-on@8x": {
+        "path": "previews/accessory-on@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 4258,
+        "hashes": {
+          "fileSha256": "97d0a0212c302ead0990b1c507d08a682cb39439ba80cd3de58b70bb12e38e8a",
+          "rawRgbaSha256": "d1f3b5db6985a565ee3ba117818924fa1f30be2ca68b981fa2975ae81d2c78ef",
+          "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"
+        }
+      },
+      "weapon-off@1x": {
+        "path": "previews/weapon-off.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1368,
+        "hashes": {
+          "fileSha256": "2f5c39e1eb2c59ab13b64c158eb434ec98fd0eb19e3d2a642ebd6b7c3cdfb4de",
+          "rawRgbaSha256": "4d7d7f4187cb32baf7d3b945642f3c80777fe5e8fd32a9eb3d81f7aa9356695a",
+          "alphaMaskSha256": "ea8f467ab521413a6056998200cefdee9b1028cf4e29e3d2aeb489c38e2c1d65"
+        }
+      },
+      "weapon-off@8x": {
+        "path": "previews/weapon-off@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 4141,
+        "hashes": {
+          "fileSha256": "013dd4ea30fd129d7858bc049631d0da2b9dde54f856669e04a1dceea18a6632",
+          "rawRgbaSha256": "c89d38ef276de9335e03af23237299afc50ca2e977ab2ddc9c07ab394814fba1",
+          "alphaMaskSha256": "4bd8c3cc98d9d9f1670c28cdcca87d44d52b04bdd1fd5f5f239c515ba644ece6"
+        }
+      },
+      "weapon-on@1x": {
+        "path": "previews/weapon-on.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1440,
+        "hashes": {
+          "fileSha256": "f89a34b68b1f6009d060d909f9ccfcf6a2659658ae0ae49cd5f1badd9d59a0af",
+          "rawRgbaSha256": "371fda1511d6a757142d7d00fcd552183da283c43dfca08c676965c6820e3795",
+          "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"
+        }
+      },
+      "weapon-on@8x": {
+        "path": "previews/weapon-on@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 4258,
+        "hashes": {
+          "fileSha256": "97d0a0212c302ead0990b1c507d08a682cb39439ba80cd3de58b70bb12e38e8a",
+          "rawRgbaSha256": "d1f3b5db6985a565ee3ba117818924fa1f30be2ca68b981fa2975ae81d2c78ef",
+          "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"
+        }
+      },
+      "palette@1x": {
+        "path": "previews/palette.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 380,
+        "hashes": {
+          "fileSha256": "fa232ae098d98aa1f4300927988363d2d858dbfcb9787f064d7c0fc1eb00c683",
+          "rawRgbaSha256": "9676316344e56cca93d63599fa05441db5ca39bfb51f9891704ea5d2c50b7a69",
+          "alphaMaskSha256": "e0ec3747e7b9aa7bb74d08879db1d2c3977a81919c390793cb3772a5858efdb2"
+        }
+      },
+      "palette@8x": {
+        "path": "previews/palette@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 2053,
+        "hashes": {
+          "fileSha256": "a6d131c89873496cac26fb9548f32bdf0c8f56de3589aadc3ee945a2fb8c4988",
+          "rawRgbaSha256": "b2f1690e41af1c3cacac7c91356413736e777616006cdd07bd6dd328793513d6",
+          "alphaMaskSha256": "9f13f98f1b757b404c7cc288f8411d03ba999738e4a37fc8e3868dd4111b6a15"
+        }
+      },
+      "runtime-equipped-reference@1x": {
+        "path": "previews/runtime-equipped-reference.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1440,
+        "hashes": {
+          "fileSha256": "f89a34b68b1f6009d060d909f9ccfcf6a2659658ae0ae49cd5f1badd9d59a0af",
+          "rawRgbaSha256": "371fda1511d6a757142d7d00fcd552183da283c43dfca08c676965c6820e3795",
+          "alphaMaskSha256": "6d6a277a49da86459681fea78e22746471f3230c77eb3b41f1f69abb19a60d53"
+        }
+      },
+      "runtime-equipped-reference@8x": {
+        "path": "previews/runtime-equipped-reference@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 4258,
+        "hashes": {
+          "fileSha256": "97d0a0212c302ead0990b1c507d08a682cb39439ba80cd3de58b70bb12e38e8a",
+          "rawRgbaSha256": "d1f3b5db6985a565ee3ba117818924fa1f30be2ca68b981fa2975ae81d2c78ef",
+          "alphaMaskSha256": "29c127ec603d7473f3cb6c89636d5d7fce2fc42c2bef6f0d222d37eb8c29185c"
+        }
+      },
+      "anchors-preview@1x": {
+        "path": "previews/anchors-preview.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1068,
+        "hashes": {
+          "fileSha256": "e0697228e4d0d2f3872a4cd0cee720b9bb3efa26fd32c0942fe55085e4464dc0",
+          "rawRgbaSha256": "6fc5f534e756631d76fc31358129215591a24aed4a1fa47f675023bb05e27d9d",
+          "alphaMaskSha256": "2cb77f15788844efb45dbe247f334c117fadc2c8c4dab8b3406034a4874849e6"
+        }
+      },
+      "anchors-preview@8x": {
+        "path": "previews/anchors-preview@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 3676,
+        "hashes": {
+          "fileSha256": "934a69e22904447b7e7280d69e5264aa9ea8f1c29d19d7023db180e2061cddf9",
+          "rawRgbaSha256": "662116013946da023fc113132a384870b663bea11d2dbb68e901e258a7d1296d",
+          "alphaMaskSha256": "157d2683b40aa792beebe589f2265244b55afe2becaafcadbed14cf5c19f8d57"
+        }
+      },
+      "layer-bounds-preview@1x": {
+        "path": "previews/layer-bounds-preview.png",
+        "width": 64,
+        "height": 64,
+        "fileByteCount": 1457,
+        "hashes": {
+          "fileSha256": "86b81a0f7899d62e0c03b14780cc559a2823478764dfa4df8a2d103919611062",
+          "rawRgbaSha256": "ad1fbf3234e29dd2a4bb7d774cb1de0ca9faaa940ba5333f0848be0362f94ab4",
+          "alphaMaskSha256": "3556e4088b7efacf5274e2ce98ffcd4e2a438f893203645011c0710aca77330d"
+        }
+      },
+      "layer-bounds-preview@8x": {
+        "path": "previews/layer-bounds-preview@8x.png",
+        "width": 512,
+        "height": 512,
+        "fileByteCount": 4287,
+        "hashes": {
+          "fileSha256": "22647fab10cfbe5b2c1416e518ffb9dab38470f82a4ee6e43cc16c940896a3a6",
+          "rawRgbaSha256": "776ad89f394ca11e180f20df080808f81138544aa9739450bd1a7d339cde2634",
+          "alphaMaskSha256": "448efe733b148eb002cb4975c3cb94c92fe06a36d8969b78d622068f3b79603d"
+        }
+      }
+    }
+  },
+  "generatedSheet": {
+    "path": "todo-quest-character-modular-sheet.png",
+    "pathRelativeToSpec": true,
+    "status": "available",
+    "purpose": "deterministic debug and golden preview; not a runtime layer source",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "logicalTile": {
+      "width": 64,
+      "height": 64,
+      "columns": 8,
+      "rows": 2
+    },
+    "tileMap": [
+      {
+        "name": "body-only",
+        "row": 0,
+        "column": 0,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "body-default-hair",
+        "row": 0,
+        "column": 1,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "default-equipped",
+        "row": 0,
+        "column": 2,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "adventure-equipped",
+        "row": 0,
+        "column": 3,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "mixed-default-top",
+        "row": 0,
+        "column": 4,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "mixed-adventure-top",
+        "row": 0,
+        "column": 5,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "headgear-off",
+        "row": 0,
+        "column": 6,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "headgear-on",
+        "row": 0,
+        "column": 7,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "accessory-off",
+        "row": 1,
+        "column": 0,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "accessory-on",
+        "row": 1,
+        "column": 1,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "weapon-off",
+        "row": 1,
+        "column": 2,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "weapon-on",
+        "row": 1,
+        "column": 3,
+        "kind": "compositePreview"
+      },
+      {
+        "name": "anchors-preview",
+        "row": 1,
+        "column": 4,
+        "kind": "generatedDebugOverlay"
+      },
+      {
+        "name": "palette",
+        "row": 1,
+        "column": 5,
+        "kind": "generatedProductionPalette"
+      },
+      {
+        "name": "layer-bounds-preview",
+        "row": 1,
+        "column": 6,
+        "kind": "generatedDebugOverlay"
+      },
+      {
+        "name": "runtime-equipped-reference",
+        "row": 1,
+        "column": 7,
+        "kind": "compositePreview"
+      }
+    ],
+    "hashes": {
+      "fileSha256": "dd65804c90dff09f5ce0e1e08bda0c69dd686963b7a45654424657dca7281681",
+      "rawRgbaSha256": "b6432c66ed247d45261ee3ba49f84e2051893f4055c4ad5ff3600f19713821ff",
+      "alphaMaskSha256": "2fb5ec14cfa4988af528180ec60a31680500d7487835d2601d504394287269cd",
+      "tileRgbaSha256": {
+        "body-only": "7a63a4100e9954edc2705462f3b441ee8fb639058fc83a9ecc596f7bd98293d9",
+        "body-default-hair": "74b42c9245cc1d2d6625963f5b161df6431a5b0c168014c7c895f1584a12d082",
+        "default-equipped": "676852b80d1aed866d1b837c5e912bdc203ce16de53671483ec261668c95b00e",
+        "adventure-equipped": "371fda1511d6a757142d7d00fcd552183da283c43dfca08c676965c6820e3795",
+        "mixed-default-top": "7d026b6cd6fd727bd6fb785467bd0b98e48fc159daf33d6ff6446ebee5bec73e",
+        "mixed-adventure-top": "e4841b9c212d9b6312975bbee490b998ea197635c7bf4a5d8768ad19bb949bbb",
+        "headgear-off": "7d51e4a016a79a9356b1e47b460af2ba8432d34d8383734ea06138b7a6f13cfb",
+        "headgear-on": "371fda1511d6a757142d7d00fcd552183da283c43dfca08c676965c6820e3795",
+        "accessory-off": "3b0b9ea3ae2602ab186d64cfe80acdabb00f1c49a80a81679b3741f035fbfbf3",
+        "accessory-on": "371fda1511d6a757142d7d00fcd552183da283c43dfca08c676965c6820e3795",
+        "weapon-off": "4d7d7f4187cb32baf7d3b945642f3c80777fe5e8fd32a9eb3d81f7aa9356695a",
+        "weapon-on": "371fda1511d6a757142d7d00fcd552183da283c43dfca08c676965c6820e3795",
+        "anchors-preview": "6fc5f534e756631d76fc31358129215591a24aed4a1fa47f675023bb05e27d9d",
+        "palette": "9676316344e56cca93d63599fa05441db5ca39bfb51f9891704ea5d2c50b7a69",
+        "layer-bounds-preview": "ad1fbf3234e29dd2a4bb7d774cb1de0ca9faaa940ba5333f0848be0362f94ab4",
+        "runtime-equipped-reference": "371fda1511d6a757142d7d00fcd552183da283c43dfca08c676965c6820e3795"
+      }
+    },
+    "fileByteCount": 7146,
+    "opaqueBounds": [
+      20,
+      4,
+      492,
+      122
+    ],
+    "opaquePixelCount": 19089
+  },
+  "hashSerialization": {
+    "algorithm": "SHA-256",
+    "fileBytes": "hash the exact stored PNG file bytes without decoding",
+    "layerRgba": "4096 RGBA pixels in top-to-bottom, left-to-right row-major order; four bytes per pixel; 16384 bytes total",
+    "layerAlpha": "4096 alpha bytes in top-to-bottom, left-to-right row-major order; one byte per pixel; 4096 bytes total",
+    "sheetRgba": "65536 RGBA pixels in top-to-bottom, left-to-right row-major order; four bytes per pixel; 262144 bytes total"
+  }
+}

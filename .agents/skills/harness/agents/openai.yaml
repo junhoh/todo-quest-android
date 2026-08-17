@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness"
+  short_description: "프로젝트 작업을 단계별 실행 계획으로 설계합니다"
+  default_prompt: "Use $harness to design an executable phased implementation plan for this project."

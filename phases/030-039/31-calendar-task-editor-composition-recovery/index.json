@@ -1,0 +1,31 @@
+{
+  "project": "Todo Quest",
+  "phase": "31-calendar-task-editor-composition-recovery",
+  "steps": [
+    {
+      "step": 0,
+      "name": "modal-composition-classification",
+      "status": "completed",
+      "started_at": "2026-07-21T18:47:16+0900",
+      "summary": "Calendar task editor hierarchy와 Window·Surface·HWC layer·screenshot 증거를 분리해 interaction·render·성공으로 판정하는 공용 함수와 fixture 테스트를 추가했다.",
+      "completed_at": "2026-07-21T18:51:56+0900"
+    },
+    {
+      "step": 1,
+      "name": "physical-tap-display-regression",
+      "status": "completed",
+      "started_at": "2026-07-21T19:12:55+0900",
+      "summary": "Calendar 추가 버튼을 실제 Android pointer로 탭하고 최종 display 변화를 검증하도록 강화했으며, API 37 Pixel_9에서 dialog hierarchy 생성 후 changeRatio=0.0000 실패와 전후 PNG·메타데이터를 app/build/outputs/connected_android_test_additional_output에 기록했다.",
+      "completed_at": "2026-07-21T19:17:58+0900"
+    },
+    {
+      "step": 2,
+      "name": "modal-aware-gpu-recovery",
+      "status": "completed",
+      "started_at": "2026-07-21T19:19:22+0900",
+      "summary": "swangle backend에서 launch·Calendar modal 진단과 unit 191개×2 variant·connected 36개·harness 69개를 모두 통과했고, 핵심 결과를 app/build/launch-diagnostics/graphics-recovery/Pixel_9/summary.txt와 app/build/launch-diagnostics/calendar-modal/emulator-5556/summary.txt에 기록했다.",
+      "completed_at": "2026-07-21T19:57:24+0900"
+    }
+  ],
+  "created_at": "2026-07-21T18:47:16+0900"
+}

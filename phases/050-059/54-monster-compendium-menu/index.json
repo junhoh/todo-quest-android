@@ -1,0 +1,48 @@
+{
+  "project": "Todo Quest",
+  "phase": "54-monster-compendium-menu",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-monster-discovery-contract",
+      "status": "completed",
+      "summary": "MonsterDiscoveryPolicy와 순수 Kotlin 테스트를 생성하고 CombatRepository에 발견 종족 Flow 관찰 계약을 추가했다.",
+      "started_at": "2026-08-11T14:04:09+0900",
+      "completed_at": "2026-08-11T14:07:24+0900"
+    },
+    {
+      "step": 1,
+      "name": "project-monster-discovery-history",
+      "status": "completed",
+      "summary": "Room v14 migration 없이 보존된 전체 몬스터 인스턴스 이력을 발견 종족 Flow로 투영하고 승리 시 즉시 갱신되도록 구현했다.",
+      "started_at": "2026-08-11T14:07:24+0900",
+      "completed_at": "2026-08-11T14:10:19+0900"
+    },
+    {
+      "step": 2,
+      "name": "implement-monster-compendium-screen",
+      "status": "completed",
+      "summary": "공용 몬스터 visual catalog와 발견 상태별 도감 목록·상세 ViewModel 및 반응형 Compose 화면을 구현했다.",
+      "started_at": "2026-08-11T14:11:40+0900",
+      "completed_at": "2026-08-11T14:22:55+0900"
+    },
+    {
+      "step": 3,
+      "name": "add-compendium-navigation-flow",
+      "status": "completed",
+      "summary": "도감을 네 번째 top-level destination으로 연결하고 몬스터 목록·상세 route의 parent 선택, back 순서와 탭 상태 복원을 구현했다.",
+      "started_at": "2026-08-11T14:46:15+0900",
+      "completed_at": "2026-08-11T15:01:44+0900"
+    },
+    {
+      "step": 4,
+      "name": "document-monster-compendium",
+      "status": "completed",
+      "summary": "Room v14 migration 없는 전투 이력 projection과 네 번째 도감 navigation 계약을 문서화하고 debug·release 각 595개, connected 140개, harness 88개 전체 검증을 통과했다.",
+      "started_at": "2026-08-11T15:02:25+0900",
+      "completed_at": "2026-08-11T15:25:42+0900"
+    }
+  ],
+  "created_at": "2026-08-11T14:04:09+0900",
+  "completed_at": "2026-08-11T15:26:33+0900"
+}

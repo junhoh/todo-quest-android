@@ -1,0 +1,48 @@
+{
+  "project": "Todo Quest",
+  "phase": "20-adventure-outfit-seam-refinement",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-adventure-outfit-seam-contract",
+      "status": "completed",
+      "started_at": "2026-07-20T19:29:02+0900",
+      "summary": "모험가 상·하의의 y=42/43 무중첩 경계와 하의 팔레트·대칭, base-body 손 38픽셀 보호 및 4개 대상·12개 보존 타일 계약을 schema v3에 정의함",
+      "completed_at": "2026-07-20T19:36:23+0900"
+    },
+    {
+      "step": 1,
+      "name": "extend-adventure-outfit-validation",
+      "status": "completed",
+      "started_at": "2026-07-20T19:36:24+0900",
+      "summary": "schema v3 모험가 상·하의의 42/43 seam, 전용 팔레트·3색 제한, 다리 대칭·1px 중앙선, 손 38픽셀 및 12개 보존 타일 검증을 추가함",
+      "completed_at": "2026-07-20T19:49:49+0900"
+    },
+    {
+      "step": 2,
+      "name": "refine-adventure-top-layer",
+      "status": "completed",
+      "started_at": "2026-07-20T20:24:27+0900",
+      "summary": "built-in image_gen edit 프롬프트 기반 .tmp/imagegen/20-adventure-outfit-seam-refinement/adventure-top-layer.png를 파란 허리 길이 재킷·아이보리 셔츠·청록 장식과 y=42 연속 짙은 남색 밑단, 손 38픽셀 비침범 설계로 채택함",
+      "completed_at": "2026-07-20T20:28:17+0900"
+    },
+    {
+      "step": 3,
+      "name": "refine-adventure-bottom-layer",
+      "status": "completed",
+      "started_at": "2026-07-20T20:29:27+0900",
+      "summary": "built-in image_gen edit 프롬프트로 .tmp/imagegen/20-adventure-outfit-seam-refinement/adventure-bottom-layer.png를 y=43..52 짙은 남색 바지, x=24..40 연속 허리, x=32 1px 중앙선과 동일 y=52 다리 끝 설계로 채택함",
+      "completed_at": "2026-07-20T20:51:45+0900"
+    },
+    {
+      "step": 4,
+      "name": "assemble-adventure-outfit-composites",
+      "status": "completed",
+      "started_at": "2026-07-20T20:58:08+0900",
+      "summary": "승인된 상·하의 레이어를 source-over 순서로 조립해 docs/art/character/todo-quest-character-modular-sheet.png의 4개 대상 타일만 갱신하고 두 validator·213개 테스트·타일 해시 검증을 통과함",
+      "completed_at": "2026-07-20T21:08:32+0900"
+    }
+  ],
+  "created_at": "2026-07-20T19:29:02+0900",
+  "completed_at": "2026-07-20T21:08:32+0900"
+}

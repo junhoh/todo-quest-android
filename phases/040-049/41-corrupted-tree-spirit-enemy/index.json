@@ -1,0 +1,66 @@
+{
+  "project": "Todo Quest",
+  "phase": "41-corrupted-tree-spirit-enemy",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-corrupted-tree-spirit-art-contract",
+      "status": "completed",
+      "started_at": "2026-07-31T21:51:50+0900",
+      "summary": "docs/art/monster/todo-quest-corrupted-tree-spirit-front-idle-spec.json에 64×64 RGBA, 중심축 x=32·발 y=58·bounds [14,11,50,58], 15색 팔레트와 눈빛·균열·수액·시든 잎 의미 영역 계약을 정의했다.",
+      "completed_at": "2026-07-31T21:55:42+0900"
+    },
+    {
+      "step": 1,
+      "name": "generate-corrupted-tree-spirit-sprite",
+      "status": "completed",
+      "started_at": "2026-07-31T21:55:42+0900",
+      "summary": "docs/art/monster/todo-quest-corrupted-tree-spirit-front-idle.png에 built-in imagegen으로 자홍색 배경의 정면 3등신 타락한 나무 정령을 생성·정규화했고, 몬스터 validator·Python 270개·캐릭터 시트 2종·git diff --check 검증을 통과했다.",
+      "completed_at": "2026-07-31T22:07:21+0900"
+    },
+    {
+      "step": 2,
+      "name": "extend-monster-species-policy",
+      "status": "completed",
+      "started_at": "2026-07-31T22:08:11+0900",
+      "summary": "CORRUPTED_TREE_SPIRIT enum과 BALANCED+NORMAL 나무 정령·ATTACK+NORMAL 해골·나머지 고블린 매핑을 추가하고, stored definitionId+grade 파생을 Room schema·balance version migration 없이 검증했다.",
+      "completed_at": "2026-07-31T22:15:47+0900"
+    },
+    {
+      "step": 3,
+      "name": "register-corrupted-tree-spirit-runtime-resources",
+      "status": "completed",
+      "started_at": "2026-07-31T22:29:44+0900",
+      "summary": "docs/art/monster/todo-quest-corrupted-tree-spirit-front-idle.png를 app/src/main/res/drawable-nodpi/todo_quest_corrupted_tree_spirit_front_idle.png에 byte-identical 등록해 SHA-256 49BFC16525645EDC5EDA24039E78A8C0858C7D24E3FEEC35DEBC61B881158DAD 일치를 확인하고 이름·쓰러짐 한국어 문자열 리소스를 추가했다.",
+      "completed_at": "2026-07-31T22:32:57+0900"
+    },
+    {
+      "step": 4,
+      "name": "map-corrupted-tree-spirit-presentation",
+      "status": "completed",
+      "started_at": "2026-07-31T22:34:22+0900",
+      "summary": "고블린·해골·타락한 나무 정령의 visual catalog를 완성하고 BALANCED+NORMAL Stage 1 encounter 1 표시와 처치 전 death·처치 후 spawn 종족 분리, nonlethal·monster attack 종족 유지 및 나무 정령 단일 Preview를 검증했다.",
+      "completed_at": "2026-07-31T22:39:18+0900"
+    },
+    {
+      "step": 5,
+      "name": "verify-corrupted-tree-spirit-battle-ui",
+      "status": "completed",
+      "started_at": "2026-07-31T22:41:17+0900",
+      "summary": "타락한 나무 정령의 drawable·체력/전투/쓰러짐 semantics, spawn 교체, BALANCED+NORMAL end-to-end와 2배 최근접·alpha/발 anchor를 Compose 테스트로 고정하고 BattleMap 23개·전체 connected 86개·assembleDebug를 통과했다.",
+      "completed_at": "2026-07-31T23:40:45+0900"
+    },
+    {
+      "step": 6,
+      "name": "synchronize-corrupted-tree-spirit-docs-and-validate",
+      "status": "completed",
+      "started_at": "2026-07-31T23:41:57+0900",
+      "summary": "타락한 나무 정령의 canonical·runtime 자산, 세 종족 파생 정책과 Battle Map 표시 계약을 문서에 동기화하고 validator·SHA-256·Python 284개·JVM 각 403개·lint·APK·실기기 connected 86개 및 1배율·8배율·portrait·landscape 시각 검증을 완료했다.",
+      "completed_at": "2026-08-01T00:10:44+0900"
+    }
+  ],
+  "created_at": "2026-07-31T21:51:50+0900",
+  "status": "completed",
+  "summary": "타락한 나무 정령 canonical/runtime PNG와 BALANCED+NORMAL 종족 정책, 세 종족 Battle Map presentation을 구현하고 Python 284개·JVM 각 403개·lint·APK·실기기 connected 86개 및 시각 검증을 완료했다.",
+  "completed_at": "2026-08-01T00:10:44+0900"
+}

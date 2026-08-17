@@ -1,0 +1,74 @@
+{
+  "project": "Todo Quest",
+  "phase": "45-slime-enemy",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-slime-art-contract",
+      "status": "completed",
+      "started_at": "2026-08-01T05:31:12+0900",
+      "completed_at": "2026-08-01T05:34:09+0900",
+      "summary": "docs/art/monster/todo-quest-slime-front-idle-spec.json에 24px 높이, bounds [17,35,47,58], 중심축·발 기준 32·58, 12색 팔레트와 눈·내부 핵·표면 하이라이트 의미 영역 계약을 정의함"
+    },
+    {
+      "step": 1,
+      "name": "generate-slime-sprite",
+      "status": "completed",
+      "started_at": "2026-08-01T05:35:30+0900",
+      "summary": "built-in imagegen으로 생성한 슬라임을 하드 크로마키 제거와 NEAREST 64×64·12색·1픽셀 외곽선 정규화로 docs/art/monster/todo-quest-slime-front-idle.png에 저장하고 validator·Python 307개·캐릭터 시트·8배율 검증을 통과했다.",
+      "completed_at": "2026-08-01T05:43:34+0900"
+    },
+    {
+      "step": 2,
+      "name": "implement-deterministic-species-schedule",
+      "status": "completed",
+      "started_at": "2026-08-01T05:54:41+0900",
+      "completed_at": "2026-08-01T06:00:12+0900",
+      "summary": "MonsterSpecies.SLIME과 명시적 5종·grade code 기반 java.util.Random/Collections.shuffle 결정 스케줄을 추가하고 balance v1 golden vector·반복 동일성·균형·invalid input 및 기존 능력치·피해·보상 불변 테스트를 통과함"
+    },
+    {
+      "step": 3,
+      "name": "register-slime-runtime-resources",
+      "status": "completed",
+      "started_at": "2026-08-01T06:01:24+0900",
+      "completed_at": "2026-08-01T06:03:54+0900",
+      "summary": "docs/art/monster/todo-quest-slime-front-idle.png를 app/src/main/res/drawable-nodpi/todo_quest_slime_front_idle.png에 byte-identical로 등록해 SHA-256 83A9CE9BBF44403F63E1F54D58C17FDB519ABAC53EF6A85F6831BAC1151B6106 일치를 확인하고 battle_monster_slime_name·battle_monster_slime_death_announcement 한국어 문자열 리소스를 추가함"
+    },
+    {
+      "step": 4,
+      "name": "map-slime-battle-presentation",
+      "status": "completed",
+      "started_at": "2026-08-01T06:04:41+0900",
+      "completed_at": "2026-08-01T06:07:40+0900",
+      "summary": "슬라임을 포함한 다섯 종족 visual catalog와 치명 전환 25개 before/after 조합·비치명/몬스터 공격 동일 source를 검증하고 모든 종족에 공통 64×64 frame·발 anchor·unit scale을 유지함"
+    },
+    {
+      "step": 5,
+      "name": "integrate-slime-species-repository",
+      "status": "completed",
+      "started_at": "2026-08-01T06:08:43+0900",
+      "completed_at": "2026-08-01T06:19:12+0900",
+      "summary": "저장된 Stage·encounter·grade·balance version으로 결정적 종족을 파생하고 Repository 재생성·처치 전환 안정성을 검증했으며 Room schema와 migration은 변경하지 않음"
+    },
+    {
+      "step": 6,
+      "name": "verify-slime-battle-ui",
+      "status": "completed",
+      "started_at": "2026-08-01T09:58:14+0900",
+      "completed_at": "2026-08-01T10:20:02+0900",
+      "summary": "SM-A325N Android 13과 Pixel 9 Android 17에서 BattleMapTest 각 29개를 통과하고 슬라임 drawable·한국어 접근성·공격/피격/쓰러짐·spawn 교체·Stage 1 encounter 5/8·64×64 최근접 확대·bounds [17,35,47,58]·공통 발 anchor·binary alpha를 검증함"
+    },
+    {
+      "step": 7,
+      "name": "synchronize-slime-docs-and-validate",
+      "status": "completed",
+      "started_at": "2026-08-01T10:29:32+0900",
+      "completed_at": "2026-08-01T16:20:26+0900",
+      "summary": "슬라임 canonical/runtime 자산과 결정적 다섯 종족 스케줄·Battle Map presentation을 문서에 동기화하고 validator·SHA-256·Python 383개·JVM 각 412개·lint·APK·실기기 composite connected 92개 및 1·8배율·portrait/landscape 검증을 완료했다."
+    }
+  ],
+  "created_at": "2026-08-01T05:31:12+0900",
+  "status": "completed",
+  "summary": "슬라임 canonical/runtime PNG와 결정적 다섯 종족 스케줄, 종족별 Battle Map presentation을 구현하고 validator·SHA-256·Python 383개·JVM 각 412개·lint·APK·실기기 composite connected 92개 및 시각 검증을 완료했다.",
+  "completed_at": "2026-08-01T16:20:26+0900"
+}

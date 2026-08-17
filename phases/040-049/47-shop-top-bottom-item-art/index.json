@@ -1,0 +1,64 @@
+{
+  "project": "Todo Quest",
+  "phase": "47-shop-top-bottom-item-art",
+  "steps": [
+    {
+      "step": 0,
+      "name": "define-outfit-asset-contract",
+      "status": "completed",
+      "started_at": "2026-08-05T01:11:40+0900",
+      "summary": "todo-quest-top-bottom-layers-spec.json에 top_cloth·top_leather_armor·top_iron_breastplate [20,29,44,45]와 bottom_cloth_pants·bottom_leather_pants·bottom_steel_greaves [24,41,40,54] 계약 및 범용 검증을 추가했다.",
+      "completed_at": "2026-08-05T01:26:22+0900"
+    },
+    {
+      "step": 1,
+      "name": "generate-top-bottom-layer-assets",
+      "status": "completed",
+      "started_at": "2026-08-05T01:26:22+0900",
+      "summary": "built-in image_gen stylized-concept의 평면 #FF00FF·isolated 64×64 top/bottom·지정 재질·bounds·16색·1px outline 프롬프트로 6종을 독립 생성하고 raw source를 .tmp/imagegen/47-shop-top-bottom-item-art/<key>/source.png, canonical PNG 6개를 docs/art/equipment/layers/, 착용 1×/8× 및 3×3 matrix preview를 docs/art/equipment/previews/에 저장했다.",
+      "completed_at": "2026-08-05T01:51:13+0900"
+    },
+    {
+      "step": 2,
+      "name": "extend-outfit-loadout-domain",
+      "status": "completed",
+      "started_at": "2026-08-05T01:52:19+0900",
+      "summary": "CharacterLoadoutCatalog에 상의 3종·하의 3종 ID를 허용하고 기존 기본 loadout과 나머지 slot 값을 보존하는 순수 Kotlin 테스트를 추가했다.",
+      "completed_at": "2026-08-05T01:54:25+0900"
+    },
+    {
+      "step": 3,
+      "name": "register-outfit-runtime-layers",
+      "status": "completed",
+      "started_at": "2026-08-05T02:05:52+0900",
+      "summary": "상의·하의 runtime PNG 6개를 byte-identical 등록하고 23개 asset path와 800개 loadout 합성·preview golden 검증을 완료했다.",
+      "completed_at": "2026-08-05T02:12:09+0900"
+    },
+    {
+      "step": 4,
+      "name": "bind-outfit-catalog-visuals",
+      "status": "completed",
+      "started_at": "2026-08-05T02:13:36+0900",
+      "summary": "상의·하의 6종의 imageKey·layerKey를 loadout 상수에 연결하고 stable identity 기반 멱등 backfill과 projection·HP 비율 보존 테스트를 완료했다.",
+      "completed_at": "2026-08-05T02:20:37+0900"
+    },
+    {
+      "step": 5,
+      "name": "register-outfit-shop-artwork",
+      "status": "completed",
+      "started_at": "2026-08-05T02:23:54+0900",
+      "summary": "상의·하의 6종 imageKey를 공용 artwork catalog에 등록하고 상점 목록·상세·장착 슬롯과 인벤토리 카드의 실제 이미지·한국어 설명 검증을 추가했다.",
+      "completed_at": "2026-08-05T02:32:10+0900"
+    },
+    {
+      "step": 6,
+      "name": "verify-outfit-ui-and-docs",
+      "status": "completed",
+      "started_at": "2026-08-05T02:32:10+0900",
+      "summary": "상의·하의 6종의 실제 Shop·Inventory artwork, 구매·장착·교체·혼합 세트, Character·Battle shared renderer와 decode 실패 격리를 연결 테스트로 검증하고 canonical 문서를 실제 결과에 동기화했다.",
+      "completed_at": "2026-08-05T03:35:29+0900"
+    }
+  ],
+  "created_at": "2026-08-05T01:11:40+0900",
+  "completed_at": "2026-08-05T03:38:49+0900"
+}
